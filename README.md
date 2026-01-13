@@ -89,11 +89,16 @@ This module focuses on processing DPE (Department of Public Examinations) past p
 **5. Article Extractor (`article_extractor.py`)**
 -   **Usage**: `python article_extractor.py`
 -   **Purpose**: Uses **Gemini 3 Pro Preview** (synchronous) to extract structured JSON data.
--   **Output**: `<Paper Name>.json` containing:
-    - `articles`: Array of articles.
-    - `questions`: Array of questions (omitting numbers/marks).
-    - `answer`: Text of the answer from the marking scheme.
-    - `summary`: Summary of the article if available.
+-   **Output**: `<Paper Name>.json` containing articles, questions, answers, and summaries.
+
+**6. JSON to DOCX Converter (`json_to_docx.py`)**
+-   **Usage**: `python json_to_docx.py`
+-   **Purpose**: Converts the structured JSON files into formatted "processed" DOCX files.
+-   **Features**:
+    -   **RTL** and **Right Aligned** text.
+    -   **Faruma** font for content.
+    -   **Arial** font for metadata markers (e.g., `[article_1]`).
+-   **Output**: `<Paper Name> processed.docx`.
 
 #### Workflow
 
