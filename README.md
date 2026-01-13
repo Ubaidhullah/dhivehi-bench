@@ -86,6 +86,15 @@ This module focuses on processing DPE (Department of Public Examinations) past p
 -   **Usage**: `python check_thaana.py`
 -   **Purpose**: Scans text files to identify those missing Thaana characters (e.g., failed OCR or English-only documents).
 
+**5. Article Extractor (`article_extractor.py`)**
+-   **Usage**: `python article_extractor.py`
+-   **Purpose**: Uses **Gemini 3 Pro Preview** (synchronous) to extract structured JSON data.
+-   **Output**: `<Paper Name>.json` containing:
+    - `articles`: Array of articles.
+    - `questions`: Array of questions (omitting numbers/marks).
+    - `answer`: Text of the answer from the marking scheme.
+    - `summary`: Summary of the article if available.
+
 #### Workflow
 
 To generate the summarization dataset section:

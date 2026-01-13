@@ -2,3 +2,7 @@ requests
 bs4
 pypdf
 python-docx
+google-genai
+python-dotenv
+pydantic
+tqdm
