@@ -7,9 +7,7 @@
   * [Project Scope](#project-scope)
   * [Sub-Projects](#sub-projects)
     * [1. Summarization Module](#1-summarization-module)
-      * [Setup](#setup)
-      * [Scripts](#scripts)
-      * [Workflow](#workflow)
+    * [2. MCQ Module](#2-mcq-module)
 <!-- TOC -->
 
 ## Project Scope
@@ -20,7 +18,7 @@ The project consists of several distinct sub-modules, each focusing on a specifi
     -   Collection and processing of documents for abstractive and extractive summarization.
 2.  **Translation** (Planned)
     -   Parallel corpus creation for English-Dhivehi translation.
-3.  **MCQ Question Answering** (Planned)
+3.  **MCQ Question Answering** (Active)
     -   Multiple-choice datasets for testing reasoning and knowledge.
 4.  **Context-Based Question Answering** (Planned)
     -   Reading comprehension datasets based on provided contexts.
@@ -107,3 +105,51 @@ To generate the summarization dataset section:
 2.  Run `pdf_extractor.py` to digitize the content.
 3.  Run `check_thaana.py` to validate quality.
 4.  Run `txt_to_docx.py` to finalize formatting.
+
+---
+
+### 2. MCQ Module
+
+Located in: `./mcq/`
+
+This module scrapes Dhivehi content for MCQ dataset generation.
+
+#### Setup
+
+```bash
+cd mcq
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+pip install -r requirements.txt
+```
+
+#### Data Source: Saruna (MNU Digital Repository)
+
+The primary data source is [Saruna](https://saruna.mnu.edu.mv), the Maldives National University's digital repository. It runs on DSpace 8.0 and provides an excellent REST API.
+
+**API Documentation:** https://saruna.mnu.edu.mv/server/api
+
+Key endpoints:
+- `GET /server/api/core/collections/{uuid}` - Collection info
+- `GET /server/api/discover/search/objects?scope={uuid}` - Search within collection
+- `GET /server/api/core/items/{uuid}/bundles` - Item bundles
+- `GET /server/api/core/bitstreams/{uuid}/content` - Download file
+
+#### Scripts
+
+**Saruna Scraper (`scrapers/saruna_scraper.py`)**
+
+Downloads PDFs from a Saruna collection.
+
+```bash
+# Download 10 pages from Dhivehi Language Studies collection
+python scrapers/saruna_scraper.py ffb9e093-5a2b-42fa-a584-2aa19d7d5e7d --pages 10
+
+# Download all pages
+python scrapers/saruna_scraper.py ffb9e093-5a2b-42fa-a584-2aa19d7d5e7d --pages 0
+
+# Custom output directory
+python scrapers/saruna_scraper.py <collection_id> --pages 5 --output ./my_data
+```
+
+Find collection IDs by browsing https://saruna.mnu.edu.mv/communities - the UUID is in the URL.
