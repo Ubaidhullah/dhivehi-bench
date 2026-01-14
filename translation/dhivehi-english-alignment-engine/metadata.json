@@ -1,0 +1,5 @@
+{
+  "name": "Dhivehi-English Alignment Engine",
+  "description": "A specialized tool for aligning English and Dhivehi text at the sentence level for Machine Learning benchmarks, following strict semantic matching rules and JSONL output standards.",
+  "requestFramePermissions": []
+}
