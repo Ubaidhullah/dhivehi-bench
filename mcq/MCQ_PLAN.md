@@ -21,7 +21,7 @@ Many documents in Saruna are PDFs containing images or legacy fonts.
     - Segment text into coherent paragraphs/articles.
 
 ## Phase 3: MCQ Generation (AI-Assisted)
-Use LLMs (like Gemini 1.5 Pro) to generate high-quality MCQs from the extracted text.
+Use LLMs (**Gemini 3 or higher**) to generate high-quality MCQs from the extracted text. These models provide superior understanding of Dhivehi context and nuances.
 
 1.  **Develop Prompt Template**: Create a robust prompt that instructs the LLM to:
     - Identify a key fact or concept in the text.
