@@ -73,11 +73,12 @@ def main():
     parser.add_argument("collection_id", help="Collection UUID")
     parser.add_argument("--pages", type=int, required=True, help="Pages to download (0=all)")
     parser.add_argument("--output", default="./raw_data", help="Output directory")
+    parser.add_argument("--collection-name", help="Optional: Override folder name")
     args = parser.parse_args()
 
     # Get collection info
     info = fetch(f"/core/collections/{args.collection_id}")
-    name = info.get("name", args.collection_id)
+    name = args.collection_name if args.collection_name else info.get("name", args.collection_id)
     print(f"Collection: {name}")
 
     # Get total pages
