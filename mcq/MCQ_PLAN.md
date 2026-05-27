@@ -10,15 +10,16 @@ The primary source of data is **Saruna** (MNU Digital Repository).
     - Example: `python mcq/scrapers/saruna_scraper.py ffb9e093-5a2b-42fa-a584-2aa19d7d5e7d --pages 0 --output mcq/data/saruna`
 3.  **Verify Downloads**: Check `mcq/data/saruna/<Collection_Name>_downloads.csv` to ensure high success rate.
 
-## Phase 2: Pre-processing & OCR
-Many documents in Saruna are PDFs containing images or legacy fonts.
+## Phase 2: Pre-processing & OCR (Advanced)
+Many documents in Saruna are scanned PDFs. We utilize a fine-tuned **Qwen 2.5 3B** model for superior Dhivehi OCR.
 
-1.  **Convert PDF to Images**: Use `pdf2image` to convert PDF pages into high-resolution images.
-2.  **OCR (Dhivehi OCR)**: Apply a Dhivehi-specialized OCR (e.g., PaddleOCR with Dhivehi weights or custom engine) to extract text.
-3.  **Text Cleaning**:
-    - Remove OCR artifacts and noise.
-    - Normalize Thaana characters.
-    - Segment text into coherent paragraphs/articles.
+1.  **Google Colab Setup**: Use the provided `mcq/Dhivehi_OCR_Qwen_Colab.ipynb` notebook.
+2.  **Model Loading**: Load the fine-tuned Qwen 2.5 3B model from Google Drive.
+3.  **OCR Processing**:
+    -   Convert PDF pages to images.
+    -   Perform inference using the Qwen model to extract accurate Dhivehi text.
+    -   Save extracted text back to Google Drive (`mcq/data/extracted_text`).
+4.  **Text Cleaning**: Normalize Thaana characters and segment text for the next phase.
 
 ## Phase 3: MCQ Generation (AI-Assisted)
 Use LLMs (**Gemini 3 or higher**) to generate high-quality MCQs from the extracted text. These models provide superior understanding of Dhivehi context and nuances.
