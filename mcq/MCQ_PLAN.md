@@ -5,9 +5,19 @@ This document outlines the step-by-step procedure for generating a Multiple Choi
 ## Phase 1: Data Acquisition (Scraping)
 The primary source of data is **Saruna** (MNU Digital Repository).
 
-1.  **Identify Target Collections**: Use the Saruna communities page to find relevant collection UUIDs (e.g., Dhivehi Language, History, Culture).
-2.  **Execute Scraper**: Run `mcq/scrapers/saruna_scraper.py` for each collection.
-    - Example: `python mcq/scrapers/saruna_scraper.py ffb9e093-5a2b-42fa-a584-2aa19d7d5e7d --pages 0 --output mcq/data/saruna`
+1.  **Identify Target Collections**: Use the Saruna communities page to find relevant collection UUIDs. Current scope includes:
+    -   Dhivehi Language Studies
+    -   Maldivian History
+    -   Maldivian Art & Culture
+    -   Religion
+    -   Poetry
+    -   Essays
+    -   Science
+    -   Shari'ah & Law
+    -   Political Science
+    -   Education
+    -   Customs & Traditions
+2.  **Execute Scraper**: Run `mcq/scrapers/bulk_scrape.sh` or `mcq/scrapers/retry_scrape.sh`.
 3.  **Verify Downloads**: Check `mcq/data/saruna/<Collection_Name>_downloads.csv` to ensure high success rate.
 
 ## Phase 2: Pre-processing & OCR (Advanced)
