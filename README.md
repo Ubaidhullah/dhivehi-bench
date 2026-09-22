@@ -23,8 +23,9 @@ The project consists of several distinct sub-modules, each focusing on a specifi
     -   **Verification**: All samples have been manually verified and refined by skilled Dhivehi translators to ensure benchmark-grade accuracy.
 3.  **MCQ Question Answering** (Active)
     -   Multiple-choice datasets for testing reasoning and knowledge.
-4.  **Context-Based Question Answering** (Planned)
-    -   Reading comprehension datasets based on provided contexts.
+4.  **Context-Based Question Answering** (Completed)
+    -   **Completed**: 1,134 high-quality SQuAD-style QA pairs spanning 574 unique paragraphs.
+    -   **Source**: Extracted via Qwen2.5-VL OCR from diverse Dhivehi domains (History, Law, Essays) and manually curated/polished.
 
 ---
 
@@ -175,3 +176,17 @@ This module focuses on creating a high-quality parallel corpus for English-Dhive
 
 The project includes a custom **Dhivehi-English Alignment Engine** located in `./translation/dhivehi-english-alignment-engine/`. This tool uses Gemini models to assist in the initial semantic alignment of comparable documents before human review.
 
+
+---
+
+### 4. Context QA Module
+
+Located in: `./context_qa/`
+
+This module generates SQuAD-style reading comprehension datasets to evaluate Dhivehi language models.
+
+#### Dataset Details
+
+- **Size**: 1,134 SQuAD-style QA pairs based on 574 unique paragraphs.
+- **Source**: Extracted from various PDFs via Qwen2.5-VL and parsed locally.
+- **Quality Assurance**: Automatically scrubbed of hallucinated formatting, normalized using a robust Gemini polishing prompt, and meticulously verified via a manual Streamlit curation UI to enforce standalone benchmarking rules.
