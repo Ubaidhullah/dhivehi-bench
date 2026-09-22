@@ -216,3 +216,9 @@ ehthumbs.db
 Thumbs.db
 
 /.idea/
+
+# Dhivehi Bench Data
+*/data/saruna/
+*/data/extracted_text/
+*/data/pdfs/
+*.pdf
