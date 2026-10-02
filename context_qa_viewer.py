@@ -4,7 +4,7 @@ import pandas as pd
 import os
 
 st.set_page_config(page_title="Dhivehi SQuAD Curator", layout="wide")
-DATA_FILE = "context_qa/data/context_qa_dataset_polished_v2.jsonl"
+DATA_FILE = "context_qa/data/dhivehi_squad.jsonl"
 
 def load_data():
     data = []
