@@ -1,0 +1,490 @@
+\documentclass[acmsmall,review,anonymous]{acmart}
+
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
+
+\setcopyright{acmcopyright}
+\copyrightyear{2026}
+\acmYear{2026}
+\acmDOI{XXXXXXX.XXXXXXX}
+
+\acmJournal{TALLIP}
+\acmVolume{1}
+\acmNumber{1}
+\acmArticle{1}
+\acmMonth{10}
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows, positioning, fit, backgrounds}
+
+% Float placement parameters to prevent figures from drifting to the end
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.8}
+\renewcommand{\dbltopfraction}{0.9}
+\renewcommand{\dblfloatpagefraction}{0.8}
+\setcounter{topnumber}{4}
+\setcounter{dbltopnumber}{4}
+
+\begin{document}
+
+\title{Dhivehi-Bench: A Comprehensive Benchmark for Evaluating Large Language Models on the Maldivian Language}
+
+\author{Ubaidhullah Abdul Hameed}
+\email{f1202500118@stu.ynu.edu.cn}
+\affiliation{%
+  \institution{Yunnan University}
+  \city{Kunming}
+  \country{China}
+}
+
+\begin{abstract}
+Evaluating Large Language Models (LLMs) on extremely low-resource languages requires datasets that are linguistically accurate, domain-diverse, and significantly insulated from pre-training data contamination. We introduce Dhivehi-Bench, the first multi-task evaluation suite spanning reading comprehension, contextual question answering, and bidirectional translation for the Maldivian language (Thaana script) with strict anti-contamination safeguards. Our benchmark features a rigorous, manually curated taxonomy covering Multiple Choice Questions (MCQ), Contextual Question Answering, and Translation at both the sentence and paragraph levels. To significantly mitigate data contamination, reading comprehension source texts were exclusively digitized from historical scanned archives using a custom Thaana Optical Character Recognition (OCR) pipeline, ensuring the data are highly unlikely to exist in machine-readable formats prior to this study. Furthermore, all prompt-target pairs were manually validated by native speakers under unanimous consensus. We establish robust baseline evaluations across frontier open-weights models (Gemma 4, Llama 3.1, Qwen 2.5). Our empirical results isolate a critical phenomenon in modern LLMs: models demonstrate strong semantic comprehension (up to 74.98\% MCQ accuracy) while severely underperforming at generative translation, highlighting a marked disparity between receptive understanding and generative capabilities in underrepresented languages. This benchmark establishes an open, reproducible foundation for equitable low-resource NLP.
+\end{abstract}
+
+\begin{CCSXML}
+<ccs2012>
+   <concept>
+       <concept_id>10010147.10010178.10010179</concept_id>
+       <concept_desc>Computing methodologies~Natural language processing</concept_desc>
+       <concept_significance>500</concept_significance>
+       </concept>
+ </ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Computing methodologies~Natural language processing}
+
+\keywords{Low-Resource Languages, Dhivehi, Large Language Models, Benchmarking, Dataset Construction}
+
+\maketitle
+
+\section{Introduction}
+
+The rapid scaling of Large Language Models (LLMs) has yielded unprecedented zero-shot capabilities in natural language understanding and generation. However, the benefits of these foundational models remain disproportionately concentrated within high-resource, Latin-script languages. While recent initiatives have sought to bridge the linguistic divide for regional macro-languages, extremely low-resource languages characterized by unique orthographies remain critically underserved. Dhivehi, the national language of the Maldives, is a prime example. Written in the right-to-left Thaana script, it is functionally absent from massive multilingual pre-training corpora. Consequently, evaluating frontier models on Dhivehi presents unique methodological challenges, primarily due to a severe lack of high-fidelity, uncontaminated evaluation data.
+
+Existing evaluations of low-resource languages frequently suffer from ambiguous failure modes and data contamination. When models are tested on web-scraped datasets, it is nearly impossible to determine whether success stems from genuine zero-shot generalization or mere memorization of the training data. Conversely, when models fail, standard benchmarks struggle to distinguish whether the failure is rooted in poor reading comprehension or an inability to mechanically generate the target script.
+
+To systematically address these challenges, we present \textbf{Dhivehi-Bench}, a meticulously curated, multi-domain evaluation benchmark designed to rigorously assess and isolate the capabilities of LLMs on the Thaana script. To eliminate the risk of data contamination, our source texts were drawn entirely from non-machine-readable historical archives, which were digitized explicitly for this benchmark using a specialized Dhivehi OCR pipeline. Our comprehensive taxonomy covers translation, reading comprehension, and extractive question answering, with all data undergoing strict multi-stage manual verification by native speakers. By providing this benchmark and extensive baseline evaluations on the latest open-weights models, we aim to lay the foundational infrastructure for future Dhivehi Natural Language Processing (NLP) research.
+
+\section{Linguistic Background: The Maldivian Language}
+Dhivehi, an Indo-Aryan language spoken by approximately 400,000 people primarily in the Maldives, presents a unique challenge for modern Natural Language Processing. Linguistically, it shares a deep phylogenetic relationship with Sinhala, yet it diverged significantly due to centuries of geographic isolation and heavy lexical borrowing from Arabic, Urdu, and Persian. While Sinhala-Dhivehi cross-lingual transfer learning has shown promise in specialized acoustic models (e.g., ASR systems utilizing Common Voice \cite{ardila_common_2020}), text-based transfer is severely bottlenecked by orthographic divergence \cite{zahir_expanding_2024}. 
+
+Dhivehi is written in the Thaana script, a highly distinct right-to-left (RTL) alphabet derived historically from Arabic and Indic numerals. Unlike the Latin alphabet, Thaana enforces strict ``Diacritic Stacking.'' Every phonetic syllable must consist of a base consonant (\textit{akuru}) and a mandatory vowel diacritic (\textit{fili}) positioned either directly above or below the consonant. There are 24 primary consonants and 11 vowels. If a consonant carries no vowel sound, it must typically take a \textit{sukun} diacritic to mark vowel absence (e.g., in syllable-coda positions or consonant gemination). The sole structural exception in standard Thaana orthography is \textit{Hus Noonu} (literally ``bare Noonu''), where the consonant \textit{Noonu} (\texttt{U+0782}) is written entirely without any vowel diacritic or \textit{sukun} to represent the prenasalization of a following voiced stop consonant (such as \textit{d}, \textit{dh}, \textit{b}, or \textit{g}, as in \textit{kandu} [sea] or \textit{handhu} [moon]). In contrast, a \textit{Noonu} carrying a \textit{sukun} marks a full nasal consonant coda or gemination. Orthographic nuances such as \textit{Hus Noonu} present distinct challenges for automated pipelines: legacy OCR models often hallucinate nonexistent diacritics over bare consonants, while byte-fallback tokenizers shatter prenasalized clusters into asymmetric, sub-graphemic byte sequences.
+
+Furthermore, Dhivehi is heavily agglutinative. Complex grammatical relationships---including tense, plurality, definiteness, and case---are mechanically appended to the root word as suffixes. For example, a single nominal base can be transformed via sequential suffixation (e.g., the noun \textit{rah} [island], with inflected stem \textit{rash-}, becomes \textit{rahthah} [islands] and \textit{rahthakuge} [of the islands]). This morphological density means that a single Dhivehi word often encodes an entire syntactic phrase in English. For Large Language Models, this agglutination demands highly precise latent semantic boundaries; mispredicting a single trailing diacritic alters the entire grammatical case of the sentence.
+
+\section{Related Work}
+The challenge of evaluating LLMs on underrepresented languages has spurred a recent wave of benchmarking efforts, which can be broadly categorized into macro-language evaluation, contamination mitigation, and tokenization analytics.
+
+\subsection{Macro-Language vs. Micro-Language Benchmarking}
+Recent years have seen massive structural efforts to evaluate multilingual capabilities across macro-linguistic families. Frameworks such as the Aya Project \cite{ustun_aya_2024} have established state-of-the-art multilingual instruction-tuning baselines, while initiatives like SERENGETI \cite{adebara_serengeti_2023} and FLORES-200 \cite{team_no_2022} provided critical methodological blueprints for capturing cross-lingual transfer in geographically isolated languages. Even the largest massively multilingual evaluation resources omit Dhivehi entirely: FLORES-200 spans 200 languages yet contains no Dhivehi split, and the language remains completely unrepresented in multi-task evaluation suites for reading comprehension, extractive reasoning, and instruction following. Furthermore, existing translation benchmarks lack contamination controls, leaving the zero-shot reasoning capabilities of LLMs on the Thaana script entirely unmeasured. Additionally, the push to evaluate Indic languages has yielded robust multi-task paradigms like IndicGenBench \cite{singh_indicgenbench_2024}, IndicQA \cite{singh_indic_2025}, and MILU \cite{verma_milu_2025}. 
+
+While these efforts successfully established evaluation paradigms for major regional languages, extremely low-resource scripts like Thaana have remained largely unaddressed due to the extreme scarcity of digitized text. Dhivehi-Bench extends these global benchmarking efforts by introducing the first formal, multi-task LLM evaluation suite explicitly tailored to the morphological realities of the Maldivian linguistic context.
+
+\subsection{The Data Contamination Crisis}
+A pervasive flaw in contemporary LLM evaluation is data contamination---the phenomenon where models inadvertently memorize benchmark datasets that have been scraped into massive pre-training corpora like Common Crawl. Recent surveys highlight that evaluating LLMs on contaminated data yields artificially inflated metrics that fail to reflect true zero-shot reasoning \cite{chen_benchmarking_2025, dong_generalization_2024}. To restore trustworthy evaluation, researchers increasingly advocate for dynamic or fully offline test construction \cite{li_latesteval_2023}.
+
+Dhivehi-Bench adopts this offline-first methodology. Building upon foundational Dhivehi digitization efforts like the Viyavi OCR series \cite{hameed_bridging_2026}, we engineered a dataset that is contamination-free by construction for the reading comprehension tracks by utilizing custom Optical Character Recognition to extract texts strictly from non-machine-readable physical archives. This ensures zero prior exposure during LLM pre-training.
+
+\subsection{Tokenization Inequality in Rich Morphology}
+Recent literature has increasingly correlated generative LLM failure with tokenization misalignment, particularly in morphologically rich and agglutinative languages. Standard subword tokenization algorithms (such as Byte-Pair Encoding and SentencePiece), predominantly optimized for high-resource, Latin-script corpora, impose substantial economic and performance penalties on non-Latin and long-tail languages \cite{ahia_all_2023, petrov_language_2023, rust_how_2021}. While Arnett et al. \cite{arnett_evaluating_2025} find that morphological boundary alignment accounts for minimal variance in downstream benchmark performance across 70 languages, extreme subword and byte fragmentation in underrepresented scripts introduces severe computational inflation and distorts autoregressive modeling (\textit{Broken Words, Broken Performance} \cite{pawar_broken_2025}). Parallel benchmarking initiatives for Extremely Low-Resource Languages (ELRLs), including IrokoBench \cite{adelani_irokobench_2025} and FormosanBench \cite{lin_formosanbench_2025}, have similarly documented that subword fragmentation drives severe downstream degradation in generative tasks across typologically diverse language families.
+
+To mitigate this tokenization disparity, recent research has explored morphology-aware vocabulary construction, such as MorphBPE \cite{asgari_morphbpe_2026} and Morpheme-Aware Subword Construction (MoVoC) \cite{teklehaymanot_movoc_2025}. Concurrently, structured pretokenization schemes such as SCRIPT-BPE \cite{land_bpe_2025}, morphology-driven byte routing like MYTE \cite{limisiewicz_myte_2024}, and natively token-free byte architectures such as Byte Latent Transformer \cite{pagnoni_byte_2025} and H-Net \cite{hwang_dynamic_2025} seek to lower the disproportionate encoding floor imposed on multi-byte non-Latin scripts. Dhivehi-Bench grounds these theoretical frameworks in empirical evaluation, demonstrating how standard subword tokenizers induce complete generative collapse when applied to the Thaana script.
+
+\subsubsection{Mathematical Implications for Transformer Self-Attention}
+While inflated token counts impose direct latency and computational costs, their catastrophic impact on autoregressive generation is rooted in the mathematical mechanics of the Transformer architecture itself. In standard auto-regressive LLMs, the computational complexity of the self-attention mechanism scales quadratically with sequence length, $O(N^2)$. Because the Thaana script resides within the Unicode block \texttt{U+0780--U+07BF}, each Thaana character requires two bytes in UTF-8 encoding. Consequently, a highly agglutinated Dhivehi word, transformed via sequential suffixation to denote plurality and grammatical case (e.g., \textit{rahthakuge} meaning ``of the islands''), consists of 10 individual Thaana codepoints. In standard subword tokenizers optimized for Latin scripts that allocate zero vocabulary entries to Thaana, this single 10-character semantic unit is shattered into 20 distinct, semantically meaningless byte-level tokens.
+
+By dedicating 20 distinct positional embeddings to encode a single word, the latent morphological and semantic boundaries are compromised. The self-attention layers must span a massively and artificially elongated sequence, quadratically scaling attention computation and increasing the risk of localized positional misalignment and attention dispersion. Instead of attending to higher-level syntactic relations (such as Subject--Object agreement), the attention heads are forced to dedicate representational capacity to modeling the deterministic byte-reconstruction of individual Thaana letters. We propose this mathematical sequence dilation as a strong mechanistic hypothesis for the ``Infinite Repetition Loops'' observed during our translation generation track: when navigating extended byte-fallback sequences, the decoder's autoregressive state loses its local position within the word boundary, falling into a local minimum where it deterministically emits identical sequences of UTF-8 fallback bytes indefinitely.
+
+\subsection{Prior Dhivehi NLP Infrastructure}
+Despite advancements in multilingual NLP, Dhivehi remains starkly under-resourced. Prior computational work has largely been restricted to narrow domains, such as early rule-based stemming, morphological tools \cite{mismaah_dhivehi_nlp_2023}, and acoustic Automatic Speech Recognition (ASR) pipelines leveraging the Mozilla Common Voice dataset \cite{ardila_common_2020, zahir_expanding_2024}. Recent efforts have also explored cross-lingual transfer learning from Sinhala to Dhivehi, capitalizing on their shared Indo-Aryan phylogenetic roots. In regional evaluation, initiatives such as Burmese-SAN \cite{aung_burmese-san_2026} and UrduBench \cite{shafique_urdubench_2026} have established precedents for morphology-aware task design and native human-in-the-loop curation for non-Latin scripts. 
+
+While recent Maldivian industry initiatives (such as DhivehiGPT) have stimulated local interest in conversational tools, Dhivehi has lacked a standardized, open-access academic benchmark. Dhivehi-Bench bridges this foundational gap by introducing the first formal, multi-task evaluation suite combining reading comprehension, contextual QA, and bidirectional translation, grounded in offline historical archives with unanimous native speaker consensus validation. Furthermore, by publicly releasing Dhivehi-Bench, we provide the first peer-reviewed, contamination-controlled, and openly accessible evaluation suite for the language.
+
+\section{Dhivehi-Bench Dataset Construction}
+
+The primary contribution of this work is the construction of a high-fidelity, culturally aligned, and strictly uncontaminated evaluation dataset. The curation process was heavily optimized to reflect authentic Dhivehi linguistic structures while preventing memorization artifacts. The end-to-end architecture of this dual-stream curation pipeline is illustrated in Figure \ref{fig:pipeline}.
+
+\begin{figure*}[t]
+\centering
+\resizebox{0.95\textwidth}{!}{
+\begin{tikzpicture}[
+    block/.style={rectangle, draw, fill=blue!10, text width=2.6cm, text centered, rounded corners, minimum height=1.2cm, font=\small},
+    block_mt/.style={rectangle, draw, fill=green!10, text width=2.6cm, text centered, rounded corners, minimum height=1.2cm, font=\small},
+    eval/.style={rectangle, draw, fill=orange!15, text width=2.6cm, text centered, rounded corners, minimum height=1.2cm, font=\bfseries\small},
+    line/.style={draw, -latex', thick}
+]
+% Stream 1: Offline Contamination-Controlled Track (MCQ & QA)
+\node [block] (archives) at (0, 1.2) {Physical Archives\\(Saruna DSpace)};
+\node [block] (ocr) at (3.5, 1.2) {Viyavi OCR\\\& Post-Editing};
+\node [block] (ensemble) at (7.0, 1.2) {Disjoint API\\Ensemble};
+\node [block] (comp_tracks) at (10.5, 1.2) {Comprehension Tracks\\(MCQ \& QA)};
+
+% Stream 2: Bilingual Translation Track (MT)
+\node [block_mt] (mt_source) at (0, -1.2) {Official Records\\(Constitution, News)};
+\node [block_mt] (mt_align) at (5.25, -1.2) {Bilingual Alignment\\\& Native Validation};
+\node [block_mt] (trans_track) at (10.5, -1.2) {Generative Track\\(Translation)};
+
+% Evaluation Cohort Node
+\node [eval] (eval) at (14.2, 0) {Open-Weights\\Evaluation Cohort\\(Gemma, Llama, Qwen)};
+
+% Paths for Stream 1
+\path [line] (archives) -- (ocr);
+\path [line] (ocr) -- (ensemble);
+\path [line] (ensemble) -- (comp_tracks);
+\path [line] (comp_tracks) -- (eval);
+
+% Paths for Stream 2
+\path [line] (mt_source) -- (mt_align);
+\path [line] (mt_align) -- (trans_track);
+\path [line] (trans_track) -- (eval);
+
+\end{tikzpicture}
+}
+\caption{The Dual-Stream Curation Pipeline of Dhivehi-Bench. To eliminate pre-training contamination in reading comprehension, source texts for MCQ and Contextual QA are digitized exclusively from offline physical archives via custom OCR and post-edited before distractor and QA generation via a disjoint API ensemble. The Translation track is independently curated from official bilingual records and verified by native speakers to isolate script-conditioned generative collapse.}
+\label{fig:pipeline}
+\end{figure*}
+
+\subsection{Anti-Contamination via Custom OCR Digitization}
+A pervasive flaw in contemporary LLM evaluation is data contamination---models inadvertently memorizing test sets that were scraped into massive pre-training corpora (e.g., Common Crawl). To guarantee true zero-shot evaluation, the foundational texts for our reading comprehension and question-answering tracks were sourced exclusively from the Maldives National University's Digital Repository (\textit{Saruna}). 
+
+To systematically mine this repository, we interfaced directly with the Saruna DSpace 8.0 REST API. We programmatically targeted the ``Dhivehi Language Studies'' collections, downloading decades of historical archives, essays, and legal treatises. Crucially, these archives consisted solely of scanned, non-machine-readable PDFs and historical manuscripts that have never been exposed to the clear web as raw text. 
+
+To digitize this data, we utilized the Viyavi Multi-Scale OCR series \cite{hameed_bridging_2026}, an open-source Vision-Language Model suite fine-tuned on the Qwen-2.5 architecture explicitly for the Thaana script. Thaana's right-to-left orientation and strict ``Diacritic Stacking''---where mandatory \textit{fili} (vowels) hang above and below base \textit{akuru} (consonants)---historically caused legacy OCR engines to fail. The Viyavi pipeline successfully mapped these non-linear spatial dynamics. In standalone OCR evaluations, the 3B model achieved an 8.0\% Character Error Rate (CER) on held-out historical manuscripts, drastically outperforming legacy engines. By running the scanned documents through this pipeline, we generated a novel digital corpus that substantially reduces the risk of data contamination. To ensure the highest fidelity for LLM benchmarking, all OCR outputs were subjected to exhaustive human post-editing to correct the residual 8.0\% recognition errors. This rigorous post-editing protocol guarantees high-fidelity textual contexts prior to question-answer pair creation. To ensure context fidelity, a secondary verification audit was conducted on a held-out sample of 300 lines. The audit measured a residual Character Error Rate (CER) of 1.4\% and a Word Error Rate (WER) of 3.2\%, reflecting the natural human variance and diacritic oversight inherent in manual Thaana post-editing, while confirming that the initial 8.0\% OCR noise was overwhelmingly resolved prior to question creation.
+
+\subsection{Task Taxonomy and Manual Curation}
+The benchmark is structured into three primary tracks to isolate distinct cognitive and mechanical capabilities:
+\begin{itemize}
+    \item \textbf{Multiple Choice Questions (MCQ):} This track isolates pure semantic reading comprehension. To construct this track, we engineered a dedicated, multi-stage hybrid curation pipeline to ensure absolute quality. First, the \textit{Dhivehi-English Alignment Engine} was deployed to draft initial questions, target answers, and three linguistically plausible distractors based exclusively on the OCR'd archival contexts. To explicitly prevent model-specific familiarity bias (i.e., a model scoring highly because it recognizes its own generated syntax), the Alignment Engine utilized a \textit{Multi-Model Ensemble Pipeline}. The drafting workload was distributed randomly across three frontier APIs: Gemini 3.8 Flash, GPT-4o, and Claude 3.5 Sonnet. This ensemble approach guarantees syntactic diversity. While our drafting ensemble (Gemini, GPT-4o, Claude) is predominantly disjoint from the open-weights evaluation cohort (Llama, Qwen), we explicitly acknowledge that Gemma 4 shares architectural, tokenizer, and distillation lineage with Google's Gemini models. Although this shared heritage could theoretically introduce subtle stylistic familiarity, item-level data contamination is precluded because all items are freshly extracted from offline historical archives, and 64.2\% of LLM-drafted candidate distractors were subsequently rewritten or replaced by human native annotators. 
+
+To manage the adjudication of these 2,070 items, we developed a specialized Streamlit Curation Interface. This UI presented human annotators with the source OCR context, the LLM-generated question, and the four options. Annotators were required to manually verify that the question was answerable solely using the provided context, rejecting any items that required external world knowledge (preventing data contamination shortcuts). Across candidate reviews, pre-consensus inter-annotator agreement was high (Cohen's $\kappa = 0.81$ on distractor plausibility). Furthermore, to counter potential stylistic LLM self-preference, native human annotators manually edited or completely replaced 64.2\% of the LLM-drafted distractors to ensure they contained morphologically similar ``trap'' words (e.g., using the same semantic root but an incorrect agglutinative case or tense suffix) to rigorously test fine-grained reading comprehension. Only items that passed this exhaustive manual rewrite phase were promoted to the final benchmark. Models are presented with a Dhivehi question and four options, evaluating their ability to parse Thaana logic without the burden of long-form generation.
+    \item \textbf{Contextual Question Answering (1,134 items):} This track tests extractive comprehension. Based on the OCR-digitized \textit{Saruna} texts, models are provided with a dense context paragraph and a question. The items span nine authentic academic collections, led by Dhivehi Language Studies (49.6\%, avg context 154.5 words), Literature \& Poetry (24.6\%, avg context 79.5 words), and Religion \& Islam (10.2\%, avg context 75.7 words), complemented by Shariah \& Law (4.1\%), Political Science (3.2\%), History (3.0\%), and Science. To enforce standalone benchmarking rules (ensuring the LLM could answer the question using \textit{only} the provided context), the extracted QA pairs were normalized and meticulously filtered through a custom-built Streamlit Curation UI by native annotators. To prevent context leakage and overrepresentation, strict density limits were enforced: a maximum of 3 QA pairs or MCQ items were derived from any single source paragraph.
+    \item \textbf{Translation (Sentence and Paragraph Levels):} To evaluate generative fluency, we manually curated an extensive English-to-Dhivehi translation dataset (2,016 pairs). The source material was meticulously gathered from official Maldivian Presidency press releases, the Maldivian Constitution, and professionally translated literature. While these official documents are publicly available (raising no ethical or copyright restrictions), they were distinctly segregated from the offline archival tracks to isolate domains where pre-training memorization was plausible. Regarding contamination, we explicitly acknowledge that while the MCQ and QA tracks are strictly insulated, the public-domain Translation track is excluded from our offline guarantee. However, this potential exposure actually strengthens our primary finding: despite the high likelihood that models encountered the English source texts during pre-training, they still exhibit catastrophic generative collapse when forced to output Thaana, underscoring that the failure is fundamentally a script-conditioned decoding pathology rather than a lack of semantic exposure. To manage the scale of this curation, we engineered a custom \textit{Dhivehi-English Alignment Engine} utilizing frontier LLMs to perform the initial semantic pairing of comparable bilingual documents, prior to rigorous human verification.
+\end{itemize}
+
+\subsection{Corpus Statistics}
+To provide a transparent overview of the benchmark's scale and complexity, Table \ref{tab:stats} details the quantitative properties of the curated datasets. The corpus comprises over 270,000 total words across the three tracks, deliberately weighted heavily toward dense Contextual QA to rigorously evaluate sustained semantic reasoning. 
+
+\begin{table*}[t]
+\centering
+\caption{Dhivehi-Bench Corpus Statistics.}
+\label{tab:stats}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Evaluation Track} & \textbf{Total Prompts} & \textbf{Total Source Words} & \textbf{Total Target Words} \\
+\midrule
+Multiple Choice (MCQ) & 2,070 & 54,626 & N/A (Discrete Choice) \\
+Contextual QA (SQuAD-style) & 1,134 & 142,662 (Context + Q) & 6,258 (Answer Spans) \\
+Translation & 2,016 & 42,143 (English) & 34,402 (Dhivehi) \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{Rigorous Quality Assurance}
+Given the scarcity of automated validation tools for Dhivehi, we relied on native human annotation to ensure linguistic accuracy and cultural authenticity. The entirety of the translation dataset and the OCR-extracted QA pairs were manually reviewed, corrected, and confirmed by an independent panel of three native Maldivian speakers. All annotators completed formal secondary education in Dhivehi (where Dhivehi grammar, literature, and orthography are taught as compulsory national curriculum subjects through secondary school). Given the sensitivity of diacritic placement, we did not rely on majority-voting; instead, items were only included in the final benchmark if they achieved Unanimous Consensus (100\% Inter-Annotator Agreement) across all three native speakers, ensuring the benchmark reflects natural, grammatically sound, and culturally authentic Dhivehi.
+
+\section{Evaluation Methodology and Baselines}
+To benchmark Dhivehi-Bench, we selected a rigorous cohort of purely open-weights models to ensure maximal reproducibility and to eliminate API-based evaluation asymmetries. We deliberately chose Gemma 4 (31B) \cite{team_gemma_2026} as the strongest deployable open-weight model for consumer hardware, alongside Llama 3.1 (70B) \cite{grattafiori_llama_2024} and Qwen 2.5 (72B) \cite{qwen_qwen25_2025} as widely-deployed, highly capable baselines that dominate the global open-source ecosystem. By restricting our baseline to open-weights architectures, we guarantee that all comprehension evaluations (the MCQ track) are conducted using strict log-likelihood scoring rather than generative extraction, unifying the evaluation protocol. We deliberately exclude specialized massively multilingual machine translation (MT) systems, such as MADLAD-400 \cite{kudugunta_madlad-400_2023} or NLLB \cite{team_no_2022}, from our core baselines. While MADLAD-400 reports coverage of Dhivehi, NLLB does not; moreover, such systems lack the generalized instruction-tuning required to evaluate zero-shot MCQ reasoning or contextual QA, precluding a unified cross-task comparison. However, to calibrate translation difficulty, we evaluated MADLAD-400 (7B) on the EN$\rightarrow$DV track, achieving 6.8 BLEU and 38.2 chrF. While MADLAD-400's 38.2 chrF demonstrates that supervised MT architectures bypass the structural decoder-collapse seen in generalist LLMs, we note a critical caveat: MADLAD-400 was trained on web-crawled parallel data, making it highly susceptible to having memorized public web sources (like the Maldivian Constitution) present in our translation track. Nonetheless, its performance serves as a vital structural calibration point, sharpening our hypothesis that generative collapse is tied to the autoregressive decoding of out-of-vocabulary bytes.
+
+\subsection{EleutherAI Evaluation Harness and Log-Likelihood}
+To guarantee strict reproducibility and minimize prompt-engineering biases, the entire benchmark was executed using a custom implementation of EleutherAI's \textit{lm-evaluation-harness} \cite{gao_framework_2023}. 
+
+A critical methodological decision was the adoption of \textbf{Log-Likelihood Evaluation} for the MCQ track across all models. To bypass generative formatting errors and the risk of hallucinated reasoning loops, the harness calculates the raw log-likelihood probabilities of the model generating Options A, B, C, or D given the context. Because we restricted our evaluation entirely to open-weights models, we achieved a uniform mathematical scoring protocol without relying on brittle generative extraction heuristics. To control for length bias exacerbated by byte-level fallback, all MCQ log-likelihoods were length-normalized (utilizing \texttt{acc\_norm} in the EleutherAI harness). Option ordering was strictly randomized during inference to eliminate positional bias. In the raw curated gold set, the target answer keys exhibited a positional distribution of Option A: 46.81\%, Option B: 37.58\%, Option C: 14.78\%, and Option D: 0.82\%. This distribution was an operational artifact of the curation interface, which initialized candidate items with the correct answer in the first position (A); while human annotators frequently shuffled target answers into slots B and C when rewriting distractors, they rarely relocated them to D. Crucially, length-normalized log-likelihood scoring evaluates model probability across all options simultaneously without positional bias, ensuring our reported baseline scores remain unaffected. Furthermore, to safeguard downstream generative evaluations against an unmitigated Option-A majority-class heuristic (which would otherwise set a 46.81\% artificial performance floor), the released benchmark dataset programmatically rebalances option positions using a fixed seed ($\text{seed}=42$), establishing a uniform 25.0\% distribution across all four keys. All harness task definitions, prompt formatting templates, and evaluation runs were executed under fixed seeds ($\text{seed}=42$) and are bundled with the open-source release.
+
+\subsection{The Tokenization Tax: Byte-Fallback and Fertility Metrics}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=0.9\linewidth]{fig_tokenization.pdf}
+\caption{The Tokenization Tax. While an English concept encodes to a single token, its Dhivehi equivalent is shattered into 8 distinct byte-level tokens due to lack of Thaana vocabulary, destroying semantic boundaries.}
+\label{fig:tokenization}
+\end{figure*}
+
+To quantitatively prove that the generative collapse is driven by tokenization architecture rather than semantic incapacity, we conducted a rigorous vocabulary inspection and token fertility analysis across the open-weights cohort. We analyzed the tokenizer vocabularies across our evaluated models to measure explicit coverage for the Thaana script (the official Unicode block \texttt{U+0780}--\texttt{U+07BF}).
+
+We formally define the counting criterion: \textit{a vocabulary entry is classified as containing Thaana if and only if its decoded UTF-8 representation contains at least one codepoint in \texttt{U+0780}--\texttt{U+07BF}. A multi-character merge is defined as any single token whose decoded bytes represent two or more Thaana codepoints.} To ensure complete transparency and independent auditability, we ship the exact tokenizer inspection script in our companion repository (\texttt{scripts/verify\_tokenizers.py}), pinning model revisions (Gemma 4/2: \texttt{33c1930284}, Llama 3.1: \texttt{d04e592bb4}, Qwen 2.5: \texttt{d149729398}) and verifying both dynamically and against static registries.
+
+As reported in Table \ref{tab:tokenizer_vocab}, modern foundation LLM tokenizers exhibit a total absence of learned subword merges for Dhivehi. Gemma 4 employs a base SentencePiece unigram vocabulary of 256,000 tokens \cite{team_gemma_2026}; as documented in the Gemma 4 technical report, the output embedding and Multi-Token Prediction (MTP) projection layer is dimensioned to $d \times 262,144$ ($\approx 262,000$, $2^{18}$), padding the vocabulary for hardware accelerator efficiency. While Gemma 4 includes 42 isolated unigram characters and Qwen 2.5 \cite{qwen_qwen25_2025} includes 8 isolated single consonants, \textbf{neither model contains a single multi-character Thaana merge (0 merges)}. Llama 3.1 (128,256 tokens) \cite{grattafiori_llama_2024} contains zero Thaana tokens of any kind. 
+
+Because written Dhivehi orthography strictly mandates diacritic stacking---wherein every syllable attaches an obligatory vowel diacritic (\textit{fili}) above or below the base consonant---an isolated consonant cannot form even a monosyllabic word. Without multi-character merges (consonant + diacritic combinations or subword units), 100\% of continuous Dhivehi text forces a catastrophic out-of-vocabulary (OOV) byte-level fallback. In Llama 3.1 and Qwen 2.5, every single Thaana character is shattered into two individual UTF-8 byte tokens.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Tokenizer Architecture and Empirical Thaana Coverage Across Evaluated Models. A token is classified as Thaana if its decoded UTF-8 byte representation contains codepoints in \texttt{U+0780}--\texttt{U+07BF}. Across all evaluated models, multi-character Thaana merges are exactly zero, enforcing 100\% byte-fallback on continuous text.}
+\label{tab:tokenizer_vocab}
+\begin{tabular}{llcccc}
+\toprule
+\textbf{Model} & \textbf{Tokenizer Family} & \textbf{Base Vocab} & \textbf{Effective Vocab} & \textbf{Thaana Tokens} & \textbf{Multi-Char Merges} \\
+\midrule
+Gemma 4 (31B) & SentencePiece & 256,000 & 262,144\textsuperscript{*} & 42 & 0 \\
+Llama 3.1 (70B) & Tiktoken BPE & 128,000 & 128,256 & 0 & 0 \\
+Qwen 2.5 (72B) & Tiktoken BPE & 151,643 & 152,064 & 8\textsuperscript{\dag} & 0 \\
+\bottomrule
+\end{tabular}
+\vspace{1ex}
+\flushleft{\footnotesize \textsuperscript{*} The base SentencePiece unigram vocabulary is 256,000; the architectural embedding and projection layers are dimensioned to $d \times 262,144$ ($2^{18}$, $\approx 262\text{k}$) in the Gemma Technical Report \cite{team_gemma_2026}.\\
+\textsuperscript{\dag} Qwen 2.5 includes 8 isolated single-consonant characters without vowel diacritics (\textit{fili}); because written Dhivehi requires consonant-vowel combinations, continuous text requires 100\% byte fallback.}
+\end{table} 
+
+We calculated the Tokenization Tax Penalty by measuring token fertility (tokens per word) across the 2,016 parallel Dhivehi-English translation pairs. For English, Gemma 4 averages a highly efficient \textbf{1.28 tokens/word}. For Dhivehi, this skyrockets to \textbf{21.12 tokens/word}---imposing an extraordinary \textbf{16.50x tokenization penalty}. Similarly, Llama 3.1 exhibits a \textbf{15.00x penalty} (1.33 English vs. 20.00 Dhivehi tokens/word), and Qwen 2.5 exhibits a \textbf{14.56x penalty} (1.22 English vs. 17.80 Dhivehi tokens/word). 
+
+As illustrated in Figure \ref{fig:tokenization}, this extreme byte-level fragmentation explains the generative failure: while an English concept encodes into a single subword token, its Dhivehi counterpart is shattered into multiple semantically ungrounded byte tokens due to the total absence of Thaana merges. When prompted to generate a 100-word Dhivehi paragraph, the LLM decoder is forced to predict an autoregressive chain of over 2,000 mathematically distinct bytes. The attention mechanism rapidly loses the semantic horizon, causing the decoder to degrade into the infinite, hallucinatory repetition loops observed in Table \ref{tab:error}.
+
+\subsection{Unconstrained Evaluation Framework and Decoding Strategy}
+During our evaluation design, we observed that models frequently failed Dhivehi generation tasks not strictly due to linguistic ignorance, but due to severe tokenization inefficiencies. Because standard LLM tokenizers do not natively map Thaana characters, models rely on UTF-8 byte-level fallback, inflating a single Dhivehi word into dozens of tokens. To prevent this inflation from artificially triggering max-token truncation limits during evaluation, baseline tests were conducted in an unconstrained setting with generation limits extended to 8,192 tokens. 
+
+Crucially, all generative evaluations were conducted using greedy decoding (\(\text{Temperature} = 0.0\)) without strict stop-sequences. This deterministic setting guarantees that the observed ''Infinite Hallucination Loops'' (where models repeat the same phrase for thousands of tokens) are structural failures of the model's auto-regressive alignment rather than artifacts of high-temperature sampling.
+
+\subsection{Agglutinative Text Normalization}
+For the Contextual QA track, reporting exact match (EM) on morphologically rich languages is notoriously problematic. Our automated scoring pipeline stripped standard Latin punctuation but deliberately preserved Dhivehi \textit{fili} (diacritics). Consequently, we observed a massive gap between EM ($\sim$13\%) and Token F1 ($\sim$52\%). This discrepancy highlights a fundamental evaluation hurdle: models frequently extract the correct semantic root but attach a contextually misaligned morphological suffix, causing EM to fail while F1 accurately captures the partial semantic success. Specifically, an error taxonomy analysis on the Contextual QA track revealed that the majority of EM failures were driven by case-marking and definiteness suffix mismatches (e.g., extracting the base noun \textit{rah} instead of the inflected locative \textit{rashaku}), proving that agglutinative morphology heavily penalizes strict string matching.
+\subsection{Human Baseline Validation}
+To anchor the LLM evaluation metrics and establish an empirical ceiling for the dataset, we instituted a Human Baseline evaluation. A stratified sample of 200 items (100 MCQ, 100 Contextual QA) was evaluated independently by two native Maldivian speakers with formal secondary education in Dhivehi. Evaluators were presented with items in a blind evaluation setting without access to target answer keys or model outputs. Pre-adjudication inter-annotator agreement was high (Cohen's $\kappa = 0.85$, measuring agreement on answer correctness and exact match appropriateness). The 98.00\% MCQ accuracy is the mean of the two evaluators (Evaluator 1: 97.5\%, Evaluator 2: 98.5\%). Given that the dataset's inclusion criteria required unanimous consensus during curation, the theoretical human ceiling is 100\%. The final Human Baseline measured on this sample achieved 98.00\% for MCQ, 95.00\% F1 for Contextual QA, and 85.00\% Exact Match (EM). The 10\% gap between EM and F1 for native human readers highlights the natural morphological variance in Dhivehi suffixation, confirming that F1 is the optimal metric for generative comprehension. This baseline strongly confirms that Dhivehi-Bench is readily solvable by literate native speakers and that the current SOTA open-weights models (e.g., Gemma 4 at 74.98\%) have not yet saturated the benchmark.
+
+\subsection{Metrics}
+For generative tracks, alongside standard BLEU and chrF scores, we define a \textbf{Loop Rate} metric (defined as generating identical 4-grams $\geq50$ times) to quantify instances of severe generative collapse. Across the full 1,008-item English-to-Dhivehi evaluation track, Gemma 4 exhibits an aggregate 94.2\% Loop Rate (varying between 91\% on news and 98\% on constitutional law; Table \ref{tab:domain}), demonstrating that autoregressive breakdown pervades all evaluated registers.
+Performance on the MCQ track is evaluated via absolute accuracy, with 95\% confidence intervals estimated at $\pm 2.2\%$ worst-case given the sample size ($n=2,070$). For Contextual QA, we report both Exact Match (EM) and Token-level F1 scores, as F1 provides a more nuanced measure of semantic extraction in agglutinative languages. While we currently rely on Token F1 to capture partial matches, we recognize the limitations of strict Exact Match (EM). Future iterations of the benchmark will incorporate lightweight morphological normalization (e.g., Dhivehi-specific suffix-stripping for postpositions) for EM to better capture near-miss morphology. Translation fluency is evaluated using sacreBLEU \cite{post_call_2018} (signature: \texttt{nrefs:1|case:mixed|eff:no|tok:char|smooth:exp|version:2.3.1}) and chrF \cite{popovic_chrf_2015}. We note that \texttt{tok:char} produces character-tokenized BLEU, rendering these scores non-comparable with standard \texttt{tok:13a} literature; thus we lean on chrF as our primary generative metric, emphasizing character-level n-gram overlap which is highly suited for morphologically dense scripts. Furthermore, neural reference-based evaluation metrics such as COMET \cite{rei_comet_2020} cannot be reliably deployed for Dhivehi because standard cross-lingual foundation encoders (e.g., XLM-RoBERTa) omit the Thaana script entirely from their pretraining vocabularies.
+
+\section{Results and Discussion}
+
+\subsection{Benchmark Results}
+The baseline evaluation results on Dhivehi-Bench are presented in Table \ref{tab:results}. The data reveals a stark and consistent divergence between reading comprehension (MCQ) and generative ability (Translation) across all model families.
+
+\begin{table*}[t]
+\centering
+\caption{Dhivehi-Bench Baseline Evaluation Results for Open-Weights Models. Translation scores reflect EN$\rightarrow$DV (generating Thaana) and DV$\rightarrow$EN (generating English) to demonstrate Receptive Bilingualism. All MCQ evaluations are computed strictly via log-likelihood.}
+\label{tab:results}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{l c cc cc cc}
+\toprule
+& \textbf{MCQ} & \multicolumn{2}{c}{\textbf{Contextual QA}} & \multicolumn{2}{c}{\textbf{EN$\rightarrow$DV (Thaana)}} & \multicolumn{2}{c}{\textbf{DV$\rightarrow$EN (English)}} \\
+\cmidrule(lr){2-2} \cmidrule(lr){3-4} \cmidrule(lr){5-6} \cmidrule(lr){7-8}
+\textbf{Model (Parameters)} & \textbf{Acc (\%)} & \textbf{F1 (\%)} & \textbf{EM (\%)} & \textbf{BLEU} & \textbf{chrF} & \textbf{BLEU} & \textbf{chrF} \\
+\midrule
+\textit{Human Baseline ($n=200$ stratified)} & \textit{98.00} & \textit{95.00} & \textit{85.00} & \textit{--} & \textit{--} & \textit{--} & \textit{--} \\
+\midrule
+\multicolumn{8}{l}{\textbf{Gemma Family (Google)}} \\
+\quad Gemma 4 (31B) & \textbf{74.98} & \textbf{52.49} & \textbf{14.55} & 1.01 & \textbf{29.21} & \textbf{19.04} & \textbf{50.95} \\
+\midrule
+\multicolumn{8}{l}{\textbf{Llama Family (Meta)}} \\
+\quad Llama 3.1 (70B) & 46.00 & 46.06 & 13.00 & 1.01 & 18.50 & 10.98 & 38.40 \\
+\midrule
+\multicolumn{8}{l}{\textbf{Qwen Family (Alibaba)}} \\
+\quad Qwen 2.5 (72B) & 39.00 & 22.58 & 3.00 & 0.72 & 15.10 & 9.45 & 40.10 \\
+\quad Qwen 2.5 (7B) & 36.33 & -- & -- & -- & -- & -- & -- \\
+\bottomrule
+\end{tabular}%
+}
+\end{table*}
+
+\subsection{The Generative Disparity}
+Dhivehi-Bench successfully isolates a phenomenon consistent with \textit{receptive bilingualism} in human linguistics \cite{grosjean_neurolinguistics_1989}. As illustrated in Figure \ref{fig:gap}, modern open-weights models like Gemma 4 demonstrate robust semantic reading comprehension, having made massive generational leaps to achieve 74.98\% MCQ accuracy. They can effectively extract exact Dhivehi spans from context (averaging $\sim$52\% F1). However, when forced to generate novel Dhivehi text in the Translation (EN$\rightarrow$DV) track, performance collapses entirely. Open-weights models reliably fall into infinite hallucination loops (yielding BLEU scores of $\sim$1.0). This generative bottleneck aligns directly with recent findings in Omnilingual MT \cite{team_omnilingual_2026}, which independently documented that state-of-the-art multilingual models maintain robust receptive comprehension of long-tail languages while suffering catastrophic collapse during autoregressive target-script generation.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.85\linewidth]{fig_gap.pdf}
+\caption{The Generative Collapse: Open-weights models demonstrate high Receptive Comprehension (MCQ/QA) but completely fail at generating Thaana (EN$\rightarrow$DV BLEU).}
+\label{fig:gap}
+\end{figure*}
+
+\subsection{Cross-Domain Performance Variance}
+Evaluating model capabilities across diverse registers demonstrates substantial domain-dependent variance across both reading comprehension and translation tracks. In Contextual QA, stratifying Gemma 4 across its nine constituent collections reveals that while the model achieved its highest extraction fidelity on formulaic Shariah \& Law contexts (75.28\% F1, 30.43\% EM) and Political Science (62.30\% F1), performance dropped substantially on dense Literature \& Poetry (48.94\% F1, 11.51\% EM) and Art \& Culture (46.14\% F1) due to archaic metaphorical syntax and intricate agglutinative morphology.
+
+\paragraph{EN$\rightarrow$DV Generative Variance.}
+In target-script generation (EN$\rightarrow$DV), domain stratification directly influenced the severity of autoregressive breakdown (Table \ref{tab:domain}). The Constitution of the Maldives, characterized by an archaic, highly formalized legal register with dense Arabic-derived jurisprudence terminology and complex postpositional chains, posed the steepest challenge, triggering an extreme 98\% Loop Rate and a suppressed 27.80 chrF. Conversely, contemporary Presidential Press Releases yielded marginally improved generation (31.10 chrF, 91\% Loop Rate), while General Literacy and Wikipedia excerpts occupied an intermediate tier (29.50 chrF, 94\% Loop Rate). Across all domains, however, loop rates remained above 90\%, confirming that while register formality exacerbates decoder collapse, the underlying failure is fundamentally driven by the tokenization bottleneck across the entire language.
+
+\begin{table*}[t]
+\centering
+\caption{Generative Translation Variance by Domain (Gemma 4 31B)}
+\label{tab:domain}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Source Domain} & \textbf{EN$\rightarrow$DV (chrF)} & \textbf{Loop Rate} \\
+\midrule
+Maldivian Constitution (Legal) & 27.80 & 98\% \\
+Presidency Press Releases (News) & 31.10 & 91\% \\
+General Literacy / Wikipedia & 29.50 & 94\% \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\paragraph{DV$\rightarrow$EN Receptive Variance.}
+In reverse translation (DV$\rightarrow$EN), where models parse Dhivehi source text to generate English, performance exhibited a parallel but semantically grounded cross-domain disparity. The open-weights cohort attained substantially higher chrF and BLEU retrieval on contemporary press releases and modern literature than on Constitutional excerpts. This variance reflects vocabulary distribution: contemporary press releases frequently feature transliterated English proper nouns, international geopolitical entities, and standardized diplomatic phrasing that serve as latent semantic ``anchors'' for cross-lingual alignment. In contrast, the rigid syntax and specialized Arabic-derived vocabulary of the Constitution are vanishingly rare in general web-crawled pre-training corpora. This contrast underscores why multi-domain representation is essential in ELRL benchmarking: monolithic test sets over-indexing on modernized, anglicized registers artificially inflate apparent competence, obscuring failures on authentic national archives.
+
+\subsection{Directional Asymmetry in Translation (DV$\rightarrow$EN)}
+To empirically prove that this collapse is a failure of \textit{script-conditioned generation} rather than a lack of cross-lingual semantic understanding, we conducted a reverse translation experiment (DV$\rightarrow$EN) using Gemma 4 (31B). As visualized in Figure \ref{fig:asymmetry}, the results demonstrate a severe directional asymmetry: while generating Thaana (EN$\rightarrow$DV) resulted in a total generative collapse (1.01 BLEU, 29.21 chrF), generating English from Dhivehi inputs (DV$\rightarrow$EN) yielded a highly capable 19.04 BLEU and 50.95 chrF.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.85\linewidth]{fig_asymmetry.pdf}
+\caption{Directional Translation Asymmetry. Models reliably translate Dhivehi source text into English (DV$\rightarrow$EN), but fail to generate the reverse, proving latent receptive bilingualism.}
+\label{fig:asymmetry}
+\end{figure*}
+
+This directional contrast strongly supports the Receptive Bilingual hypothesis, echoing observations in low-resource non-Latin scripts such as Chakma \cite{chakma_chakmanmt_2026}, where severe directional performance asymmetries highlight that generation into complex non-Latin scripts represents a distinct, script-bound decoder bottleneck. The model possesses robust internal semantic mappings of Dhivehi (evidenced by its ability to translate it accurately into English), but its decoder lacks the localized auto-regressive alignment required to sustain coherent output in the Thaana script.
+
+\subsection{Qualitative Error Morphology: The Generative Collapse}
+While quantitative metrics indicate severe generative failure, a structured qualitative taxonomy is required to diagnose the underlying mechanical breakdown. We conducted a manual taxonomic coding of 100 failed translations across the open-weights cohort by two independent coders (inter-coder agreement Cohen's $\kappa = 0.82$). The failures uniformly collapsed into four distinct error classes:
+
+\begin{enumerate}
+    \item \textbf{Morphological Fragmentation (42\%):} The model correctly identifies the semantic root word but appends mathematically invalid or hallucinated Thaana diacritics, resulting in phonetically impossible sequences.
+    \item \textbf{Infinite Repetition Loops (31\%):} The model generates a semantically correct preamble (usually 3-5 words) but entirely loses positional alignment, repeating the final token indefinitely until hard-truncated by the 8,192 token limit.
+    \item \textbf{Arabic/Latin Script Mixing (18\%):} Due to Thaana's derivation from Arabic, the model frequently falls back to Arabic orthography (e.g., substituting the Thaana \textit{Javiyani} for the Arabic \textit{Jeem}) or injects raw English subwords into the Dhivehi syntax.
+    \item \textbf{Semantic Drift (9\%):} The model outputs grammatically valid Thaana, but the content entirely ignores the source prompt, generating unrelated Wikipedia-style facts about the Maldives.
+\end{enumerate}
+
+As demonstrated in Table \ref{tab:error}, when prompted to translate complex text, Gemma 4 (31B) exhibits a cascading failure of Script Mixing followed immediately by an Infinite Repetition Loop. This confirms that while the model's self-attention layers can parse Thaana inputs (evidenced by the 74.98\% MCQ score and high DV$\rightarrow$EN translation accuracy), its generative decoder lacks the localized auto-regressive stability required to sustain coherent Thaana output.
+
+\begin{table*}[t]
+\caption{Taxonomic Failure Example: Gemma 4 (31B) exhibiting Script-Mixing and Repetition Loops. (Text romanized to comply with pdflatex UTF-8 typesetting constraints).}
+\label{tab:error}
+\begin{tabular}{p{0.15\linewidth} p{0.8\linewidth}}
+\toprule
+\textbf{Source (EN)} & 2. has been convicted of a criminal offence and is serving a sentence of more than twelve months; \\
+\midrule
+\textbf{Ground Truth} & 2. Jinaa'ee kusheh kurikan saabithuve baara masduvahashvure dhigu muddhathehge hukumeh thanfeezukuramundhaa meehaku kamugaivun. \\
+\midrule
+\textbf{Gemma 4} & 2. [Arabic: jiim]-naa'ee and varimajuroomukurevifaivaairu, adhi han-recovered han-recovered han-recovered... \textit{[Repeats for 8,000+ tokens]} \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{Dynamic Decoding and Few-Shot In-Context Ablations}
+A critical question arises from the severe generative collapse observed in the open-weights models: Is the morphological fragmentation and infinite looping a fundamental failure of the Thaana script representation, or merely an artifact of deterministic (greedy) decoding? To scientifically isolate this pathology, we conducted targeted ablations on a 50-item stratified subset of the Translation track using Gemma 4 (31B).
+
+We evaluated three configurations:
+\begin{enumerate}
+    \item \textbf{Baseline (Greedy Decoding)}: Temperature = 0.0, Repetition Penalty = 1.0.
+    \item \textbf{High Repetition Penalty}: Temperature = 0.0, Repetition Penalty = 1.2. This tests whether explicitly penalizing previously emitted UTF-8 bytes forces the decoder to break out of the hallucinatory loop and recover grammatical syntax.
+    \item \textbf{Few-Shot Prompting (3-Shot In-Context Learning)}: Standard zero-shot evaluation relies heavily on the model's pre-trained alignment. To test whether the models possess latent semantic circuitry for Dhivehi that simply requires activation, we injected three perfectly aligned, gold-standard English-to-Dhivehi translation pairs directly into the context window prior to the inference task. If the model is capable of in-context learning for the Thaana script, these few-shot examples should anchor the attention mechanism and help prevent generative collapse.
+\end{enumerate}
+
+The quantitative results of this ablation (Table \ref{tab:ablation}) confirm the severity of the tokenization tax. The Greedy baseline achieved a chrF of 29.21 with a 94\% loop rate (outputs hitting maximum token limits due to infinite repetition). Applying a severe Repetition Penalty (1.2) successfully suppressed the loop rate to 12\%, but failed to rescue the translation quality (25.14 chrF). Rather than generating coherent Dhivehi, the penalty forced the model to emit non-repeating random Thaana characters or switch scripts entirely to Arabic. Similarly, 3-Shot in-context learning provided minor structural gains (31.40 chrF) but ultimately succumbed to the same fragmentation. These metrics strongly suggest that the generative collapse is not a hyperparameter artifact, but a fundamental structural failure of the LLM decoder when forced to emit out-of-vocabulary, byte-level agglutinative sequences.
+
+\begin{table*}[t]
+\centering
+\caption{Translation Ablation Results (n=50 subset, Gemma 4 31B). *95\% CIs approx $\pm 3.5$ chrF.}
+\label{tab:ablation}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Configuration} & \textbf{chrF} & \textbf{BLEU} & \textbf{Loop Rate} \\
+\midrule
+Greedy (Temp 0.0, Pen 1.0) & 29.21 & 1.01 & 94\% \\
+Rep. Penalty (Temp 0.0, Pen 1.2) & 25.14 & 0.85 & 12\% \\
+3-Shot (Temp 0.0, Pen 1.0) & 31.40 & 1.15 & 88\% \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{Ablation: Romanized Transliteration and Script Isolation}
+\label{sec:ablation-romanized}
+To definitively isolate whether the observed generative collapse is a failure of semantic language comprehension or a strictly \textit{script-conditioned} decoding pathology, we conducted a targeted ablation study utilizing Romanized Dhivehi (Latin transliteration). In this ablation, Gemma 4 (31B) was prompted to translate English source texts into Dhivehi, but was explicitly constrained to output the response using the Latin alphabet (standardized via the official Mal\'{e} Latin transliteration scheme; full character mapping detailed in Appendix B). Evaluated quantitatively against a transliterated reference set, this configuration achieved a 22.40 chrF score and an apparent rise in BLEU score from 1.01 to 12.45.
+
+It is essential to clarify that neither raw chrF nor BLEU scores are directly comparable across different scripts. Because chrF evaluates character $n$-gram $F$-scores against ground-truth references within each respective script, the 29.21 chrF in Thaana is artificially inflated by repetitive character generation within infinite hallucinatory loops (which repeatedly match frequent consonants and common vowel diacritics). Conversely, the 22.40 chrF in Romanized Latin reflects diverse, non-repeating generation with natural lexical variance against Latin-transliterated references. Similarly, BLEU cannot be directly compared across scripts because Thaana generation was evaluated using character-tokenized BLEU (\texttt{tok:char}), whereas Romanized generation utilizes standard word-level tokenization. While the numerical rise to 12.45 BLEU indicates coherent lexical production against transliterated gold references, the primary, load-bearing empirical evidence of decoder recovery is not cross-script metric magnitude, but the decisive elimination of generative collapse: the Loop Rate plummeted from 94\% to 0\% across the 50-item ablation subset.
+
+Remarkably, removing the Thaana script entirely eliminated infinite repetition loops and severe morphological fragmentation. The residual errors primarily comprised standard lexical substitutions and minor grammatical agreement mismatches rather than catastrophic decoding collapse. The model successfully generated coherent, syntactically valid Dhivehi sentences in Romanized form. This ablation provides the strongest empirical evidence for our Receptive Bilingualism hypothesis: the latent semantic representation of Dhivehi is robustly intact within the model's parameters. The 1.01 BLEU failure in the primary Translation track is fundamentally a \textit{typographical and tokenization-induced bottleneck} at the decoder level when forced to emit Thaana Unicode codepoints under severe subword fragmentation.
+
+\section{Limitations}
+\label{sec:limitations}
+While Dhivehi-Bench establishes an empirical foundation for evaluation in an Extremely Low-Resource Language, several methodological and architectural limitations warrant explicit discussion:
+
+\paragraph{Multimodal Pre-Training and Zero-Shot OCR Bounds.}
+A potential concern in offline archival extraction is that frontier open-weights architectures (such as Gemma 4) are natively multimodal vision-language models capable of optical document processing. If unindexed historical scans had been ingested during multimodal pre-training, visual contamination could theoretically undermine evaluation integrity. However, general-purpose vision-language models lack native tokenization and visual pre-training for the Thaana script. Without domain-specific OCR fine-tuning, zero-shot visual transcription suffers from severe breakdown on historical Thaana typography \cite{hameed_bridging_2026}: models frequently omit diacritics, confuse right-to-left cursive graphemes, hallucinate Arabic or Latin characters, and fail on orthographic subtleties such as the unvoweled \textit{Hus Noonu} (which carries no diacritic and is phonetically conditioned by context). This fundamental zero-shot failure is precisely what necessitated developing the specialized Viyavi OCR model \cite{hameed_bridging_2026} (which achieved an 8.0\% CER before human post-editing reduced it to 1.4\% CER). Because generalist multimodal architectures cannot reliably parse or extract unprocessed Thaana manuscripts in an unaligned zero-shot setting, inadvertent visual pre-training memorization of these offline historical archives is highly improbable.
+
+\paragraph{Register Skew and Dialectal Coverage.}
+To enforce strict contamination controls, our reading comprehension tracks were digitized exclusively from offline historical archives, legal statutes, and academic publications. Consequently, the corpus exhibits a register skew toward formal, literary, and classical Dhivehi syntax. While this design is essential for testing complex syntactic parsing and preventing web-scraping leakage, the benchmark does not encompass colloquial conversational Dhivehi, informal SMS-style transliterations, or distinct regional dialects (e.g., the southern dialects of Huvadhoo, Fuvahmulah, and Addu, which exhibit substantial phonological and lexical divergence from standard Mal\'{e} Dhivehi).
+
+\paragraph{Public-Domain Status of the Translation Track.}
+Unlike the OCR-digitized reading comprehension corpus, the bilingual parallel corpora utilized for the Machine Translation track were derived from the Constitution of the Maldives and official governmental communiqu\'{e}s. While official state records are in the public domain and provide authoritative, professional translations, public-domain text carries an inherent theoretical risk of prior pre-training exposure. However, the catastrophic failure of open-weights models in EN$\rightarrow$DV generation (BLEU $\approx$ 1.01, with an aggregate 94.2\% Loop Rate across the full track and 94\% on the ablation subset) confirms that models retain zero verbatim memorization of these parallel sequences. Nonetheless, future iterations of the benchmark should incorporate newly commissioned, copyright-held contemporary translations.
+
+\paragraph{Inferential Nature of the Attention Dilation Hypothesis.}
+While our Romanized transliteration ablation (\S\ref{sec:ablation-romanized}) decisively demonstrates that generative collapse is script-conditioned rather than semantic (reducing loop rates from 94\% to 0\% on the ablation subset), our mechanistic explanation---linking quadratic attention scaling and byte-fallback to attention dispersion and infinite repetition loops---remains inferential. Conclusive causal validation requires internal mechanistic interpretability studies, such as attention map probing, logit lens tracking, and direct experimental interventions with vocabulary expansion or dedicated byte-to-chunk architectures (e.g., ByT5 \cite{xue_byt5_2022} and Byte Latent Transformer \cite{pagnoni_byte_2025}).
+
+\section{Conclusion and Future Work}
+In this paper, we introduced Dhivehi-Bench, the first meticulously curated, multi-task, and contamination-mitigated evaluation benchmark for the Maldivian language (Dhivehi). By combining custom OCR digitization of offline historical archives with rigorous multi-stage native post-editing and consensus validation, we established an uncompromised evaluation foundation across multiple-choice reasoning, contextual QA, and bidirectional translation. Our baseline evaluations on leading open-weights models reveal a striking performance dichotomy: while models demonstrate significant receptive comprehension in the Thaana script (achieving up to 74.98\% MCQ accuracy), their generative fluency in Thaana collapses entirely (EN$\rightarrow$DV BLEU $\approx$ 1.01 with a 94.2\% full-track loop rate). Our Romanized transliteration ablation isolates this breakdown to a script-conditioned decoding failure driven by extreme subword fragmentation and byte-fallback (reducing loop rates from 94\% to 0\% on the ablation subset).
+
+Future work will leverage Dhivehi-Bench to train script-specific tokenizers and evaluate parameter-efficient fine-tuning (PEFT) to bridge the receptive-generative divide. Furthermore, exploring tokenizer-free byte-to-chunk architectures such as H-Net \cite{hwang_dynamic_2025} and Byte Latent Transformer \cite{pagnoni_byte_2025}, morphology-aware vocabulary construction schemes such as MorphBPE \cite{asgari_morphbpe_2026} and MoVoC \cite{teklehaymanot_movoc_2025}, and structured pretokenization boundaries like SCRIPT-BPE \cite{land_bpe_2025} and MYTE \cite{limisiewicz_myte_2024} will be critical to mitigating the tokenization tax without requiring full model retraining. Finally, applying dynamic, time-sensitive evaluation frameworks \cite{li_latesteval_2023} and systematic anti-contamination methodologies \cite{chen_benchmarking_2025} will ensure Dhivehi-Bench remains robust against future pre-training contamination as frontier language technologies evolve.
+
+\section{Data and Code Availability}
+The Dhivehi-Bench evaluation benchmark, including all 2,070 MCQ items, 1,134 Contextual QA pairs, and 2,016 translation pairs, is released on Hugging Face Datasets at \url{https://huggingface.co/datasets/ubaidhullah05/dhivehi-bench} under a CC-BY-NC 4.0 license. The evaluation harness, prompt templates, and the tokenizer verification script (\texttt{scripts/verify\_tokenizers.py}) are available in our GitHub repository at \url{https://github.com/Ubaidhullah/dhivehi-bench} under the MIT License. The repository and dataset will be made fully public upon publication.
+
+To ensure strict compliance with copyright law, we distribute only the highly transformed, derivative QA pairs and short context snippets, which fall under Fair Use for non-consumptive computational research. Official state communications are in the public domain and freely distributed. All evaluation harnesses and fertility analysis scripts are open-sourced under the MIT License to facilitate community reproducibility.
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+\section*{Appendix A: Prompt Templates}
+
+\textbf{Translation (DV$\rightarrow$EN):}
+\newline Translate the following Dhivehi text into English.
+\newline Dhivehi: [target\_text]
+\newline English:
+
+\vspace{1em}
+\textbf{Translation (EN$\rightarrow$DV):}
+\newline Translate the following English text into Dhivehi.
+\newline English: [source\_text]
+\newline Dhivehi:
+
+\vspace{1em}
+\textbf{Contextual QA:}
+\newline Read the following Dhivehi paragraph and answer the question in Dhivehi.
+\newline Context: [context]
+\newline Question: [question]
+\newline Answer:
+
+\vspace{1em}
+\textbf{Multiple Choice (MCQ):}
+\newline Question: [question]
+\newline A. [option\_a]
+\newline B. [option\_b]
+\newline C. [option\_c]
+\newline D. [option\_d]
+\newline Answer:
+
+\section*{Appendix B: Mal\'{e} Latin Transliteration Mapping}
+The Romanized transliteration ablation (\S\ref{sec:ablation-romanized}) adopted the standardized Mal\'{e} Latin orthographic mapping widely recognized in official administrative and educational contexts across the Maldives. Table \ref{tab:transliteration} documents the systematic phonetic correspondence for all primary consonants and vowel diacritics.
+
+\begin{table*}[h]
+\centering
+\small
+\caption{Official Mal\'{e} Latin Transliteration Scheme for Dhivehi (Thaana Script).}
+\label{tab:transliteration}
+\begin{tabular}{llcllc}
+\toprule
+\textbf{Thaana Consonant} & \textbf{Name} & \textbf{Latin} & \textbf{Thaana Diacritic} & \textbf{Name} & \textbf{Latin} \\
+\midrule
+Haa (\texttt{U+0780}) & Haa & h & Aba-fili (\texttt{U+07A6}) & Aba-fili & a \\
+Shaviyani (\texttt{U+0781}) & Shaviyani & sh & Aabaa-fili (\texttt{U+07A7}) & Aabaa-fili & aa \\
+Noonu (\texttt{U+0782}) & Noonu & n & Ibi-fili (\texttt{U+07A8}) & Ibi-fili & i \\
+Raa (\texttt{U+0783}) & Raa & r & Eebee-fili (\texttt{U+07A9}) & Eebee-fili & ee \\
+Baa (\texttt{U+0784}) & Baa & b & Ubu-fili (\texttt{U+07AA}) & Ubu-fili & u \\
+Lhaviyani (\texttt{U+0785}) & Lhaviyani & lh & Ooboo-fili (\texttt{U+07AB}) & Ooboo-fili & oo \\
+Kaafu (\texttt{U+0786}) & Kaafu & k & Ebe-fili (\texttt{U+07AC}) & Ebe-fili & e \\
+Alifu (\texttt{U+0787}) & Alifu & ' & Eybey-fili (\texttt{U+07AD}) & Eybey-fili & ey \\
+Vaavu (\texttt{U+0788}) & Vaavu & v & Obo-fili (\texttt{U+07AE}) & Obo-fili & o \\
+Meemu (\texttt{U+0789}) & Meemu & m & Oaboa-fili (\texttt{U+07AF}) & Oaboa-fili & oa \\
+Faafu (\texttt{U+078A}) & Faafu & f & Sukun (\texttt{U+07B0}) & Sukun & \textit{(stop/geminate)} \\
+Dhaalu (\texttt{U+078B}) & Dhaalu & dh & & & \\
+Thaa (\texttt{U+078C}) & Thaa & th & & & \\
+Laamu (\texttt{U+078D}) & Laamu & l & & & \\
+Gaafu (\texttt{U+078E}) & Gaafu & g & & & \\
+Gnaviyani (\texttt{U+078F}) & Gnaviyani & gn & & & \\
+Seenu (\texttt{U+0790}) & Seenu & s & & & \\
+Daviyani (\texttt{U+0791}) & Daviyani & d & & & \\
+Zaaviyani (\texttt{U+0792}) & Zaaviyani & z & & & \\
+Ttaviyani (\texttt{U+0793}) & Ttaviyani & t & & & \\
+Yaavu (\texttt{U+0794}) & Yaavu & y & & & \\
+Paviyani (\texttt{U+0795}) & Paviyani & p & & & \\
+Javiyani (\texttt{U+0796}) & Javiyani & j & & & \\
+Chaviyani (\texttt{U+0797}) & Chaviyani & ch & & & \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\end{document}

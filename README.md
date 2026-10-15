@@ -1,113 +1,134 @@
-# Dhivehi Bench
+# Dhivehi-Bench 🇲🇻
 
-**Dhivehi Bench** is a comprehensive project designed to create benchmark datasets for the Dhivehi language. It aims to support various Natural Language Processing (NLP) tasks, enabling better evaluation and development of Dhivehi language models.
+[![Hugging Face Datasets](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Datasets-yellow)](https://huggingface.co/datasets/ubaidhullah05/dhivehi-bench)
+[![License: MIT](https://img.shields.io/badge/Code%20License-MIT-blue.svg)](LICENSE)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/Data%20License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 
-<!-- TOC -->
-* [Dhivehi Bench](#dhivehi-bench)
-  * [Project Scope](#project-scope)
-  * [Sub-Projects](#sub-projects)
-    * [1. Translation Module](#1-translation-module)
-    * [2. MCQ Module](#2-mcq-module)
-    * [3. Context QA Module](#3-context-qa-module)
-<!-- TOC -->
+**Dhivehi-Bench** is the first comprehensive, contamination-mitigated evaluation benchmark designed for the Dhivehi language (written in the right-to-left Thaana script). By combining custom OCR digitization of offline historical archives with multi-stage human native post-editing and unanimous consensus verification, Dhivehi-Bench establishes an empirical foundation across three distinct tracks:
 
-## Project Scope
+1. **Multiple Choice Reasoning (MCQ):** 2,070 items testing semantic reading comprehension across 9 authentic academic domains.
+2. **Contextual Question Answering (Context QA):** 1,134 SQuAD-style extractive comprehension items derived from digitized national archives.
+3. **Bidirectional Translation:** 2,016 parallel sentence pairs (EN$\rightarrow$DV and DV$\rightarrow$EN) evaluating generative fluency and receptive bilingualism.
 
-The project consists of three distinct, highly-curated sub-modules, each focusing on a specific benchmark domain:
-
-1.  **Translation** (Completed)
-    -   **Completed**: 2,000 high-quality parallel samples.
-    -   **Source**: Presidency and independent news articles.
-    -   **Verification**: All samples have been manually verified and refined by skilled Dhivehi translators to ensure benchmark-grade accuracy.
-2.  **MCQ Question Answering** (Completed)
-    -   **Completed**: 2,070 multiple-choice questions for testing reasoning and knowledge.
-    -   **Source**: Extracted via Qwen2.5-VL OCR from MNU Digital Repository (Saruna) across 9 academic domains.
-    -   **Verification**: Categorized using semantic LLM classifiers and manually curated.
-3.  **Context-Based Question Answering** (Completed)
-    -   **Completed**: 1,134 high-quality SQuAD-style QA pairs spanning 303 unique documents.
-    -   **Source**: Extracted via Qwen2.5-VL OCR from diverse Dhivehi domains (History, Law, Essays) and manually curated/polished.
-    -   **Verification**: Manually verified via a custom curation UI to enforce standalone benchmarking rules.
+> **Note on Availability:** This repository and the associated Hugging Face dataset will be made fully public upon publication.
 
 ---
 
-## Sub-Projects
+## 🚀 Quickstart: Load from Hugging Face
 
-Each module is self-contained with its own scripts and `requirements.txt`.
+The full benchmark is hosted on Hugging Face Datasets: [`ubaidhullah05/dhivehi-bench`](https://huggingface.co/datasets/ubaidhullah05/dhivehi-bench).
 
-### 1. Translation Module
-
-Located in: `./translation/`
-
-This module focuses on creating a high-quality parallel corpus for English-Dhivehi translation.
-
-#### Dataset Details
-
-- **Size**: 2,000 parallel sentence pairs.
-- **Source**: News articles from the President's Office (Presidency) and independent news outlets.
-- **Quality Assurance**: Every pair has been manually verified and refined by skilled Dhivehi translators to ensure high semantic fidelity and grammatical correctness.
-
-#### Alignment Tool
-
-The project includes a custom **Dhivehi-English Alignment Engine** located in `./translation/dhivehi-english-alignment-engine/`. This tool uses Gemini models to assist in the initial semantic alignment of comparable documents before human review.
-
----
-
-### 2. MCQ Module
-
-Located in: `./mcq/`
-
-This module scrapes Dhivehi content for MCQ dataset generation.
-
-#### Setup
+You can load each evaluation track with the `datasets` Python library:
 
 ```bash
-cd mcq
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-pip install -r requirements.txt
+pip install datasets
 ```
 
-#### Data Source: Saruna (MNU Digital Repository)
+```python
+from datasets import load_dataset
 
-The primary data source is [Saruna](https://saruna.mnu.edu.mv), the Maldives National University's digital repository. It runs on DSpace 8.0 and provides an excellent REST API.
+# 1. Multiple-Choice Reasoning Track (2,070 items)
+mcq_dataset = load_dataset("ubaidhullah05/dhivehi-bench", "mcq")
+print("MCQ sample:", mcq_dataset["test"][0])
 
-**API Documentation:** https://saruna.mnu.edu.mv/server/api
+# 2. Contextual Question Answering Track (1,134 items)
+qa_dataset = load_dataset("ubaidhullah05/dhivehi-bench", "squad")
+print("QA sample:", qa_dataset["test"][0])
 
-Key endpoints:
-- `GET /server/api/core/collections/{uuid}` - Collection info
-- `GET /server/api/discover/search/objects?scope={uuid}` - Search within collection
-- `GET /server/api/core/items/{uuid}/bundles` - Item bundles
-- `GET /server/api/core/bitstreams/{uuid}/content` - Download file
-
-#### Scripts
-
-**Saruna Scraper (`scrapers/saruna_scraper.py`)**
-
-Downloads PDFs from a Saruna collection.
-
-```bash
-# Download 10 pages from Dhivehi Language Studies collection
-python scrapers/saruna_scraper.py ffb9e093-5a2b-42fa-a584-2aa19d7d5e7d --pages 10
-
-# Download all pages
-python scrapers/saruna_scraper.py ffb9e093-5a2b-42fa-a584-2aa19d7d5e7d --pages 0
-
-# Custom output directory
-python scrapers/saruna_scraper.py <collection_id> --pages 5 --output ./my_data
+# 3. Bidirectional Translation Track (2,016 parallel pairs)
+translation_dataset = load_dataset("ubaidhullah05/dhivehi-bench", "translation")
+print("Translation sample:", translation_dataset["test"][0])
 ```
-
-Find collection IDs by browsing https://saruna.mnu.edu.mv/communities - the UUID is in the URL.
 
 ---
 
-### 3. Context QA Module
+## 🔬 Reproducing the Tokenization Tax & Vocabulary Coverage
 
-Located in: `./context_qa/`
+Modern foundation LLMs exhibit severe generative breakdown on Dhivehi despite strong reading comprehension. As shown in Section 4.2 of our paper, this failure is rooted in tokenization architecture: modern LLM tokenizers contain **zero learned multi-character merges** for Thaana, shattering words into byte-level sequences.
 
-This module generates SQuAD-style reading comprehension datasets to evaluate Dhivehi language models.
+### Counting Criterion
+A vocabulary entry is classified as a Thaana-supported token if and only if its decoded UTF-8 byte representation contains at least one codepoint in the official Thaana Unicode block: **`U+0780` to `U+07BF`**. A multi-character merge is defined as any token whose decoded bytes represent two or more Thaana codepoints.
 
-#### Dataset Details
+### Run Verification Script
+To reproduce Table 2 from the paper with pinned tokenizer revisions:
 
-- **Size**: 1,134 SQuAD-style QA pairs based on 574 unique paragraphs.
-- **Source**: Extracted from various PDFs via Qwen2.5-VL and parsed locally.
-- **Quality Assurance**: Automatically scrubbed of hallucinated formatting, normalized using a robust Gemini polishing prompt, and meticulously verified via a manual Streamlit curation UI to enforce standalone benchmarking rules.
+```bash
+python3 scripts/verify_tokenizers.py
+```
+
+### Empirical Coverage (Paper Section 4.2 / Table 2)
+
+| Model | Tokenizer Family | Base Vocab | Effective Vocab | Thaana Tokens | Multi-Char Merges | Fallback Rate |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: |
+| **Gemma 4 (31B)** | SentencePiece | 256,000 | 262,144* | 42 | **0** | **100% (Fallback)** |
+| **Llama 3.1 (70B)** | Tiktoken BPE | 128,000 | 128,256 | 0 | **0** | **100% (Fallback)** |
+| **Qwen 2.5 (72B)** | Tiktoken BPE | 151,643 | 152,064 | 8† | **0** | **100% (Fallback)** |
+
+- `*` Gemma 4's base SentencePiece vocabulary is 256,000. In the Gemma Technical Report, the output projection matrix is dimensioned to $d \times 262,144$ ($2^{18}$, $\approx 262\text{k}$) in the Multi-Token Prediction (MTP) specification for TPU/GPU alignment.
+- `†` Qwen 2.5 contains 8 isolated single-consonant characters without vowel diacritics (*fili*); because continuous written Dhivehi requires vowel diacritics, all continuous text forces byte fallback.
+- **Key Result:** Across all three frontier models, learned multi-character Thaana merges are exactly **zero**, forcing 100% byte-level fallback that inflates token fertility up to **21.12 tokens/word** (a 16.5x penalty).
+
+---
+
+## 📁 Repository Structure & Sub-Projects
+
+```
+dhivehi-bench/
+├── mcq/                                 # MCQ track scraping, generation & curation
+│   ├── scrapers/saruna_scraper.py      # DSpace 8.0 REST API scraper for MNU Saruna
+│   └── data/                            # Curated MCQ splits
+├── context_qa/                          # Contextual QA track (SQuAD-style)
+│   └── data/                            # OCR-digitized archival QA pairs
+├── translation/                         # Translation track & alignment engine
+│   ├── dhivehi-english-alignment-engine/# Multi-stage LLM alignment pipeline
+│   └── data/                            # 2,016 parallel pairs (EN-DV / DV-EN)
+├── scripts/
+│   └── verify_tokenizers.py             # Reproducible tokenizer & vocabulary verification
+├── paper/
+│   ├── main.tex                         # Complete LaTeX manuscript
+│   ├── references.bib                   # BibTeX bibliographic entries
+│   └── fig_tokenization.pdf             # Tokenization tax diagram (Figure 2)
+└── README.md
+```
+
+### 1. Translation Module (`./translation/`)
+- **Dataset Size:** 2,016 parallel sentence and paragraph pairs.
+- **Sources:** Official Presidency communiqués, the Constitution of the Maldives, and professionally translated administrative literature.
+- **Quality Assurance:** Unanimous consensus across an independent panel of three native Maldivian speakers.
+- **Alignment Engine:** Custom pipeline using frontier LLM ensembles (`./translation/dhivehi-english-alignment-engine/`) for initial candidate alignment prior to manual verification.
+
+### 2. MCQ Module (`./mcq/`)
+- **Dataset Size:** 2,070 four-way multiple-choice items spanning 9 academic domains.
+- **Source:** Extracted from non-machine-readable historical archives at [Saruna](https://saruna.mnu.edu.mv) (Maldives National University DSpace repository) using custom Viyavi OCR.
+- **Scraper Usage:**
+  ```bash
+  cd mcq
+  python scrapers/saruna_scraper.py ffb9e093-5a2b-42fa-a584-2aa19d7d5e7d --pages 10 --output ./data
+  ```
+- **Distractor Hardening:** 64.2% of candidate distractors manually rewritten by native speakers with morphologically similar grammatical traps.
+
+### 3. Context QA Module (`./context_qa/`)
+- **Dataset Size:** 1,134 extractive SQuAD-style QA pairs over 574 unique archival contexts.
+- **Anti-Contamination:** Built exclusively on offline historical manuscripts digitized via custom OCR.
+- **Evaluation:** Evaluated using Exact Match (EM) and Token F1, accommodating Dhivehi's agglutinative morphology.
+
+---
+
+## 📜 Citation
+
+If you use Dhivehi-Bench in your research, please cite:
+
+```bibtex
+@article{dhivehibench2026,
+  title={Dhivehi-Bench: A Comprehensive Benchmark for Evaluating Large Language Models on the Maldivian Language},
+  author={Hameed, Ubaidhullah Abdul},
+  journal={ACM Transactions on Asian and Low-Resource Language Information Processing (TALLIP)},
+  year={2026}
+}
+```
+
+---
+
+## 📄 License
+- **Code & Scripts:** Licensed under the [MIT License](LICENSE).
+- **Benchmark Datasets:** Licensed under the [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/) license.

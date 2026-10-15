@@ -1,0 +1,352 @@
+[
+    {
+        "english": "An agreement was also signed for the construction of 50 housing units on the island.",
+        "target": "މި ރަސްމިއްޔާތުގައި ހިމެނިގެން، ރ. ދުވާފަރުގައި 50 ހައުސިންގް ޔުނިޓް ތަރައްޤީކުރުމުގެ މަޝްރޫޢުގެ އެއްބަސްވުމުގައި ސޮއިކުރެއްވުންވެސް އޮތެވެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "The child, Yunus Hussain Abdullah, died on July 28.",
+        "target": "މިދިޔަ ޖުލައި މަހު 28ގައި، ނިޔާވީ، ޔޫނުސް ޙުސައިން އަބްދުﷲއެވެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "Members of the People’s Majlis should be guided in their actions by considerations of national interest and public welfare foremost, and should not exploit their official positions in any way for their own benefit or for the benefit of those with whom they have special relations.",
+        "target": "ރައްޔިތުންގެ މަޖިލީހުގެ މެންބަރުން ޢަމަލުކުރާންވާނީ، ޤައުމީ މަޞްލަޙަތާއި ރައްޔިތުންގެ ލާބަޔާއި މަންފާއަށް އިސްކަންދީގެންނެވެ. އަދި އެއްވެސް މެންބަރަކު އެމީހެއްގެ ނުވަތަ އެމީހަކާ ޚާއްޞަ ގުޅުމެއް އޮތް އެހެން މީހެއްގެވެސް ޒާތީ މަޞްލަޙަތެއް ކުރިއެރުވުމަށް މަޤާމުގެ ބޭނުންކޮށްގެނެއް ނުވާނެއެވެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "Indeed, human logic and common sense compel countering the spread of these ideologies within the community.",
+        "target": "އިންސާނީ ހަމަބުއްދިން ވިސްނާއިރުވެސް، އިންސާނީ މުޖުތަމަޢެއްގައި ފަތުރަން ހެޔޮވާވަރުގެ ފިކުރުތަކެއް ނޫން.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "(e) The Supreme Court established as provided for in this Chapter, in formulating the principles applicable to the appeal process shall ensure that the following cases have the opportunity of appeal:",
+        "target": "(ބ) މި ބާބުގެ ދަށުން އުފައްދާ ސުޕްރީމްކޯޓަށް އިސްތިއުނާފު ކުރުމާބެހޭ އުޞޫލުތައް ކަނޑައެޅުމުގައި ތިރީގައިވާ މައްސަލަތައް އިސްތިއުނާފުކުރުމުގެ ފުރުޞަތު ދޭންވާނެއެވެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "Any transfer, sale, lease, release, mortgage (to any person) or destruction of, any property or assets owned by the State, and any such other agreement, shall only be entered into in accordance with law.",
+        "target": "ދައުލަތުގެ މިލްކުގައި ހިމެނޭ އެއްވެސް އެއްޗެއް އެއްވެސް ފަރާތަކަށް ދޭންވާނީ ނުވަތަ ވިއްކާންވާނީ ނުވަތަ ކުއްޔަށް ދޭންވާނީ ނުވަތަ ދޫކޮށްލާންވާނީ ނުވަތަ ރަހުނުކުރާންވާނީ ނުވަތަ ނައްތައިލާންވާނީ ނުވަތަ މިނޫންވެސް މިފަދަ ކަމަކާގުޅޭ އެއްބަސްވުމެއްގައި ސޮއިކުރާންވާނީ ޤާނޫނުގައިވާ ގޮތުގެމަތީންނެވެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "The Anti-Corruption Commission is an independent and impartial institution.",
+        "target": "އެންޓި-ކޮރަޕްޝަން ކޮމިޝަނަކީ ވަކިފަރާތަކަށް ބުރަނުވާ، މުސްތަޤިއްލު މުއައްސަސާއެކެވެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "At the function, the President appealed for a firm commitment to prioritising national interest at this momentous juncture, as the nation celebrates the inauguration of the Velana New Terminal and the 60th anniversary of the Maldives’ independence.",
+        "target": "އައު ޓަރމިނަލް ހުޅުވުމާއި، ދިވެހިރާއްޖޭގެ 60 ވަނަ މިނިވަން ދުވަސް އެކުގައި ފާހަގަކުރަމުންދާ މި ޚާއްޞަ ދަނޑިވަޅުގައި، ޤައުމު އިސްކުރުމުގެ ޢަޒުމު ކަނޑައެޅުމަށް ރައީސުލްޖުމްހޫރިއްޔާ އިލްތިމާސް ކުރެއްވިއެވެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "Our policies to preserve the independence of the Maldives and sustaining diplomatic relations while honouring the independence of other nations played an instrumental role in the recent election of one of our own to the presidency of the United Nations General Assembly, thus elevating our leverage on the international stage.",
+        "target": "އ.ދ.ގެ އާންމު މަޖިލީހުގެ ރިއާސަތަށް ރާއްޖެ އިންތިޚާބުވެ، ދުނިޔޭގެ ފެންވަރުގައި ބަސް ކިޔޭވަރުގެ ޤައުމަކަށް ރާއްޖެ ވެގެން މިދިޔައީ، ރާއްޖޭގެ މިނިވަންކަން ފުރިހަމައަށް ޙިމާޔަތްކުރެވޭ ގޮތަށް، އަދި ދުނިޔޭގެ އެހެން ޤައުމުތަކުގެ މިނިވަންކަމަށްވެސް ޙުރުމަތްތެރިކޮށްހިތާ ސިޔާސަތެއްގެ ދަށުން، ބައިނަލްއަޤްވާމީ ގުޅުންތައް ދަމަހައްޓަމުން އަންނާތީ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "It shall exercise its duties and responsibilities in accordance with the Constitution and laws enacted by the People’s Majlis.",
+        "target": "އެ ކޮމިޝަނުގެ ވާޖިބުތަކާއި މަސްއޫލިއްޔަތުތައް އަދާކުރާންވާނީ ޤާނޫނުއަސާސީ އާއި ރައްޔިތުންގެ މަޖިލީހުން ފާސްކުރާ ޤާނޫނާ އެއްގޮތްވާ ގޮތުގެމަތީންނެވެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "This especially impacts over 13,000 Maldivian employees in the tourism industry.",
+        "target": "ވަކިން ޚާއްޞަކޮށް، ފަތުރުވެރިކަމުގެ ސިނާޢަތުގެ 13,000 ދިވެހި މުވައްޒަފުންނަށްވާ ރަނގަޅު އަދި މާބޮޑު.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "Extremist ideologies and actions that are being propagated in our community in the name of Islam have no relation to Islam and are firmly refuted in its teachings.",
+        "target": "އިސްލާމްދީނުގެ ނަމުގައި، އަޅުގަނޑުމެންގެ ތެރޭގައި ފަތުރަމުން އަންނަ ހަރުކަށި ފިކުރުތަކާއި، ހައްދުފަހަނައެޅުމުގެ ޢަމަލުތަކަކީ، އެއްވެސް ގޮތަކުން އިސްލާމްދީނާ ގުޅުމެއް ނެތް ބާޠިލު ކަންތައްތަކެއް.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "Reduce the cost of electricity",
+        "target": "ކަރަންޓުގެ އަގު ހެޔޮކުރެވޭނެ",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "SME Digital has introduced a new financing product, “Vessel Financing”, to support small and medium enterprises operating in fishing, tourism, cargo, and logistics.",
+        "target": "އެސްއެމްއީ ޑިޖިޓަލްއިން ކުދި އަދި މެދުފަންތީގެ ވިޔަފާރިތަކުގެ ކަނޑު އުޅަނދުފަހަރާއި ގުޅުންހުރި ބޭނުންތަކަށް މާލީ އެހީތެރިކަން ފޯރުކޮށްދިނުމަށް، 'ވެސަލް ފައިނޭންސިން'ގެ ނަމުގައި އާ ފައިނޭންސިން ޕްރޮޑަކްޓެއް މިއަދު ތައާރަފުކޮށްފިއެވެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "The government banned Sangu within a year of its first publication, however, and Nasheed was arrested and jailed for the first of many times.",
+        "target": "\"ސަންގު\" މަޖައްލާއަށް އަހަރުވީތަނާ، ސަރުކާރުން އެމަޖައްލާ ނެރުން މަނާކުރައްވައި، ނަޝީދު ހައްޔަރުކުރެއްވިއެވެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "10‑year‑old Mariyam Rubyn Muaz performed on the show aired by Sri Lanka’s Sirasa TV, singing Roar by Katy Perry.",
+        "target": "ލަންކާގެ ސިރާސާ ޗެނަލުން ބްރޯޑްކާސްޓު ކުރަމުން އަންނަ އެ މުބާރާތުގައި، ފަނޑިޔާރުންގެ ޝައުގުވެރިކަން ހޯދި ދިވެހި ކުއްޖަކީ، 10 އަހަރުގެ މަރިޔަމް ރުބީން މުއާޒެވެ. އެ މުބާރާތުގައި ރުބީން ކިޔައިފައިވަނީ، ކޭޓީ ޕެރީގެ \"ރޯރް\" ލަވައެވެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "I assure you that this administration will do everything possible to maintain political collaboration.",
+        "target": "މިދެންނެވި ސިޔާސީ އެކުވެރިކަން ޙާޞިލު ކުރުމަށްޓަކައި މި ސަރުކާރަށް ކުރެވެންހުރި ހުރިހާ މަސައްކަތެއް ކުރާނެ ވާހަކަ ދަންނަވަން.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "to faithfully implement the provisions of this Constitution and the law, and to promote compliance by organs of the State and by the people;",
+        "target": "މި ޤާނޫނުއަސާސީ އާއި ޤާނޫނުގައި ކަނޑައަޅައިފައިވާ ކަންތައްތައް އިޚްލާސްތެރިކަމާއެކު ތަންފީޛުކޮށް، ދައުލަތުގެ މުއައްސަސާތަކުންނާއި ރައްޔިތުން ޤާނޫނުއަސާސީ އާއި ޤާނޫނާ އެއްގޮތަށް ޢަމަލުކުރުމަށް ބާރުއެޅުން.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "If no candidate obtains such majority, a run-off election must be held within twenty one days after the first election.",
+        "target": "ރިޔާސީ އިންތިޚާބަށް ކުރިމަތިލާ މީހުންގެ ތެރެއިން އެއްވެސް ކެންޑިޑޭޓަކަށް ފަންސާސް އިންސައްތައަށްވުރެ ގިނަ ވޯޓު ނުލިބިއްޖެނަމަ، އިންތިޚާބު ބޭއްވުނުތާ އެކާވީސް ދުވަހުގެ ތެރޭގައި އިންތިޚާބުގެ ދެވަނަ ބުރެއް ބާއްވަން ވާނެއެވެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "He reiterated that this initiative provides a model that other small island states can use to develop sustainably, by conserving eco-rich areas, phasing out single-use plastics, and rapidly transiting to renewable energy.",
+        "target": "މި މޭމުރުމުން ވާހަކަފުޅު ދައްކަވަމުން އެމަނިކުފާނު ވަނީ 'ކްލައިމެ ޓް ރެޒީލިއަންޓް އައިލެންޑް އިނީޝިއޭޓިވް' އަކީ ކުދި އެހެން ޖަޒީރާ ޤައުމުތަކަށް ވެސް، ދެމެހެއްޓެނިވި ގޮތެއްގައި ގުދުރަތީ ދިރުންތަކުން މުއްސަނދިވެފައިވާ ސަރަޙައްދުތައް ހިމާޔަތްކުރުމާއި އެއް ފަހަރު ބޭނުންކޮށްފައި އުކާލާ ޒާތުގެ ޕްލާސްޓިކް މަދުކުރުމަށާއި ތިމާވެށި ހިމާޔަތްކުރުމުގެ ގޮތުން އިޢާދަކުރަނިވި ހަކަތަ ބޭނުންކުރުންފަދަ ކަންކަންކުރުމުގައި ބޭނުންކުރެވިދާނެ ނަމޫނާ މޮޑެލްއެއްކަން ފާހަގަކުރައްވާފައެވެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "3. to carry out research, and to educate the public;",
+        "target": "3. އިންސާނީ ހައްޤުތަކާ ގުޅޭ އެކިއެކި ދިރާސާތައް ކުރުމާއި އާންމު ހޭލުންތެރިކަން އިތުރުކުރުވުން",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "The members of the Anti-Corruption Commission shall be paid such salary and allowances as determined by the People’s Majlis.",
+        "target": "އެންޓި-ކޮރަޕްޝަން ކޮމިޝަނުގެ މެންބަރުންނަށް މުސާރައާއި ޢިނާޔަތްތައް ކަނޑައަޅާނީ ރައްޔިތުންގެ މަޖިލީހުންނެވެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "He stated this while speaking at the press conference held at the President’s Office this morning, after the launch of the Measles and Rubella Vaccination Campaign.",
+        "target": "ޑޮކްޓަރ އަރުވިންދު މާތުރު މިހެން ވިދާޅުވީ ދިވެހިރާއްޖެއިން ހިމަބިހި ނައްތާލުމުގެ ޤައުމީ ކެމްޕެއިން އިފްތިތާޙްކޮށްދެއްވުމަށްފަހު ރައީސުލްޖުމްހޫރިއްޔާގެ އޮފީހުގައި މިއަދު ހެނދުނު ބޭއްވެވި ނޫސްވެރިންގެ ބައްދަލުވުމެއްގައި ވާހަކަފުޅުދައްކަވަމުންނެވެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "Siyam noted that Maldivians continue to recall the painful memories of the tsunami with deep emotions.",
+        "target": "ސުނާމީ ކާރިސާގެ ހިތި ހަނދާންތައް އަދިވެސް ދިވެހީންގެ ހިތްތަކުގައި ސިފަވަމުންދަނީ، ހިތާމައިގެ ގަދަފަދަ ޝުއުރުތަކާއެކު ކަމަށް ސިޔާމް ވިދާޅުވިއެވެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "Such declarations shall include the details of any other employment and obligations of such employment.",
+        "target": "އަދި މިގޮތުން ދޭ މަޢުލޫމާތުގައި އެމީހަކު އަދާކުރާ އެހެން ވަޒީފާތަކާއި އެ ވަޒީފާތަކުގެ ޒިންމާތައް ހިމަނާންވާނެއެވެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "It also focuses on developing local coaches and volunteers to ensure the program’s long-term impact and sustainability.",
+        "target": "އެ މަސައްކަތް ދެމެހެއްޓެނިވި ގޮތެއްގައި ކުރިއަށް ގެންދިއުމަށް، އެ ރަށުގެ ކޯޗުންނާއި ވޮލަންޓިއަރުން ތަމްރީނުކުރުމުގެ މަސައްކަތް ވެސް މި ޕްރޮގްރާމްގެ ތެރެއިން ކުރިއަށްދާނެ ކަމަށް އެ ކުންފުނިން ބުންޏެވެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "Positive changes that are not the most perfect but close to the best practice should be welcomed and encouraged by all",
+        "target": "އެންމެ ފުރިހަމަ ގޮތަށް ޢަމަލު ނުކުރެވުނު ނަމަވެސް ރަނގަޅު ގޮތާ ގާތްކުރާ ހެޔޮ ބަދަލުތަކަކީ އެކަމަށް ތަރުހީބުދީ ހިތްވަރުދޭންޖެހޭ ކަންކަމެވެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "International cargo services are now fully operational in regional ports across the Maldives.",
+        "target": "ރާއްޖޭގެ ސަރަޙައްދީ ބަނދަރުތަކަށް ބައިނަލްއަޤްވާމީ ކާގޯ ޚިދުމަތް ގަވާއިދުން ފެށިއްޖެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "President Dr Mohamed Muizzu has set a goal to generate 33 per cent of the Maldives electricity needs from renewable sources by 2028.",
+        "target": "2028 ވަނަ އަހަރުގެ ނިޔަލަށް، ރާއްޖޭގެ ކަރަންޓަށް ބޭނުންވާ 33 އިންސައްތައަކީ އިއާދަކުރަނިވި ވަސީލަތްތަކުން އުފައްދާ ކަރަންޓު ކަމަށް ހެދުމަށް، ރައީސުލްޖުމްހޫރިއްޔާ ޑޮކްޓަރ މުޙައްމަދު މުޢިއްޒު ވަނީ ޤައުމީ އަމާޒެއް ކަނޑައަޅުއްވާފައެވެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "The IMF estimates the Maldives to be among the top five economies globally expected to grow the most in 2022.",
+        "target": "އައި.އެމް.އެފް. އިން ލަފާކުރާ ގޮތުގައި، މި ހިނގާ 2022 ވަނަ އަހަރުވެސް އެންމެ ބާރަށް ކުރިއަރާނެ ކަމަށް ބެލެވޭ މުޅި ދުނިޔޭގެ 5 އިޤްތިޞާދުގެ ތެރޭގައި ދިވެހިރާއްޖެ ހިމެނޭ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "However, if getting prepared means obstructing governance, the Government and many other parties would come out in the defence of such actions with great passion.",
+        "target": "އެހެން ނަމަވެސް، ތައްޔާރުވުމަށްޓަކައި މިއަދު ކުރާން އޮތް ކަމަކީ، ސަރުކާރު ހިންގުމަށް ހުރަސް އެޅުމަށް މަސައްކަތްކުރުން ކަމަށް ދެކިއްޖެނަމަ، އެފަދަ ކަންކަމުގެ ދިފާޢުގައި ސަރުކާރާއި އަދި ކިތަންމެ ޕާޓީއެއް ނުކުންނާނީ ޖޯޝާއެކު.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "194. A member of the Human Rights Commission may resign from office by writing under his hand addressed to the President, and the office shall become vacant when the resignation is received by the President.",
+        "target": "194. ހިއުމަން ރައިޓްސް ކޮމިޝަނުގެ މެންބަރަކު މެންބަރުކަމުން އިސްތިޢުފާދޭން ބޭނުންވެއްޖެނަމަ، ސިޓީއަކުން އެކަން ބަޔާންކޮށް ރައީސުލްޖުމްހޫރިއްޔާއަށް ހުށަހަޅައި، އެ ސިޓީ ރައީސުލްޖުމްހޫރިއްޔާއަށް ލިބުމުން އެ މެންބަރަކު މެންބަރުކަމުން ވަކިވީއެވެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "work has begun for the houses that will be built in Thaa Madifushi;",
+        "target": "ތ. މަޑިފުށީގައި ގެދޮރު ޢިމާރާތް ކުރުމަށް ކަނޑައެޅި މަސައްކަތްވަނީ ފަށާފައި.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "Police again charged Arshad in December 2021, after seizing 119 kg of drugs in a special operation in Male' City.",
+        "target": "ފުލުހުން 2021 ވަނަ އަހަރުގެ ޑިސެމްބަރުމަހު މާލޭގައި ހިންގި ޚާއްސަ އޮޕަރޭޝަނެއްގައި، 119 ކިލޯގެ މަސްތުވާތަކެތި އަތުލައިގެން މައްސަލާގައި ވެސް އަރުޝަދުގެ މައްޗަށް މަސްތުވާތަކެތި ވިޔަފާރިކުރާ ކަމުގެ ތުހުމަތުކުރިއެވެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "Urwah bin Masoud went back to Quraysh and told them, O people of Quraysh, I have visited the kings of the world,",
+        "target": "ކޮންމެއަކަސް، އުރުވާ ބިން މަސްޢޫދަށް އެނބުރި މައްކާގެ އަހުލުވެރިންގެ ގާތަށްގޮސް، އެވެރިންނަށް ބުނި، \"އޭ ޤުރައިޝް ގެ އަހުލުވެރިންނޭވެ! އަހަރެން ދުނިޔޭގެ ރަސްކަލުންގެ އަރިހަށް ދިޔައީމެވެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "She stressed that at the core of these demands is the need for greater urgency and ambition in cutting carbon emissions, access to resources and funding for adaptation, and ensuring just transitions and that these demands should be heard, especially in the lead up to COP26.",
+        "target": "އަދި ޒުވާނުންގެ މި އެދުންތަކުގެ މައިގަނޑު އަސާސަކީ ޖައްވަށް ދޫކުރާ ވިހަ ގޭސްތައް މަދުކުރުމަށް އަވަސް ފިޔަވަޅުތަކެއް އަޅައިދިނުމަށާއި އެކަމަށް ބޭނުންވާ ވަސީލަތްތަކާއި އެޑަޕްޓޭޝަނަށް ބޭނުންވާ ފައިސާ ލިބޭގޮތަށް އޮތުމާއި އަދި މި ބަދަލުވާ މަރުޙަލާ ވީހާވެސް އޮމާންކަމާއި ހަމަހަމަކަމާއެކު ކުރިޔަށްދާގޮތަށް އޮތުމާއެކު ޚާއްޞަކޮށް ކޮޕް-26އަށް ތައްޔާރުވަމުންދާއިރު މިވާހަކަތައް އިއްވައިދިނުން ކަމަށް ވިދާޅުވިއެވެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "Conduct a nation-level training need assessment",
+        "target": "ވަޒީފާ ހުރި ދާއިރާތަކުން މީހުން ބިނާކުރުމަށް ބޭނުންވާ މައުލޫމާތު އެއްކޮށް، ފުރިހަމަ ޓްރެއިނިންގ ނީޑް އެނަލިސިސްއެއް ގައުމީ ފެންވަރުގައި ހެދޭނެ",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "1. the amendment of this Constitution, in accordance with the terms provided herein;",
+        "target": "1. މި ޤާނޫނުއަސާސީގައި ބަޔާންކުރި ގޮތުގެމަތީން ޤާނޫނުއަސާސީއަށް އިޞްލާޙުގެނައުން.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "We must never forget that political gain was not the sole factor behind every single attempt at compromising our independence.",
+        "target": "ދިވެހި ތާރީޚުން ހެކިދޭގޮތުގައި، ރާއްޖޭގެ މިނިވަންކަމަށް ގުޑުންއެރި ކޮންމެ ފަހަރަކުމެ، އެކަމެއް ކުރިމަތިވެފައިވަނީ، ހަމައެކަނި ސިޔާސީ މަންފާއެއް ލިބިގަތުމަށް ސިޔާސީ ފިކުރެއްގެ ތެރެއިން އުފެދިގެން އައި ކަންތައްތަކަކުން ނޫންކަން އަޅުގަނޑުމެންގެ ހަނދާނުގައި ބަހައްޓަންޖެހޭ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "The summit brings parties together to accelerate action towards the goals of the Paris Agreement and the UN Framework Convention on Climate Change.",
+        "target": "މި ސަމިޓަކީ ޕެރިސް އެގްރީމެންޓާއި، މޫސުމަށް އަންނަ ބަދަލުތަކާބެހޭ އ.ދ.ގެ ފްރޭމްވަރކް ކޮންވެންޝަން އޮން ކްލައިމެޓް ޗޭންޖްގައި ކަނޑައަޅާފައިވާ ލަނޑުދަނޑިތަކަށް ވާޞިލުވުމަށްޓަކައި ފިޔަވަޅުތައް އެޅުން އަވަސްކުރުމަށް ކަމާބެހޭ ހުރިހާ ފަރާތްތައް އެއްތަންކުރުމުގެ ގޮތުން ބާއްވާ ސަމިޓެކެވެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "Observing that the life of a complete Muslim is built on activity, she added that the diligent lifestyle and sound dietary habits of Muslims would help maintain the Maldives as a happy and healthy nation.",
+        "target": "ފުރިހަމަ މުސްލިމެއްގެ ދިރިއުޅުން ބިނާވެފައި އޮންނާނީ ހަރަކާތްތެރިކަމުގެ މައްޗަށްކަން ފާހަގަކުރައްވައި، މުސްލިމުންގެ މުރާލި ދިރިއުޅުމާއި ކެއިންބުއިމުގެ ހަރުދަނާ އާދަތަކުގެ ސަބަބުން ދިވެހި ޤައުމު ދުޅަހެޔޮ އުފާވެރި ޤައުމެއްގެ ގޮތުގައި ބޭއްވުމަށް ފަސޭހަވެގެންދާނެ ކަމަށްވެސް އެކަމަނާ ވިދާޅުވިއެވެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "In addition, we will be reclaiming Giraavaru lagoon and will provide 2,000 plots of land to Malé permanent residents.",
+        "target": "އަދި އޭގެއިތުރުން، ގިރާވަރު ފަޅު ހިއްކައި، އެ ބިމުންވެސް މަދުވެގެން 2,000 ގޯތި، މާލޭ ރަށްވެހިންނަށް ދޭނަން.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "To achieve this cooperation, I also assure you that, with the grace of God, we will extend our full support, or move away from any position that may be necessary in the larger interests of the nation.",
+        "target": "މިކަމުގައި އަޅުގަނޑުމެންގެ ފަރާތުން ބޭނުންފުޅުވާ އެއްބާރުލުމެއްވާނަމަ، އެ އެއްބާރުލުންދީ އަދި އެއްކައިރިވާންޖެހޭ ކަމެއްވާނަމަ މުޅި ޤައުމުގެ މަޞްލަޙަތު އިސްކުރުމަށްޓަކައި އިރާދަފުޅާއެކު މަސައްކަތް ކުރާނެ ކަމުގެ ފުރިހަމަ ޔަޤީންކަން އަރުވަން.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "Through efforts to provide these children with suitable family environments, 65 have been successfully placed in families so far.",
+        "target": "ދައުލަތުގެ ބެލުމުގެ ދަށުގައި ތިބޭ މިފަދަ ކުދީން ހެދިބޮޑުވުމަށް އެކަށޭނަ ރަނގަޅު ޢާއިލީ ވެށްޓެއްގެ ފުރުޞަތު ފަހިކޮށްދިނުމަށް ކުރެވުނު މަސައްކަތުގެ ތެރެއިން، މިހައިތަނަށް ޖުމުލަ 65 ކުދިންނަށް ވަނީ ޢާއިލީ ވެށްޓެއް ހޯދައިދެވިފައި.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "Answering the assertions against the Government not responding to the allegations posed by the audios, the Chief of Staff stated that the audio's origin is unknown and therefore cannot be determined as credible evidence.",
+        "target": "މި ތުހުމަތުތަކަށް ރައްދުދެއްވައި ވާހަކަފުޅު ދައްކަވަމުން ޗީފް އޮފް ސްޓާފް އަލްއުސްތާޛު ޢަލީ ޒާހިރު ވިދާޅުވީ ފެތުރޭ އޯޑިޔޯތަކާ އަދި ކުރެއްވި ތުހުމަތުތަކަށް ސަރުކާރުން ރައްދެއްދެއްވައި ވާހަކަދައްވާފައި ނުވަނީ އެއީ އެއްވެސް އަޞްލެއްނެތް ވާހަކަތަކަކަށް ވާތީކަމުގައެވެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "192. (a) The Human Rights Commission’s responsibilities and powers shall include the following:",
+        "target": "192. (ހ) ހިއުމަން ރައިޓްސް ކޮމިޝަނުގެ މަސްއޫލިއްޔަތުތަކާއި ބާރުތަކުގެ ތެރޭގައި އަންނަނިވި ކަންކަން ހިމެނެއެވެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "Destitute families (assessed): 50 (ministry-designated agency assessment)",
+        "target": "ނިކަމެތި ޢާއިލާތައް (އެސެސް ކުރެވިފައިވާ): 50 (މިނިސްޓްރީން ކަނޑައަޅާ އެޖެންސީއަކުން އެގޮތް ވަޒަންކޮށް ބަލާފައިވާ)",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "Many people in society have been plagued, in recent years, by ill-behaviour and lawlessness, more often than not the bitter outcome of so-called attempts at improving fundamental liberties and improving human rights.",
+        "target": "ފަރުދީ މިނިވަންކަމާއި އިންސާނީ ޙައްޤުތަކުގެ ނަމުގައި ގޮވައިލެވޭ ގޮވައިލުންތަކުން އުފެދުނު އޮއިވަރުގައި ޤައުމުގެ ގިނަބަޔަކު ޖެހި، މީގެކުރިން މިޤައުމު ދެކެފައިނުވާވަރުގެ އަޚުލާޤީ ބަލިމަޑުކަމެއް ވަނީ ފެތުރިފައި.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "Last year, more than 15,300 students received MVR 1.26 billion in financial assistance for higher education.",
+        "target": " ފާއިތުވި އަހަރު ޖުމުލަ 15,300 އަށްވުރެ ގިނަ ދަރިވަރުން، މަތީ ތަޢުލީމު ހާސިލުކުރުމަށް 1.26 ބިލިއަން ރުފިޔާގެ މާލީ އެހީ ވާނީ ދެވިފައި.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    },
+    {
+        "english": "At the Summit, the President highlighted that the Maldives takes its climate commitments seriously, and that it will continue to engage with our global partners to preserve biodiversity and address the climate emergency.",
+        "target": "މި ސަމިޓުގައި ވާހަކަފުޅުދައްކަވަމުން ރައީސުލްޖުމްހޫރިއްޔާ ވަނީ މޫސުމަށް އަންނަ ބަދަލުތައް ކުޑަކުރުމަށާއި، ބަޔޯޑައިވަރސިޓީ ދެމެހެއްޓުމުގައި ބައިނަލްއަޤްވާމީ ބައިވެރިންނާއެކު ރާއްޖެއިން މަސައްކަތްކުރާނެކަމަށާއި، މޫސުމީ ކަންކަމަށް ރާއްޖެއިން ވަރަށް ބޮޑު އަހައްމިއްޔަތެއް ދޭ ކަމުގައި ވިދާޅުވެފައެވެ.",
+        "greedy": "",
+        "repetition_penalty": "",
+        "few_shot": ""
+    }
+]

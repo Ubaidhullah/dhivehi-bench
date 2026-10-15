@@ -1,0 +1,502 @@
+[
+    {
+        "english": "The funeral was held this afternoon in Bangladesh, Dhaka.",
+        "target": "މި ޖަނާޒާ ބާއްވާފައިވަނީ މިއަދު މެންދުރު ބަންގްލަދޭޝްގެ ދާކާގައެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "President Dr Mohamed Muizzu has issued Presidential Decree No. 36/2025, amending Presidential Decree No. 2/2025 specifying the inhabited islands of the Maldives, to provide for the resettlement of residents of Hirimaradhoo to Hanimaadhoo, South Thiladhunmathi Atoll.",
+        "target": "ރައީސުލްޖުމްހޫރިއްޔާ ޑޮކްޓަރ މުޙައްމަދު މުޢިއްޒު، ތިލަދުންމަތީ ދެކުނުބުރީ ހިރިމަރަދޫގެ ރައްޔިތުން އެ އަތޮޅުގެ ހަނިމާދޫއަށް ބަދަލުކުރެއްވުމަށް ނިންމަވައި، ރައީސުލްޖުމްހޫރިއްޔާގެ ޤަރާރު ނަންބަރު 2/2025 (ދިވެހިރާއްޖޭގައި މީހުން ދިރިއުޅޭ ރަށްތައް ކަނޑައެޅުން) އަށް އިޞްލާޙު ގެންނަވައިފިއެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "The amendment facilitates the determination of the electoral constituency of Hirimaradhoo residents for the Local Council Elections and Women’s Development Committee Elections 2026, scheduled for 4 April 2026. As the resettlement is ongoing during the election period, Section 8(h) of the Elections General Act (Act No. 11/2008) applies, which provides that where the inhabitants of an island are in the process of being resettled to another island, such persons shall be deemed to be electors of the island to which they are being resettled. Accordingly, the decree designates Hanimaadhoo as the electoral constituency for residents of Hirimaradhoo, enabling the Elections Commission of the Maldives to prepare the Voters’ Registry accordingly.",
+        "target": "މި އިޞްލާޙު ގެނައުމުގެ ބޭނުމަކީ، 2026 އެޕްރީލް 4 ވަނަ ދުވަހު ބޭއްވުމަށް އިލެކްޝަންސް ކޮމިޝަނުން އިޢުލާނުކޮށްފައިވާ ލޯކަލް ކައުންސިލް އިންތިޚާބާއި އަންހެނުންގެ ތަރައްޤީއަށް މަސައްކަތްކުރާ ކޮމިޓީގެ އިންތިޚާބު 2026 ގެ ތާރީޚަކީ ހިރިމަރަދޫގެ ރަށްވެހިން އެ އަތޮޅުގެ ހަނިމާދޫއަށް ބަދަލުކުރުމުގެ މަސައްކަތް ސަރުކާރުން ކުރަމުންދާ މަރުޙަލާގެ ތެރޭގައި ހިމެނޭ ތާރީޚަކަށްވާތީ، ޤާނޫނު ނަންބަރު 2008/11 (އިންތިޚާބުތަކާބެހޭ ޢާންމު ޤާނޫނު) ގެ 8 ވަނަ މާއްދާގެ (އ) ގައި، އިލެކްޝަންސް ކޮމިޝަނުން ވޯޓުލުމުގެ ޙައްޤު ލިބިގެންވާ މީހުންގެ ރަޖިސްޓަރީ އެކުލަވައިލާއިރު، މީހުން ދިރިއުޅޭ އެއްވެސް ރަށެއް، ފަޅުރަށެއްގެ ގޮތުގައި ސަރުކާރުން ކަނޑައަޅައި، އެ ރަށުގެ ރަށްވެހިން އެހެން ރަށަކަށް ބަދަލުކުރާ ޙާލަތުގައި، އެފަދައިން ބަދަލުވީ ރަށުގެ ރަށްވެހިންގެ އިންތިޚާބީ ދާއިރާ ކަމުގައި އިލެކްޝަންސް ކޮމިޝަނުން ބަލަންވާނީ އެ މީހުން އަލަށް ބަދަލުކުރެވުނު ރަށްކަމަށް ބަޔާންކޮށްފައިވާތީ، ހިރިމަރަދޫގެ ރައްޔިތުންގެ އިންތިޚާބީ ދާއިރާއަކީ އެ އަތޮޅުގެ ހަނިމާދޫކަމުގައި ބެލުމަށް މަގުފަހިކޮށްދިނުމެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "The amendment has been made under the authority conferred on the President pursuant to Section 134(a) of the Decentralisation Act (Act No. 7/2010). Upon completion of the resettlement and registration of Hirimaradhoo residents in Hanimaadhoo, Hirimaradhoo will be declared an uninhabited island. The revised and updated list of inhabited islands has been published in the Government Gazette.",
+        "target": "އެގޮތުން ރައީސުލްޖުމްހޫރިއްޔާ މިއަދު އެކަށައެޅުއްވި ޤަރާރު ނަންބަރު 36/2025 އާއެކު، ދިވެހިރާއްޖޭގެ އިދާރީ ދާއިރާތައް ލާމަރުކަޒީ އުޞޫލުން ހިންގުމުގެ ޤާނޫނުގެ 134 ވަނަ މާއްދާގެ (ހ) އިން ރައީސުލްޖުމްހޫރިއްޔާއަށް ލިބިދޭ ބާރުގެ ދަށުން، ތިލަދުންމަތީ ދެކުނުބުރީ ހިރިމަރަދޫގެ ރައްޔިތުން އެ އަތޮޅުގެ ހަނިމާދޫގައި އާބާދުކޮށް ރަޖިސްޓަރީކޮށް ނިމުމުން، ތިލަދުންމަތީ ދެކުނުބުރީ ހިރިމަރަދޫއަކީ މީހުން ދިރިއުޅޭ ރަށެއް ނޫންކަމަށް ކަނޑައެޅުއްވުމަށް ނިންމަވައި، ދިވެހިރާއްޖޭގައި މީހުން ދިރިއުޅޭ ރަށްތައް ކަނޑައެޅުމަށް އެކަށައަޅައިފައިވާ ރައީސުލްޖުމްހޫރިއްޔާގެ ޤަރާރު ނަންބަރު 2/2025 (ދިވެހިރާއްޖޭގައި މީހުން ދިރިއުޅޭ ރަށްތައް ކަނޑައެޅުން) ގެ ޖަދުވަލުގައި ހިމަނައިފައިވާ ދިވެހިރާއްޖޭގައި މީހުން ދިރިއުޅޭ ރަށްތަކުގެ ލިސްޓުން ތިލަދުންމަތީ ދެކުނުބުރީ ހިރިމަރަދޫ އުނިކޮށް، އެ ލިސްޓު އަދާހަމަކޮށް، ޤަރާރުގެ ޖަދުވަލެއްގެ ގޮތުގައި އެ ލިސްޓު ވަނީ ހިމަނުއްވާފައެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "The amendment will take effect from the date on which the Government officially announces the completion of the resettlement and registration of Hirimaradhoo residents in Hanimaadhoo.",
+        "target": "މި އިޞްލާޙަށް ޢަމަލުކުރަން ފަށާނީ، ތިލަދުންމަތީ ދެކުނުބުރީ ހިރިމަރަދޫގެ ރައްޔިތުން އެ އަތޮޅުގެ ހަނިމާދޫގައި އާބާދުކޮށް ރަޖިސްޓަރީކޮށް ނިމުމާއެކު، އެ ކަން ސަރުކާރުން ޢާންމުކޮށް އިޢުލާނުކުރާ ތާރީޚުން ފެށިގެންނެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1791189780000'}, 'limit_source': 'openrouter_free_tier_per_minute', 'remedy_hint': 'Slow down requests to free models, or retry after the per-minute window resets.', 'provider_name': None}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "This Constitution guarantees to all persons, in a manner that is not contrary to any tenet of Islam, the rights and freedoms contained within this Chapter, subject only to such reasonable limits prescribed by a law enacted by the People’s Majlis in a manner that is not contrary to this Constitution.",
+        "target": "މި ބާބުގައި ބަޔާންކޮށްފައިވާ އެންމެހައި ޙައްޤުތަކާއި މިނިވަންކަން، އިސްލާމްދީނުގެ އަޞްލަކާ ޚިލާފުނުވާނޭ ގޮތުގެމަތީން ކޮންމެ މީހަކަށްމެ ލިބިގެންވާކަން މި ޤާނޫނުއަސާސީ ކަށަވަރުކޮށްދެއެވެ. އަދި މިއިން އެއްވެސް ޙައްޤެއް ނުވަތަ މިނިވަންކަމެއްގެ އެއްވެސް މިންވަރެއް ހިފެހެއްޓޭނީ މި ޤާނޫނުއަސާސީއާ ތަޢާރުޟްނުވާ ގޮތެއްގެމަތީން، ރައްޔިތުންގެ މަޖިލީހުން ފާސްކުރާ ޤާނޫނަކުންނެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1791189780000'}, 'limit_source': 'openrouter_free_tier_per_minute', 'remedy_hint': 'Slow down requests to free models, or retry after the per-minute window resets.', 'provider_name': None}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "Any such law enacted by the People’s Majlis can limit the rights and freedoms to any extent only if demonstrably justified in a free and democratic society.",
+        "target": "ރައްޔިތުންގެ މަޖިލީހުން ފާސްކުރާ ޤާނޫނަކުން ވެސް އެއިން ޙައްޤެއް ނުވަތަ މިނިވަންކަމެއްގެ އެއްވެސް މިންވަރެއް ހިފެހެއްޓޭނީ، މިނިވަން، ދީމިޤްރާޠީ މުޖްތަމަޢެއްގައި މިފަދަ ޙައްޤެއް ނުވަތަ މިނިވަންކަމެއް ހިފެހެއްޓިދާނެކަމަށް ޤަބޫލުކުރެވޭ މިންވަރަކަށެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1791189780000'}, 'limit_source': 'openrouter_free_tier_per_minute', 'remedy_hint': 'Slow down requests to free models, or retry after the per-minute window resets.', 'provider_name': None}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "1. the nature and character of the right or freedom;",
+        "target": "1. އެ ޙައްޤެއްގެ ނުވަތަ އެ މިނިވަންކަމެއްގެ ޒާތާއި ބާވަތް.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1791189780000'}, 'limit_source': 'openrouter_free_tier_per_minute', 'remedy_hint': 'Slow down requests to free models, or retry after the per-minute window resets.', 'provider_name': None}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "2. the purpose and importance of limiting the right or freedom;",
+        "target": "2. އެ ޙައްޤެއް ނުވަތަ އެ މިނިވަންކަމެއް ހިފެހެއްޓުމުގެ ބޭނުމާއި، މުހިންމުކަން.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "3. the extent and manner of limiting the right or freedom;",
+        "target": "3. އެ ޙައްޤެއް ނުވަތަ އެ މިނިވަންކަމެއް ހިފަހައްޓައިފައިވާ ގޮތާއި މިންވަރު.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1791189840000'}, 'limit_source': 'openrouter_free_tier_per_minute', 'remedy_hint': 'Slow down requests to free models, or retry after the per-minute window resets.', 'provider_name': None}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "4. the relationship between the limitation of the right or freedom and the importance of the right or freedom;",
+        "target": "4. އެ ޙައްޤެއް ނުވަތަ އެ މިނިވަންކަމެއް ހިފެހެއްޓި ހިފެހެއްޓުމާއި އެ ޙައްޤެއް ނުވަތަ އެ މިނިވަންކަމެއްގެ މުހިންމުކަމާ ހުރި ގުޅުން.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1791189840000'}, 'limit_source': 'openrouter_free_tier_per_minute', 'remedy_hint': 'Slow down requests to free models, or retry after the per-minute window resets.', 'provider_name': None}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "5. the extent to which the objective for which the right or freedom has been limited could have been achieved by limiting the right or freedom to a lesser degree;",
+        "target": "5. އެ ޙައްޤެއް ނުވަތަ އެ މިނިވަންކަމެއް ހިފަހައްޓައިފައިވާ މިންވަރަށްވުރެ ކުޑަކޮށް ހިފަހައްޓައިގެން ބޭނުންވާ މަޤްޞަދު ޙާޞިލްކުރެވިދާނެތޯ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1791189840000'}, 'limit_source': 'openrouter_free_tier_per_minute', 'remedy_hint': 'Slow down requests to free models, or retry after the per-minute window resets.', 'provider_name': None}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "6. the extent to which the right or freedom must be limited in order to protect the tenets of Islam, where the right or freedom has been limited pursuant to article (b).",
+        "target": "6. އެ ޙައްޤެއް ނުވަތަ އެ މިނިވަންކަމެއް ހިފަހައްޓައިފައިވަނީ މި މާއްދާގެ (ށ) ގެ ދަށުން ނަމަ، އިސްލާމްދީނުގެ އަޞްލުތައް ރައްކާތެރިކުރުމަށްޓަކައި އެ ޙައްޤެއް ނުވަތަ އެ މިނިވަންކަމެއް ކޮންމެހެން ހިފަހައްޓާންޖެހޭތޯ.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "1. the amendment of this Constitution, in accordance with the terms provided herein;",
+        "target": "1. މި ޤާނޫނުއަސާސީގައި ބަޔާންކުރި ގޮތުގެމަތީން ޤާނޫނުއަސާސީއަށް އިޞްލާޙުގެނައުން.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1791189840000'}, 'limit_source': 'openrouter_free_tier_per_minute', 'remedy_hint': 'Slow down requests to free models, or retry after the per-minute window resets.', 'provider_name': None}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "2. the enactment of legislation with regard to any matter, or the amendment or repeal of any law, which is not inconsistent with any tenet of Islam;",
+        "target": "2. އިސްލާމްދީނުގެ އަޞްލަކާ ޚިލާފުނުވާ ގޮތުގެމަތީން، ބޭނުންވެއްޖެ ކޮންމެ ކަމަކާ ބެހޭގޮތުން ޤާނޫނު ހެދުމާއި، ޤާނޫނަށް ބަދަލުގެނައުމާއި، ޤާނޫނު ބާޠިލްކުރުން.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1791189840000'}, 'limit_source': 'openrouter_free_tier_per_minute', 'remedy_hint': 'Slow down requests to free models, or retry after the per-minute window resets.', 'provider_name': None}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "3. the supervision of the exercise of executive authority and ensuring the executive authority is accountable for the exercise of its powers, and taking the steps required for ensuring the same;",
+        "target": "3. ވެރިކަން ހިންގުމުގެ ބާރުގެ ފަރާތުން ކުރާ ކަންތައްތައް ހިނގާނުހިނގާ ގޮތް ބެލުމާއި، ވެރިކަން ހިންގުމުގެ ބާރު ޖަވާބުދާރީކުރުވުން. އަދި މިކަންކަން ކުރުމަށްޓަކައި ޤާނޫނުއަސާސީއާއި ޤާނޫނުގައިވާ ގޮތުގެމަތީން ފިޔަވަޅުތައް އެޅުން.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1791189840000'}, 'limit_source': 'openrouter_free_tier_per_minute', 'remedy_hint': 'Slow down requests to free models, or retry after the per-minute window resets.', 'provider_name': None}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "4. the approval of the annual budget and any supplementary budget;",
+        "target": "4. ދައުލަތުގެ އަހަރީ ބަޖެޓާއި ސަޕްލިމެންޓަރީ ބަޖެޓް ފާސްކުރުން.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "5. the determination of matters relating to Independent Commissions and Independent Offices in accordance with law;",
+        "target": "5. މުސްތަޤިއްލު ކޮމިޝަންތަކާއި މުސްތަޤިއްލު މަޤާމުތަކާ ބެހޭގޮތުން ނިންމާންޖެހޭ ކަންތައްތައް ޤާނޫނުގައިވާ ގޮތުގެމަތީން ނިންމުން.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "6. the holding of public referendums on issues of public importance;",
+        "target": "6. ރައްޔިތުންނާ ގުޅޭ މުހިންމު ކަންތައްތަކުގައި ރައްޔިތުންގެ ޚިޔާލު ހޯދުމުގެ ޢާންމު ވޯޓު ނެގުން.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "7. the performance of all duties otherwise expressly required by this Constitution and by law.",
+        "target": "7. ރައްޔިތުންގެ މަޖިލީހުން އަދާކުރާނެކަމަށް ޤާނޫނުއަސާސީގައި ނުވަތަ ޤާނޫނުގައި ބަޔާންކޮށްފައިވާ މިނޫންވެސް ވާޖިބުތައް އަދާކުރުން.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "1. has a decreed debt which is not being paid as provided in the judgement;",
+        "target": "1. އަދާކުރާންޖެހޭ ސާބިތު ދަރަންޏެއް އޮތް މީހަކު ނަމަ، ޙުކުމާ އެއްގޮތަށް އެ ދަރަނި އަދާކުރަމުން ނުދާ މީހަކު ކަމުގައިވުން.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "2. has been convicted of a criminal offence and is serving a sentence of more than twelve months;",
+        "target": "2. ޖިނާއީ ކުށެއް ކުރިކަން ސާބިތުވެ ބާރަ މަސްދުވަހަށްވުރެ ދިގު މުއްދަތެއްގެ ޙުކުމެއް ތަންފީޛުކުރަމުންދާ މީހަކު ކަމުގައިވުން.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "3. has been convicted of a criminal offence and sentenced to a term of more than twelve months, unless a period of three years has elapsed since his release, or pardon for the offence for which he was sentenced;",
+        "target": "3. ޖިނާއީ ކުށެއް ކުރިކަން ސާބިތުވެ ބާރަ މަސްދުވަހަށްވުރެ ދިގު މުއްދަތެއްގެ ޙުކުމެއް ކުރެވިފައިވާ މީހަކު ނަމަ، އެ ޙުކުމް ތަންފީޛުކޮށް ނިމުނުތާ، ނުވަތަ ކަނޑައެޅުނު އަދަބު މަޢާފްކުރެވުނުތާ ތިން އަހަރު ނުވާ މީހަކު ކަމުގައިވުން.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "4. is a member of the Judiciary.",
+        "target": "4. ފަނޑިޔާރަކު ކަމުގައިވުން.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "President Dr. Mohamed Muizzu is the 8th President of the Republic of Maldives.",
+        "target": "ޑޮކްޓަރ މުޙައްމަދު މުޢިއްޒަކީ ދިވެހިރާއްޖޭގެ 8 ވަނަ ރައީސުލްޖުމްހޫރިއްޔާއެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "He took his oath of office on 17th November 2023.",
+        "target": "ރައީސުލްޖުމްހޫރިއްޔާކަމުގެ ޤާނޫނީ ހުވައި އެމަނިކުފާނު ކުރެއްވީ 17 ނޮވެމްބަރު 2023 ގައެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "He received his Doctor of Philosophy (PhD) in Civil Engineering from University of Leeds, United Kingdom.",
+        "target": "ސިވިލް އިންޖީނިއަރިންގގެ ދާއިރާއިން، ޑޮކްޓަރ އޮފް ފިލޯސަފީ (ޕީއެޗްޑީ) އެމަނިކުފާނު ޙާޞިލްކުރައްވާފައިވަނީ އިނގިރޭސިވިލާތުގެ ލީޑްސް ޔުނިވަރސިޓީގައެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1791189840000'}, 'limit_source': 'openrouter_free_tier_per_minute', 'remedy_hint': 'Slow down requests to free models, or retry after the per-minute window resets.', 'provider_name': None}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "During his academic life, he always stood out as a studious, well-versed student who achieved academic excellence, leading up to his doctorate.",
+        "target": "ތަޢުލީމީ ޙަޔާތުގައި، އިބްތިދާއީ މަރުޙަލާއިން ފެށިގެން ޕީއެޗްޑީ ޙާޞިލްކުރެއްވުމާ ހަމަޔަށްވެސް އެމަނިކުފާނު ވަނީ މަތީ ނަތީޖާތަކެއް ޙާޞިލްކުރައްވައިފައެވެ.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "He has also attained Project Management Professional (PMP) certification from America’s Project Management Institute (PMI).",
+        "target": "މަޝްރޫޢުތައް ރާވައި ހިންގުމުގައި ދުނިޔޭގެ ފެންވަރުގައި އެންމެ އިތުބާރުހުރި ސަނަދުދޭ އެއް މުއައްސަސާކަމުގައިވާ އެމެރިކާގެ ޕްރޮޖެކްޓް މެނޭޖްމަންޓް އިންސްޓިޓިއުޓުން، ޕްރޮޖެކްޓް މެނޭޖްމަންޓް ޕްރޮފެޝަނަލް (ޕީއެމްޕީ) ސެޓްފިކެޓްވެސް އެމަނިކުފާނު ވަނީ ޙާޞިލްކުރައްވައިފައެވެ.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "President Dr. Muizzu’s service to the government began in March 1998 with his first job as a Construction and Public Works Planning Technician Trainee at Ministry of Construction and Public Works.",
+        "target": "ރައީސުލްޖުމްހޫރިއްޔާ ޑޮކްޓަރ މުޙައްމަދު މުޢިއްޒު ދިވެހި ސަރުކާރަށް ޚިދުމަތްކުރައްވަން ފެށްޓެވީ 1998 ވަނަ އަހަރުގެ މާރިޗްމަހުއެވެ. އަދާކުރެއްވި ފުރަތަމަ ވަޒީފާއަކީ މިނިސްޓްރީ އޮފް ކޮންސްޓްރަކްޝަން އެންޑް ޕަބްލިކް ވަރކްސްގެ ޕްލޭނިންގ ޓެކްނީޝަން ޓްރޭނީއެއްގެ މަގާމެވެ.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "In addition to serving the government, also served in some key positions in the private sector.",
+        "target": "ސަރުކާރަށް ޚިދުމަތްކުރެއްވުމުގެ އިތުރުން، ރާއްޖޭގެ އަމިއްލަ ބައެއް ކުންފުނިތަކުގައިވެސް އިސް މަގާމުތަކެއްގައި ޚިދުމަތްކުރެއްވިއެވެ.",
+        "prediction": "ސަރުކާރަށް ހިދުމަތް ކުރުމާ ގުޅިގެން ޕްރައިވެޓް ސެކްޓަރުގައި ވެސް މުހިންމު ޖަނަބަނޑި ތަކުގައި ހިދުމަތް ކުރި."
+    },
+    {
+        "english": "also held key positions at political parties in the Maldives.",
+        "target": "އަދި ސިޔާސީ ބައެއް ޕާޓީތަކުގެ އިސް މަގާމުތައްވެސް ފުރުއްވާފައިވެއެވެ.",
+        "prediction": "މަދިރިޖު ރާއްޖޭގެ ސިޔާސީ ޖަމާއަތްތަކުގައިވެސް މުހިންމު ޖަޔްތަކެއް ދެއްކިފައިވެއެވެ."
+    },
+    {
+        "english": "Vice President Uz. Hussain Mohamed Latheef is known for his commitment to sports and social development in the Maldives.",
+        "target": "ރައީސުލްޖުމްހޫރިއްޔާގެ ނައިބު އަލްއުސްތާޛު ޙުސައިން މުޙައްމަދު ލަޠީފަކީ، ކުޅިވަރާ އިޖްތިމާޢީ ކަންކަން ކުރިއަރުވަން ތަރުޙީބުދެއްވާ ބޭފުޅެކެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "also served as the Senior Vice President of Football Association of Maldives (FAM).",
+        "target": "ދިވެހިރާއްޖޭގެ ފުޓްބޯޅައިގެ މައި އިދާރާ އެފްއޭއެމްގެ ސީނިއަރ ވައިސް ޕްރެޒިޑެންޓްގެ މަޤާމު އެމަނިކުފާނު ވަނީ އަދާކުރައްވާފައެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "In addition to playing sports during his academic life, he also participated in various literary activities and events.",
+        "target": "ސްކޫލް ދައުރުގައި އަދަބީ ގިނަ ޙަރަކާތްތަކެއްގައި ވަނީ ބައިވެރިވެވަޑައިގެންފައެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "Vice President Uz. Hussain Mohamed Latheef is an Al-Azhar University, Egypt, alumni who obtained his Undergraduate Degree in Social Service and Community Development.",
+        "target": "ރައީސުލްޖުމްހޫރިއްޔާގެ ނައިބު އަލްއުސްތާޛު ޙުސައިން މުޙައްމަދު ލަޠީފް ފުރަތަމަ ޑިގްރީ ޙާޞިލްކުރައްވާފައިވަނީ މިޞްރުގެ އަލްއަޒްހަރު ޔުނިވަރސިޓީގައި، ސޯޝަލް ސަރވިސް އެންޑް ކޮމިޔުނިޓީ ޑިވެލޮޕްމަންޓުގެ ދާއިރާއިންނެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "received his Master of Business Administration from Anglia Ruskin University, United Kingdom.",
+        "target": "މާސްޓަރސް ޑިގްރީ ޙާޞިލްކުރައްވާފައިވަނީ އިނގިރޭސިވިލާތުގެ އަންގްލިއާ ރަސްކިން ޔުނިވަރސިޓީގައި، ބިޒްނަސް އެޑްމިނިސްޓްރޭޝަންގެ ދާއިރާއިންނެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "Sun Tzu said: The art of war is of vital importance to the State.",
+        "target": "ސުން-ޒޫ ބުނެފައިވެއެވެ. ޢަސްކަރީ ފަންނަކީ ދައުލަތަކަށް އެއަކާއިނުލައި ނުވާނެހާ މުހިންމު އެއްޗެކެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "It is a matter of life and death, a road either to safety or to ruin.",
+        "target": "މިއީ މަރުވުމާއި ދިރިހުރުމާއި ގުޅިފައިވާ ކަމެކެވެ. ސަލާމަތްތެރިކަން ނުވަތަ ހަލާކަށްވާ މަގެކެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "Hence it is a subject of inquiry which can on no account be neglected.",
+        "target": "މިސަބަބަށްޓަކައި، މިއީ ކުޑަކޮށްވެސް އެއަކާއިމެދު ފަރުވާކުޑަކޮށް ނުލެވޭނެ ދިރާސީ މައުޟޫއެކެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "The art of war, then, is governed by five constant factors, to be taken into account in one’s deliberations, when seeking to determine the conditions obtaining in the field.",
+        "target": "ޢަސްކަރީ ފަންނު އެހެންކަމުން، ބައްޓަން ކުރެވިގެންދަނީ ބަދަލުވުމެއްނުވާ ފަސް ކަމެއްގެ މައްޗަށެވެ. މިއީ މައިދާނުގައި ޙާޞިލްކުރެވޭނެ ޙާލަތްތަކަށް ވިސްނައި، ރާވާ ހިނދު ކޮންމެހެންވެސް އަހަންމިއްޔަތުކަން ދޭންޖެހޭ ކަންތައްތަކެކެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "These are: (1) The Moral Law; (2) Heaven; (3) Earth; (4) The Commander; (5) Method and discipline.",
+        "target": "މިކަންތައްތަކަކީ: )ހ( އިޢުތިޤާދު ؛ )ށ( އުޑު؛ )ނ( ބިން ؛ )ރ( ކޮމާންޑަރު ؛ )ބ( ޤަވާއިދު ؛ މިއެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "3. Again, if the campaign is protracted, the resources of the State will not be equal to the strain.",
+        "target": "3. ތަކުރާރުކޮށް ބުނަމެވެ! ހަނގުރާމަ ދިގުލައިގެންދާނަމަ، ޤައުމުގެ ވަޞީލަތްތައް އެހަނގުރާމައިގެ ބުރަޔާއި ނުބައްދަލުވާހުއްޓެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "4. Now, when your weapons are dulled, your ardor damped, your strength exhausted and your treasure spent, other chieftains will spring up to take advantage of your extremity.",
+        "target": "4. ދެން، ތިބާގެ ހަތިޔާރުތަކުގެ ފަންވަރު ގެއްލި، ތިބާގެ ޖޯޝު ކެނޑި، ވަރު ހުސްވެ، ތިބާގެ ޚަޒާނާ ހުލިވެގެންދާހިނދު، އެހެން ވެރީންތައް ތިބާއަށް ޖެހިފައިތިވާ ދަތިކަމުގެ ފައިދާ ނެގުމަށް ތިބާއާއި ދެކޮޅަށް ތެދުވާން ފަށާނެއެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1791189780000'}, 'limit_source': 'openrouter_free_tier_per_minute', 'remedy_hint': 'Slow down requests to free models, or retry after the per-minute window resets.', 'provider_name': None}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "Then no man, however wise, will be able to avert the consequences that must ensue.",
+        "target": "އެއަށްފަހު، އޭގެން ނިކުންނަ ނަތީޖާ އަނބުރައިލުމަށް އެއްވެސް މީހަކަށް ކުޅަދާނައެއް ނުވާނެއެވެ. އެއީ އަދި ކިތަންމެ ޙިކްމަތްތެރި މީހަކަށް ވިއަސްމެއެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "5. Thus, though we have heard of stupid haste in war, cleverness has never been seen associated with long delays.",
+        "target": "5. ވުމާއެކު، ހަނގުރާމައިގައި އަވަސް އަރުވާލުމުން ނިކުންނަ ގެއްލުމުގެ ވާހަކަ އަހަރެމެން އަހައިފައިވިޔަސް، )ޙަޤީޤަތަކީ( ދިގުދެމިގެންދާ ލަސްކުރުންތަކަކާއި ތޫނުފިލިކަން ގުޅިފައިވަނިކޮށް ދުވަހަކުވެސް ފެނިފައެއް ނުވެއެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "1. Sun Tzu said: The good fighters of old first put themselves beyond the possibility of defeat, and then waited for an opportunity of defeating the enemy.",
+        "target": "1. ސުން-ޒޫ ބުނެފައިވެއެވެ: އިހުގެ ކުޅަދާނަ ސިފައިން އެންމެ ފުރަތަމަ ކަމަކަށް، އެއުރެން ބަލިނުކުރެވޭނެ ފަދަ ރައްކާތެރިކަމެއް ހޯދައިގަތެވެ. ދެން އެއާއިއެކު، ޢަދުއްވުން ނާޒުކު ފައްތަރެއްގައި ވާނެ ދަނޑިވަޅަކަށް ބަލަބަލައި ތިބެއެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "2. To secure ourselves against defeat lies in our own hands, but the opportunity of defeating the enemy is provided by the enemy himself.",
+        "target": "2. )ހަނގުރާމައިގައި( ލިބިދާނެ ގެއްލުމަކުން ރައްކާތެރިވުން އޮތީ ޚުދު އަހަރެމެންގެ އަމިއްލަ އަތް މަތީގައެވެ. ހަމައެފަދައިން، ދުޝްމަނުން ބަލިވުމުގެ ފުރުޞަތު ފަހިކޮށްދެނީވެސް ހަމަ އެމީހުން އަމިއްލައަށެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1791189840000'}, 'limit_source': 'openrouter_free_tier_per_minute', 'remedy_hint': 'Slow down requests to free models, or retry after the per-minute window resets.', 'provider_name': None}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "3. Thus the good fighter is able to secure himself against defeat, but cannot make certain of defeating the enemy.",
+        "target": "3. މިފަދައިން ކުޅަދާނަ ހަނގުރާމަވެރިޔަކު، އޭނަގެ ނަފްސު ހަނގުރާމައިގައި ބަލިވުމުން ރައްކާތެރި ކުރެއެވެ. އެހެނަސް ދުޝްމަނުން ބަލިކުރެވޭނެކަން ކަށަވަރުކުރުން؛ މިއީ އޭނާއަށް ކުރެވޭނެ ކަމެއް ނޫނެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1791189840000'}, 'limit_source': 'openrouter_free_tier_per_minute', 'remedy_hint': 'Slow down requests to free models, or retry after the per-minute window resets.', 'provider_name': None}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "4. Hence the saying: One may KNOW how to conquer without being able to DO it.",
+        "target": "4. އެހެންކަމުން ބުނެވިފައިވެއެވެ: \"މޮޅުވާނީ ކިހިނަކުން ކަން އެނގުނަސް، އެކަން އަދި ޙާޞިލްނުކުރެވި ހިނގައިދާނެއެވެ.\"",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1791189840000'}, 'limit_source': 'openrouter_free_tier_per_minute', 'remedy_hint': 'Slow down requests to free models, or retry after the per-minute window resets.', 'provider_name': None}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "5. Security against defeat implies defensive tactics; ability to defeat the enemy means taking the offensive.",
+        "target": "5. އަމިއްލަ ރައްކާތެރިކަން ބަރޯސާވަނީ ދިފާޢުވުމުގެ ޤާބިލިއްޔަތަށެވެ؛ މޮޅުވުމުގެ ފުރުޞަތު ބަރޯސާވަނީ ޙަމަލާގެ ކުޅަދާނަކަމަށެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1791189840000'}, 'limit_source': 'openrouter_free_tier_per_minute', 'remedy_hint': 'Slow down requests to free models, or retry after the per-minute window resets.', 'provider_name': None}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "Members of the People’s Majlis should be guided in their actions by considerations of national interest and public welfare foremost, and should not exploit their official positions in any way for their own benefit or for the benefit of those with whom they have special relations.",
+        "target": "ރައްޔިތުންގެ މަޖިލީހުގެ މެންބަރުން ޢަމަލުކުރާންވާނީ، ޤައުމީ މަޞްލަޙަތާއި ރައްޔިތުންގެ ލާބަޔާއި މަންފާއަށް އިސްކަންދީގެންނެވެ. އަދި އެއްވެސް މެންބަރަކު އެމީހެއްގެ ނުވަތަ އެމީހަކާ ޚާއްޞަ ގުޅުމެއް އޮތް އެހެން މީހެއްގެވެސް ޒާތީ މަޞްލަޙަތެއް ކުރިއެރުވުމަށް މަޤާމުގެ ބޭނުންކޮށްގެނެއް ނުވާނެއެވެ.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "They shall represent not only their constituencies but the country as a whole.",
+        "target": "އެބައިމީހުން، އެބައިމީހުން އިންތިޚާބުވީ ދާއިރާތަކާއި މުޅި ޤައުމާއި ހުރިހާ ރައްޔިތުންގެ ލާބަޔާއި މަންފާއަށް ތަމްސީލުކުރުމުގައި، ރިޢާޔަތްކުރާންވާނެއެވެ.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "Every member shall anually submit to the Secretary General of the People’s Majlis a statement of all property and monies owned by him, business interests and liabilities.",
+        "target": "ކޮންމެ މެންބަރަކުމެ ކޮންމެ އަހަރަކު އެއްފަހަރު އެމީހެއްގެ މިލްކިއްޔާތުގައިވާ މުދަލާއި ފައިސާގެ ހިސާބުތަކާއި، ވިޔަފާރީގެ މަޞްލަޙަތުތަކާއި، ދަރަންޏާއި އަރަނި ހާމަކޮށް ތައްޔާރުކުރާ ބަޔާނެއް ރައްޔިތުންގެ މަޖިލީހުގެ އަމީންޢާންމަށް ހުށަހަޅާންވާނެއެވެ.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "Such declarations shall include the details of any other employment and obligations of such employment.",
+        "target": "އަދި މިގޮތުން ދޭ މަޢުލޫމާތުގައި އެމީހަކު އަދާކުރާ އެހެން ވަޒީފާތަކާއި އެ ވަޒީފާތަކުގެ ޒިންމާތައް ހިމަނާންވާނެއެވެ.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "(a)The executive power is vested in the President as provided for in the Constitution and the law.",
+        "target": "(ހ) ޤާނޫނުއަސާސީއާއި ޤާނޫނުގައިވާ ގޮތުގެމަތީން ވެރިކަންހިންގުމުގެ ބާރުތައް ލިބިގެންވަނީ ރައީސުލްޖުމްހޫރިއްޔާއަށެވެ.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "(b) The President shall be the Head of State, the Head of Government, and the Commander in Chief of the Armed Forces.",
+        "target": "(ށ) ދައުލަތުގެ އެންމެމަތީ ވެރިޔަކީ، އަދި ސަރުކާރުގެ އެންމެމަތީ ވެރިޔަކީ، އަދި ސިފައިންގެ އެންމެމަތީ ވެރިޔަކީ، ރައީސުލްޖުމްހޫރިއްޔާއެވެ.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "(c) The principles of governance of the State being determined by this Constitution, the President shall uphold, defend and respect the Constitution, and shall promote the unity of the State.",
+        "target": "(ނ) ދައުލަތް ހިންގުމުގެ އެންމެހައި އުޞޫލުތައް ކަނޑައަޅަނީ މި ޤާނޫނުއަސާސީން ކަމަށްވީހިނދު، މި ޤާނޫނުއަސާސީ ދަމަހައްޓައި، ދިފާޢުކޮށް، ޤާނޫނުއަސާސީއަށް ޙުރުމަތްތެރިކޮށް ހިތުމުގައި ރައީސުލްޖުމްހޫރިއްޔާ ދެމިހުންނާންވާނެއެވެ. އަދި ދައުލަތުގެ އެއްބައިވަންތަކަން ދަމަހައްޓާން މަސައްކަތްކުރާންވާނެއެވެ.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "(d) The President shall exercise Executive authority as provided for in the Constitution and law.",
+        "target": "(ރ) ރައީސުލްޖުމްހޫރިއްޔާ ވެރިކަން ހިންގާންވާނީ ޤާނޫނުއަސާސީއާއި ޤާނޫނުގައިވާ ގޮތުގެމަތީންނެވެ.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "Elections for the office of President shall be held within one hundred and twenty days to thirty days prior to the expiry of the existing presidential term.",
+        "target": "ރައީސުލްޖުމްހޫރިއްޔާއަކު ހޮވުމަށް އިންތިޚާބު ބާއްވާނީ، ރައީސުލްޖުމްހޫރިއްޔާކަމުގެ މަޤާމުގައި ހުރި މީހެއްގެ މަޤާމުގެ ދައުރު ހަމަވުމުގެ ސަތޭކަ ވިހި ދުވަހާއި ތިރީސް ދުވަހާ ދެމެދުގައެވެ.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "The President shall be elected by over fifty percent of the votes.",
+        "target": "ރައީސުލްޖުމްހޫރިއްޔާކަމަށް މީހަކު ހޮވޭނީ ވޯޓުދިން މީހުންގެ ފަންސާސް އިންސައްތައަށްވުރެ ގިނަ ވޯޓު އެ މީހަކަށް ލިބިގެންނެވެ.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "If no candidate obtains such majority, a run-off election must be held within twenty one days after the first election.",
+        "target": "ރިޔާސީ އިންތިޚާބަށް ކުރިމަތިލާ މީހުންގެ ތެރެއިން އެއްވެސް ކެންޑިޑޭޓަކަށް ފަންސާސް އިންސައްތައަށްވުރެ ގިނަ ވޯޓު ނުލިބިއްޖެނަމަ، އިންތިޚާބު ބޭއްވުނުތާ އެކާވީސް ދުވަހުގެ ތެރޭގައި އިންތިޚާބުގެ ދެވަނަ ބުރެއް ބާއްވަން ވާނެއެވެ.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "The run-off election shall be contested only by the two candidates receiving the highest number of votes in the first election.",
+        "target": "އިންތިޚާބުގެ ދެވަނަ ބުރުގައި ވާދަކުރާނީ އިންތިޚާބުގެ ފުރަތަމަ ބުރުގައި އެންމެ ގިނަ ވޯޓު ލިބުނު ދެ ކެންޑިޑޭޓުންނެވެ.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "If the two candidates receiving the highest number of votes in the first election have an equal number of votes, only those two candidates shall compete in the run-off election.",
+        "target": "އިންތިޚާބުގެ ފުރަތަމަ ބުރުގައި އެންމެ ގިނަ ވޯޓު ލިބުނު ދެ ކެންޑިޑޭޓުންނަށް ވޯޓު ލިބުނީ އެއް ޢަދަދަކަށް ކަމުގައިވާނަމަ، އިންތިޚާބުގެ ދެވަނަ ބުރުގައި ވާދަކުރާނީ އެ ދެ ކެންޑިޑޭޓުން އެކަންޏެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "If there are two candidates in second position with an equal number of votes, then the run-off election shall be held among the top three candidates.",
+        "target": "އިންތިޚާބުގެ ފުރަތަމަ ބުރުގައި ދެވަނައަށް އެންމެ ގިނަ ވޯޓު ލިބުނު ދެ ކެންޑިޑޭޓަކަށް ވޯޓު ލިބުނީ އެއް ޢަދަދަކަށް ކަމުގައިވާނަމަ، އިންތިޚާބުގެ ދެވަނަ ބުރުގައި ވާދަކުރާނީ ފުރަތަމަ ބުރުގައި އެންމެ ގިނަ ވޯޓު ލިބުނު ކެންޑިޑޭޓާއި ދެވަނައަށް އެންމެ ގިނަ ވޯޓު ލިބުނު ދެ ކެންޑިޑޭޓުންނެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "to faithfully implement the provisions of this Constitution and the law, and to promote compliance by organs of the State and by the people;",
+        "target": "މި ޤާނޫނުއަސާސީ އާއި ޤާނޫނުގައި ކަނޑައަޅައިފައިވާ ކަންތައްތައް އިޚްލާސްތެރިކަމާއެކު ތަންފީޛުކޮށް، ދައުލަތުގެ މުއައްސަސާތަކުންނާއި ރައްޔިތުން ޤާނޫނުއަސާސީ އާއި ޤާނޫނާ އެއްގޮތަށް ޢަމަލުކުރުމަށް ބާރުއެޅުން.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "to supervise the efficient and harmonious functioning of all departments of Government;",
+        "target": "ސަރުކާރުގެ އެންމެހައި އިދާރާތައް ހިންގުންތެރިކަމާއެކު ގުޅިގެން މަސައްކަތްކުރޭތޯބެލުން.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "to promote the rule of law, and to protect the rights and freedoms of all people;",
+        "target": "ޤާނޫނުގެ ވެރިކަން ކުރިއަރުވައި، އެންމެންގެ ޙައްޤުތަކާއި މިނިވަންކަން ރައްކާތެރިކުރުން.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "to guarantee the independence and territorial integrity of the Maldives, and to promote respect for national sovereignty in the international community;",
+        "target": "ދިވެހިރާއްޖޭގެ މިނިވަންކަމާއި ސަރަޙައްދުގެ ރައްކާތެރިކަން ދެމެހެއްޓުމާއެކު ބައިނަލްއަޤްވާމީ މުޖްތަމަޢުގައި ދިވެހިރާއްޖޭގެ ޤައުމީ ސިޔާދަތަށް އިޙްތިރާމްކުރުން އިތުރުކުރުވުން.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "to formulate fundamental policies of the State, and to submit policies and recommendations to the appropriate agencies and institutions of Government;",
+        "target": "ދައުލަތުގެ މައިގަނޑު ސިޔާސަތުތައް ކަނޑައަޅައި އެ ސިޔާސަތުތައް ސަރުކާރުގެ ކަމާގުޅޭ އިދާރާތަކަށާއި މުއައްސަސާތަކަށް އަންގައި، އެތަންތަނަށް ބޭނުންވާ އިރުޝާދު ދިނުން.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "to appoint, dismiss and accept the resignation of members of the Cabinet, and such officials necessary for the proper functioning of the duties of his office;",
+        "target": "ވަޒީރުންގެ މަޖިލީހަށާއި، ރައީސުލްޖުމްހޫރިއްޔާގެ މަޤާމުގެ ވާޖިބު އަދާކުރުމަށްޓަކައި ބޭނުންވާ މަޤާމުތަކަށް، މީހުން ޢައްޔަންކުރުމާއި، އެ މަޤާމުތަކުން މީހުން ވަކިކުރުމާއި، އެމީހުންގެ އިސްތިޢުފާ ޤަބޫލުކުރުން.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "(g) to preside over the Cabinet of Ministers;",
+        "target": "(ކ) ވަޒީރުންގެ މަޖިލީހުގެ ރިޔާސަތު ބެލެހެއްޓުން.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "(h) to issue declarations of war and peace, and to immediately submit such declarations to the People’s Majlis for approval;",
+        "target": "(އ) ހަނގުރާމަ ނުވަތަ ޞުލްޙަ އިޢުލާންކުރުމުގެ ޤަރާރު ނެރުމާއި، އެފަދަ ޤަރާރުތައް ރައްޔިތުންގެ މަޖިލީހުން ފާސްކުރުމަށްޓަކައި އެ މަޖިލީހަށް އެވަގުތުން ހުށަހެޅުން.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "(i) to declare states of emergency, in accordance with the provisions of the Constitution;",
+        "target": "(ވ) ޤާނޫނުއަސާސީގައި ބަޔާންވެގެންވާ ގޮތުގެމަތީން ކުއްލިނުރައްކަލުގެ ޙާލަތު އިޢުލާންކުރުން.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "(j) to determine, conduct and oversee the foreign policy of the country, and to conduct political relations with foreign nations and international organizations;",
+        "target": "(މ) ދިވެހިރާއްޖޭގެ ޚާރިޖީ ސިޔާސަތު ކަނޑައަޅައި، ހިންގައި، އެ ސިޔާސަތު ހިނގާނުހިނގާގޮތް ބަލައި، ބޭރު ޤައުމުތަކާއި ބައިނަލްއަޤްވާމީ ޖަމްޢިއްޔާތަކާއެކު ގުޅުން ޤާއިމްކޮށް ދެމެހެއްޓުން.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "(k) 1. to enter into general treaties and agreements with foreign states and international organizations, which do not impose any obligations on citizens;",
+        "target": "(ފ) 1. ދިވެހިރާއްޖެއިން ބޭރު ޤައުމުތަކާއި ބައިނަލްއަޤްވާމީ ޖަމްޢިއްޔާތަކާއެކު ވާ މުޢާހަދާތަކާއި އެއްބަސްވުންތަކުގެ ތެރެއިން، ރައްޔިތުން އެއްވެސް އިލްތިޒާމެއް އުފުލާން ނުޖެހޭ ބާވަތުގެ ޢާންމު އެއްބަސްވުންތަކުގައި ސޮއިކުރުން.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "(k) 2. to enter into and ratify, with the approval of the People’s Majlis, treaties and agreements with foreign states and international organizations, which impose obligations on citizens;",
+        "target": "(ފ) 2. ދިވެހިރާއްޖެއިން ބޭރު ޤައުމުތަކާއި ބައިނަލްއަޤްވާމީ ޖަމްޢިއްޔާތަކާއެކު ވާ މުޢާހަދާތަކާއި އެއްބަސްވުންތަކުގެ ތެރެއިން ރައްޔިތުން އެއްވެސް އިލްތިޒާމެއް އުފުލާންޖެހޭ ބާވަތުގެ މުޢާހަދާތަކާއި އެއްބަސްވުންތަކުގައި ރައްޔިތުންގެ މަޖިލީހުގެ ރުހުމާއެކު ސޮއިކޮށް، ތަޞްދީޤްކުރުން.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "(l) to appoint members of diplomatic missions to foreign countries and international organizations in consultation with the People’s Majlis;",
+        "target": "(ދ) ބޭރުޤައުމުތަކަށާއި ބައިނަލްއަޤްވާމީ ޖަމްޢިއްޔާތަކަށް ރާއްޖެއިން ކަނޑައަޅާ ސަފީރުން ރައްޔިތުންގެ މަޖިލީހުގެ މަޝްވަރާގެމަތީން ޢައްޔަންކުރުން.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "(m) to recall and remove from office members of diplomatic missions to foreign countries and international organizations;",
+        "target": "(ތ) ބޭރު ޤައުމުތަކަށާއި ބައިނަލްއަޤްވާމީ ޖަމްޢިއްޔާތަކަށް ރާއްޖެއިން ޢައްޔަންކޮށްފައިވާ ސަފީރުން އަނބުރާ ގެނައުމާއި މަޤާމުން ވަކިކުރުން.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "(n) to receive and recognize the credentials of diplomatic and consular representatives of foreign countries and other parties and to accept their letters of recall;",
+        "target": "(ލ) ބޭރުޤައުމުތަކާއި އެނޫންވެސް ފަރާތްތަކުން ރާއްޖެއަށް ކަނޑައަޅާ ސަފީރުންގެ ފަތްކޮޅު ބަލައިގަތުމާއި، ސަފީރުން އަނބުރާ ގެންދިއުމުގެ ލިޔުން ބަލައިގަތުން.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "(a) There shall be a Cabinet of Ministers appointed by the President, with responsibility for the duties and functions assigned to them by the President, this Constitution and the law.",
+        "target": "(ހ) ރައީސުލްޖުމްހޫރިއްޔާ ޙަވާލުކުރާ ކަންތައްތަކާއި މި ޤާނޫނުއަސާސީންނާއި ޤާނޫނުން ޙަވާލުކުރެވޭ ކަންތައްތައް ކުރުމަށްޓަކައި ރައީސުލްޖުމްހޫރިއްޔާ ޢައްޔަންކުރާ ވަޒީރުންގެ މަޖިލީހެއް އޮންނާންވާނެއެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1791189780000'}, 'limit_source': 'openrouter_free_tier_per_minute', 'remedy_hint': 'Slow down requests to free models, or retry after the per-minute window resets.', 'provider_name': None}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "(b) The Cabinet shall consist of the Vice President, the Ministers given responsibility for the different Ministries, and the Attorney General.",
+        "target": "(ށ) ވަޒީރުންގެ މަޖިލިސް އެކުލެވިގެންވަނީ، ރައީސުލްޖުމްހޫރިއްޔާގެ ނައިބާއި، އެކިއެކި ވުޒާރާތައް ހިންގުން ޙަވާލުކުރާ ވަޒީރުންނާއި، ބަންޑާރަނައިބުގެ މައްޗަށެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "(c) Except for the Vice President, the President must receive the approval of the People’s Majlis for all appointments to the Cabinet.",
+        "target": "(ނ) ރައީސުލްޖުމްހޫރިއްޔާގެ ނައިބު ފިޔަވައި، ވަޒީރުންގެ މަޖިލީހަށް ޢައްޔަންކުރާ އެހެން މެންބަރުން އެ މަޖިލީހަށް ޢައްޔަންކުރުމަށްފަހު ރައްޔިތުންގެ މަޖިލީހުގެ ރުހުން ހޯދާންވާނެއެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1791189780000'}, 'limit_source': 'openrouter_free_tier_per_minute', 'remedy_hint': 'Slow down requests to free models, or retry after the per-minute window resets.', 'provider_name': None}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "(d) The President shall submit to the People’s Majlis, within seven days of making appointments to the Cabinet the names of the appointees to the Cabinet for approval of the People’s Majlis.",
+        "target": "(ރ) ވަޒީރުންގެ މަޖިލީހަށް ރައީސުލްޖުމްހޫރިއްޔާ ޢައްޔަންކުރާ މީހުންގެ ނަންތައް، އެމީހުން ޢައްޔަންކުރެވޭ ދުވަހުން ފެށިގެން ހަތް ދުވަހުގެ ތެރޭގައި، ރައްޔިތުންގެ މަޖިލީހުގެ ރުހުން ހޯދުމަށްޓަކައި އެ މަޖިލީހަށް ރައީސުލްޖުމްހޫރިއްޔާ ހުށަހަޅާންވާނެއެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1791189780000'}, 'limit_source': 'openrouter_free_tier_per_minute', 'remedy_hint': 'Slow down requests to free models, or retry after the per-minute window resets.', 'provider_name': None}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "(a) to recommend to and assist the President in determining the general policies of the State, and to supervise and implement those policies in all areas of government activity, in accordance with the Constitution and the law;",
+        "target": "(ހ) ދައުލަތް ހިންގުމުގެ ޢާންމު ސިޔާސަތުތައް ކަނޑައެޅުމުގައި ރައީސުލްޖުމްހޫރިއްޔާއަށް މަޝްވަރާދިނުމާއި، އެހީތެރިވެދިނުމާއި، ޤާނޫނުއަސާސީއާއި ޤާނޫނާ އެއްގޮތްވާ ގޮތުގެމަތީން، ސަރުކާރު ހިންގުމުގެ ހުރިހާ ދާއިރާތަކެއްގައި އެ ސިޔާސަތުތައް ތަންފީޛުކޮށް، ހިނގާނުހިނގާގޮތް ބެލުން.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.8-27b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'ModelRun', 'is_byok': False, 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "(b) to advise and recommend draft bills and proposals to the President, to be prepared for submission to the People’s Majlis;",
+        "target": "(ށ) ރައްޔިތުންގެ މަޖިލީހަށް ފާސްކުރުމަށް ސަރުކާރުން ހުށަހަޅާންވީ ބިލުތަކާއި އެނޫންވެސް ހުށަހެޅުންތައް ތައްޔާރުކުރުމުގައި ރައީސުލްޖުމްހޫރިއްޔާއަށް ލަފަޔާއި މަޝްވަރާދިނުން.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1791189780000'}, 'limit_source': 'openrouter_free_tier_per_minute', 'remedy_hint': 'Slow down requests to free models, or retry after the per-minute window resets.', 'provider_name': None}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "(c) to direct, review and coordinate the work of the Government;",
+        "target": "(ނ) ސަރުކާރުގެ މަސައްކަތްތައް ހިންގުމާއި، އެ މަސައްކަތްތައް ވިލަރެސްކުރުމާއި، މުރާޖަޢާކުރުން.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1791189840000'}, 'limit_source': 'openrouter_free_tier_per_minute', 'remedy_hint': 'Slow down requests to free models, or retry after the per-minute window resets.', 'provider_name': None}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "(d) to ensure good relations and smooth functioning between the Government and other organs of the State in their areas of responsibility;",
+        "target": "(ރ) އެމީހެއްގެ މަސްއޫލިއްޔަތުގެ ދާއިރާއާ ގުޅޭގޮތުން، އޮމާންކަމާއެކު ކަންތައްތައް ހިންގުމަށް ސަރުކާރާއި ދައުލަތުގެ އެހެން ބާރުތަކާ މެދު ބާއްވާންޖެހޭ ގުޅުންތައް ބާއްވައި އެ ގުޅުންތައް ދެމެހެއްޓުން.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1791189840000'}, 'limit_source': 'openrouter_free_tier_per_minute', 'remedy_hint': 'Slow down requests to free models, or retry after the per-minute window resets.', 'provider_name': None}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "(e) to prudently and carefully manage the assets of the State within their areas of responsibility;",
+        "target": "(ބ) އެމީހެއްގެ މަސްއޫލިއްޔަތުގެ ތެރޭގައި ހިމެނޭ ދައުލަތުގެ އެންމެހައި މުދަލާއި ފައިސާ ހެޔޮގޮތުގައި ފަރުވާތެރިކަމާއެކު ބެލެހެއްޓުން.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "(f) to recommend to and assist the President in formulating the general policies of the State in relation to national and international matters, and to direct, review and coordinate the political, economic and social development of the Maldives;",
+        "target": "(ޅ) ޤައުމީ އަދި ބައިނަލްއަޤްވާމީ ކަންތައްތަކުގައި ސަރުކާރުގެ ސިޔާސަތު އެކަށައެޅުމުގައި ރައީސުލްޖުމްހޫރިއްޔާއަށް ލަފާދިނުމާއި، ސިޔާސީ، އިޤްތިޞާދީ އަދި އިޖްތިމާޢީ ގޮތުން ރާއްޖެ ތަރައްޤީ ކުރުމަށްޓަކައި ކުރާންޖެހޭ ކަންކަން މުރާޖަޢާކޮށް ވިލަރެސްކުރުން.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1791189840000'}, 'limit_source': 'openrouter_free_tier_per_minute', 'remedy_hint': 'Slow down requests to free models, or retry after the per-minute window resets.', 'provider_name': None}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "(g) to promote, protect and uphold the rule of law, and defend public safety and the public interest;",
+        "target": "(ކ) ޤާނޫނުގެ ވެރިކަން ޙިމާޔަތްކޮށް ކުރިއެރުވުމާއި، ރައްޔިތުންގެ ސަލާމަތްތެރިކަމާއި ޢާންމު ފައިދާ ދަމަހައްޓައި ރައްކާތެރިކުރުމަށް މަސައްކަތްކުރުން.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "(a) The judicial power is vested in the Supreme Court, the High Court, and such Trial Courts as established by law.",
+        "target": "(ހ) ޢަދުލުއިންޞާފު ޤާއިމްކުރުމުގެ އެންމެހައި ބާރުތައް ލިބިގެންވަނީ ސުޕްރީމްކޯޓަށާއި، ހައިކޯޓަށާއި، އަދި ޤާނޫނަކުން ކަނޑައަޅައިފައިވާ ދަށުކޯޓުތަކަށެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1791189840000'}, 'limit_source': 'openrouter_free_tier_per_minute', 'remedy_hint': 'Slow down requests to free models, or retry after the per-minute window resets.', 'provider_name': None}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "(b) The Supreme Court shall be the highest authority for the administration of justice in the Maldives.",
+        "target": "(ށ) ޢަދުލުއިންޞާފު ޤާއިމްކުރުމުގެ އެންމެ އިސް ފަރާތަކީ ސުޕްރީމްކޯޓެވެ.",
+        "prediction": "ERROR: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1791189840000'}, 'limit_source': 'openrouter_free_tier_per_minute', 'remedy_hint': 'Slow down requests to free models, or retry after the per-minute window resets.', 'provider_name': None}}, 'user_id': 'user_38Kt2khhOleKUtvznbPIzHHe4W0'}"
+    },
+    {
+        "english": "The Chief Justice shall be the highest authority on the Supreme Court.",
+        "target": "ސުޕްރީމްކޯޓުގެ އެންމެ އިސް ފަރާތަކީ އުއްތަމަ ފަނޑިޔާރެވެ.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "All matters adjudicated before the Supreme Court shall be decided upon by a majority of the judges sitting together in session.",
+        "target": "ސުޕްރީމްކޯޓުން ބަލާ ކޮންމެ މައްސަލައެއް ނިންމާންވާނީ އެ މައްސަލައެއް ބެލި ފަނޑިޔާރުންގެ މަޖިލީހުގެ އަޣުލަބިއްޔަތުންނެވެ.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "(c) No officials performing public functions, or any other persons, shall interfere with and influence the functions of the courts.",
+        "target": "(ނ) އަމިއްލަ ފަރުދަކު ވިޔަސް، ދައުލަތުގެ ކަމެއް ހިންގުމާ ޙަވާލުވެހުރި މީހަކު ވިޔަސް، ފަނޑިޔާރުންގެ މަސައްކަތާ ބެހި ނުފޫޒުފޯރުވައި ހަދައިގެން ނުވާނެއެވެ.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "There shall be a Chief Justice of the Maldives.",
+        "target": "ދިވެހިރާއްޖޭގައި އުއްތަމަފަނޑިޔާރަކު ހުންނާންވާނެއެވެ.",
+        "prediction": "ރާއްޖޭގެ ނާޒިމެއް ހުރިހާނެ."
+    },
+    {
+        "english": "The President as the Head of State shall appoint the Chief Justice, after consulting the Judicial Service Commission and confirmation of the appointee by a majority of the members of the People’s Majlis present and voting.",
+        "target": "އުއްތަމަފަނޑިޔާރުގެ މަޤާމަށް މީހަކު ޢައްޔަންކުރާނީ ދައުލަތުގެ އެންމެ އިސްވެރިޔާގެ ޙައިޘިއްޔަތުން ރައީސުލްޖުމްހޫރިއްޔާއެވެ. މިގޮތުން އުއްތަމަފަނޑިޔާރުކަމުގެ މަޤާމަށް ޢައްޔަންކުރާނެ މީހަކު ކަނޑައަޅާނީ ޖުޑީޝަލް ސަރވިސް ކޮމިޝަނުގެ މަޝްވަރާގެމަތިން ރައްޔިތުންގެ މަޖިލީހަށް ހުށަހެޅުމަށްފަހު މަޖިލީހުގެ ޖަލްސާއެއްގައި ހާޒިރުވެ ވޯޓުގައި ބައިވެރިވި މެންބަރުންގެ އަޣުލަބިއްޔަތުން އެ ނަމެއް ފާސްވުމުންނެވެ.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "The President as the Head of State shall appoint the Judges of the Supreme Court, after consulting the Judicial Service Commission and confirmation of the appointees by a majority of the members of the People’s Majlis present and voting.",
+        "target": "(ހ) ސުޕްރީމްކޯޓުގެ އެންމެހައި ފަނޑިޔާރުން ޢައްޔަންކުރާނީ ދައުލަތުގެ އެންމެ އިސްވެރިޔާގެ ޙައިޘިއްޔަތުން ރައީސުލްޖުމްހޫރިއްޔާއެވެ. މިގޮތުން ސުޕްރީމްކޯޓުގެ ފަނޑިޔާރުކަމުގެ މަޤާމަށް ޢައްޔަންކުރާނެ މީހުން ކަނޑައަޅާނީ ޖުޑީޝަލް ސަރވިސް ކޮމިޝަނުގެ މަޝްވަރާގެމަތިން ރައްޔިތުންގެ މަޖިލީހަށް ހުށަހެޅުމަށްފަހު މަޖިލީހުގެ ޖަލްސާއަށް ހާޒިރުވެ ވޯޓުގައި ބައިވެރިވި މެންބަރުންގެ އަޣުލަބިއްޔަތުން އެ ނަންތަކެއް ފާސްވުމުންނެވެ.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    },
+    {
+        "english": "(b) All other Judges shall be appointed by the Judicial Service Commission, to be established in accordance with the provisions of this Constitution.",
+        "target": "(ށ) ސުޕްރީމްކޯޓުގެ ފަނޑިޔާރުން ފިޔަވައި އެހެނިހެން ފަނޑިޔާރުން ޢައްޔަންކުރާނީ މި ޤާނޫނުއަސާސީގައިވާ ގޮތުގެމަތިން އުފައްދާ ޖުޑީޝަލް ސަރވިސް ކޮމިޝަނުންނެވެ.",
+        "prediction": "ERROR: 'NoneType' object has no attribute 'strip'"
+    }
+]
