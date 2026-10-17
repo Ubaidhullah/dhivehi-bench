@@ -35,12 +35,10 @@
 
 \title{Dhivehi-Bench: A Comprehensive Benchmark for Evaluating Large Language Models on the Maldivian Language}
 
-\author{Ubaidhullah Abdul Hameed}
-\email{f1202500118@stu.ynu.edu.cn}
+\author{Anonymous Author(s)}
 \affiliation{%
-  \institution{Yunnan University}
-  \city{Kunming}
-  \country{China}
+  \institution{Anonymous Institution}
+  \country{Anonymous}
 }
 
 \begin{abstract}
@@ -240,7 +238,7 @@ To establish an empirical ceiling, two native Maldivian speakers with formal sec
 \subsection{Metrics}
 On the MCQ track ($n=2,070$), length-normalized accuracy has a 95\% confidence interval of $\pm 2.2\%$. On Contextual QA ($n=1,134$), we report Exact Match (EM) and Token-level F1.
 
-On the Translation track ($n=2,016$), we pair word-tokenized sacreBLEU \cite{post_call_2018} (\texttt{nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.3.1}) with character-tokenized BLEU (\texttt{tok:char}, reported as char-BLEU in \S\ref{sec:domain_granularity}) and chrF \cite{popovic_chrf_2015}. Because agglutinative suffixation penalizes whole-word matching under \texttt{tok:13a}, chrF serves as our primary translation metric. We also report \textbf{Loop Rate}, defined as the percentage of outputs that repeat an identical 4-gram $\geq50$ times; across the 2,016-item $\text{EN}\rightarrow\text{DV}$ track, Gemma 4 records a 94.2\% Loop Rate (91\% on news to 98\% on constitutional law; Table \ref{tab:domain}). We omit neural metrics such as COMET \cite{rei_comet_2020} because their underlying encoders (e.g., XLM-RoBERTa) lack Thaana vocabulary coverage.
+On the Translation track ($n=2,016$), we pair word-tokenized sacreBLEU \cite{post_call_2018} (\texttt{nrefs:1|\allowbreak case:mixed|\allowbreak eff:no|\allowbreak tok:13a|\allowbreak smooth:exp|\allowbreak version:2.3.1}) with character-tokenized BLEU (\texttt{tok:char}, reported as char-BLEU in \S\ref{sec:domain_granularity}) and chrF \cite{popovic_chrf_2015}. Because agglutinative suffixation penalizes whole-word matching under \texttt{tok:13a}, chrF serves as our primary translation metric. We also report \textbf{Loop Rate}, defined as the percentage of outputs that repeat an identical 4-gram $\geq50$ times; across the 2,016-item $\text{EN}\rightarrow\text{DV}$ track, Gemma 4 records a 94.2\% Loop Rate (91\% on news to 98\% on constitutional law; Table \ref{tab:domain}). We omit neural metrics such as COMET \cite{rei_comet_2020} because their underlying encoders (e.g., XLM-RoBERTa) lack Thaana vocabulary coverage.
 
 \section{Results and Discussion}
 
@@ -525,7 +523,7 @@ Chaviyani (\texttt{U+0797}) & Chaviyani & ch & & & \\
 \begin{itemize}
     \item \textbf{Sukun (\texttt{U+07B0}) Realization:} Word-medially before a consonant, \textit{sukun} triggers gemination of the following consonant (e.g., \textit{rah} + \textit{thah} $\rightarrow$ \textit{rahthah}). Word-finally, \textit{Alifu sukun} (\texttt{U+0787 U+07B0}) and \textit{Shaviyani sukun} (\texttt{U+0781 U+07B0}) transliterate to word-final \texttt{-h} (glottal stop), \textit{Noonu sukun} (\texttt{U+0782 U+07B0}) to \texttt{-n}, \textit{Thaa sukun} (\texttt{U+078C U+07B0}) to \texttt{-iy} / \texttt{-th}, and \textit{Seenu sukun} (\texttt{U+0790 U+07B0}) to \texttt{-s}.
     \item \textbf{Hus Noonu (\texttt{U+0782} without fili/sukun):} Transliterated as prenasalized \texttt{n} preceding voiced stops (\texttt{nd}, \texttt{ndh}, \texttt{mb}, \texttt{ng}, as in \textit{kandu} and \textit{handhu}).
-    \item \textbf{Arabic-Derived Dotted Thaana (\textit{Tikhi Thaana}, \texttt{U+0798}--\texttt{U+07A5} and \texttt{U+07B1}):} Mapped to their standard phonetic Latin counterparts in legal and Islamic texts: \textit{Thaalu} (\texttt{U+0798} $\rightarrow$ \texttt{th}/\texttt{dh}), \textit{Hhaa} (\texttt{U+0799} $\rightarrow$ \texttt{h}), \textit{Khaa} (\texttt{U+079A} $\rightarrow$ \texttt{kh}), \textit{Waavu} (\texttt{U+07A5} $\rightarrow$ \texttt{w}), \textit{Sheenu} (\texttt{U+079C} $\rightarrow$ \texttt{sh}), \textit{Saadhu} (\texttt{U+079D} $\rightarrow$ \texttt{s}), \textit{Daadhu} (\texttt{U+079E} $\rightarrow$ \texttt{d}), \textit{To} (\texttt{U+079F} $\rightarrow$ \texttt{t}), \textit{Zo} (\texttt{U+07A0} $\rightarrow$ \texttt{z}), \textit{Ainu} (\texttt{U+07A1} $\rightarrow$ \texttt{'}), \textit{Ghainu} (\texttt{U+07A2} $\rightarrow$ \texttt{gh}), \textit{Qaafu} (\texttt{U+07A3} $\rightarrow$ \texttt{q}), and \textit{Naa} (\texttt{U+07B1} $\rightarrow$ \texttt{n}).
+    \item \textbf{Arabic-Derived Dotted Thaana (\textit{Tikhi Thaana}, \texttt{U+0798}--\texttt{U+07A5} and \texttt{U+07B1}):} Mapped to their standard phonetic Latin counterparts in legal and Islamic texts: \textit{Thaalu} (\texttt{U+0798} $\rightarrow$ \texttt{th}/\texttt{dh}), \textit{Hhaa} (\texttt{U+0799} $\rightarrow$ \texttt{h}), \textit{Khaa} (\texttt{U+079A} $\rightarrow$ \texttt{kh}), \textit{Dhaal} (\texttt{U+079B} $\rightarrow$ \texttt{dh}/\texttt{z}), \textit{Sheenu} (\texttt{U+079C} $\rightarrow$ \texttt{sh}), \textit{Saadhu} (\texttt{U+079D} $\rightarrow$ \texttt{s}), \textit{Daadhu} (\texttt{U+079E} $\rightarrow$ \texttt{d}), \textit{To} (\texttt{U+079F} $\rightarrow$ \texttt{t}), \textit{Zo} (\texttt{U+07A0} $\rightarrow$ \texttt{z}), \textit{Ainu} (\texttt{U+07A1} $\rightarrow$ \texttt{'}), \textit{Ghainu} (\texttt{U+07A2} $\rightarrow$ \texttt{gh}), \textit{Qaafu} (\texttt{U+07A3} $\rightarrow$ \texttt{q}), \textit{Ghaafu} (\texttt{U+07A4} $\rightarrow$ \texttt{gh}), \textit{Waavu} (\texttt{U+07A5} $\rightarrow$ \texttt{w}), and \textit{Naa} (\texttt{U+07B1} $\rightarrow$ \texttt{n}).
 \end{itemize}
 
 \end{document}
