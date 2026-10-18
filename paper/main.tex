@@ -112,7 +112,7 @@ We designed the Dhivehi-Bench curation pipeline to pair offline archival reading
     line/.style={draw, -latex', thick}
 ]
 % Stream 1: Offline Contamination-Controlled Track (MCQ & QA)
-\node [block] (archives) at (0, 1.2) {Physical Archives\\(Saruna DSpace)};
+\node [block] (archives) at (0, 1.2) {Physical Archives\\(Saruna)};
 \node [block] (ocr) at (3.5, 1.2) {Viyavi OCR\\\& Post-Editing};
 \node [block] (ensemble) at (7.0, 1.2) {Disjoint API\\Ensemble};
 \node [block] (comp_tracks) at (10.5, 1.2) {Comprehension Tracks\\(MCQ \& QA)};
@@ -143,7 +143,7 @@ We designed the Dhivehi-Bench curation pipeline to pair offline archival reading
 \end{figure*}
 
 \subsection{Anti-Contamination via Custom OCR Digitization}
-We drew the source passages for the reading comprehension and question-answering tracks from the Maldives National University's Digital Repository (\textit{Saruna}). Querying the Saruna DSpace 8.0 REST API, we collected scanned, non-machine-readable PDFs and manuscripts from the ``Dhivehi Language Studies'' and eight related archival collections containing historical essays, monographs, and legal treatises.
+We drew the source passages for the reading comprehension and question-answering tracks from the Maldives National University's Digital Repository (\textit{Saruna}), downloading scanned, non-machine-readable PDFs and manuscripts from the ``Dhivehi Language Studies'' and eight related archival collections containing historical essays, monographs, and legal treatises.
 
 We digitized these scans using the open-source Viyavi Multi-Scale OCR series \cite{hameed_bridging_2026}, a Vision-Language Model suite fine-tuned on the Qwen-2.5 architecture for the Thaana script. Because Thaana writes right-to-left and stacks vowel diacritics (\textit{fili}) above and below base consonants (\textit{akuru}), general-purpose OCR engines routinely drop diacritics or missegment characters. On held-out historical manuscripts, the 3B Viyavi model achieved an 8.0\% Character Error Rate (CER). To eliminate residual recognition errors before question drafting, native speakers manually post-edited all OCR transcriptions. A secondary audit on a held-out sample of 300 post-edited lines measured a residual CER of 1.4\% and a Word Error Rate (WER) of 3.2\%, reflecting minor diacritic conventions in manual Thaana transcription while confirming that initial OCR errors were resolved prior to item creation.
 
