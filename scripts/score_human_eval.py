@@ -3,16 +3,19 @@ import sys
 import os
 import re
 
+import string
+
+def normalize_dhivehi(s: str) -> str:
+    if not s:
+        return ""
+    s = s.lower().strip()
+    return "".join(ch for ch in s if ch not in string.punctuation).strip()
+
 def compute_f1(pred: str, gold: str):
-    pred_tokens = re.findall(r'\S+', pred.strip())
-    gold_tokens = re.findall(r'\S+', gold.strip())
+    pred_tokens = re.findall(r'\S+', normalize_dhivehi(pred))
+    gold_tokens = re.findall(r'\S+', normalize_dhivehi(gold))
     if not pred_tokens or not gold_tokens:
         return 1.0 if pred_tokens == gold_tokens else 0.0
-    
-    common = {}
-    for t in pred_tokens:
-        if t in gold_tokens:
-            common[t] = common.get(t, 0) + 1
     
     num_same = sum(min(pred_tokens.count(t), gold_tokens.count(t)) for t in set(pred_tokens))
     if num_same == 0:
@@ -23,7 +26,7 @@ def compute_f1(pred: str, gold: str):
     return (2 * precision * recall) / (precision + recall)
 
 def compute_em(pred: str, gold: str):
-    return 1.0 if pred.strip().lower() == gold.strip().lower() else 0.0
+    return 1.0 if normalize_dhivehi(pred) == normalize_dhivehi(gold) else 0.0
 
 def compute_cohens_kappa(eval1_answers, eval2_answers, num_options=4):
     # For MCQ
