@@ -347,16 +347,16 @@ Comparing $\text{EN}\rightarrow\text{DV}$ against $\text{DV}\rightarrow\text{EN}
 ChakmaNMT \cite{chakma_chakmanmt_2026} reports a similar directional gap for the Chakma script: models map fragmented non-Latin input tokens into high-resource English representations during encoding, but lose coherence when required to emit long sequences of unmerged non-Latin tokens during decoding.
 
 \subsection{Qualitative Error Morphology in Thaana Generation}
-Two native annotators manually coded 100 failed $\text{EN}\rightarrow\text{DV}$ translation outputs across the open-weights cohort (inter-coder agreement Cohen's $\kappa = 0.82$), grouping errors into four categories:
+Two native annotators independently coded a stratified sample of 100 failed $\text{EN}\rightarrow\text{DV}$ translation outputs across the open-weights cohort into four primary failure categories, achieving 72.0\% observed agreement and substantial inter-coder reliability (Cohen's $\kappa = 0.63$, expected chance agreement $P_e = 24.7\%$). Averaged across both annotators, the primary error distribution comprises:
 
 \begin{enumerate}
-    \item \textbf{Morphological Fragmentation (42\%):} The model selects a valid Dhivehi root but attaches mismatched vowel diacritics (\textit{fili}), producing non-words.
-    \item \textbf{Repetition Loops (31\%):} The model emits 3--5 initial words before repeating a short byte or character sequence until hitting the 8,192-token limit.
-    \item \textbf{Arabic/Latin Script Mixing (18\%):} The decoder substitutes Arabic codepoints for Thaana consonants (e.g., Arabic \textit{Jeem} \texttt{U+062C} in place of Thaana \textit{Javiyani} \texttt{U+0796}) or splices English words into Thaana clauses.
-    \item \textbf{Semantic Drift (9\%):} The model produces grammatical Thaana phrases that do not translate the source sentence, defaulting to generic statements about the Maldives.
+    \item \textbf{Repetition Loops (28.0\%; Annotator 1: 32\%, Annotator 2: 24\%):} The model emits 3--5 initial words before repeating a short byte, syllable, or word sequence until hitting the generation limit.
+    \item \textbf{Arabic/Latin Script Mixing (28.0\%; Annotator 1: 24\%, Annotator 2: 32\%):} The decoder substitutes Arabic, Indic, or Latin codepoints for Thaana characters (e.g., Arabic \textit{Jeem} \texttt{U+062C} in place of Thaana \textit{Javiyani} \texttt{U+0796}) or splices English words into Thaana clauses.
+    \item \textbf{Semantic Drift (23.0\%; Annotator 1: 27\%, Annotator 2: 19\%):} The model produces readable Thaana phrases without loops or foreign scripts, but the meaning diverges from the English source sentence.
+    \item \textbf{Morphological Fragmentation (21.0\%; Annotator 1: 17\%, Annotator 2: 25\%):} The model selects recognizable Dhivehi roots in pure Thaana script but attaches mismatched vowel diacritics (\textit{fili}) or broken suffixes, producing non-words.
 \end{enumerate}
 
-Table \ref{tab:error} shows a representative Gemma 4 (31B) output that begins with an Arabic script substitution on the first consonant and then locks into a byte-level repetition loop until reaching 8,192 tokens.
+Inspecting the confusion matrix shows that 22 of the 28 inter-coder disagreements occurred on compound failures where two error modes co-occurred in the same sentence: 17 outputs combined morphological diacritic errors with resulting semantic drift, and 5 outputs spliced foreign script characters before entering a repetition loop. Table \ref{tab:error} illustrates this compound behavior in a Gemma 4 (31B) output that begins with an Arabic script substitution on the first consonant and then locks into a byte-level repetition loop until reaching 8,192 tokens.
 
 \begin{table*}[t]
 \centering

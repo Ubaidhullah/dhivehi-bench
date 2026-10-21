@@ -1,0 +1,442 @@
+{
+  "n_items": 100,
+  "annotator_1": "Hawwa",
+  "annotator_2": "Hussain Arif",
+  "observed_agreement": 0.72,
+  "chance_agreement": 0.2474,
+  "cohens_kappa": 0.628,
+  "category_percentages": {
+    "morphological_fragmentation": 21.0,
+    "repetition_loops": 28.0,
+    "script_mixing": 28.0,
+    "semantic_drift": 23.0
+  },
+  "confusion_matrix": {
+    "morphological_fragmentation": {
+      "morphological_fragmentation": 12,
+      "repetition_loops": 0,
+      "script_mixing": 1,
+      "semantic_drift": 4
+    },
+    "repetition_loops": {
+      "morphological_fragmentation": 0,
+      "repetition_loops": 24,
+      "script_mixing": 5,
+      "semantic_drift": 3
+    },
+    "script_mixing": {
+      "morphological_fragmentation": 0,
+      "repetition_loops": 0,
+      "script_mixing": 24,
+      "semantic_drift": 0
+    },
+    "semantic_drift": {
+      "morphological_fragmentation": 13,
+      "repetition_loops": 0,
+      "script_mixing": 2,
+      "semantic_drift": 12
+    }
+  },
+  "item_ratings": {
+    "err_001": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "repetition_loops"
+    },
+    "err_002": {
+      "annotator_1": "semantic_drift",
+      "annotator_2": "morphological_fragmentation"
+    },
+    "err_003": {
+      "annotator_1": "semantic_drift",
+      "annotator_2": "semantic_drift"
+    },
+    "err_004": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "script_mixing"
+    },
+    "err_005": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "repetition_loops"
+    },
+    "err_006": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "script_mixing"
+    },
+    "err_007": {
+      "annotator_1": "morphological_fragmentation",
+      "annotator_2": "semantic_drift"
+    },
+    "err_008": {
+      "annotator_1": "morphological_fragmentation",
+      "annotator_2": "morphological_fragmentation"
+    },
+    "err_009": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "repetition_loops"
+    },
+    "err_010": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "repetition_loops"
+    },
+    "err_011": {
+      "annotator_1": "morphological_fragmentation",
+      "annotator_2": "morphological_fragmentation"
+    },
+    "err_012": {
+      "annotator_1": "morphological_fragmentation",
+      "annotator_2": "semantic_drift"
+    },
+    "err_013": {
+      "annotator_1": "script_mixing",
+      "annotator_2": "script_mixing"
+    },
+    "err_014": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "repetition_loops"
+    },
+    "err_015": {
+      "annotator_1": "semantic_drift",
+      "annotator_2": "morphological_fragmentation"
+    },
+    "err_016": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "repetition_loops"
+    },
+    "err_017": {
+      "annotator_1": "morphological_fragmentation",
+      "annotator_2": "morphological_fragmentation"
+    },
+    "err_018": {
+      "annotator_1": "script_mixing",
+      "annotator_2": "script_mixing"
+    },
+    "err_019": {
+      "annotator_1": "script_mixing",
+      "annotator_2": "script_mixing"
+    },
+    "err_020": {
+      "annotator_1": "morphological_fragmentation",
+      "annotator_2": "morphological_fragmentation"
+    },
+    "err_021": {
+      "annotator_1": "script_mixing",
+      "annotator_2": "script_mixing"
+    },
+    "err_022": {
+      "annotator_1": "semantic_drift",
+      "annotator_2": "semantic_drift"
+    },
+    "err_023": {
+      "annotator_1": "morphological_fragmentation",
+      "annotator_2": "morphological_fragmentation"
+    },
+    "err_024": {
+      "annotator_1": "script_mixing",
+      "annotator_2": "script_mixing"
+    },
+    "err_025": {
+      "annotator_1": "script_mixing",
+      "annotator_2": "script_mixing"
+    },
+    "err_026": {
+      "annotator_1": "semantic_drift",
+      "annotator_2": "morphological_fragmentation"
+    },
+    "err_027": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "repetition_loops"
+    },
+    "err_028": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "repetition_loops"
+    },
+    "err_029": {
+      "annotator_1": "semantic_drift",
+      "annotator_2": "morphological_fragmentation"
+    },
+    "err_030": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "script_mixing"
+    },
+    "err_031": {
+      "annotator_1": "semantic_drift",
+      "annotator_2": "morphological_fragmentation"
+    },
+    "err_032": {
+      "annotator_1": "morphological_fragmentation",
+      "annotator_2": "semantic_drift"
+    },
+    "err_033": {
+      "annotator_1": "morphological_fragmentation",
+      "annotator_2": "semantic_drift"
+    },
+    "err_034": {
+      "annotator_1": "script_mixing",
+      "annotator_2": "script_mixing"
+    },
+    "err_035": {
+      "annotator_1": "semantic_drift",
+      "annotator_2": "morphological_fragmentation"
+    },
+    "err_036": {
+      "annotator_1": "semantic_drift",
+      "annotator_2": "semantic_drift"
+    },
+    "err_037": {
+      "annotator_1": "semantic_drift",
+      "annotator_2": "semantic_drift"
+    },
+    "err_038": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "repetition_loops"
+    },
+    "err_039": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "script_mixing"
+    },
+    "err_040": {
+      "annotator_1": "morphological_fragmentation",
+      "annotator_2": "morphological_fragmentation"
+    },
+    "err_041": {
+      "annotator_1": "script_mixing",
+      "annotator_2": "script_mixing"
+    },
+    "err_042": {
+      "annotator_1": "semantic_drift",
+      "annotator_2": "semantic_drift"
+    },
+    "err_043": {
+      "annotator_1": "script_mixing",
+      "annotator_2": "script_mixing"
+    },
+    "err_044": {
+      "annotator_1": "script_mixing",
+      "annotator_2": "script_mixing"
+    },
+    "err_045": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "repetition_loops"
+    },
+    "err_046": {
+      "annotator_1": "semantic_drift",
+      "annotator_2": "semantic_drift"
+    },
+    "err_047": {
+      "annotator_1": "morphological_fragmentation",
+      "annotator_2": "morphological_fragmentation"
+    },
+    "err_048": {
+      "annotator_1": "script_mixing",
+      "annotator_2": "script_mixing"
+    },
+    "err_049": {
+      "annotator_1": "semantic_drift",
+      "annotator_2": "semantic_drift"
+    },
+    "err_050": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "repetition_loops"
+    },
+    "err_051": {
+      "annotator_1": "semantic_drift",
+      "annotator_2": "morphological_fragmentation"
+    },
+    "err_052": {
+      "annotator_1": "semantic_drift",
+      "annotator_2": "morphological_fragmentation"
+    },
+    "err_053": {
+      "annotator_1": "script_mixing",
+      "annotator_2": "script_mixing"
+    },
+    "err_054": {
+      "annotator_1": "semantic_drift",
+      "annotator_2": "morphological_fragmentation"
+    },
+    "err_055": {
+      "annotator_1": "semantic_drift",
+      "annotator_2": "morphological_fragmentation"
+    },
+    "err_056": {
+      "annotator_1": "semantic_drift",
+      "annotator_2": "semantic_drift"
+    },
+    "err_057": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "repetition_loops"
+    },
+    "err_058": {
+      "annotator_1": "script_mixing",
+      "annotator_2": "script_mixing"
+    },
+    "err_059": {
+      "annotator_1": "morphological_fragmentation",
+      "annotator_2": "morphological_fragmentation"
+    },
+    "err_060": {
+      "annotator_1": "semantic_drift",
+      "annotator_2": "semantic_drift"
+    },
+    "err_061": {
+      "annotator_1": "script_mixing",
+      "annotator_2": "script_mixing"
+    },
+    "err_062": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "repetition_loops"
+    },
+    "err_063": {
+      "annotator_1": "morphological_fragmentation",
+      "annotator_2": "morphological_fragmentation"
+    },
+    "err_064": {
+      "annotator_1": "morphological_fragmentation",
+      "annotator_2": "script_mixing"
+    },
+    "err_065": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "repetition_loops"
+    },
+    "err_066": {
+      "annotator_1": "script_mixing",
+      "annotator_2": "script_mixing"
+    },
+    "err_067": {
+      "annotator_1": "semantic_drift",
+      "annotator_2": "morphological_fragmentation"
+    },
+    "err_068": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "repetition_loops"
+    },
+    "err_069": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "semantic_drift"
+    },
+    "err_070": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "semantic_drift"
+    },
+    "err_071": {
+      "annotator_1": "semantic_drift",
+      "annotator_2": "semantic_drift"
+    },
+    "err_072": {
+      "annotator_1": "semantic_drift",
+      "annotator_2": "morphological_fragmentation"
+    },
+    "err_073": {
+      "annotator_1": "semantic_drift",
+      "annotator_2": "script_mixing"
+    },
+    "err_074": {
+      "annotator_1": "script_mixing",
+      "annotator_2": "script_mixing"
+    },
+    "err_075": {
+      "annotator_1": "morphological_fragmentation",
+      "annotator_2": "morphological_fragmentation"
+    },
+    "err_076": {
+      "annotator_1": "semantic_drift",
+      "annotator_2": "morphological_fragmentation"
+    },
+    "err_077": {
+      "annotator_1": "script_mixing",
+      "annotator_2": "script_mixing"
+    },
+    "err_078": {
+      "annotator_1": "morphological_fragmentation",
+      "annotator_2": "morphological_fragmentation"
+    },
+    "err_079": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "repetition_loops"
+    },
+    "err_080": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "repetition_loops"
+    },
+    "err_081": {
+      "annotator_1": "semantic_drift",
+      "annotator_2": "semantic_drift"
+    },
+    "err_082": {
+      "annotator_1": "semantic_drift",
+      "annotator_2": "semantic_drift"
+    },
+    "err_083": {
+      "annotator_1": "script_mixing",
+      "annotator_2": "script_mixing"
+    },
+    "err_084": {
+      "annotator_1": "morphological_fragmentation",
+      "annotator_2": "morphological_fragmentation"
+    },
+    "err_085": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "script_mixing"
+    },
+    "err_086": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "repetition_loops"
+    },
+    "err_087": {
+      "annotator_1": "script_mixing",
+      "annotator_2": "script_mixing"
+    },
+    "err_088": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "semantic_drift"
+    },
+    "err_089": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "repetition_loops"
+    },
+    "err_090": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "repetition_loops"
+    },
+    "err_091": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "repetition_loops"
+    },
+    "err_092": {
+      "annotator_1": "script_mixing",
+      "annotator_2": "script_mixing"
+    },
+    "err_093": {
+      "annotator_1": "script_mixing",
+      "annotator_2": "script_mixing"
+    },
+    "err_094": {
+      "annotator_1": "script_mixing",
+      "annotator_2": "script_mixing"
+    },
+    "err_095": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "repetition_loops"
+    },
+    "err_096": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "repetition_loops"
+    },
+    "err_097": {
+      "annotator_1": "semantic_drift",
+      "annotator_2": "script_mixing"
+    },
+    "err_098": {
+      "annotator_1": "script_mixing",
+      "annotator_2": "script_mixing"
+    },
+    "err_099": {
+      "annotator_1": "repetition_loops",
+      "annotator_2": "repetition_loops"
+    },
+    "err_100": {
+      "annotator_1": "script_mixing",
+      "annotator_2": "script_mixing"
+    }
+  }
+}
