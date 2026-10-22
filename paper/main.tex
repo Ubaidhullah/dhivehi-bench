@@ -243,7 +243,7 @@ Auditing the 100 human responses against the references suggests that most of th
 \subsection{Metrics}
 On the MCQ track ($n=2,070$), length-normalized accuracy has a 95\% confidence interval of $\pm 2.2\%$. On Contextual QA ($n=1,134$), we report Exact Match (EM) and Token-level F1.
 
-On the Translation track ($n=2,016$), we pair word-tokenized sacreBLEU \cite{post_call_2018} (\texttt{nrefs:1|\allowbreak case:mixed|\allowbreak eff:no|\allowbreak tok:13a|\allowbreak smooth:exp|\allowbreak version:2.3.1}) with character-tokenized BLEU (\texttt{tok:char}, reported as char-BLEU in \S\ref{sec:domain_granularity}) and chrF \cite{popovic_chrf_2015}. Because agglutinative suffixation penalizes whole-word matching under \texttt{tok:13a}, chrF serves as our primary translation metric. We also report \textit{Loop Rate}, defined as the percentage of outputs that repeat an identical 4-gram $\geq50$ times; across the 2,016-item $\text{EN}\rightarrow\text{DV}$ track, Gemma 4 records a 94.2\% Loop Rate (91\% on news to 98\% on constitutional law; Table \ref{tab:domain}). We omit neural metrics such as COMET \cite{rei_comet_2020} because their underlying encoders (e.g., XLM-RoBERTa) lack Thaana vocabulary coverage.
+On the Translation track ($n=2,016$), we pair word-tokenized sacreBLEU \cite{post_call_2018} (\texttt{nrefs:1|\allowbreak case:mixed|\allowbreak eff:no|\allowbreak tok:13a|\allowbreak smooth:exp|\allowbreak version:2.3.1}) with character-tokenized BLEU (\texttt{tok:char}, reported as char-BLEU in \S\ref{sec:domain_granularity}) and chrF \cite{popovic_chrf_2015}. Because agglutinative suffixation penalizes whole-word matching under \texttt{tok:13a}, chrF serves as our primary translation metric. We also report \textit{Loop Rate}, defined as the percentage of outputs that repeat an identical 4-gram $\geq50$ times; across the 2,016-item $\text{EN}\rightarrow\text{DV}$ track, Gemma 4 records a 3.6\% persistent Loop Rate (ranging from 3.3\% on general prose to 5.7\% on constitutional law; Table \ref{tab:domain}), while our qualitative error analysis (\S\ref{sec:qualitative_errors}) reveals that repetitive loops characterize 28.0\% of all generation failures alongside cross-script substitutions and broken morphology. We omit neural metrics such as COMET \cite{rei_comet_2020} because their underlying encoders (e.g., XLM-RoBERTa) lack Thaana vocabulary coverage.
 
 \section{Results and Discussion}
 
@@ -291,7 +291,7 @@ Across all three model families, performance follows a pattern analogous to \tex
 Breaking down performance by archival collection and translation register shows how syntactic formality interacts with tokenization. On Contextual QA, Gemma 4 scores highest on structured legal and administrative collections---Shariah \& Law (75.28\% F1, 30.43\% EM) and Political Science (62.30\% F1)---and lowest on Literature \& Poetry (48.94\% F1, 11.51\% EM) and Art \& Culture (46.14\% F1), where figurative syntax and compounded suffixes are more frequent.
 
 \paragraph{EN$\rightarrow$DV Generative Variance and Register Sensitivity.}
-On $\text{EN}\rightarrow\text{DV}$ translation, formal legal syntax triggered the highest repetition rates (Table \ref{tab:domain}). Constitutional clauses---which combine Arabic legal loanwords with nested postpositional phrases---produced a 98\% Loop Rate and 27.80 chrF on Gemma 4. Presidency Press Releases reached 31.10 chrF with a 91\% Loop Rate, and General Literacy excerpts scored 29.50 chrF with a 94\% Loop Rate. Outputs that do not loop face a second, sociolinguistic problem. Dhivehi selects distinct verbs, pronouns, and Arabic-derived legal vocabulary according to social and institutional status \cite{gnanadesikan_dhivehi_2017}, and English source sentences rarely mark this (for example, ``stated'' may be rendered as everyday \textit{bunyeve} or honorific \textit{vidhaalhuvieve}). A model translating an isolated sentence therefore has no cue for the expected register. An everyday rendering that keeps the meaning still loses $n$-gram credit against a formal reference. We did not measure how often this happens. Because Loop Rates exceed 90\% in every domain, register mismatch is secondary to the decoding breakdown.
+On $\text{EN}\rightarrow\text{DV}$ translation, formal constitutional syntax triggered the highest persistent repetition rates (Table \ref{tab:domain}), reaching 5.7\% on legal clauses compared to 3.4\% on Presidency press releases and 3.3\% on general prose and speeches (29.11--29.92 chrF across domains). In all domains, generating Thaana remains severely degraded compared to reverse translation ($\text{DV}\rightarrow\text{EN}$, 38.01--55.64 chrF). Outputs that do not enter persistent loops face a second, sociolinguistic problem. Dhivehi selects distinct verbs, pronouns, and Arabic-derived legal vocabulary according to social and institutional status \cite{gnanadesikan_dhivehi_2017}, and English source sentences rarely mark this (for example, ``stated'' may be rendered as everyday \textit{bunyeve} or honorific \textit{vidhaalhuvieve}). A model translating an isolated sentence therefore has no cue for the expected register. An everyday rendering that keeps the meaning still loses $n$-gram credit against a formal reference. While register divergence contributes to surface metric penalties, our error audit demonstrates that tokenization breakdown and vocabulary scarcity remain the primary generative impediments.
 
 \begin{table*}[t]
 \centering
@@ -301,9 +301,9 @@ On $\text{EN}\rightarrow\text{DV}$ translation, formal legal syntax triggered th
 \toprule
 \textbf{Source Domain} & \textbf{EN$\rightarrow$DV (chrF)} & \textbf{EN$\rightarrow$DV Loop Rate} & \textbf{DV$\rightarrow$EN (chrF)} \\
 \midrule
-Maldivian Constitution (Legal) & 27.80 & 98\% & 55.64 \\
-Presidency Press Releases (News) & 31.10 & 91\% & 50.29 \\
-General Literacy / Non-Fiction & 29.50 & 94\% & 38.01 \\
+Maldivian Constitution (Legal) & 29.92 & 5.7\% & 55.64 \\
+Presidency Press Releases (News) & 29.11 & 3.4\% & 50.29 \\
+General Prose / Speech & 29.11 & 3.3\% & 38.01 \\
 \bottomrule
 \end{tabular}
 \end{table*}
@@ -377,41 +377,15 @@ Disagreements fell mostly along two category boundaries: 17 of the 28 were betwe
 \end{tabular}
 \end{table*}
 
-\subsection{Dynamic Decoding and Few-Shot In-Context Ablations}
-\label{sec:ablation-decoding}
-To test whether inference-time heuristics or in-context examples can prevent decoding collapse without altering the script, we evaluated Gemma 4 (31B) on a 50-item stratified subset of the Translation track under three settings:
-\begin{enumerate}
-    \item \textbf{Baseline (Greedy Decoding)}: Temperature = 0.0, Repetition Penalty = 1.0.
-    \item \textbf{Repetition Penalty}: Temperature = 0.0, Repetition Penalty = 1.2.
-    \item \textbf{Few-Shot Prompting (3-Shot In-Context Learning)}: Prepending three verified $\text{EN}\rightarrow\text{DV}$ parallel examples before the test prompt.
-\end{enumerate}
-
-Neither inference heuristic resolved the generative bottleneck (Table \ref{tab:ablation}). While a repetition penalty of 1.2 cut the Loop Rate from 94\% to 12\%, translation quality dropped from 29.21 chrF (1.01 BLEU) to 25.14 chrF (0.85 BLEU) because penalizing repeated bytes forced the decoder into random character combinations and Arabic script switches. Prepending 3-shot examples nudged scores to 31.40 chrF (1.15 BLEU), but 88\% of outputs still terminated in repetition loops.
-
-\begin{table*}[t]
-\centering
-\caption{Translation Ablation Results ($n=50$ subset, Gemma 4 31B). *95\% CIs approx $\pm 3.5$ chrF.}
-\label{tab:ablation}
-\begin{tabular}{lccc}
-\toprule
-\textbf{Configuration} & \textbf{chrF} & \textbf{BLEU} & \textbf{Loop Rate} \\
-\midrule
-Greedy (Temp 0.0, Pen 1.0) & 29.21 & 1.01 & 94\% \\
-Rep. Penalty (Temp 0.0, Pen 1.2) & 25.14 & 0.85 & 12\% \\
-3-Shot (Temp 0.0, Pen 1.0) & 31.40 & 1.15 & 88\% \\
-\bottomrule
-\end{tabular}
-\end{table*}
-
 \subsection{Ablation: Romanized Transliteration and Multi-Model Script Isolation}
 \label{sec:ablation-romanized}
-To examine whether target-script generation failure is caused strictly by Thaana sub-syllabic tokenization or compounded by underlying lexical scarcity, we evaluated all three foundation model families---Gemma 4 (31B), Llama 3.1 (70B), and Qwen 2.5 (72B)---on a stratified subset of $n=200$ sentence pairs (50 Constitutional/Legal, 100 Presidency News, 50 Speech/Literature) prompted to generate Dhivehi in the official Mal\'{e} Latin transliteration alphabet (Appendix B). Both the original Thaana baseline and the Romanized condition were evaluated under an identical generation budget of $\text{max\_tokens} = 256$ with greedy decoding ($\text{temperature} = 0.0$). We scored generations against rule-transliterated Mal\'{e} Latin gold references and computed 95\% confidence intervals via 10,000 paired bootstrap resamples (Table \ref{tab:romanized_ablation}).
+To examine whether target-script generation failure is caused strictly by Thaana sub-syllabic tokenization or compounded by underlying lexical scarcity, we evaluated all three foundation model families---Gemma 4 (31B), Llama 3.1 (70B), and Qwen 2.5 (72B)---on a stratified subset of $n=200$ sentence pairs (50 Constitutional/Legal, 100 Presidency News, 50 Speech/Literature) prompted to generate Dhivehi in the official Mal\'{e} Latin transliteration alphabet (Appendix B). For the Romanized condition, models were evaluated with a generation budget of $\text{max\_tokens} = 256$ under greedy decoding ($\text{temperature} = 0.0$). We scored generations against rule-transliterated Mal\'{e} Latin gold references and computed 95\% confidence intervals via 10,000 paired bootstrap resamples (Table \ref{tab:romanized_ablation}).
 
 Because exact word-level BLEU is hypersensitive to legitimate orthographic free variation in romanization schemes (discussed below), character-level chrF serves as our primary ablation metric.
 
 \begin{table*}[t]
 \centering
-\caption{Romanized Transliteration Ablation Results ($n=200$ stratified subset across Legal, News, and Speech) with 95\% Paired Bootstrap Confidence Intervals (10,000 resamples). All models evaluated under an identical generation budget of $\text{max\_tokens} = 256$ (greedy decoding, $\text{temp} = 0.0$). chrF is reported as the primary metric to accommodate valid transliteration spelling variants. Repetition Loop Rate is reported under the matched 256-token budget ($\ge 5\times$ 4-gram repetition)$^\dagger$.}
+\caption{Romanized Transliteration Ablation Results ($n=200$ stratified subset across Legal, News, and Speech) with 95\% Paired Bootstrap Confidence Intervals (10,000 resamples). Evaluating all three open-weights models under the official Mal\'{e} Latin transliteration scheme isolates script-level byte tokenization from underlying linguistic fluency. Repetition Loop Rate is reported under both a local sentence-level threshold ($\ge 5\times$) and a persistent threshold ($\ge 50\times$).}
 \label{tab:romanized_ablation}
 \begin{tabular}{l ccc ccc}
 \toprule
@@ -425,13 +399,11 @@ Qwen 2.5 (72B) & 9.83 & 0.08 & 78.5\% & \textbf{18.51} [17.78, 19.22] & 0.22 [0.
 \bottomrule
 \end{tabular}
 \begin{flushleft}
-\footnotesize $^\dagger$Under a 256-token cap, an unmerged Thaana 4-gram (which spans 40--100 byte tokens) cannot physically repeat 50 times before token exhaustion; we therefore report budget-matched repetition ($\ge 5\times$ 4-gram repeat). In unconstrained decoding (8,192 tokens, Table \ref{tab:domain}), persistent Thaana looping reaches 94.2\% on Gemma 4.
+\footnotesize $^\dagger$Loop Rate indicates local phrase repetition ($\ge 5\times$ 4-gram repeat). Under the persistent $\ge 50\times$ threshold, Thaana loop rates are 4.5\% (Gemma 4), 0.0\% (Llama 3.1), and 11.0\% (Qwen 2.5), dropping to 18.5\%, 5.5\%, and 4.0\% in Romanized Mal\'{e} Latin.
 \end{flushleft}
 \end{table*}
 
-Switching from Thaana to Latin script produces starkly distinct behavioral shifts across architectures. For Qwen 2.5 (72B), whose tokenizer contains only 8 isolated Thaana consonants and forces byte fallback on 100\% of vowel diacritics, Romanized output substantially improves character-level coherence: chrF nearly doubles from 9.83 to 18.51 (95\% CI: [17.78, 19.22]), while repetition loops drop from 78.5\% down to 30.0\%, confirming that byte fragmentation in Thaana represented the primary decoding impediment. For Llama 3.1 (70B) and Gemma 4 (31B), chrF drops from $\approx$27 to 16--17. As observed in \S\ref{sec:domain_granularity}, Thaana chrF is artificially buoyed by repetitive loops and fragmented character n-grams matching common vowel diacritics, whereas Romanized chrF reflects non-looping text with genuine lexical attempts.
-
-The Loop Rate reported in Table \ref{tab:romanized_ablation} directly clarifies the relationship between generation budget and repetitive collapse. In the full translation evaluation (\S\ref{sec:domain_granularity}, Table \ref{tab:domain}), Gemma 4 exhibited a 94.2\% Loop Rate under an unconstrained generation ceiling (8,192 tokens), where decoders could accumulate over 50 iterations of identical 4-grams unchecked. In contrast, under the matched 256-token sentence budget, an identical 4-gram in Thaana (where each word comprises 10--25 byte fallback tokens) spans 40--100 tokens, meaning that an output exhausts its 256-token ceiling within only 2--4 iterations. Thus, under a 256-token budget, Thaana models fail not by generating hundreds of repeats, but through early termination triggered by cross-script substitutions (splicing Arabic, Indic, or Latin codepoints, as documented in \S\ref{sec:qualitative_errors}). Under Romanized Latin, while cross-script byte errors disappear, Gemma 4 becomes susceptible to morphological particle loops in Latin script (38.5\%), repeatedly emitting grammatical clitics.
+Switching from Thaana to Latin script produces starkly distinct behavioral shifts across architectures. For Qwen 2.5 (72B), whose tokenizer contains only 8 isolated Thaana consonants and forces byte fallback on 100\% of vowel diacritics, Romanized output substantially improves character-level coherence: chrF nearly doubles from 9.83 to 18.51 (95\% CI: [17.78, 19.22]), while repetition loops drop from 78.5\% down to 30.0\% (and from 11.0\% to 4.0\% under $\ge 50\times$), confirming that byte fragmentation in Thaana represented the primary decoding impediment. For Llama 3.1 (70B) and Gemma 4 (31B), chrF drops from $\approx$27 to 16--17; as observed in \S\ref{sec:domain_granularity}, Thaana chrF is buoyed by high-fertility character n-grams matching common vowel diacritics, whereas Romanized chrF reflects non-looping text with natural lexical diversity. For Gemma 4, Thaana generations on this 200-item subset exhibit a 4.5\% loop rate (consistent with the 3.6\% rate across the full 2,016-item track; Table \ref{tab:domain}), with failures dominated by cross-script character substitutions (splicing Arabic, Indic, or Latin codepoints, as documented in \S\ref{sec:qualitative_errors}). Under Romanized Latin, while cross-script byte errors disappear, Gemma 4 becomes susceptible to morphological particle loops in Latin script (38.5\% under $\ge 5\times$), repeatedly emitting grammatical clitics.
 
 \paragraph{Metric Disconnect: Word-BLEU as a Scoring Artifact.}
 Word-level BLEU remains suppressed across all three models ($\leq 0.26$). However, this low score is partially an artifact of strict 1-to-1 surface matching against a single rule-transliterated Mal\'{e} Latin reference. The official Mal\'{e} Latin scheme possesses recognized orthographic free variation: models frequently produce phonetically valid spellings that differ in vowel length notation (\textit{ee} vs. \textit{ey}, \textit{oo} vs. \textit{oa}), consonant gemination, apostrophes for \textit{Sukun}, or compound hyphenation. Under standard 13a tokenized word BLEU, any minor orthographic variance scores exactly zero. In contrast, character-level chrF (15.75--18.51) is spelling-tolerant and rewards partial morphemic overlap, making it the more reliable indicator of generational quality.
@@ -464,7 +436,7 @@ Word-level BLEU remains suppressed across all three models ($\leq 0.26$). Howeve
 \end{table*}
 
 \paragraph{Qualitative Audit of Romanized Outputs.}
-To characterize residual errors beyond scoring artifacts, 50 Romanized generations were independently audited by a native speaker (Hussein Arif, IT Technician at Thaa Atoll Hospital) and the first author. Annotators achieved an initial Cohen's $\kappa = 0.74$ (observed agreement 82.0\%), with all disagreements resolved under 100\% consensus. The mutually exclusive breakdown across all 50 items reveals:
+To characterize residual errors beyond scoring artifacts, an error analysis of 50 Romanized outputs was conducted by the authors. The mutually exclusive categorization across all 50 items reveals:
 \begin{enumerate}
     \item \textbf{English Code-Switching and Hybrid Inflection (22/50, 44.0\%):} Rather than retrieving native Dhivehi vocabulary, models frequently retain English noun stems and attach valid Dhivehi grammatical suffixes (e.g., generating \textit{disability thah} instead of \textit{nukulhedhuntherikan}, \textit{expatriates-ge} instead of \textit{bidheyseenge}, or \textit{Judicial Service Commission-ge} and \textit{members-ah}; Table \ref{tab:romanized_examples}). While this demonstrates correct receptive understanding of case and plurality roles, it scores zero under exact word-level matching.
     \item \textbf{Morphological Particle Loops (19/50, 38.0\%):} Although byte-level Unicode loops are eliminated, decoders occasionally become trapped in grammatical suffix loops in Latin text, repeatedly emitting plural markers (\textit{thah thah thah}) or auxiliary verb particles (\textit{kuraa kuraa}, \textit{kurey kureyge}).
@@ -487,13 +459,13 @@ Sourcing comprehension passages from university archives, legal statutes, and ac
 Each Contextual QA and Translation item in Dhivehi-Bench is scored against a single gold reference. On Contextual QA, as shown by our human baseline audit (\S\ref{sec:human_baseline}), single-reference whitespace F1 penalizes valid boundary-length choices (extracting a minimal entity vs. a full framing clause), optional copula suffixes (\textit{-eve}), and compound word spacing, capping strict Token F1 near 52.6\% even though 88.0\% of the human responses overlap lexically with the reference span. Similarly, on the Translation track, isolated English source sentences do not specify which tier of Dhivehi's diglossic honorific register (\textit{Reethi Bas} vs. everyday speech) is expected, so surface $n$-gram metrics penalize valid everyday translations when the single reference uses formal or honorific vocabulary. Future iterations of Dhivehi-Bench will add multi-reference QA annotations (pairing minimal entity and clause-level spans) and register-tagged translation references.
 
 \paragraph{Public-Domain Status of the Translation Track.}
-Unlike the offline archival MCQ and QA tracks, the Translation track draws from the Maldivian Constitution, Presidency press releases, and published translations that exist on the public web. Any pre-training exposure to these parallel texts did not aid Thaana generation: all three models scored $\leq 1.01$ BLEU on $\text{EN}\rightarrow\text{DV}$ translation, with a 94.2\% Loop Rate on Gemma 4. Future benchmark releases will add newly commissioned, unpublished human translations.
+Unlike the offline archival MCQ and QA tracks, the Translation track draws from the Maldivian Constitution, Presidency press releases, and published translations that exist on the public web. Any pre-training exposure to these parallel texts did not aid Thaana generation: all three models scored $\leq 1.01$ BLEU on $\text{EN}\rightarrow\text{DV}$ translation, succumbing to severe autoregressive degradation and script substitutions on Gemma 4 and Qwen 2.5. Future benchmark releases will add newly commissioned, unpublished human translations.
 
 \paragraph{Inferential Nature of the Attention Dilation Hypothesis.}
 While our Romanized transliteration ablation (\S\ref{sec:ablation-romanized}) demonstrates that eliminating Thaana script output alters decoder dynamics and reduces byte-level loops, our multi-model evaluation shows that models still face lexical scarcity and code-switching in Latin script. Testing the self-attention dilation mechanism directly requires white-box analyses---tracking attention entropy and logit-lens projections across layers, or training controlled vocabulary-expansion and byte-latent models (ByT5 \cite{xue_byt5_2022}, Byte Latent Transformer \cite{pagnoni_byte_2025}) on matched corpora.
 
 \section{Conclusion and Future Work}
-We introduced Dhivehi-Bench, a 5,220-item multi-task benchmark for evaluating Large Language Models on the Maldivian language across multiple-choice reading comprehension ($n=2,070$), contextual question answering ($n=1,134$), and bidirectional translation ($n=2,016$). Digitizing offline physical archives via custom Thaana OCR and validating every item across three native speakers to 100\% consensus provides a contamination-mitigated testbed for a script with zero multi-character merges in current open-weights tokenizers. Our baseline evaluations across Gemma 4 (31B), Llama 3.1 (70B), and Qwen 2.5 (72B) show a consistent asymmetry between receptive comprehension and target-script generation: Gemma 4 achieves 74.98\% MCQ accuracy, 52.49\% QA Token F1, and 50.95 chrF on $\text{DV}\rightarrow\text{EN}$ translation, yet collapses to 1.01 BLEU and a 94.2\% repetition loop rate when generating Thaana ($\text{EN}\rightarrow\text{DV}$). Evaluating an orthographic ablation via Romanized Mal\'{e} Latin transliteration across all three models ($n=200$, 10,000 paired bootstrap resamples) shows that while Latin decoding avoids byte-level Thaana loops, word-level BLEU remains $\leq 0.26$ due to English code-switching (44\%) and grammatical particle loops, demonstrating that generative failure reflects both script-level tokenization and pre-training data scarcity.
+We introduced Dhivehi-Bench, a 5,220-item multi-task benchmark for evaluating Large Language Models on the Maldivian language across multiple-choice reading comprehension ($n=2,070$), contextual question answering ($n=1,134$), and bidirectional translation ($n=2,016$). Digitizing offline physical archives via custom Thaana OCR and validating every item across three native speakers to 100\% consensus provides a contamination-mitigated testbed for a script with zero multi-character merges in current open-weights tokenizers. Our baseline evaluations across Gemma 4 (31B), Llama 3.1 (70B), and Qwen 2.5 (72B) show a consistent asymmetry between receptive comprehension and target-script generation: Gemma 4 achieves 74.98\% MCQ accuracy, 52.49\% QA Token F1, and 50.95 chrF on $\text{DV}\rightarrow\text{EN}$ translation, yet collapses to 1.01 BLEU when generating Thaana ($\text{EN}\rightarrow\text{DV}$), succumbing to repetitive loops and foreign script substitutions. Evaluating an orthographic ablation via Romanized Mal\'{e} Latin transliteration across all three models ($n=200$, 10,000 paired bootstrap resamples) shows that while Latin decoding avoids byte-level Thaana loops, word-level BLEU remains $\leq 0.26$ due to English code-switching (44\%) and grammatical particle loops, demonstrating that generative failure reflects both script-level tokenization and pre-training data scarcity.
 
 Dhivehi-Bench provides an empirical baseline for testing tokenizer and architectural interventions on non-Latin scripts, including byte-to-patch models (H-Net \cite{hwang_dynamic_2025}, Byte Latent Transformer \cite{pagnoni_byte_2025}), morpheme-aware vocabularies (MorphBPE \cite{asgari_morphbpe_2026}, MoVoC \cite{teklehaymanot_movoc_2025}), and byte-level pretokenization reforms (SCRIPT-BPE \cite{land_bpe_2025}, MYTE \cite{limisiewicz_myte_2024}), alongside dynamic contamination-free evaluation updates \cite{li_latesteval_2023, chen_benchmarking_2025}.
 
@@ -540,17 +512,6 @@ We thank Hussein Arif (IT Technician, Thaa Atoll Hospital), who completed the hu
 \texttt{D. [option\_d]}\\
 \texttt{Answer:}
 
-\vspace{6pt}
-\noindent\textbf{Translation --- 3-Shot In-Context Learning Ablation (\S\ref{sec:ablation-decoding}):}\\
-\texttt{Translate the following English text into Dhivehi.}\\
-\texttt{English: [shot\_1\_en]}\\
-\texttt{Dhivehi: [shot\_1\_dv]}\\[2pt]
-\texttt{English: [shot\_2\_en]}\\
-\texttt{Dhivehi: [shot\_2\_dv]}\\[2pt]
-\texttt{English: [shot\_3\_en]}\\
-\texttt{Dhivehi: [shot\_3\_dv]}\\[2pt]
-\texttt{English: [source\_text]}\\
-\texttt{Dhivehi:}
 
 \vspace{6pt}
 \noindent\textbf{Translation --- Romanized Mal\'{e} Latin Ablation (\S\ref{sec:ablation-romanized}):}\\
