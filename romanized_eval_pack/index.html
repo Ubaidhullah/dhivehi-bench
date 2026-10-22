@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="dv" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dhivehi-Bench: Romanized Dhivehi Human Evaluation (n = 50)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --thaana-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Faruma", "MV Boli", "Noto Sans Thaana", sans-serif;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #0b1120;
+      color: #f1f5f9;
+    }
+    .thaana-text {
+      font-family: var(--thaana-font);
+      direction: rtl;
+      text-align: right;
+      line-height: 2.1;
+      font-size: 1.15rem;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white">
+
+  <!-- Sticky Top Bar -->
+  <header class="bg-slate-900/95 backdrop-blur border-b border-slate-800 sticky top-0 z-30 shadow-lg">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between gap-4 flex-wrap">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center font-bold text-white shadow-lg text-lg">
+          L
+        </div>
+        <div>
+          <h1 class="text-base font-bold text-white">Dhivehi-Bench: Romanized Transliteration Audit (n = 50)</h1>
+          <p class="text-xs text-slate-400">Section 5.7 Qualitative Categorization &amp; Inter-Annotator Agreement</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <div class="flex items-center gap-2 bg-slate-950 px-3 py-1.5 rounded-xl border border-slate-800 text-xs">
+          <span class="text-slate-400">Annotator:</span>
+          <span id="display-name" class="font-semibold text-sky-400">Not Set</span>
+          <button onclick="promptName()" class="text-[11px] text-slate-500 hover:text-slate-300 ml-1">✏️</button>
+        </div>
+        <div class="text-xs font-mono bg-slate-950 px-3 py-1.5 rounded-xl border border-slate-800">
+          <span class="text-slate-400">Coded:</span>
+          <span id="progress-badge" class="text-sky-400 font-bold ml-1">0 / 50</span>
+        </div>
+        <button onclick="downloadResults()" class="px-3.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold shadow-md transition flex items-center gap-1.5">
+          <span>💾</span>
+          <span>Download JSON</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 max-w-5xl w-full mx-auto px-4 py-6">
+    <!-- Coding Rubric Banner -->
+    <div class="bg-slate-900 rounded-2xl border border-slate-800 p-5 mb-6 shadow-md">
+      <div class="flex items-center justify-between mb-3">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-sky-400">
+          📋 Coding Guidelines &amp; Priority Hierarchy (ކޮންމެ ތަރުޖަމާއަކަށް 1 ކެޓަގަރީ ހޮއްވަވާ)
+        </h2>
+        <span class="text-[11px] bg-slate-800 px-2 py-0.5 rounded text-slate-400 font-mono">1 to 5 keys supported</span>
+      </div>
+      <p class="text-xs text-slate-300 mb-3 leading-relaxed">
+        އެންމެ އިސްކަންދޭންވީ އުސޫލު (If an output shows multiple issues, apply this priority hierarchy from 1 to 5):
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5 text-xs">
+        <div class="bg-slate-950/80 border border-amber-900/40 rounded-xl p-3">
+          <div class="font-bold text-amber-400 flex items-center gap-1.5">
+            <span>🔁</span> 1. Morphological / Repetition Loop
+          </div>
+          <div class="text-slate-200 mt-1 font-medium thaana-text text-[13px] leading-snug">ލަފުޒު / ފަސްއަކުރު ތަކުރާރުވުން</div>
+          <div class="text-slate-400 mt-1 text-[11px]">Repeating words, suffixes, or particles 3+ times (e.g. <em>thah thah thah</em>, <em>kuraa kuraa</em>, <em>fali-fali</em>).</div>
+        </div>
+
+        <div class="bg-slate-950/80 border border-indigo-900/40 rounded-xl p-3">
+          <div class="font-bold text-indigo-400 flex items-center gap-1.5">
+            <span>🔤</span> 2. English Code-Switching
+          </div>
+          <div class="text-slate-200 mt-1 font-medium thaana-text text-[13px] leading-snug">އިނގިރޭސި ލަފުޒަށް ދިވެހި ފަސްއަކުރު ގުޅުވުން</div>
+          <div class="text-slate-400 mt-1 text-[11px]">Keeping English nouns/stems with Dhivehi suffixes (e.g. <em>members-ah</em>, <em>court-ge</em>, <em>disability thah</em>).</div>
+        </div>
+
+        <div class="bg-slate-950/80 border border-rose-900/40 rounded-xl p-3">
+          <div class="font-bold text-rose-400 flex items-center gap-1.5">
+            <span>❓</span> 3. Incoherent / Hallucination
+          </div>
+          <div class="text-slate-200 mt-1 font-medium thaana-text text-[13px] leading-snug">މާނަ ދޭހަނުވާ / ބޭކާރު ބަސް</div>
+          <div class="text-slate-400 mt-1 text-[11px]">Severe hallucination, broken meaningless Latin roots, gibberish, or completely unrelated meaning.</div>
+        </div>
+
+        <div class="bg-slate-950/80 border border-emerald-900/40 rounded-xl p-3">
+          <div class="font-bold text-emerald-400 flex items-center gap-1.5">
+            <span>📖</span> 4. Synonym / Register Variation
+          </div>
+          <div class="text-slate-200 mt-1 font-medium thaana-text text-[13px] leading-snug">މާނަ ރަނގަޅު / އެހެން ލަފުޒެއް ނުވަތަ ޢާއްމު ބަސް</div>
+          <div class="text-slate-400 mt-1 text-[11px]">Understood &amp; correct Dhivehi meaning, but uses everyday/alternative synonyms differing from formal reference.</div>
+        </div>
+
+        <div class="bg-slate-950/80 border border-sky-900/40 rounded-xl p-3 md:col-span-2 lg:col-span-2">
+          <div class="font-bold text-sky-400 flex items-center gap-1.5">
+            <span>✅</span> 5. Fluent &amp; Accurate Translation
+          </div>
+          <div class="text-slate-200 mt-1 font-medium thaana-text text-[13px] leading-snug">ރަނގަޅު ފުރިހަމަ ތަރުޖަމާ</div>
+          <div class="text-slate-400 mt-1 text-[11px]">Natural, fluent, and accurate Dhivehi translation in Latin script with no major flaws.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="flex items-center justify-between mb-4 text-xs">
+      <div class="flex items-center gap-2">
+        <button onclick="setFilter('all')" id="filter-all" class="px-3 py-1 rounded-lg bg-sky-600 text-white font-semibold">Show All (50)</button>
+        <button onclick="setFilter('uncoded')" id="filter-uncoded" class="px-3 py-1 rounded-lg bg-slate-900 text-slate-400 hover:bg-slate-800">Uncoded Only</button>
+      </div>
+      <div id="live-breakdown" class="text-slate-400 font-mono text-[11px]"></div>
+    </div>
+
+    <div id="items-container" class="flex flex-col gap-5"></div>
+  </main>
+
+  <script>
+    const ITEMS = [
+  {
+    "id": "rom_001",
+    "num": 1,
+    "domain": "news",
+    "model_key": "llama70b",
+    "model_label": "Llama 3.1 (70B)",
+    "source_idx": 145,
+    "english": "What changed from November?",
+    "gold_romanized": "novembaru mahun feshigen badhaluvee kon kameh heyyeve؟",
+    "gold_thaana": "ނޮވެމްބަރު މަހުން ފެށިގެން ބަދަލުވީ ކޮން ކަމެއް ހެއްޔެވެ؟",
+    "prediction": "November ah November ah hurihaa eh?"
+  },
+  {
+    "id": "rom_002",
+    "num": 2,
+    "domain": "news",
+    "model_key": "llama70b",
+    "model_label": "Llama 3.1 (70B)",
+    "source_idx": 82,
+    "english": "What does uninterrupted residency mean?",
+    "gold_romanized": "medhukendumennethi dhiri'ulhumakee kobaa heyyeve؟",
+    "gold_thaana": "މެދުކެނޑުމެއްނެތި ދިރިއުޅުމަކީ ކޮބާ ހެއްޔެވެ؟",
+    "prediction": "Kuriyahaa eheney kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa kuriyahaa"
+  },
+  {
+    "id": "rom_003",
+    "num": 3,
+    "domain": "news",
+    "model_key": "gemma4",
+    "model_label": "Gemma 4 (31B)",
+    "source_idx": 73,
+    "english": "Rubyn comes from a musical family, her father, Hussain Muaz, is a singer, and her aunt, Aishath Inaya, is a well‑known musician in Maldives.",
+    "gold_romanized": "rubeenge aa'ilaa'akee mi'uzikee aa'ilaa'eh kamun... rubeenge bappa husa'in mu'aazakee lavakiyuntheri'eh kamahvaa'iru، rubeenge bodudha'itha aisathu inaayaa'akee ves mi'uzikge dhaa'iraa'in gina bayaku dhanna moonekeve.",
+    "gold_thaana": "ރުބީންގެ އާއިލާއަކީ މިއުޒިކީ އާއިލާއެއް ކަމުން... ރުބީންގެ ބައްޕަ ހުސައިން މުއާޒަކީ ލަވަކިޔުންތެރިއެއް ކަމަށްވާއިރު، ރުބީންގެ ބޮޑުދައިތަ އައިޝަތު އިނާޔާއަކީ ވެސް މިއުޒިކްގެ ދާއިރާއިން ގިނަ ބަޔަކު ދަންނަ މޫނެކެވެ.",
+    "prediction": "Rubyn ey thibey music-ge family-eh gah, eyge bappa, Hussain Muaz, ey singer-eh, eyge mami, Aishath Inaya, ey Maldives-ah huri well-known musician-eh."
+  },
+  {
+    "id": "rom_004",
+    "num": 4,
+    "domain": "news",
+    "model_key": "gemma4",
+    "model_label": "Gemma 4 (31B)",
+    "source_idx": 106,
+    "english": "President also noted that numerous projects were being carried out across the country with assistance from the government of India and described the neighbour as an important development partner for the Maldives.",
+    "gold_romanized": "ra'eesuljumhooriyyaage vaahakafulhuga'i meegethere'in ba'eh masrooghuthakakee ، indi'aage eheetherikamaa'eku sarukaarun hingaa masrooghuthakekkan faahagakuravva'i indi'aa akee raajjeyge ighthisaadhee ، ijthimaa'ee adhi umraanee tharaggheege enme muhinmu eh ba'iveriyaakamuga'i vidhaalhuvi'eve.",
+    "gold_thaana": "ރައީސުލްޖުމްހޫރިއްޔާގެ ވާހަކަފުޅުގައި މީގެތެރެއިން ބައެއް މަޝްރޫޢުތަކަކީ ، އިންޑިއާގެ އެހީތެރިކަމާއެކު ސަރުކާރުން ހިންގާ މަޝްރޫޢުތަކެއްކަން ފާހަގަކުރައްވައި އިންޑިއާ އަކީ ރާއްޖޭގެ އިޤްތިސާދީ ، އިޖްތިމާއީ އަދި އުމްރާނީ ތަރައްޤީގެ އެންމެ މުހިންމު އެއް ބައިވެރިޔާކަމުގައި ވިދާޅުވިއެވެ.",
+    "prediction": "President-ah thilhu kuree India-ge sarkaru-ge madhadhugeen thalaalhu kuree raajje-ge thalaalhu-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge thahkuru-ge th"
+  },
+  {
+    "id": "rom_005",
+    "num": 5,
+    "domain": "news",
+    "model_key": "qwen72b",
+    "model_label": "Qwen 2.5 (72B)",
+    "source_idx": 139,
+    "english": "If the device fails or is turned off, vessels must report their coordinates every four hours.",
+    "gold_romanized": "diva'is feylvejjenama nuvatha nivvaala'ifinama konme hatharu gadi'irakun ulhandhufaharuge lokeysan koadineytthah ripoat kuran jehe eve.",
+    "gold_thaana": "ޑިވައިސް ފޭލްވެއްޖެނަމަ ނުވަތަ ނިއްވާލައިފިނަމަ ކޮންމެ ހަތަރު ގަޑިއިރަކުން އުޅަނދުފަހަރުގެ ލޮކޭޝަން ކޯޑިނޭޓްތައް ރިޕޯޓް ކުރަން ޖެހެ އެވެ.",
+    "prediction": "Eva veshavaa faayl karai yaahaa thibbey, baaidey koordineytaa haruvaan neshun four uureegeyn thakai thibbey."
+  },
+  {
+    "id": "rom_006",
+    "num": 6,
+    "domain": "news",
+    "model_key": "llama70b",
+    "model_label": "Llama 3.1 (70B)",
+    "source_idx": 140,
+    "english": "Only a flat or home that exceeds 400 square feet in the Greater Malé area will count against husbands or wives.",
+    "gold_romanized": "firimeehaa nuvatha anbimeehaage 400 aka footahvure bodu fleteh nuvatha  goaccheh greytar maaley sarahaddhuga'i huri nama، diskolifa'i vaane'eve.",
+    "gold_thaana": "ފިރިމީހާ ނުވަތަ އަނބިމީހާގެ 400 އަކަ ފޫޓަށްވުރެ ބޮޑު ފްލެޓެއް ނުވަތަ  ގޯއްޗެއް ގްރޭޓަރ މާލޭ ސަރަޙައްދުގައި ހުރި ނަމަ، ޑިސްކޮލިފައި ވާނެއެވެ.",
+    "prediction": "Greater Malé ge 400 square feet aai aharenge flat aharenge home aharenge hama hoadhamaai ekee kobaai hoadhamaai kobaai."
+  },
+  {
+    "id": "rom_007",
+    "num": 7,
+    "domain": "news",
+    "model_key": "llama70b",
+    "model_label": "Llama 3.1 (70B)",
+    "source_idx": 92,
+    "english": "According to the seller, the price of these commodities has risen due to a shortage following shipment delays. The seller also linked the price hike to increasing US dollar rates.",
+    "gold_romanized": "eynaa kiya'idhin gothuga'i mi baavatthakuge aguthah ufulen fashaafa'i vanee، baazaarun e thakethi madhuve، sipmantuthah lasvefa'ivaathee'eve. adhi، thaketheege aguthah ufulun gulhifa'i vanee، dolaruge agu boduvumaakan ves e viyafaariveriyaa faahagakuri'eve.",
+    "gold_thaana": "އޭނާ ކިޔައިދިން ގޮތުގައި މި ބާވަތްތަކުގެ އަގުތައް އުފުލެން ފަށާފައި ވަނީ، ބާޒާރުން އެ ތަކެތި މަދުވެ، ޝިޕްމަންޓުތައް ލަސްވެފައިވާތީއެވެ. އަދި، ތަކެތީގެ އަގުތައް އުފުލުން ގުޅިފައި ވަނީ، ޑޮލަރުގެ އަގު ބޮޑުވުމާކަން ވެސް އެ ވިޔަފާރިވެރިޔާ ފާހަގަކުރިއެވެ.",
+    "prediction": "Vikkaa kurevifaivaanee, in baiy varah masalahaahuthah dhanee shipment delay kurevifaivaanee kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriyaa kuriy"
+  },
+  {
+    "id": "rom_008",
+    "num": 8,
+    "domain": "legal",
+    "model_key": "llama70b",
+    "model_label": "Llama 3.1 (70B)",
+    "source_idx": 16,
+    "english": "where the amendment does not receive a majority approval in the public referendum, it shall be deemed to have been defeated.",
+    "gold_romanized": "rayyithunge ghaanmu khiyaalu hoadhumuge voatuga'i voatudhin meehunge aqulabiyyathu nulibijjenama e bileh baazilvee'eve.",
+    "gold_thaana": "ރައްޔިތުންގެ ޢާންމު ޚިޔާލު ހޯދުމުގެ ވޯޓުގައި ވޯޓުދިން މީހުންގެ އަޣުލަބިއްޔަތު ނުލިބިއްޖެނަމަ އެ ބިލެއް ބާޠިލްވީއެވެ.",
+    "prediction": "aharugey raayyithun majooriyaa aharemengey public referendum eh nuvaneh, eh hingajjeemey kuriyah dhaaneh viyakeh."
+  },
+  {
+    "id": "rom_009",
+    "num": 9,
+    "domain": "legal",
+    "model_key": "gemma4",
+    "model_label": "Gemma 4 (31B)",
+    "source_idx": 45,
+    "english": "The land, sea, and seabed, including all fish within the territory of the Maldives, and all naturally occurring resources, including metallic ores, petroleum and gas, shall vest in the State.",
+    "gold_romanized": "dhivehiraajjeyge sarahaddhuge thereyga'i himeney eggamaa'i، kandaa'i، kanduga'ivaa mahaa'i، kanduge adeege bimaa'i، adhi mithanthaanga'i ufedhifa'i huri nuvatha huri zabeeghee aguhuri maghudhanaa'i، thelaa'i، geyhaa'i، adhi minoonves huriha'i eccheh milkuvegenvanee، dhivehidha'ulathasheve.",
+    "gold_thaana": "ދިވެހިރާއްޖޭގެ ސަރަޙައްދުގެ ތެރޭގައި ހިމެނޭ އެއްގަމާއި، ކަނޑާއި، ކަނޑުގައިވާ މަހާއި، ކަނޑުގެ އަޑީގެ ބިމާއި، އަދި މިތަންތާނގައި އުފެދިފައި ހުރި ނުވަތަ ހުރި ޠަބީޢީ އަގުހުރި މަޢުދަނާއި، ތެލާއި، ގޭހާއި، އަދި މިނޫންވެސް ހުރިހައި އެއްޗެއް މިލްކުވެގެންވަނީ، ދިވެހިދައުލަތަށެވެ.",
+    "prediction": "Maldives-uge hiddumuge huddhu, miyadhu, adhi miyadhu-ge adhi, thaharu-ge huddhu-ga thibe hamma fish-eh, adhi thaharu-ge huddhu-ga thibe hamma thaba'ee resources-eh, thaharu-ge huddhu-ga thibe metallic ores, petroleum adhi gas-eh, hamma state-ge hukkaiyaki."
+  },
+  {
+    "id": "rom_010",
+    "num": 10,
+    "domain": "legal",
+    "model_key": "qwen72b",
+    "model_label": "Qwen 2.5 (72B)",
+    "source_idx": 3,
+    "english": "8. a lawyer elected from among the lawyers licensed to practise in the Maldives by themselves.",
+    "gold_romanized": "8. dhivehiraajjeyga'i ghaanoonee vakeelukan kurumuge huddhalibifa'ivaa ghaanoonee vakeelunge there'in eba'imeehun inthikhaabukuraa vakeelaku.",
+    "gold_thaana": "8. ދިވެހިރާއްޖޭގައި ޤާނޫނީ ވަކީލުކަން ކުރުމުގެ ހުއްދަލިބިފައިވާ ޤާނޫނީ ވަކީލުންގެ ތެރެއިން އެބައިމީހުން އިންތިޚާބުކުރާ ވަކީލަކު.",
+    "prediction": "8. aalayaa havlaa havlaha meehaafihuraa dhivehiraavaan kuraamatha thakurutta."
+  },
+  {
+    "id": "rom_011",
+    "num": 11,
+    "domain": "legal",
+    "model_key": "qwen72b",
+    "model_label": "Qwen 2.5 (72B)",
+    "source_idx": 21,
+    "english": "All property, assets and monies which at the commencement of this Constitution were vested in the State shall continue to vest in the State.",
+    "gold_romanized": "mi ghaanoonu'asaasee'ash ghamalukuraan fashaa'iru dha'ulathuge milkuga'ivaa huriha'i mudhalaa'i، thanthanaa'i، thakecchaa'i، fa'isaa'akee، dha'ulathuge thakeccheve.",
+    "gold_thaana": "މި ޤާނޫނުއަސާސީއަށް ޢަމަލުކުރާން ފަށާއިރު ދައުލަތުގެ މިލްކުގައިވާ ހުރިހައި މުދަލާއި، ތަންތަނާއި، ތަކެއްޗާއި، ފައިސާއަކީ، ދައުލަތުގެ ތަކެއްޗެވެ.",
+    "prediction": "Dhivehi: Mihaa dhaanu, aadhaaru thilaa mehaku tharhaa raajjege jehun dhaanu, aadhaaru thilaa mehaku tharhaa raajjege veshthaanu thakanaa aai konstuution thakurin thakuranaa veshthaanu thakurinaa. \n\nNote: The translation provided is a close approximation and may not be a word-for-word translation due to the nuances of the Dhivehi language. Here is a more accurate translation:\n\nDhivehi: Mihaa dhaanu, aadhaaru thilaa mehaku tharhaa raajjege veshthaanu thakuranaa aai konstuution thakurin thakuranaa veshthaanu thakurinaa."
+  },
+  {
+    "id": "rom_012",
+    "num": 12,
+    "domain": "news",
+    "model_key": "llama70b",
+    "model_label": "Llama 3.1 (70B)",
+    "source_idx": 89,
+    "english": "Former Vice President Faisal Naseem has praised India as one of the Maldives’ most important development partners, noting that India has consistently been the first to offer assistance in times of need.",
+    "gold_romanized": "raajjeyge tharaggeege enme muhinmu eh ba'iveriyaa'akee indi'aa kamashaa'i، raajje'ash dhimaavaa konme kamegga'i enme furathama eheetherikan forukohdhey ga'umakee ves indi'aa kamash vidhaalhuve kureege na'ibura'ees fa'isal naseem e ga'umash tha'ureefukuravva'ifi'eve.",
+    "gold_thaana": "ރާއްޖޭގެ ތަރައްގީގެ އެންމެ މުހިންމު އެއް ބައިވެރިޔާއަކީ އިންޑިއާ ކަމަށާއި، ރާއްޖެއަށް ދިމާވާ ކޮންމެ ކަމެއްގައި އެންމެ ފުރަތަމަ އެހީތެރިކަން ފޮރުކޮށްދޭ ގައުމަކީ ވެސް އިންޑިއާ ކަމަށް ވިދާޅުވެ ކުރީގެ ނައިބުރައީސް ފައިސަލް ނަސީމް އެ ގައުމަށް ތައުރީފުކުރައްވައިފިއެވެ.",
+    "prediction": "Ameeruveringe Faisal Naseem, hindhu aai beynunvanee Maldives ge sababu dhaairaa iyya kuraaneh, hindhu aai Maldives ah needhugai vegen dhaaneh hama dhaairaa iyya kuraaneh."
+  },
+  {
+    "id": "rom_013",
+    "num": 13,
+    "domain": "speech",
+    "model_key": "qwen72b",
+    "model_label": "Qwen 2.5 (72B)",
+    "source_idx": 177,
+    "english": "We are working on putting an end to the practice of education being treated as a commodity that is exclusively available to the wealthy.",
+    "gold_romanized": "mihaaru mikuraa kamakee، mathee thaghuleemash oth ganevikkumuge viyafaari bandhukurun.",
+    "gold_thaana": "މިހާރު މިކުރާ ކަމަކީ، މަތީ ތަޢުލީމަށް އޮތް ގަނެވިއްކުމުގެ ވިޔަފާރި ބަންދުކުރުން.",
+    "prediction": "Aanu veyri aadhaa ekaraa kurey kurey thakkaagee tharaveege aadhaa kaafi tharaveege tharaveege kaafi tharaveege aadhaa kaafi tharaveege aadhaa kaafi tharaveege aadhaa kaafi tharaveege aadhaa kaafi tharaveege aadhaa kaafi tharaveege aadhaa kaafi tharaveege aadhaa kaafi tharaveege aadhaa kaafi tharaveege aadhaa kaafi tharaveege aadhaa kaafi tharaveege aadhaa kaafi tharaveege aadhaa kaafi tharaveege aadhaa kaafi tharaveege aadhaa kaafi tharaveege aadhaa kaafi tharaveege aadhaa kaafi tharaveege aadhaa kaafi tharaveege aadhaa kaafi tharaveege aadhaa kaafi"
+  },
+  {
+    "id": "rom_014",
+    "num": 14,
+    "domain": "news",
+    "model_key": "gemma4",
+    "model_label": "Gemma 4 (31B)",
+    "source_idx": 69,
+    "english": "Everyone will be more involved in implementing decisions based on participation.”",
+    "gold_romanized": "enmen ba'iverivegen ninmaa ninmunthakash binaakosh kankan thanfeezukurumuga'i bodash harakaattherivaanee،",
+    "gold_thaana": "އެންމެން ބައިވެރިވެގެން ނިންމާ ނިންމުންތަކަށް ބިނާކޮށް ކަންކަން ތަންފީޒުކުރުމުގައި ބޮޑަށް ހަރަކާތްތެރިވާނީ،",
+    "prediction": "\"Participation-ah basaa kurey faisaa-thakaa amalkuru-vun, thahureh thahureh vadhun vamaa-vaiy vanee.\""
+  },
+  {
+    "id": "rom_015",
+    "num": 15,
+    "domain": "legal",
+    "model_key": "qwen72b",
+    "model_label": "Qwen 2.5 (72B)",
+    "source_idx": 12,
+    "english": "The members of the Elections Commission shall be appointed as follows:",
+    "gold_romanized": "(sh) ileksans komisanash menbarun ghayyankuraanvaanee annanivi gothugematheenneve.",
+    "gold_thaana": "(ށ) އިލެކްޝަންސް ކޮމިޝަނަށް މެންބަރުން ޢައްޔަންކުރާންވާނީ އަންނަނިވި ގޮތުގެމަތީންނެވެ.",
+    "prediction": "Elections Komishen'ge aadhaarakuruven thahira aasge dhaarey:\n1. Thahira aasge dhaarey aadhaarakuruven thaanaa Raajje Perumaa Puththuveriyaa vumakunu raajjege aadhaarakuruven thahira aasge dhaarey.\n2. Thahira aasge dhaarey aadhaarakuruven thaanaa Raajje Thuththuveriyaa vumakunu raajjege aadhaarakuruven thahira aasge dhaarey.\n3. Thahira aasge dhaarey aadhaarakuruven thaanaa Raajje Thuththuveriyaa vumakunu raajjege aadhaarakuruven thahira aasge dhaarey. \n\nNote: The above translation is a general interpretation. The specific roles and bodies mentioned (e.g., Raajje Perumaa Puththuveriyaa, Raajje Thuththuveriyaa) may need to be adjusted based on the exact context and official terminology used in"
+  },
+  {
+    "id": "rom_016",
+    "num": 16,
+    "domain": "news",
+    "model_key": "gemma4",
+    "model_label": "Gemma 4 (31B)",
+    "source_idx": 100,
+    "english": "Create a travel masterplan for the entire Maldives",
+    "gold_romanized": "mulhi raajjeyge traanspoat maastarpleyn hedheyne",
+    "gold_thaana": "މުޅި ރާއްޖޭގެ ޓްރާންސްޕޯޓް މާސްޓަރޕްލޭން ހެދޭނެ",
+    "prediction": "Mihaaru dhenu thibaa Maldives-ah thahkeelu travel masterplan-eh thahkuru kurun."
+  },
+  {
+    "id": "rom_017",
+    "num": 17,
+    "domain": "news",
+    "model_key": "gemma4",
+    "model_label": "Gemma 4 (31B)",
+    "source_idx": 50,
+    "english": "First Lady Sajidha Mohamed has stated that providing State employment opportunities for persons with disabilities demonstrates a strong commitment to upholding human dignity.",
+    "gold_romanized": "nukulhedhuntherikan hunna faraatthakash dha'ulathuge vazeefaalibeyney furusathu fahivegendhiyumakee insaanee karaamaathash iskandhinumuge mathiveri ninmumekkamuga'i ra'eesuljumhooriyyaage anbikanbalun saajidhaa muhammadhu vidhaalhuvejje'eve.",
+    "gold_thaana": "ނުކުޅެދުންތެރިކަން ހުންނަ ފަރާތްތަކަށް ދައުލަތުގެ ވަޒީފާލިބޭނޭ ފުރުސަތު ފަހިވެގެންދިޔުމަކީ އިންސާނީ ކަރާމާތަށް އިސްކަންދިނުމުގެ މަތިވެރި ނިންމުމެއްކަމުގައި ރައީސުލްޖުމްހޫރިއްޔާގެ އަނބިކަނބަލުން ސާޖިދާ މުޙައްމަދު ވިދާޅުވެއްޖެއެވެ.",
+    "prediction": "First Lady Sajidha Mohamed ai vanee, disability thahu thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah"
+  },
+  {
+    "id": "rom_018",
+    "num": 18,
+    "domain": "news",
+    "model_key": "gemma4",
+    "model_label": "Gemma 4 (31B)",
+    "source_idx": 80,
+    "english": "3- In the area of Sports Progression – Ahmed Abdul Kareem",
+    "gold_romanized": "3- kulhivarash khidhumakkurumuge dhaa'iraa'in - ahmadhu ghabdhulkareem ",
+    "gold_thaana": "3- ކުޅިވަރަށް ޚިދުމަތްކުރުމުގެ ދާއިރާއިން - އަޙްމަދު ޢަބްދުލްކަރީމް ",
+    "prediction": "3- Sports progression-ga area-gah – Ahmed Abdul Kareem"
+  },
+  {
+    "id": "rom_019",
+    "num": 19,
+    "domain": "news",
+    "model_key": "llama70b",
+    "model_label": "Llama 3.1 (70B)",
+    "source_idx": 131,
+    "english": "The public was invited to comment by a deadline of 2pm on January 15.",
+    "gold_romanized": "jenu'aree 15 ige mendhuru fahu 2 ge kurin ghaanmunnash khiyaalu fonuveyne'eve.",
+    "gold_thaana": "ޖެނުއަރީ 15 އިގެ މެންދުރު ފަހު 2 ގެ ކުރިން ޢާންމުންނަށް ޚިޔާލު ފޮނުވޭނެއެވެ.",
+    "prediction": "Raajjeygai ummeedhuthah 15 January 2pm ah dhaanee hurihaa eki kalaahakaai comment kuraa masahal kohfi."
+  },
+  {
+    "id": "rom_020",
+    "num": 20,
+    "domain": "news",
+    "model_key": "gemma4",
+    "model_label": "Gemma 4 (31B)",
+    "source_idx": 133,
+    "english": "In 2004, Nasheed was granted refugee status by the British government and granted indefinite leave to remain in the UK.",
+    "gold_romanized": "2004vana aharu ingireysi sarukaarun naseedhash egha'umuge himaayaddhevvi'eve.",
+    "gold_thaana": "2004ވަނަ އަހަރު އިނގިރޭސި ސަރުކާރުން ނަޝީދަށް އެޤައުމުގެ ހިމާޔަތްދެއްވިއެވެ.",
+    "prediction": "2004 gai, Nasheed-ah British sarukaaruge refugee status ain hami kamai, UK gai hifaa thaharu kurey namaa hami kamai."
+  },
+  {
+    "id": "rom_021",
+    "num": 21,
+    "domain": "legal",
+    "model_key": "llama70b",
+    "model_label": "Llama 3.1 (70B)",
+    "source_idx": 26,
+    "english": "(c) The jurisdiction and characteristics of constituencies, posts and councils created to provide for decentralised administration shall be specified in law.",
+    "gold_romanized": "(n) laamarukazee udoolun idhaaree dhaa'iraathah hingumahtaka'i ufaddhaa idhaaraathakaa'i، maghaamuthakaa'i، ka'unsilthakuge sifathakaa'i، efaraatthakuge ikhthidaad ghaanoonuga'i kanda'alha'ifa'i onnaanvaane'eve.",
+    "gold_thaana": "(ނ) ލާމަރުކަޒީ އުޞޫލުން އިދާރީ ދާއިރާތައް ހިންގުމަށްޓަކައި އުފައްދާ އިދާރާތަކާއި، މަޤާމުތަކާއި، ކައުންސިލްތަކުގެ ސިފަތަކާއި، އެފަރާތްތަކުގެ އިޚްތިޞާޞް ޤާނޫނުގައި ކަނޑައަޅައިފައި އޮންނާންވާނެއެވެ.",
+    "prediction": "(c) Viyaavasthu kuraavaru kottey kuraa dhaathtakaa aharemen ge jumhoorithah aharemen ge aadhaaran kuraavaru, posthun, majlisun kuraa dhaathtakaa aharemen ge viyaavasthu kuraavaru kottey kuraa dhaathtakaa aharemen ge jumhoorithah aharemen ge aadhaaran kuraavaru, posthun, majlisun kuraa dhaathtakaa aharemen ge viyaavasthu kuraavaru kottey kuraa dhaathtakaa aharemen ge jumhoorithah aharemen ge aadhaaran kuraavaru, posthun, majlisun kuraa dhaathtakaa aharemen ge viyaavasthu kuraavaru kottey kuraa dhaathtakaa aharemen ge jumhoorithah aharemen ge aadhaaran kuraavaru, posthun, majlisun kuraa dhaathtakaa aharemen ge viyaavasthu"
+  },
+  {
+    "id": "rom_022",
+    "num": 22,
+    "domain": "speech",
+    "model_key": "llama70b",
+    "model_label": "Llama 3.1 (70B)",
+    "source_idx": 174,
+    "english": "Next week, with the grace of Almighty Allah, we will embark on an ambitious programme to vaccinate everyone residing in the Maldives.",
+    "gold_romanized": "mi anna hafuthaage thereyga'i، maath ﷲge vaagifulhaa'eku، alhugandumen mi fashanee raajjeyga'i ulhey enmennash koavid veksin jehumuge varash bodu prograameh.",
+    "gold_thaana": "މި އަންނަ ހަފުތާގެ ތެރޭގައި، މާތް ﷲގެ ވާގިފުޅާއެކު، އަޅުގަނޑުމެން މި ފަށަނީ ރާއްޖޭގައި އުޅޭ އެންމެންނަށް ކޯވިޑް ވެކްސިން ޖެހުމުގެ ވަރަށް ބޮޑު ޕްރޮގްރާމެއް.",
+    "prediction": "Qaumuge aharenge masakkathah dhaane, Alhaamdu lillah, Maldivesge rahdhehves masahkathah vaccine kuraane aharenge barakuran programme ah dhaane."
+  },
+  {
+    "id": "rom_023",
+    "num": 23,
+    "domain": "speech",
+    "model_key": "gemma4",
+    "model_label": "Gemma 4 (31B)",
+    "source_idx": 155,
+    "english": "The harbours of forty-eight islands have now been completed and the construction of harbours in 30 more islands will be concluded by the end of this year.",
+    "gold_romanized": "raajjeyge 48 rashegge bandharu hedhumuge masakkath mihaaru vanee nimifa'i. iraadhakurevviyyaa mi aharuge niyalash ithuru 30 rashegge bandharuge masakkath nimeyne.",
+    "gold_thaana": "ރާއްޖޭގެ 48 ރަށެއްގެ ބަނދަރު ހެދުމުގެ މަސައްކަތް މިހާރު ވަނީ ނިމިފައި. އިރާދަކުރެއްވިއްޔާ މި އަހަރުގެ ނިޔަލަށް އިތުރު 30 ރަށެއްގެ ބަނދަރުގެ މަސައްކަތް ނިމޭނެ.",
+    "prediction": "Hathahasi-as-athah islandhuge harboru thaku thah thaharu thah thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu th"
+  },
+  {
+    "id": "rom_024",
+    "num": 24,
+    "domain": "legal",
+    "model_key": "llama70b",
+    "model_label": "Llama 3.1 (70B)",
+    "source_idx": 29,
+    "english": "234. Local authorities shall be provided with an annual budget from the Treasury as provided in law, and shall also have authority, in accordance with statute, to raise funds.",
+    "gold_romanized": "234. ghaanoonuga'ivaa gothugemathin konme aharakuves laamarukazee idhaaraathakash dha'ulathuge bajetuga'i himana'igen fa'isaa dhookuraanvaane'eve. adhi rayyithunge majileehun faaskuraa ghaanoonaa eggovvaa gothugemathin fa'isaa hoadhumuge baaru laamarukazee idhaaraathakash libigenve'eve.",
+    "gold_thaana": "234. ޤާނޫނުގައިވާ ގޮތުގެމަތިން ކޮންމެ އަހަރަކުވެސް ލާމަރުކަޒީ އިދާރާތަކަށް ދައުލަތުގެ ބަޖެޓުގައި ހިމަނައިގެން ފައިސާ ދޫކުރާންވާނެއެވެ. އަދި ރައްޔިތުންގެ މަޖިލީހުން ފާސްކުރާ ޤާނޫނާ އެއްގޮތްވާ ގޮތުގެމަތިން ފައިސާ ހޯދުމުގެ ބާރު ލާމަރުކަޒީ އިދާރާތަކަށް ލިބިގެންވެއެވެ.",
+    "prediction": "234. Adu dhaairaa gothah kihineh Treasury eh nuvaneh qanoon asal kuraaneh varah mas varah budget ekah kohgenney, qanoon asal kuraaneh mas varah fund ekah hama kuraaneh adu dhaairaa gothah kihineh hukmukuraaneh hureveyne."
+  },
+  {
+    "id": "rom_025",
+    "num": 25,
+    "domain": "speech",
+    "model_key": "llama70b",
+    "model_label": "Llama 3.1 (70B)",
+    "source_idx": 172,
+    "english": "The IMF estimates the Maldives to be among the top five economies globally expected to grow the most in 2022.",
+    "gold_romanized": "ai.'em.'ef. in lafaakuraa gothuga'i، mi hingaa 2022 vana aharuves enme baarash kuri'araane kamash belevey mulhi dhuniyeyge 5 ighthidaadhuge thereyga'i dhivehiraajje himeney.",
+    "gold_thaana": "އައި.އެމް.އެފް. އިން ލަފާކުރާ ގޮތުގައި، މި ހިނގާ 2022 ވަނަ އަހަރުވެސް އެންމެ ބާރަށް ކުރިއަރާނެ ކަމަށް ބެލެވޭ މުޅި ދުނިޔޭގެ 5 އިޤްތިޞާދުގެ ތެރޭގައި ދިވެހިރާއްޖެ ހިމެނޭ.",
+    "prediction": "IMF ehen 2022 ah އަށް އެންމެވެސް ވާހަކައިގެންވާ ޤައުމުތަކުގެ ތެރެއިން މާލްދީވުން ހިމެނޭނެއެވެ."
+  },
+  {
+    "id": "rom_026",
+    "num": 26,
+    "domain": "news",
+    "model_key": "gemma4",
+    "model_label": "Gemma 4 (31B)",
+    "source_idx": 68,
+    "english": "Conserve at least one island, one reef and one wetland in each atoll",
+    "gold_romanized": "konme atholhegga'i ba'inal agvaamee minganduthakash fethey gothash himaayakkurumuge prograamegge dhashun madhuvegen 1 faraa، 1 rashaa، 1 kandoofaa himeney gothash rakkaatherikureveyne",
+    "gold_thaana": "ކޮންމެ އަތޮޅެއްގައި ބައިނަލް އަގްވާމީ މިންގަނޑުތަކަށް ފެތޭ ގޮތަށް ހިމާޔަތްކުރުމުގެ ޕްރޮގްރާމެއްގެ ދަށުން މަދުވެގެން 1 ފަރާ، 1 ރަށާ، 1 ކަނޑޫފާ ހިމެނޭ ގޮތަށް ރައްކާތެރިކުރެވޭނެ",
+    "prediction": "Ekaatollu ge thahunaa, alaa thahunaa, akaru thahunaa ekeku hifun kureyye."
+  },
+  {
+    "id": "rom_027",
+    "num": 27,
+    "domain": "legal",
+    "model_key": "gemma4",
+    "model_label": "Gemma 4 (31B)",
+    "source_idx": 19,
+    "english": "to inquire into and investigate all allegations of corruption; any complaints, information, or suspicion of corruption must be investigated;",
+    "gold_romanized": "korapsange massalathah bala'i thahugheeghukurun. meegethereyga'i، evves faraathakun korapsange ghamaleh hinga'ifikamuge sakuvaa'eh hushahalha'ifinama nuvatha mifadha kamegge maghuloomaathu minoongothakunves libijjenama، nuvatha efadha kamegge macchash sakkukurevijjenama، ekameh bala'i thahugheeghukurun.",
+    "gold_thaana": "ކޮރަޕްޝަންގެ މައްސަލަތައް ބަލައި ތަޙުޤީޤުކުރުން. މީގެތެރޭގައި، އެއްވެސް ފަރާތަކުން ކޮރަޕްޝަންގެ ޢަމަލެއް ހިންގައިފިކަމުގެ ޝަކުވާއެއް ހުށަހަޅައިފިނަމަ ނުވަތަ މިފަދަ ކަމެއްގެ މަޢުލޫމާތު މިނޫންގޮތަކުންވެސް ލިބިއްޖެނަމަ، ނުވަތަ އެފަދަ ކަމެއްގެ މައްޗަށް ޝައްކުކުރެވިއްޖެނަމަ، އެކަމެއް ބަލައި ތަޙުޤީޤުކުރުން.",
+    "prediction": "corruption ge ufaa-faiyathuge thilamaa thahqeeq kurey; corruption ge kohinoo shukooku, thahqeeq kurey nunaa thahqeeq kurey;"
+  },
+  {
+    "id": "rom_028",
+    "num": 28,
+    "domain": "legal",
+    "model_key": "llama70b",
+    "model_label": "Llama 3.1 (70B)",
+    "source_idx": 31,
+    "english": "Such statute shall specify the responsibilities, powers, mandate, qualifications, and ethical standards of members.",
+    "gold_romanized": "e ghaanoonuga'i، komisanuge mas'ooliyyathuthakaa'i، baaruthakaa'i، komisanuge masakkathuge dhaa'iraa'aa'i، komisanuge menbarunge kiba'iga'i hunnaanvaane saruzuthakaa'i، sulookee minganduthah kanda'alha'ifa'i onnaanvaane'eve.",
+    "gold_thaana": "އެ ޤާނޫނުގައި، ކޮމިޝަނުގެ މަސްއޫލިއްޔަތުތަކާއި، ބާރުތަކާއި، ކޮމިޝަނުގެ މަސައްކަތުގެ ދާއިރާއާއި، ކޮމިޝަނުގެ މެންބަރުންގެ ކިބައިގައި ހުންނާންވާނެ ޝަރުޠުތަކާއި، ސުލޫކީ މިންގަނޑުތައް ކަނޑައަޅައިފައި އޮންނާންވާނެއެވެ.",
+    "prediction": "Aharenge aai aharenge adhikari, hakku, vadaigathu, ahuruvaan, aadheebathu aai aharenge aai aadheebathuge thahugeeves masahalaa kuri kohfi."
+  },
+  {
+    "id": "rom_029",
+    "num": 29,
+    "domain": "news",
+    "model_key": "llama70b",
+    "model_label": "Llama 3.1 (70B)",
+    "source_idx": 136,
+    "english": "To further strengthen healthcare service delivery on the island, the President inaugurated a newly constructed building at the Dhuvaafaru Health Centre.",
+    "gold_romanized": "hospitalu tharaggheekurevvumaa hama'ahves rayyithunnash dihhee khidhumatthah veehaaves furihama gothegga'i foarukohdhevvumash mihaarun mihaarash kuravvamun gendhavaa masakkatthakuge thereyga'i himenigen، dhuvaafaruge dihhee marukazash alash ithurukurevunu imaaraath emanikufaanu vanee، rasmeekosh hulhuvva'idhevvaafa'eve.",
+    "gold_thaana": "ހޮސްޕިޓަލު ތަރައްޤީކުރެއްވުމާ ހަމައަށްވެސް ރައްޔިތުންނަށް ޞިއްޙީ ޚިދުމަތްތައް ވީހާވެސް ފުރިހަމަ ގޮތެއްގައި ފޯރުކޮށްދެއްވުމަށް މިހާރުން މިހާރަށް ކުރައްވަމުން ގެންދަވާ މަސައްކަތްތަކުގެ ތެރޭގައި ހިމެނިގެން، ދުވާފަރުގެ ޞިއްޙީ މަރުކަޒަށް އަލަށް އިތުރުކުރެވުނު އިމާރާތް އެމަނިކުފާނު ވަނީ، ރަސްމީކޮށް ހުޅުއްވައިދެއްވާފައެވެ.",
+    "prediction": "Dhuvaafaru Health Centre ah dhakkaaifiy kuriyah gondi eki building eh hulhuvaalhu kuraashee President ah hama dhuvahuge."
+  },
+  {
+    "id": "rom_030",
+    "num": 30,
+    "domain": "speech",
+    "model_key": "gemma4",
+    "model_label": "Gemma 4 (31B)",
+    "source_idx": 178,
+    "english": "‘HIYA’ (‘Shelter’), the biggest housing project launched by the Government this year, to be completed next year, is expected to provide housing to more than 160,000 people residing in the Maldives.",
+    "gold_romanized": "mihaathanash، raajjeyga'i boahiyaavahikamaa gulheygothun hingaa enmebodu masrooghu kamahvaa [hiyaa] masrooghu، 2019 vana aharu nimey'iru، raajjeyge aabaadheege jumula 160,000 ahvure gina adhadhegge bayakash، boahiyaavahikamuge furudathu iraadhakurevviyyaa fahivegendhaane.",
+    "gold_thaana": "މިހާތަނަށް، ރާއްޖޭގައި ބޯހިޔާވަހިކަމާ ގުޅޭގޮތުން ހިންގާ އެންމެބޮޑު މަޝްރޫޢު ކަމަށްވާ [ހިޔާ] މަޝްރޫޢު، 2019 ވަނަ އަހަރު ނިމޭއިރު، ރާއްޖޭގެ އާބާދީގެ ޖުމުލަ 160,000 އަށްވުރެ ގިނަ އަދަދެއްގެ ބަޔަކަށް، ބޯހިޔާވަހިކަމުގެ ފުރުޞަތު އިރާދަކުރެއްވިއްޔާ ފަހިވެގެންދާނެ.",
+    "prediction": "Immaa e-year-aa government-ge mitha year-aa launch kalhu vanee miadhu thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru thahakuru"
+  },
+  {
+    "id": "rom_031",
+    "num": 31,
+    "domain": "speech",
+    "model_key": "qwen72b",
+    "model_label": "Qwen 2.5 (72B)",
+    "source_idx": 191,
+    "english": "Recurrent expenditure of Government as estimated in 2008 was Rf 8.7 billion.",
+    "gold_romanized": "2008 vana aharu sarukaaruge rikarent kharadhugegothuga'i lafaakurevifa'i othee 8.7 bili'an rufiyaa.",
+    "gold_thaana": "2008 ވަނަ އަހަރު ސަރުކާރުގެ ރިކަރެންޓް ޚަރަދުގެގޮތުގައި ލަފާކުރެވިފައި އޮތީ 8.7 ބިލިއަން ރުފިޔާ.",
+    "prediction": "Raajjige baaharai tharahaa 2008'ekan dhaharaa roneege Rf 8.7 baaru thahaa."
+  },
+  {
+    "id": "rom_032",
+    "num": 32,
+    "domain": "news",
+    "model_key": "qwen72b",
+    "model_label": "Qwen 2.5 (72B)",
+    "source_idx": 137,
+    "english": "Furthermore information regarding activities prohibited to conduct in the protected areas will be informed to everyone through special informative programmes.",
+    "gold_romanized": "esarahaddhuthakuga'i kurun huddha adhi kurun manaakankan ighulaan kurumahves vanee ninmavaafa'eve.",
+    "gold_thaana": "އެސަރަޙައްދުތަކުގައި ކުރުން ހުއްދަ އަދި ކުރުން މަނާކަންކަން އިޢުލާން ކުރުމަށްވެސް ވަނީ ނިންމަވާފައެވެ.",
+    "prediction": "Ferðabaareege thelun vunahuraaveege aavashyakatha tharaha vunahuraaveege lai thakagahuraaveege aavashyakatha tharaha vunahuraaveege lai aavashyakatha tharaa vunahuraaveege lai thakagahuraaveege aavashyakatha tharaha vunahuraaveege lai tharaa vunahuraaveege lai aavashyakatha tharaha vunahuraaveege lai thakagahuraaveege aavashyakatha tharaha vunahuraaveege lai tharaa vunahuraaveege lai aavashyakatha tharaha vunahuraaveege lai thakagahuraaveege aavashyakatha tharaha vunahuraaveege lai tharaa vunahuraaveege lai aavashyakatha tharaha vunahuraaveege lai thakagahuraaveege a"
+  },
+  {
+    "id": "rom_033",
+    "num": 33,
+    "domain": "news",
+    "model_key": "qwen72b",
+    "model_label": "Qwen 2.5 (72B)",
+    "source_idx": 113,
+    "english": "During his academic life, he always stood out as a studious, well-versed student who achieved academic excellence, leading up to his doctorate.",
+    "gold_romanized": "thaghuleemee hayaathuga'i، ibthidhaa'ee maruhalaa'in feshigen pee'echdee haadilkurevvumaa hamayahves emanikufaanu vanee mathee natheejaathakeh haadilkuravva'ifa'eve.",
+    "gold_thaana": "ތަޢުލީމީ ޙަޔާތުގައި، އިބްތިދާއީ މަރުޙަލާއިން ފެށިގެން ޕީއެޗްޑީ ޙާޞިލްކުރެއްވުމާ ހަމަޔަށްވެސް އެމަނިކުފާނު ވަނީ މަތީ ނަތީޖާތަކެއް ޙާޞިލްކުރައްވައިފައެވެ.",
+    "prediction": "Dhivehi: Haaru akademi jeevi'aa, aalhi tharigha'aa thaa, bo'lhu fathimash taqdiiri baaree, dhaal'ee aasari baaree, hedhunaa dakurukuru dhaageyri tharigha'aa."
+  },
+  {
+    "id": "rom_034",
+    "num": 34,
+    "domain": "legal",
+    "model_key": "gemma4",
+    "model_label": "Gemma 4 (31B)",
+    "source_idx": 11,
+    "english": "2. has been convicted of a criminal offence and is serving a sentence of more than twelve months;",
+    "gold_romanized": "2. jinaa'ee kusheh kurikan saabithuve baara masdhuvahahvure dhigu muddhathegge hukumeh thanfeedhukuramundhaa meehaku kamuga'ivun.",
+    "gold_thaana": "2. ޖިނާއީ ކުށެއް ކުރިކަން ސާބިތުވެ ބާރަ މަސްދުވަހަށްވުރެ ދިގު މުއްދަތެއްގެ ޙުކުމެއް ތަންފީޛުކުރަމުންދާ މީހަކު ކަމުގައިވުން.",
+    "prediction": "2. jinaiyathahku thahzeebu kureygei, thahzeebu thahzeebukurey thahzeebu thahzeebukurey thahzeebu thahzeebukurey thahzeebu thahzeebukurey thahzeebu thahzeebukurey thahzeebu thahzeebukurey thahzeebu thahzeebukurey thahzeebu thahzeebukurey thahzeebu thahzeebukurey thahzeebu thahzeebukurey thahzeebu thahzeebukurey thahzeebu thahzeebukurey thahzeebu thahzeebukurey thahzeebu thahzeebukurey thahzeebu thahzeebukurey thahzeebu thahzeebukurey thahzeebu thahzeebukurey thahzeebu thahzeebukurey thahzeebu thahzeebukurey thahzeebu thahzeebukurey thahzeebu thahzeebukurey thahzeebu thah"
+  },
+  {
+    "id": "rom_035",
+    "num": 35,
+    "domain": "speech",
+    "model_key": "gemma4",
+    "model_label": "Gemma 4 (31B)",
+    "source_idx": 163,
+    "english": "As such, 25 percent of the loans that are issued will be solely dedicated to women, youth and persons with disabilities.",
+    "gold_romanized": "e siyaasathuge dhashun dhookurevey loanuge 25 insattha khaadda kurevifa'ivanee anhenunnaa'i، zuvaanunnaa'i، nukulhedhuntherikan hunna meehunnash.",
+    "gold_thaana": "އެ ސިޔާސަތުގެ ދަށުން ދޫކުރެވޭ ލޯނުގެ 25 އިންސައްތަ ޚާއްޞަ ކުރެވިފައިވަނީ އަންހެނުންނާއި، ޒުވާނުންނާއި، ނުކުޅެދުންތެރިކަން ހުންނަ މީހުންނަށް.",
+    "prediction": "Egeen, thahseelu kuran loan-thahuge 25 percentage-u, kuraa-nu, youth-ah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah thah th"
+  },
+  {
+    "id": "rom_036",
+    "num": 36,
+    "domain": "legal",
+    "model_key": "gemma4",
+    "model_label": "Gemma 4 (31B)",
+    "source_idx": 25,
+    "english": "to recommend further inquiries and investigations by other investigatory bodies, and to recommend prosecution of alleged offences to the Prosecutor General, where warranted;",
+    "gold_romanized": "komisanun thahugheeghukuraa kanthatthakuge there'in ehenihen idhaaraathakun ithurash bala'i saafukuraanjehey kanthatthah e faraatthakash hushahalha'i، sareeghathash hushahalhaanjeheykamash fenna kanthatthah sareeghathash hushahelhumahtaka'i prosiki'utar jeneralash fonuvun.",
+    "gold_thaana": "ކޮމިޝަނުން ތަޙުޤީޤުކުރާ ކަންތައްތަކުގެ ތެރެއިން އެހެނިހެން އިދާރާތަކުން އިތުރަށް ބަލައި ސާފުކުރާންޖެހޭ ކަންތައްތައް އެ ފަރާތްތަކަށް ހުށަހަޅައި، ޝަރީޢަތަށް ހުށަހަޅާންޖެހޭކަމަށް ފެންނަ ކަންތައްތައް ޝަރީޢަތަށް ހުށަހެޅުމަށްޓަކައި ޕްރޮސިކިއުޓަރ ޖެނެރަލަށް ފޮނުވުން.",
+    "prediction": "adaa thahru thahruge thahqeeqathai thahqeequge thahqeeq thahru thahruge thahqeeq thahru thahruge thahqeeq thahru thahruge thahqeeq thahru thahruge thahqeeq thahru thahruge thahqeeq thahru thahruge thahqeeq thahru thahruge thahqeeq thahru thahruge thahqeeq thahru thahruge thahqeeq thahru thahruge thahqeeq thahru thahruge thahqeeq thahru thahruge thahqeeq thahru thahruge thahqeeq thahru thahruge thahqeeq thahru thahruge thahqeeq thahru thahruge thahqeeq thahru thahruge thahqeeq thahru thahruge thahqeeq thahru thahruge thahqeeq thahru thahruge thahqeeq thahru thahruge thahqeeq th"
+  },
+  {
+    "id": "rom_037",
+    "num": 37,
+    "domain": "news",
+    "model_key": "qwen72b",
+    "model_label": "Qwen 2.5 (72B)",
+    "source_idx": 51,
+    "english": "The proposal needs to be properly studied through the Maldives National University, He suggested.",
+    "gold_romanized": "gennaan hushahalhaafa'ivaa badhalu moaldivs neysanal yunivaasitee ('em'enyoo) medhuverikosh rangalhash dhiraasaa kuranjehey kamahves eynaa vidhaalhuvi'eve.",
+    "gold_thaana": "ގެންނާން ހުށަހަޅާފައިވާ ބަދަލު މޯލްޑިވްސް ނޭޝަނަލް ޔުނިވާސިޓީ (އެމްއެންޔޫ) މެދުވެރިކޮށް ރަނގަޅަށް ދިރާސާ ކުރަންޖެހޭ ކަމަށްވެސް އޭނާ ވިދާޅުވިއެވެ.",
+    "prediction": "Thahadhu fashahathun baavehi raa'iyaa thahavathun havaaee aheh, eh thahavathun dhivehi daalunivarshe thesahathaa maruvaanee, eh thahavathaa thakurufan thakurufan thakurufan tharaavehi. \n\n(Note: The last part \"He suggested\" is translated as \"eh thahavathaa thakurufan thakurufan thakurufan tharaavehi\" which is a more literal translation. A more natural translation would be \"eh thahavathaa tharaavehi\" which means \"he suggested this proposal\".) \n\nA more natural and concise translation would be:\n\nThahadhu fashahathun baavehi raa'iyaa thahavathun havaaee aheh, eh thahavathaa tharaavehi."
+  },
+  {
+    "id": "rom_038",
+    "num": 38,
+    "domain": "speech",
+    "model_key": "gemma4",
+    "model_label": "Gemma 4 (31B)",
+    "source_idx": 198,
+    "english": "Last year, fundamental changes were brought to the administrative framework of our National Defence Force in order to ensure that the military is a trusted force that functions independent of political influence.",
+    "gold_romanized": "dhivehi ghaskariyyaa'akee، siyaasee nufoozun ekkibaave، rayyithunge furihama ithubaaraa'i loabbaa'eku، masakkakkuraa profesanal bayakash hedhumash، midhiya aharuge thereyga'i، dhivehiraajjeyge gha'umee dhifaaghee baaruge، hingumuge onigandash muhinmu badhaluthakeh genevunu.",
+    "gold_thaana": "ދިވެހި ޢަސްކަރިއްޔާއަކީ، ސިޔާސީ ނުފޫޒުން އެއްކިބާވެ، ރައްޔިތުންގެ ފުރިހަމަ އިތުބާރާއި ލޯތްބާއެކު، މަސައްކަތްކުރާ ޕްރޮފެޝަނަލް ބަޔަކަށް ހެދުމަށް، މިދިޔަ އަހަރުގެ ތެރޭގައި، ދިވެހިރާއްޖޭގެ ޤައުމީ ދިފާޢީ ބާރުގެ، ހިންގުމުގެ އޮނިގަނޑަށް މުހިންމު ބަދަލުތަކެއް ގެނެވުނު.",
+    "prediction": "Gathiyun thaharu, nubaathuge siyasaathuge atharun thaharu, thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thaharu thah"
+  },
+  {
+    "id": "rom_039",
+    "num": 39,
+    "domain": "speech",
+    "model_key": "llama70b",
+    "model_label": "Llama 3.1 (70B)",
+    "source_idx": 187,
+    "english": "1. In war, the general receives his commands from the sovereign, collects his army and concentrates his forces.",
+    "gold_romanized": "1. hanguraama'ige ghaanmu udoolakee، rayyithun thayyaaree haalathashgenes، laskaru jamaakurumash jeneral'ash amuru kuraanee gha'umuge veriyaa'eve.",
+    "gold_thaana": "1. ހަނގުރާމައިގެ ޢާންމު އުޞޫލަކީ، ރައްޔިތުން ތައްޔާރީ ޙާލަތަށްގެނެސް، ލަޝްކަރު ޖަމާކުރުމަށް ޖެނެރަލްއަށް އަމުރު ކުރާނީ ޤައުމުގެ ވެރިޔާއެވެ.",
+    "prediction": "1. Dha'inu dharumah, jeneraalun dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa dha'iraa"
+  },
+  {
+    "id": "rom_040",
+    "num": 40,
+    "domain": "news",
+    "model_key": "qwen72b",
+    "model_label": "Qwen 2.5 (72B)",
+    "source_idx": 127,
+    "english": "He added that it would increase tourism facilities, including guesthouses and city hotels, drive job creation in the northern atolls, and transform the region into an economic hub.",
+    "gold_romanized": "egothun ethahhaas vazeefaathah ufedhumaa'i gest ha'usthakaa'i، sitee hotaathakaa'i، risoatuthakuge endhuthah، ethah guna'eh ithuruvegendhi'umaa'i eki baavatthakuge viyafaarithakaa ، ighthidaadhee masakkatthakash gina furudathuthakeh hulhuvigengos boduthiladhunmacchakee ighthidaadhee varugadha habakahvumash magufahivegendhaanekan emanikufaanu faahagakurevvi'eve.",
+    "gold_thaana": "އެގޮތުން އެތައްހާސް ވަޒީފާތައް އުފެދުމާއި ގެސްޓް ހައުސްތަކާއި، ސިޓީ ހޮޓާތަކާއި، ރިސޯޓުތަކުގެ އެނދުތައް، އެތައް ގުނައެއް އިތުރުވެގެންދިއުމާއި އެކި ބާވަތްތަކުގެ ވިޔަފާރިތަކާ ، އިޤްތިޞާދީ މަސައްކަތްތަކަށް ގިނަ ފުރުޞަތުތަކެއް ހުޅުވިގެންގޮސް ބޮޑުތިލަދުންމައްޗަކީ އިޤްތިޞާދީ ވަރުގަދަ ހަބަކަށްވުމަށް މަގުފަހިވެގެންދާނެކަން އެމަނިކުފާނު ފާހަގަކުރެއްވިއެވެ.",
+    "prediction": "Uvvaan dhige thakurufan tharaabu tharaabu, gashehige tharaabuge mehehige tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu tharaabu"
+  },
+  {
+    "id": "rom_041",
+    "num": 41,
+    "domain": "news",
+    "model_key": "qwen72b",
+    "model_label": "Qwen 2.5 (72B)",
+    "source_idx": 107,
+    "english": "Marking last year’s tourism performance, Visit Maldives said tourist spending reached a record USD 5.4 billion, citing data from the Maldives Monetary Authority (MMA).",
+    "gold_romanized": "midhiya aharuge fathuruverikamuge kaamiyaabeethah faahagakosh، vizit moaldivs'in vanee eaharu raajje'ash ziyaarakkohfa'ivaa fathuruverin kohfa'ivaa heydha'ige minvaru rekoadu adhadhakash ithuruve، 5.4 bili'an emerikaa dolarash ara'ifa'ivaa kamash، marukazee beynku em'em'ey'aa havaalaadhee bunefa'eve.",
+    "gold_thaana": "މިދިޔަ އަހަރުގެ ފަތުރުވެރިކަމުގެ ކާމިޔާބީތައް ފާހަގަކޮށް، ވިޒިޓް މޯލްޑިވްސްއިން ވަނީ އެއަހަރު ރާއްޖެއަށް ޒިޔާރަތްކޮށްފައިވާ ފަތުރުވެރިން ކޮށްފައިވާ ހޭދައިގެ މިންވަރު ރެކޯޑު އަދަދަކަށް އިތުރުވެ، 5.4 ބިލިއަން އެމެރިކާ ޑޮލަރަށް އަރައިފައިވާ ކަމަށް، މަރުކަޒީ ބޭންކު އެމްއެމްއޭއާ ހަވާލާދީ ބުނެފައެވެ.",
+    "prediction": "Markas laasthaa varushun turaisthi perfaarmans, Visit Maldives thakurain touristhi spendinghi thaasaa dhiggah USD 5.4 billion thii, MMA (Maldives Monetary Authority) thaa dataa kareeban kuree."
+  },
+  {
+    "id": "rom_042",
+    "num": 42,
+    "domain": "legal",
+    "model_key": "gemma4",
+    "model_label": "Gemma 4 (31B)",
+    "source_idx": 23,
+    "english": "to faithfully implement the provisions of this Constitution and the law, and to promote compliance by organs of the State and by the people;",
+    "gold_romanized": "mi ghaanoonu'asaasee aa'i ghaanoonuga'i kanda'alha'ifa'ivaa kanthatthah ikhlaastherikamaa'eku thanfeedhukosh، dha'ulathuge mu'assasaathakunnaa'i rayyithun ghaanoonu'asaasee aa'i ghaanoonaa eggothash ghamalukurumash baaru'elhun.",
+    "gold_thaana": "މި ޤާނޫނުއަސާސީ އާއި ޤާނޫނުގައި ކަނޑައަޅައިފައިވާ ކަންތައްތައް އިޚްލާސްތެރިކަމާއެކު ތަންފީޛުކޮށް، ދައުލަތުގެ މުއައްސަސާތަކުންނާއި ރައްޔިތުން ޤާނޫނުއަސާސީ އާއި ޤާނޫނާ އެއްގޮތަށް ޢަމަލުކުރުމަށް ބާރުއެޅުން.",
+    "prediction": "mee constitution ge niyamakan thakuge thahthakuge thahthakuge niyamakan thakuge thahthakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan thakuge niyamakan th"
+  },
+  {
+    "id": "rom_043",
+    "num": 43,
+    "domain": "news",
+    "model_key": "gemma4",
+    "model_label": "Gemma 4 (31B)",
+    "source_idx": 56,
+    "english": "The hospital also noted that scans for admitted patients should not be delayed due to public holidays.",
+    "gold_romanized": "eyge'ithurash، sarukaaru bandhu dhuvasthakeh aumun '''altraa sa'und skeyn\" hedhun lasvi thuhumathaa gulhuva'i aijee'em'echun bunee، sarukaaru bandhu dhuvasthakeh ai namaves، edumitukohfa'ivaa bali meehegge skeynu lasvegen nuvaane kamash gaboolukuraa kamasheve.",
+    "gold_thaana": "އޭގެއިތުރަށް، ސަރުކާރު ބަންދު ދުވަސްތަކެއް އައުމުން ''އަލްޓްރާ ސައުންޑް ސްކޭން\" ހެދުން ލަސްވި ތުހުމަތާ ގުޅުވައި އައިޖީއެމްއެޗުން ބުނީ، ސަރުކާރު ބަންދު ދުވަސްތަކެއް އައި ނަމަވެސް، އެޑުމިޓުކޮށްފައިވާ ބަލި މީހެއްގެ ސްކޭނު ލަސްވެގެން ނުވާނެ ކަމަށް ގަބޫލުކުރާ ކަމަށެވެ.",
+    "prediction": "Hospitaluge hifaa-dhunugey thahqeeqathah, addugath patients-ah scan kurey nunaa thahqeeqathah, public holiday-ge namaa-thahkuraa thahqeeqathah thahqeequ nunaa nunaa hifaa-dhunugey thahqeeqathah.\n\n*(Alternative more natural phrasing)*:\nHospitaluge hifaa-dhunugey thahqeeqathah, addugath patients-ah scan kurey nunaa thahqeeqathah, public holiday-ge namaa-thahkuraa thahqeeqathah thahqeequ nunaa nunaa hifaa-dhunugey thahqeeqathah.\n\n**Corrected Natural Translation:**\nHospitaluge hifaa-dhunugey thahqeeqathah, addugath patients-ah scan kurey nunaa thahqeeqathah, public holiday-ge namaa-thahkuraa thahqeeqathah thahqeequ nunaa nunaa hifaa-dh"
+  },
+  {
+    "id": "rom_044",
+    "num": 44,
+    "domain": "legal",
+    "model_key": "gemma4",
+    "model_label": "Gemma 4 (31B)",
+    "source_idx": 4,
+    "english": "1. to promote respect for human rights;",
+    "gold_romanized": "1. insaanee hagghuthakash meehunge hitthakuga'i loabbaa'i ihthiraam ashagennevumash masakkakkurun.",
+    "gold_thaana": "1. އިންސާނީ ޙައްޤުތަކަށް މީހުންގެ ހިތްތަކުގައި ލޯތްބާއި އިޙްތިރާމް އަށަގެންނެވުމަށް މަސައްކަތްކުރުން.",
+    "prediction": "1. manuge hakgey ehtiraamu vadhuvahumah;"
+  },
+  {
+    "id": "rom_045",
+    "num": 45,
+    "domain": "legal",
+    "model_key": "qwen72b",
+    "model_label": "Qwen 2.5 (72B)",
+    "source_idx": 39,
+    "english": "The members of the Anti-Corruption Commission shall be paid such salary and allowances as determined by the People’s Majlis.",
+    "gold_romanized": "enti-korapsan komisanuge menbarunnash musaara'aa'i ghinaayatthah kanda'alhaanee rayyithunge majileehunneve.",
+    "gold_thaana": "އެންޓި-ކޮރަޕްޝަން ކޮމިޝަނުގެ މެންބަރުންނަށް މުސާރައާއި ޢިނާޔަތްތައް ކަނޑައަޅާނީ ރައްޔިތުންގެ މަޖިލީހުންނެވެ.",
+    "prediction": "Aanthi-korruption komaishan kurendukalhu ge salaarah aurallowan kunhah valhih People’s Majlis vajah taaminah dhakkan."
+  },
+  {
+    "id": "rom_046",
+    "num": 46,
+    "domain": "news",
+    "model_key": "gemma4",
+    "model_label": "Gemma 4 (31B)",
+    "source_idx": 72,
+    "english": "He also briefed attendees on planned initiatives aimed at youth empowerment and encouraged greater youth participation in sustainable development and environmental protection.",
+    "gold_romanized": "egothun zuvaanunge kuri'erumash mi sarukaarun kuravvamungendhavaa eki'eki masakkatthakuge ithurun dhemehettenivi tharagghee'aa'i thimaaveshi himaayakkurumuga'i zuvaanunge ba'iverivun ithurukurumash kuravvamungendhavaa masakkappulhuthakuge thafseel ma'uloomaathu emanikufaanu hissaakurevvi'eve.",
+    "gold_thaana": "އެގޮތުން ޒުވާނުންގެ ކުރިއެރުމަށް މި ސަރުކާރުން ކުރައްވަމުންގެންދަވާ އެކިއެކި މަސައްކަތްތަކުގެ އިތުރުން ދެމެހެއްޓެނިވި ތަރައްޤީއާއި ތިމާވެށި ހިމާޔަތްކުރުމުގައި ޒުވާނުންގެ ބައިވެރިވުން އިތުރުކުރުމަށް ކުރައްވަމުންގެންދަވާ މަސައްކަތްޕުޅުތަކުގެ ތަފްސީލް މައުލޫމާތު އެމަނިކުފާނު ހިއްސާކުރެއްވިއެވެ.",
+    "prediction": "Eey thahzeenuge thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku thahruku th"
+  },
+  {
+    "id": "rom_047",
+    "num": 47,
+    "domain": "legal",
+    "model_key": "llama70b",
+    "model_label": "Llama 3.1 (70B)",
+    "source_idx": 9,
+    "english": "7. the performance of all duties otherwise expressly required by this Constitution and by law.",
+    "gold_romanized": "7. rayyithunge majileehun adhaakuraanekamash ghaanoonu'asaaseega'i nuvatha ghaanoonuga'i bayaankohfa'ivaa minoonves vaajibuthah adhaakurun.",
+    "gold_thaana": "7. ރައްޔިތުންގެ މަޖިލީހުން އަދާކުރާނެކަމަށް ޤާނޫނުއަސާސީގައި ނުވަތަ ޤާނޫނުގައި ބަޔާންކޮށްފައިވާ މިނޫންވެސް ވާޖިބުތައް އަދާކުރުން.",
+    "prediction": "7. ehee dhivehi raajjeyge aaiin ah ehee qanoonun thahugee, thahugee dhaairaa kohdheh noonu kohdheh dhaairaa kohdheh nuvaaneh."
+  },
+  {
+    "id": "rom_048",
+    "num": 48,
+    "domain": "speech",
+    "model_key": "qwen72b",
+    "model_label": "Qwen 2.5 (72B)",
+    "source_idx": 167,
+    "english": "My beloved brothers and sisters! Remember: even from a cloudy horizon, a ray of light can only break through with truthful and honest service.",
+    "gold_romanized": "alhuganduge loabivaa akhunnaa'i ukhuthunneyve! handhumafulhukuravvaasheve! bavanavefa'ivaa udharehakun roasanee kulavareh dhakkaaleveyneeves thedhuveri ikhulaadtheri khidhumathunney.",
+    "gold_thaana": "އަޅުގަނޑުގެ ލޯބިވާ އަޚުންނާއި އުޚުތުންނޭވެ! ހަނދުމަފުޅުކުރައްވާށެވެ! ބަވަނަވެފައިވާ އުދަރެހަކުން ރޯޝަނީ ކުލަވަރެއް ދައްކާލެވޭނީވެސް ތެދުވެރި އިޚުލާޞްތެރި ޚިދުމަތުންނޭ.",
+    "prediction": "Maay bai dhigu rukhābādhi thakurā! Fathuru: thāvarehi thāveri dhālāthakunu rāyi tharunnaa, rāyi rozzehi tharunnaa, vāji rozzehi tharunnaa, evvanaa tharunnaa kunnaa, rāyi rozzehi tharunnaa, kunnaa marū badhuru tharunnaa, kunnaa marū badhuru tharunnaa, evvanaa kunnaa marū badhuru tharunnaa, kunnaa marū badhuru tharunnaa, evvanaa kunnaa marū badhuru tharunnaa, kunnaa marū badhuru tharunnaa, evvanaa kunnaa marū badhuru tharunnaa, kunnaa marū badhuru tharunnaa, evvanaa kunnaa marū badhuru tharunnaa, kunnaa marū badhuru tharunnaa, evvanaa kunna"
+  },
+  {
+    "id": "rom_049",
+    "num": 49,
+    "domain": "news",
+    "model_key": "qwen72b",
+    "model_label": "Qwen 2.5 (72B)",
+    "source_idx": 94,
+    "english": "Police identified the suspects as Ahmed Hatim, 49, of M. Ziyaaraiifushi, and Ahmed Shareef, 50, of Andhaleebuge, B. Hithadhoo.",
+    "gold_romanized": "mi massala'aa gulhigen hayyarukohfa'i vanee m. ziyaaraffushi ahmadhu haathim (49') adhi b. hithaadhoo andhaleebugey ahmadhu sareef (50')'eve.",
+    "gold_thaana": "މި މައްސަލައާ ގުޅިގެން ހައްޔަރުކޮށްފައި ވަނީ މ. ޒިޔާރަތްފުށި އަހްމަދު ހާތިމް (49އ) އަދި ބ. ހިތާދޫ އަންދަލީބުގޭ އަހްމަދު ޝަރީފް (50އ)އެވެ.",
+    "prediction": "Polisheyn thaidheyn thaas ahmed hatim, 49, m. ziyaaraiifushi, daheyn ahmed shareef, 50, andhaleebuge, b. hithadhoo."
+  },
+  {
+    "id": "rom_050",
+    "num": 50,
+    "domain": "news",
+    "model_key": "llama70b",
+    "model_label": "Llama 3.1 (70B)",
+    "source_idx": 90,
+    "english": "Pave way for individual farmers to access financial loans and credit schemes",
+    "gold_romanized": "dhanduverikamuge masakkathuga'i ulhey amilla faraatthakash maalee idhaaraathakunnaa'i beynkuthakun loanu adhi kredit skeemuthakuga'i ba'iveriveveyne magu thanavaskohdheveyne",
+    "gold_thaana": "ދަނޑުވެރިކަމުގެ މަސައްކަތުގައި އުޅޭ އަމިއްލަ ފަރާތްތަކަށް މާލީ އިދާރާތަކުންނާއި ބޭންކުތަކުން ލޯނު އަދި ކްރެޑިޓް ސްކީމުތަކުގައި ބައިވެރިވެވޭނެ މަގު ތަނަވަސްކޮށްދެވޭނެ",
+    "prediction": "Aai aharengey verikamugey financial loan gai credit scheme ga kuranee aharengey access kuravvaafa dhaanee hoadhaafa dhaanee"
+  }
+];
+    const STORAGE_KEY = "dhivehi_bench_romanized_eval_v1";
+    const NAME_KEY = "dhivehi_bench_romanized_eval_name";
+
+    const CATEGORIES = [
+      { key: "particle_loops", num: "1", icon: "🔁", label: "1. Repetition Loop", dv: "ލަފުޒު / ފަސްއަކުރު ތަކުރާރުވުން", color: "amber" },
+      { key: "code_switching", num: "2", icon: "🔤", label: "2. English Code-Switching", dv: "އިނގިރޭސި ލަފުޒަށް ދިވެހި ފަސްއަކުރު ގުޅުވުން", color: "indigo" },
+      { key: "incoherent_hallucination", num: "3", icon: "❓", label: "3. Incoherent / Hallucination", dv: "މާނަ ދޭހަނުވާ / ބޭކާރު ބަސް", color: "rose" },
+      { key: "synonymy_register", num: "4", icon: "📖", label: "4. Synonym / Register Variation", dv: "މާނަ ރަނގަޅު / އެހެން ލަފުޒެއް", color: "emerald" },
+      { key: "fluent_translation", num: "5", icon: "✅", label: "5. Fluent & Accurate", dv: "ރަނގަޅު ފުރިހަމަ ތަރުޖަމާ", color: "sky" }
+    ];
+
+    let state = {};
+    let currentFilter = "all";
+
+    function loadState() {
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) state = JSON.parse(saved);
+      } catch (e) {
+        console.error(e);
+      }
+      const savedName = localStorage.getItem(NAME_KEY);
+      if (savedName) {
+        document.getElementById("display-name").textContent = savedName;
+      } else {
+        setTimeout(promptName, 300);
+      }
+    }
+
+    function promptName() {
+      const current = localStorage.getItem(NAME_KEY) || "";
+      const name = prompt("Enter your name (e.g. Hussein Arif or Hawwa La'aaly):", current);
+      if (name && name.trim()) {
+        localStorage.setItem(NAME_KEY, name.trim());
+        document.getElementById("display-name").textContent = name.trim();
+      }
+    }
+
+    function selectCategory(itemId, catKey) {
+      state[itemId] = catKey;
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      updateCardUI(itemId);
+      updateHeaderStats();
+    }
+
+    function setFilter(mode) {
+      currentFilter = mode;
+      document.getElementById("filter-all").className = mode === "all"
+        ? "px-3 py-1 rounded-lg bg-sky-600 text-white font-semibold"
+        : "px-3 py-1 rounded-lg bg-slate-900 text-slate-400 hover:bg-slate-800";
+      document.getElementById("filter-uncoded").className = mode === "uncoded"
+        ? "px-3 py-1 rounded-lg bg-sky-600 text-white font-semibold"
+        : "px-3 py-1 rounded-lg bg-slate-900 text-slate-400 hover:bg-slate-800";
+      renderAll();
+    }
+
+    function updateHeaderStats() {
+      const codedCount = Object.keys(state).length;
+      const total = ITEMS.length;
+      document.getElementById("progress-badge").textContent = `${codedCount} / ${total}`;
+      if (codedCount === total) {
+        document.getElementById("progress-badge").className = "text-emerald-400 font-bold ml-1";
+      } else {
+        document.getElementById("progress-badge").className = "text-sky-400 font-bold ml-1";
+      }
+
+      // Tally categories
+      const counts = {};
+      CATEGORIES.forEach(c => counts[c.key] = 0);
+      Object.values(state).forEach(k => {
+        if (counts[k] !== undefined) counts[k]++;
+      });
+      const parts = CATEGORIES.map(c => `${c.icon} ${counts[c.key]}`);
+      document.getElementById("live-breakdown").textContent = parts.join(" | ");
+    }
+
+    function toggleThaana(itemId) {
+      const el = document.getElementById(`thaana-${itemId}`);
+      if (el) {
+        el.classList.toggle("hidden");
+      }
+    }
+
+    function renderCard(item) {
+      const currentCat = state[item.id];
+      const isCoded = !!currentCat;
+
+      const buttonsHtml = CATEGORIES.map(c => {
+        const isSelected = currentCat === c.key;
+        let btnClasses = "";
+        if (isSelected) {
+          if (c.color === "amber") btnClasses = "bg-amber-600 border-amber-400 text-white shadow-lg ring-2 ring-amber-400/50";
+          else if (c.color === "indigo") btnClasses = "bg-indigo-600 border-indigo-400 text-white shadow-lg ring-2 ring-indigo-400/50";
+          else if (c.color === "rose") btnClasses = "bg-rose-600 border-rose-400 text-white shadow-lg ring-2 ring-rose-400/50";
+          else if (c.color === "emerald") btnClasses = "bg-emerald-600 border-emerald-400 text-white shadow-lg ring-2 ring-emerald-400/50";
+          else if (c.color === "sky") btnClasses = "bg-sky-600 border-sky-400 text-white shadow-lg ring-2 ring-sky-400/50";
+        } else {
+          btnClasses = "bg-slate-900 hover:bg-slate-800 border-slate-800 text-slate-300";
+        }
+
+        return `
+          <button onclick="selectCategory('${item.id}', '${c.key}')"
+                  class="flex flex-col text-left p-2.5 rounded-xl border transition-all text-xs ${btnClasses} group">
+            <div class="flex items-center justify-between w-full">
+              <span class="font-bold flex items-center gap-1.5">
+                <span>${c.icon}</span>
+                <span>${c.label}</span>
+              </span>
+              <span class="text-[10px] opacity-60 font-mono px-1 rounded bg-black/30">[${c.num}]</span>
+            </div>
+            <div class="thaana-text text-[12px] opacity-90 mt-1 leading-tight">${c.dv}</div>
+          </button>
+        `;
+      }).join("");
+
+      return `
+        <div id="card-${item.id}" class="bg-slate-900/90 rounded-2xl border ${isCoded ? 'border-sky-800/60' : 'border-slate-800'} p-5 shadow-lg transition-all">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-2.5 mb-3.5">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded bg-sky-950 border border-sky-800 text-sky-400 text-xs font-bold font-mono">#${item.num}</span>
+              <span class="text-xs text-slate-400 font-mono capitalize">Domain: ${item.domain}</span>
+              <span class="text-[11px] text-slate-500 font-mono">ID: ${item.id}</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="toggleThaana('${item.id}')" class="text-[11px] text-slate-400 hover:text-sky-400 bg-slate-950 px-2 py-0.5 rounded border border-slate-800 transition">
+                👁️ Toggle Thaana Script
+              </button>
+              ${isCoded ? '<span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1"><span>✓</span> Coded</span>' : '<span class="text-[11px] text-slate-500">Uncoded</span>'}
+            </div>
+          </div>
+
+          <!-- English Source -->
+          <div class="mb-3">
+            <div class="text-[11px] uppercase font-bold text-slate-400 tracking-wider mb-1">Source (English)</div>
+            <div class="text-sm text-slate-200 bg-slate-950/70 p-3 rounded-xl border border-slate-800/80 leading-relaxed font-sans">
+              ${item.english}
+            </div>
+          </div>
+
+          <!-- Gold Reference -->
+          <div class="mb-3">
+            <div class="text-[11px] uppercase font-bold text-emerald-400 tracking-wider mb-1">Gold Reference (Official Malé Latin)</div>
+            <div class="text-sm text-emerald-200/95 bg-emerald-950/20 p-3 rounded-xl border border-emerald-900/40 leading-relaxed font-mono text-[13px]">
+              ${item.gold_romanized}
+            </div>
+            <div id="thaana-${item.id}" class="hidden mt-1.5 p-2.5 rounded-xl bg-slate-950/90 border border-slate-800 text-amber-200 thaana-text text-sm">
+              ${item.gold_thaana}
+            </div>
+          </div>
+
+          <!-- Model Prediction -->
+          <div class="mb-4">
+            <div class="text-[11px] uppercase font-bold text-sky-400 tracking-wider mb-1">Model Output (Romanized Candidate)</div>
+            <div class="text-sm text-sky-200 bg-sky-950/20 p-3.5 rounded-xl border border-sky-800/40 leading-relaxed font-mono text-[13px] break-words">
+              ${item.prediction}
+            </div>
+          </div>
+
+          <!-- Coding Buttons -->
+          <div>
+            <div class="text-[11px] uppercase font-bold text-slate-400 tracking-wider mb-2">Select Primary Category:</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+              ${buttonsHtml}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function updateCardUI(itemId) {
+      const item = ITEMS.find(x => x.id === itemId);
+      if (!item) return;
+      const cardEl = document.getElementById(`card-${itemId}`);
+      if (cardEl) {
+        cardEl.outerHTML = renderCard(item);
+      }
+    }
+
+    function renderAll() {
+      const container = document.getElementById("items-container");
+      const filtered = ITEMS.filter(item => {
+        if (currentFilter === "uncoded") return !state[item.id];
+        return true;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-16 bg-slate-900 rounded-2xl border border-slate-800">
+            <div class="text-4xl mb-3">🎉</div>
+            <h3 class="text-base font-bold text-white mb-1">All Items Coded!</h3>
+            <p class="text-xs text-slate-400 mb-4">Click "Download JSON" at the top to save and return your ratings.</p>
+            <button onclick="setFilter('all')" class="px-4 py-2 rounded-xl bg-sky-600 text-white text-xs font-semibold">Review All Items</button>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map(renderCard).join("");
+      updateHeaderStats();
+    }
+
+    function downloadResults() {
+      const name = localStorage.getItem(NAME_KEY) || "annotator";
+      const codedCount = Object.keys(state).length;
+      const total = ITEMS.length;
+
+      if (codedCount < total) {
+        const proceed = confirm(`You have coded ${codedCount} of ${total} items. Do you want to download now anyway?`);
+        if (!proceed) return;
+      }
+
+      const payload = {
+        annotator: name,
+        timestamp: new Date().toISOString(),
+        total_items: total,
+        coded_items: codedCount,
+        ratings: state,
+        metadata: ITEMS.map(it => ({
+          id: it.id,
+          num: it.num,
+          domain: it.domain,
+          model_key: it.model_key,
+          model_label: it.model_label,
+          coded_category: state[it.id] || null
+        }))
+      };
+
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const sanitizedName = name.toLowerCase().replace(/[^a-z0-9]/g, "_");
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `romanized_eval_${sanitizedName}.json`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      loadState();
+      renderAll();
+    });
+  </script>
+</body>
+</html>
