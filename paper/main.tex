@@ -440,7 +440,7 @@ Word-level BLEU remains suppressed across all three models ($\leq 0.26$). Howeve
 \end{table*}
 
 \paragraph{Qualitative Audit of Romanized Outputs.}
-To characterize residual errors beyond scoring artifacts, two native speakers (Hussain Arif and Hawwa La'aaly) independently audited a stratified sample of 50 Romanized generations across all three models. Annotators achieved an observed agreement of 66.0\% (Cohen's $\kappa = 0.50$; chance agreement 32.0\%, reaching 80.0\% agreement on Gemma 4; full confusion matrix in Appendix C). Averaged across both annotators (100 total ratings), the mutually exclusive categorization reveals:
+To characterize residual errors beyond scoring artifacts, two native speakers (Annotator 1 and Annotator 2) independently audited a stratified sample of 50 Romanized generations across all three models. Annotators achieved an observed agreement of 66.0\% (Cohen's $\kappa = 0.50$; chance agreement 32.0\%, reaching 80.0\% agreement on Gemma 4; full confusion matrix in Appendix C). Averaged across both annotators (100 total ratings), the mutually exclusive categorization reveals:
 \begin{enumerate}
     \item \textbf{Morphological Particle Loops (40.0\%; Annotator 1: 44.0\%, Annotator 2: 36.0\%):} Although byte-level Unicode loops are eliminated, decoders remain vulnerable to grammatical particle loops in Latin text, repeatedly emitting plural markers (\textit{thah thah thah}), verbal copulas (\textit{kuraa kuraa}), or reduplicated clitics (\textit{fali-fali}). This failure mode dominates Gemma 4, accounting for 55.0\% of its evaluated generations.
     \item \textbf{Semantic Incoherence and Hallucination (37.0\%; Annotator 1: 36.0\%, Annotator 2: 38.0\%):} The model generates phonetically plausible Latin strings that do not correspond to any valid Dhivehi root or English transfer, producing severe morphological distortions (46.9\% on Llama 3.1 and 50.0\% on Qwen 2.5).
@@ -480,9 +480,7 @@ The Dhivehi-Bench dataset (2,070 MCQ items, 1,134 Contextual QA pairs, and 2,016
 To comply with copyright law, we distribute only transformed derivative QA pairs and short context excerpts under Fair Use for non-consumptive computational research; official governmental communications and constitutional texts are in the public domain.
 
 \begin{acks}
-This work was supported by the National Natural Science Foundation of China (Grant No. 62502421), the Yunnan Research Project (Grant Nos. 202501AU070058, 202301AU070194, and 202401AT070614), the Yunnan Academician and Expert Workstation Project (Grant No. 202505AF350053), and the Yunnan International Joint Laboratory of Cross-Border Data Governance (Grant No. 202403AP140021). The authors sincerely acknowledge the financial support from all funding agencies.
-
-We thank Hussain Arif (IT Technician, Thaa Atoll Hospital) and Hawwa La'aaly (Diploma in Computer Science; undergraduate student), who completed the human baseline evaluation and independently annotated the error analyses across both Thaana script and Romanized transliteration. Both completed several years of formal Dhivehi language study in the Maldivian school system.
+Funding sources, institutional affiliations, and individual annotator acknowledgments are omitted for double-blind review and will be restored in the camera-ready version upon publication.
 \end{acks}
 
 \bibliographystyle{ACM-Reference-Format}
@@ -573,13 +571,13 @@ Chaviyani (\texttt{U+0797}) & Chaviyani & ch & & & \\
 \end{itemize}
 
 \section*{Appendix C: Inter-Annotator Agreement on Romanized Transliteration Audit}
-Table \ref{tab:confusion_matrix} documents the empirical confusion matrix between the two independent native evaluators (Hawwa La'aaly and Hussain Arif) across the 50 Romanized translation outputs (\S\ref{sec:ablation-romanized}).
+Table \ref{tab:confusion_matrix} documents the empirical confusion matrix between the two independent native evaluators (Annotator 1 and Annotator 2) across the 50 Romanized translation outputs (\S\ref{sec:ablation-romanized}).
 
 \begin{table}[h]
 \centering
 \small
 \setlength{\tabcolsep}{5pt}
-\caption{Inter-Annotator Confusion Matrix for Romanized Error Morphology Audit ($n=50$, Cohen's $\kappa=0.50$, Observed Agreement 66.0\%). Rows represent Annotator 1 (Hawwa La'aaly) and columns represent Annotator 2 (Hussain Arif).}
+\caption{Inter-Annotator Confusion Matrix for Romanized Error Morphology Audit ($n=50$, Cohen's $\kappa=0.50$, Observed Agreement 66.0\%). Rows represent Annotator 1 and columns represent Annotator 2.}
 \label{tab:confusion_matrix}
 \begin{tabular}{lccccc}
 \toprule
