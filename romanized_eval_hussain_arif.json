@@ -1,0 +1,460 @@
+{
+  "annotator": "Hussain Arif",
+  "timestamp": "2026-10-22T18:30:30.674Z",
+  "total_items": 50,
+  "coded_items": 50,
+  "ratings": {
+    "rom_001": "incoherent_hallucination",
+    "rom_002": "particle_loops",
+    "rom_003": "code_switching",
+    "rom_004": "particle_loops",
+    "rom_005": "incoherent_hallucination",
+    "rom_006": "code_switching",
+    "rom_007": "particle_loops",
+    "rom_008": "incoherent_hallucination",
+    "rom_009": "incoherent_hallucination",
+    "rom_010": "incoherent_hallucination",
+    "rom_011": "incoherent_hallucination",
+    "rom_012": "incoherent_hallucination",
+    "rom_013": "particle_loops",
+    "rom_014": "incoherent_hallucination",
+    "rom_015": "particle_loops",
+    "rom_016": "code_switching",
+    "rom_017": "particle_loops",
+    "rom_018": "code_switching",
+    "rom_019": "particle_loops",
+    "rom_020": "code_switching",
+    "rom_021": "incoherent_hallucination",
+    "rom_022": "synonymy_register",
+    "rom_023": "particle_loops",
+    "rom_024": "incoherent_hallucination",
+    "rom_025": "incoherent_hallucination",
+    "rom_026": "incoherent_hallucination",
+    "rom_027": "incoherent_hallucination",
+    "rom_028": "incoherent_hallucination",
+    "rom_029": "code_switching",
+    "rom_030": "particle_loops",
+    "rom_031": "incoherent_hallucination",
+    "rom_032": "incoherent_hallucination",
+    "rom_033": "incoherent_hallucination",
+    "rom_034": "particle_loops",
+    "rom_035": "particle_loops",
+    "rom_036": "particle_loops",
+    "rom_037": "incoherent_hallucination",
+    "rom_038": "particle_loops",
+    "rom_039": "particle_loops",
+    "rom_040": "particle_loops",
+    "rom_041": "code_switching",
+    "rom_042": "particle_loops",
+    "rom_043": "particle_loops",
+    "rom_044": "synonymy_register",
+    "rom_045": "synonymy_register",
+    "rom_046": "particle_loops",
+    "rom_047": "synonymy_register",
+    "rom_048": "incoherent_hallucination",
+    "rom_049": "synonymy_register",
+    "rom_050": "synonymy_register"
+  },
+  "metadata": [
+    {
+      "id": "rom_001",
+      "num": 1,
+      "domain": "news",
+      "model_key": "llama70b",
+      "model_label": "Llama 3.1 (70B)",
+      "coded_category": "incoherent_hallucination"
+    },
+    {
+      "id": "rom_002",
+      "num": 2,
+      "domain": "news",
+      "model_key": "llama70b",
+      "model_label": "Llama 3.1 (70B)",
+      "coded_category": "particle_loops"
+    },
+    {
+      "id": "rom_003",
+      "num": 3,
+      "domain": "news",
+      "model_key": "gemma4",
+      "model_label": "Gemma 4 (31B)",
+      "coded_category": "code_switching"
+    },
+    {
+      "id": "rom_004",
+      "num": 4,
+      "domain": "news",
+      "model_key": "gemma4",
+      "model_label": "Gemma 4 (31B)",
+      "coded_category": "particle_loops"
+    },
+    {
+      "id": "rom_005",
+      "num": 5,
+      "domain": "news",
+      "model_key": "qwen72b",
+      "model_label": "Qwen 2.5 (72B)",
+      "coded_category": "incoherent_hallucination"
+    },
+    {
+      "id": "rom_006",
+      "num": 6,
+      "domain": "news",
+      "model_key": "llama70b",
+      "model_label": "Llama 3.1 (70B)",
+      "coded_category": "code_switching"
+    },
+    {
+      "id": "rom_007",
+      "num": 7,
+      "domain": "news",
+      "model_key": "llama70b",
+      "model_label": "Llama 3.1 (70B)",
+      "coded_category": "particle_loops"
+    },
+    {
+      "id": "rom_008",
+      "num": 8,
+      "domain": "legal",
+      "model_key": "llama70b",
+      "model_label": "Llama 3.1 (70B)",
+      "coded_category": "incoherent_hallucination"
+    },
+    {
+      "id": "rom_009",
+      "num": 9,
+      "domain": "legal",
+      "model_key": "gemma4",
+      "model_label": "Gemma 4 (31B)",
+      "coded_category": "incoherent_hallucination"
+    },
+    {
+      "id": "rom_010",
+      "num": 10,
+      "domain": "legal",
+      "model_key": "qwen72b",
+      "model_label": "Qwen 2.5 (72B)",
+      "coded_category": "incoherent_hallucination"
+    },
+    {
+      "id": "rom_011",
+      "num": 11,
+      "domain": "legal",
+      "model_key": "qwen72b",
+      "model_label": "Qwen 2.5 (72B)",
+      "coded_category": "incoherent_hallucination"
+    },
+    {
+      "id": "rom_012",
+      "num": 12,
+      "domain": "news",
+      "model_key": "llama70b",
+      "model_label": "Llama 3.1 (70B)",
+      "coded_category": "incoherent_hallucination"
+    },
+    {
+      "id": "rom_013",
+      "num": 13,
+      "domain": "speech",
+      "model_key": "qwen72b",
+      "model_label": "Qwen 2.5 (72B)",
+      "coded_category": "particle_loops"
+    },
+    {
+      "id": "rom_014",
+      "num": 14,
+      "domain": "news",
+      "model_key": "gemma4",
+      "model_label": "Gemma 4 (31B)",
+      "coded_category": "incoherent_hallucination"
+    },
+    {
+      "id": "rom_015",
+      "num": 15,
+      "domain": "legal",
+      "model_key": "qwen72b",
+      "model_label": "Qwen 2.5 (72B)",
+      "coded_category": "particle_loops"
+    },
+    {
+      "id": "rom_016",
+      "num": 16,
+      "domain": "news",
+      "model_key": "gemma4",
+      "model_label": "Gemma 4 (31B)",
+      "coded_category": "code_switching"
+    },
+    {
+      "id": "rom_017",
+      "num": 17,
+      "domain": "news",
+      "model_key": "gemma4",
+      "model_label": "Gemma 4 (31B)",
+      "coded_category": "particle_loops"
+    },
+    {
+      "id": "rom_018",
+      "num": 18,
+      "domain": "news",
+      "model_key": "gemma4",
+      "model_label": "Gemma 4 (31B)",
+      "coded_category": "code_switching"
+    },
+    {
+      "id": "rom_019",
+      "num": 19,
+      "domain": "news",
+      "model_key": "llama70b",
+      "model_label": "Llama 3.1 (70B)",
+      "coded_category": "particle_loops"
+    },
+    {
+      "id": "rom_020",
+      "num": 20,
+      "domain": "news",
+      "model_key": "gemma4",
+      "model_label": "Gemma 4 (31B)",
+      "coded_category": "code_switching"
+    },
+    {
+      "id": "rom_021",
+      "num": 21,
+      "domain": "legal",
+      "model_key": "llama70b",
+      "model_label": "Llama 3.1 (70B)",
+      "coded_category": "incoherent_hallucination"
+    },
+    {
+      "id": "rom_022",
+      "num": 22,
+      "domain": "speech",
+      "model_key": "llama70b",
+      "model_label": "Llama 3.1 (70B)",
+      "coded_category": "synonymy_register"
+    },
+    {
+      "id": "rom_023",
+      "num": 23,
+      "domain": "speech",
+      "model_key": "gemma4",
+      "model_label": "Gemma 4 (31B)",
+      "coded_category": "particle_loops"
+    },
+    {
+      "id": "rom_024",
+      "num": 24,
+      "domain": "legal",
+      "model_key": "llama70b",
+      "model_label": "Llama 3.1 (70B)",
+      "coded_category": "incoherent_hallucination"
+    },
+    {
+      "id": "rom_025",
+      "num": 25,
+      "domain": "speech",
+      "model_key": "llama70b",
+      "model_label": "Llama 3.1 (70B)",
+      "coded_category": "incoherent_hallucination"
+    },
+    {
+      "id": "rom_026",
+      "num": 26,
+      "domain": "news",
+      "model_key": "gemma4",
+      "model_label": "Gemma 4 (31B)",
+      "coded_category": "incoherent_hallucination"
+    },
+    {
+      "id": "rom_027",
+      "num": 27,
+      "domain": "legal",
+      "model_key": "gemma4",
+      "model_label": "Gemma 4 (31B)",
+      "coded_category": "incoherent_hallucination"
+    },
+    {
+      "id": "rom_028",
+      "num": 28,
+      "domain": "legal",
+      "model_key": "llama70b",
+      "model_label": "Llama 3.1 (70B)",
+      "coded_category": "incoherent_hallucination"
+    },
+    {
+      "id": "rom_029",
+      "num": 29,
+      "domain": "news",
+      "model_key": "llama70b",
+      "model_label": "Llama 3.1 (70B)",
+      "coded_category": "code_switching"
+    },
+    {
+      "id": "rom_030",
+      "num": 30,
+      "domain": "speech",
+      "model_key": "gemma4",
+      "model_label": "Gemma 4 (31B)",
+      "coded_category": "particle_loops"
+    },
+    {
+      "id": "rom_031",
+      "num": 31,
+      "domain": "speech",
+      "model_key": "qwen72b",
+      "model_label": "Qwen 2.5 (72B)",
+      "coded_category": "incoherent_hallucination"
+    },
+    {
+      "id": "rom_032",
+      "num": 32,
+      "domain": "news",
+      "model_key": "qwen72b",
+      "model_label": "Qwen 2.5 (72B)",
+      "coded_category": "incoherent_hallucination"
+    },
+    {
+      "id": "rom_033",
+      "num": 33,
+      "domain": "news",
+      "model_key": "qwen72b",
+      "model_label": "Qwen 2.5 (72B)",
+      "coded_category": "incoherent_hallucination"
+    },
+    {
+      "id": "rom_034",
+      "num": 34,
+      "domain": "legal",
+      "model_key": "gemma4",
+      "model_label": "Gemma 4 (31B)",
+      "coded_category": "particle_loops"
+    },
+    {
+      "id": "rom_035",
+      "num": 35,
+      "domain": "speech",
+      "model_key": "gemma4",
+      "model_label": "Gemma 4 (31B)",
+      "coded_category": "particle_loops"
+    },
+    {
+      "id": "rom_036",
+      "num": 36,
+      "domain": "legal",
+      "model_key": "gemma4",
+      "model_label": "Gemma 4 (31B)",
+      "coded_category": "particle_loops"
+    },
+    {
+      "id": "rom_037",
+      "num": 37,
+      "domain": "news",
+      "model_key": "qwen72b",
+      "model_label": "Qwen 2.5 (72B)",
+      "coded_category": "incoherent_hallucination"
+    },
+    {
+      "id": "rom_038",
+      "num": 38,
+      "domain": "speech",
+      "model_key": "gemma4",
+      "model_label": "Gemma 4 (31B)",
+      "coded_category": "particle_loops"
+    },
+    {
+      "id": "rom_039",
+      "num": 39,
+      "domain": "speech",
+      "model_key": "llama70b",
+      "model_label": "Llama 3.1 (70B)",
+      "coded_category": "particle_loops"
+    },
+    {
+      "id": "rom_040",
+      "num": 40,
+      "domain": "news",
+      "model_key": "qwen72b",
+      "model_label": "Qwen 2.5 (72B)",
+      "coded_category": "particle_loops"
+    },
+    {
+      "id": "rom_041",
+      "num": 41,
+      "domain": "news",
+      "model_key": "qwen72b",
+      "model_label": "Qwen 2.5 (72B)",
+      "coded_category": "code_switching"
+    },
+    {
+      "id": "rom_042",
+      "num": 42,
+      "domain": "legal",
+      "model_key": "gemma4",
+      "model_label": "Gemma 4 (31B)",
+      "coded_category": "particle_loops"
+    },
+    {
+      "id": "rom_043",
+      "num": 43,
+      "domain": "news",
+      "model_key": "gemma4",
+      "model_label": "Gemma 4 (31B)",
+      "coded_category": "particle_loops"
+    },
+    {
+      "id": "rom_044",
+      "num": 44,
+      "domain": "legal",
+      "model_key": "gemma4",
+      "model_label": "Gemma 4 (31B)",
+      "coded_category": "synonymy_register"
+    },
+    {
+      "id": "rom_045",
+      "num": 45,
+      "domain": "legal",
+      "model_key": "qwen72b",
+      "model_label": "Qwen 2.5 (72B)",
+      "coded_category": "synonymy_register"
+    },
+    {
+      "id": "rom_046",
+      "num": 46,
+      "domain": "news",
+      "model_key": "gemma4",
+      "model_label": "Gemma 4 (31B)",
+      "coded_category": "particle_loops"
+    },
+    {
+      "id": "rom_047",
+      "num": 47,
+      "domain": "legal",
+      "model_key": "llama70b",
+      "model_label": "Llama 3.1 (70B)",
+      "coded_category": "synonymy_register"
+    },
+    {
+      "id": "rom_048",
+      "num": 48,
+      "domain": "speech",
+      "model_key": "qwen72b",
+      "model_label": "Qwen 2.5 (72B)",
+      "coded_category": "incoherent_hallucination"
+    },
+    {
+      "id": "rom_049",
+      "num": 49,
+      "domain": "news",
+      "model_key": "qwen72b",
+      "model_label": "Qwen 2.5 (72B)",
+      "coded_category": "synonymy_register"
+    },
+    {
+      "id": "rom_050",
+      "num": 50,
+      "domain": "news",
+      "model_key": "llama70b",
+      "model_label": "Llama 3.1 (70B)",
+      "coded_category": "synonymy_register"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "n_items": 50,
+  "annotator_1": "Hawwa La'aaly",
+  "annotator_2": "Hussain Arif",
+  "observed_agreement": 0.66,
+  "chance_agreement": 0.32,
+  "cohens_kappa": 0.5,
+  "distribution_percentages": {
+    "particle_loops": 40.0,
+    "code_switching": 15.0,
+    "incoherent_hallucination": 37.0,
+    "synonymy_register": 7.0,
+    "fluent_translation": 1.0
+  },
+  "confusion_matrix": {
+    "particle_loops": {
+      "particle_loops": 17,
+      "code_switching": 1,
+      "incoherent_hallucination": 4,
+      "synonymy_register": 0,
+      "fluent_translation": 0
+    },
+    "code_switching": {
+      "particle_loops": 0,
+      "code_switching": 4,
+      "incoherent_hallucination": 2,
+      "synonymy_register": 2,
+      "fluent_translation": 0
+    },
+    "incoherent_hallucination": {
+      "particle_loops": 1,
+      "code_switching": 1,
+      "incoherent_hallucination": 12,
+      "synonymy_register": 4,
+      "fluent_translation": 0
+    },
+    "synonymy_register": {
+      "particle_loops": 0,
+      "code_switching": 1,
+      "incoherent_hallucination": 0,
+      "synonymy_register": 0,
+      "fluent_translation": 0
+    },
+    "fluent_translation": {
+      "particle_loops": 0,
+      "code_switching": 0,
+      "incoherent_hallucination": 1,
+      "synonymy_register": 0,
+      "fluent_translation": 0
+    }
+  }
+}
