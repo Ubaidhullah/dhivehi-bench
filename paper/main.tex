@@ -178,7 +178,7 @@ Translation (1,812 sent. / 204 para.) & 2,016 & 42,143 (English) & 34,402 (Dhive
 \end{table*}
 
 \subsection{Quality Assurance and Annotation Protocol}
-Because Dhivehi lacks automated grammatical parsers, three native Maldivian speakers verified every item across the MCQ, Contextual QA, and Translation tracks. Two primary evaluators conducted initial context-grounding checks, distractor rewriting, and candidate filtering, and a third independent evaluator performed final adjudication. All three annotators completed formal secondary education in the Maldives, where Dhivehi grammar, literature, and orthography are compulsory curriculum subjects. Because shifting a single vowel diacritic changes lexical meaning or grammatical case, we required 100\% agreement across all three annotators to retain an item.
+Because Dhivehi lacks automated grammatical parsers, three native Maldivian speakers verified every item across the MCQ, Contextual QA, and Translation tracks. Two primary evaluators conducted initial context-grounding checks, distractor rewriting, and candidate filtering, and a third independent evaluator performed final adjudication. All three annotators completed formal secondary education in the Maldives, where Dhivehi grammar, literature, and orthography are compulsory curriculum subjects. Because shifting a single vowel diacritic changes lexical meaning or grammatical case, we required 100\% agreement across all three annotators to retain an item. All evaluators participated with informed consent and were compensated fairly according to local Maldivian professional and academic rates.
 
 \section{Evaluation Methodology and Baselines}
 We evaluated three open-weights foundation models spanning distinct model families and parameter scales: Gemma 4 (31B) \cite{team_gemma_2026}, Llama 3.1 (70B) \cite{grattafiori_llama_2024}, and Qwen 2.5 (72B) \cite{qwen_qwen25_2025}. Evaluating open-weights checkpoints guarantees deterministic reproducibility and provides direct access to token log-likelihoods for multiple-choice scoring. We exclude dedicated encoder-decoder translation models from the main multi-task table because they cannot perform zero-shot MCQ or extractive QA. NLLB-200 \cite{team_no_2022} cannot serve even as a translation reference. Its 600M, 1.3B, and 3.3B checkpoints share a 256,204-token SentencePiece vocabulary with no \texttt{div\_Thaa} language tag and no Thaana consonants. Because the tokenizer has no byte fallback, every Thaana consonant in the input maps to \texttt{<unk>} (token ID 3; Table \ref{tab:tokenizer_vocab}). We therefore use MADLAD-400 (7B) \cite{kudugunta_madlad-400_2023}, which includes Dhivehi among its training languages, as the translation reference. On the EN$\rightarrow$DV track it scored 6.8 BLEU and 38.2 chrF. MADLAD-400 does not produce the repetition loops seen in the causal LLMs, but its training data include public web crawls that overlap with Maldivian constitutional and government texts.
@@ -220,10 +220,12 @@ Qwen 2.5 (72B) & Tiktoken BPE & 151,643 & 152,064 & 8\textsuperscript{\dag} & 0 
 NLLB-200 (600M--3.3B) & SentencePiece & 256,204 & 256,204 & 1\textsuperscript{\ddag} & 0 \\
 \bottomrule
 \end{tabular}
-\vspace{1ex}
-\flushleft{\footnotesize \textsuperscript{*} The base SentencePiece unigram vocabulary is 256,000; the architectural embedding and projection layers are dimensioned to $d \times 262,144$ ($2^{18}$, $\approx 262\text{k}$) in the Gemma Technical Report \cite{team_gemma_2026}.\\
+\begin{flushleft}
+\footnotesize
+\textsuperscript{*} The base SentencePiece unigram vocabulary is 256,000; the architectural embedding and projection layers are dimensioned to $d \times 262,144$ ($2^{18}$, $\approx 262\text{k}$) in the Gemma Technical Report \cite{team_gemma_2026}.\\
 \textsuperscript{\dag} Qwen 2.5 includes 8 isolated single-consonant characters without vowel diacritics (\textit{fili}); because written Dhivehi requires consonant-vowel combinations, continuous text relies on byte fallback.\\
-\textsuperscript{\ddag} NLLB-200 contains zero Thaana consonants (only 1 isolated vowel diacritic \texttt{U+07AC}) and omits \texttt{div\_Thaa}; lacking byte-fallback, all Dhivehi text collapses to \texttt{<unk>}.}
+\textsuperscript{\ddag} NLLB-200 contains zero Thaana consonants (only 1 isolated vowel diacritic \texttt{U+07AC}) and omits \texttt{div\_Thaa}; lacking byte-fallback, all Dhivehi text collapses to \texttt{<unk>}.
+\end{flushleft}
 \end{table} 
 
 Measuring token fertility (tokens per whitespace-delimited word) across all 2,016 parallel translation pairs quantifies this expansion. On English text, Gemma 4 averages 1.28 tokens/word, whereas on the parallel Dhivehi text it averages 21.12 tokens/word---a 16.50x fertility ratio. Llama 3.1 reaches a 15.04x ratio (1.33 English vs. 20.00 Dhivehi tokens/word), and Qwen 2.5 reaches a 14.59x ratio (1.22 English vs. 17.80 Dhivehi tokens/word). Generating a 100-word Dhivehi passage therefore requires predicting more than 2,000 sequential tokens (Figure \ref{fig:tokenization}).
@@ -252,9 +254,10 @@ Table \ref{tab:results} reports baseline performance across all four task direct
 
 \begin{table*}[t]
 \centering
+\small
+\setlength{\tabcolsep}{4.5pt}
 \caption{Dhivehi-Bench Baseline Evaluation Results for Open-Weights Models. Translation scores reflect EN$\rightarrow$DV (generating Thaana) and DV$\rightarrow$EN (generating English) to examine Receptive Bilingualism. All MCQ evaluations are computed via length-normalized log-likelihood. On Contextual QA, strict whitespace Token F1/EM caps both the Human Baseline and Gemma 4 near 52.5\% due to single-reference span-boundary and compound-spacing variance; both overlap lexically with the reference in $\approx$88\% of items (\S\ref{sec:human_baseline}).}
 \label{tab:results}
-\resizebox{\linewidth}{!}{%
 \begin{tabular}{l c cc cc cc}
 \toprule
 & \textbf{MCQ} & \multicolumn{2}{c}{\textbf{Contextual QA}} & \multicolumn{2}{c}{\textbf{EN$\rightarrow$DV (Thaana)}} & \multicolumn{2}{c}{\textbf{DV$\rightarrow$EN (English)}} \\
@@ -272,8 +275,7 @@ Table \ref{tab:results} reports baseline performance across all four task direct
 \multicolumn{8}{l}{\textbf{Qwen Family (Alibaba)}} \\
 \quad Qwen 2.5 (72B) & 39.00 & 22.58 & 3.00 & 0.08 & 9.42 & 9.45 & 40.10 \\
 \bottomrule
-\end{tabular}%
-}
+\end{tabular}
 \end{table*}
 
 \subsection{The Receptive-Generative Disparity}
@@ -385,6 +387,8 @@ Because exact word-level BLEU is hypersensitive to legitimate orthographic free 
 
 \begin{table*}[t]
 \centering
+\small
+\setlength{\tabcolsep}{3.5pt}
 \caption{Romanized Transliteration Ablation Results ($n=200$ stratified subset across Legal, News, and Speech) with 95\% Paired Bootstrap Confidence Intervals (10,000 resamples). Evaluating all three open-weights models under the official Mal\'{e} Latin transliteration scheme isolates script-level byte tokenization from underlying linguistic fluency. Repetition Loop Rate is reported under both a local sentence-level threshold ($\ge 5\times$) and a persistent threshold ($\ge 50\times$).}
 \label{tab:romanized_ablation}
 \begin{tabular}{l ccc ccc}
@@ -436,7 +440,7 @@ Word-level BLEU remains suppressed across all three models ($\leq 0.26$). Howeve
 \end{table*}
 
 \paragraph{Qualitative Audit of Romanized Outputs.}
-To characterize residual errors beyond scoring artifacts, two native speakers (Hussain Arif and Hawwa La'aaly) independently audited a stratified sample of 50 Romanized generations across all three models. Annotators achieved an observed agreement of 66.0\% (Cohen's $\kappa = 0.50$; chance agreement 32.0\%, reaching 80.0\% agreement on Gemma 4). Averaged across both annotators (100 total ratings), the mutually exclusive categorization reveals:
+To characterize residual errors beyond scoring artifacts, two native speakers (Hussain Arif and Hawwa La'aaly) independently audited a stratified sample of 50 Romanized generations across all three models. Annotators achieved an observed agreement of 66.0\% (Cohen's $\kappa = 0.50$; chance agreement 32.0\%, reaching 80.0\% agreement on Gemma 4; full confusion matrix in Appendix C). Averaged across both annotators (100 total ratings), the mutually exclusive categorization reveals:
 \begin{enumerate}
     \item \textbf{Morphological Particle Loops (40.0\%; Annotator 1: 44.0\%, Annotator 2: 36.0\%):} Although byte-level Unicode loops are eliminated, decoders remain vulnerable to grammatical particle loops in Latin text, repeatedly emitting plural markers (\textit{thah thah thah}), verbal copulas (\textit{kuraa kuraa}), or reduplicated clitics (\textit{fali-fali}). This failure mode dominates Gemma 4, accounting for 55.0\% of its evaluated generations.
     \item \textbf{Semantic Incoherence and Hallucination (37.0\%; Annotator 1: 36.0\%, Annotator 2: 38.0\%):} The model generates phonetically plausible Latin strings that do not correspond to any valid Dhivehi root or English transfer, producing severe morphological distortions (46.9\% on Llama 3.1 and 50.0\% on Qwen 2.5).
@@ -478,7 +482,7 @@ To comply with copyright law, we distribute only transformed derivative QA pairs
 \begin{acks}
 This work was supported by the National Natural Science Foundation of China (Grant No. 62502421), the Yunnan Research Project (Grant Nos. 202501AU070058, 202301AU070194, and 202401AT070614), the Yunnan Academician and Expert Workstation Project (Grant No. 202505AF350053), and the Yunnan International Joint Laboratory of Cross-Border Data Governance (Grant No. 202403AP140021). The authors sincerely acknowledge the financial support from all funding agencies.
 
-We thank Hussein Arif (IT Technician, Thaa Atoll Hospital) and Hawwa La'aaly (Diploma in Computer Science; undergraduate student), who completed the human baseline evaluation and independently annotated the error analyses across both Thaana script and Romanized transliteration. Both completed several years of formal Dhivehi language study in the Maldivian school system.
+We thank Hussain Arif (IT Technician, Thaa Atoll Hospital) and Hawwa La'aaly (Diploma in Computer Science; undergraduate student), who completed the human baseline evaluation and independently annotated the error analyses across both Thaana script and Romanized transliteration. Both completed several years of formal Dhivehi language study in the Maldivian school system.
 \end{acks}
 
 \bibliographystyle{ACM-Reference-Format}
@@ -567,5 +571,27 @@ Chaviyani (\texttt{U+0797}) & Chaviyani & ch & & & \\
     \item \textbf{Hus Noonu (\texttt{U+0782} without fili/sukun):} Transliterated as prenasalized \texttt{n} preceding voiced stops (\texttt{nd}, \texttt{ndh}, \texttt{mb}, \texttt{ng}, as in \textit{kandu} and \textit{handhu}).
     \item \textbf{Arabic-Derived Dotted Thaana (\textit{Tikhi Thaana}, \texttt{U+0798}--\texttt{U+07A5} and \texttt{U+07B1}):} Mapped to their standard phonetic Latin counterparts in legal and Islamic texts: \textit{Thaalu} (\texttt{U+0798} $\rightarrow$ \texttt{th}/\texttt{dh}), \textit{Hhaa} (\texttt{U+0799} $\rightarrow$ \texttt{h}), \textit{Khaa} (\texttt{U+079A} $\rightarrow$ \texttt{kh}), \textit{Dhaal} (\texttt{U+079B} $\rightarrow$ \texttt{dh}/\texttt{z}), \textit{Sheenu} (\texttt{U+079C} $\rightarrow$ \texttt{sh}), \textit{Saadhu} (\texttt{U+079D} $\rightarrow$ \texttt{s}), \textit{Daadhu} (\texttt{U+079E} $\rightarrow$ \texttt{d}), \textit{To} (\texttt{U+079F} $\rightarrow$ \texttt{t}), \textit{Zo} (\texttt{U+07A0} $\rightarrow$ \texttt{z}), \textit{Ainu} (\texttt{U+07A1} $\rightarrow$ \texttt{'}), \textit{Ghainu} (\texttt{U+07A2} $\rightarrow$ \texttt{gh}), \textit{Qaafu} (\texttt{U+07A3} $\rightarrow$ \texttt{q}), \textit{Ghaafu} (\texttt{U+07A4} $\rightarrow$ \texttt{gh}), \textit{Waavu} (\texttt{U+07A5} $\rightarrow$ \texttt{w}), and \textit{Naa} (\texttt{U+07B1} $\rightarrow$ \texttt{n}).
 \end{itemize}
+
+\section*{Appendix C: Inter-Annotator Agreement on Romanized Transliteration Audit}
+Table \ref{tab:confusion_matrix} documents the empirical confusion matrix between the two independent native evaluators (Hawwa La'aaly and Hussain Arif) across the 50 Romanized translation outputs (\S\ref{sec:ablation-romanized}).
+
+\begin{table}[h]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\caption{Inter-Annotator Confusion Matrix for Romanized Error Morphology Audit ($n=50$, Cohen's $\kappa=0.50$, Observed Agreement 66.0\%). Rows represent Annotator 1 (Hawwa La'aaly) and columns represent Annotator 2 (Hussain Arif).}
+\label{tab:confusion_matrix}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Annotator 1 $\backslash$ Annotator 2} & \textbf{Loops} & \textbf{Code-Switch} & \textbf{Incoherent} & \textbf{Synonymy} & \textbf{Fluent} \\
+\midrule
+Morphological Loops & 17 & 1 & 4 & 0 & 0 \\
+Code-Switching & 0 & 4 & 2 & 2 & 0 \\
+Incoherent / Hallucination & 1 & 1 & 12 & 4 & 0 \\
+Synonymy / Register & 0 & 1 & 0 & 0 & 0 \\
+Fluent Translation & 0 & 0 & 1 & 0 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \end{document}
