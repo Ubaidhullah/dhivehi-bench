@@ -47,22 +47,22 @@ CONSONANTS = {
     '\u0795': 'p',   # Paviyani
     '\u0796': 'j',   # Javiyani
     '\u0797': 'ch',  # Chaviyani
-    # Tikhi Thaana (Arabic-derived)
-    '\u0798': 'th',  # Thaalu
-    '\u0799': 'h',   # Hhaa
-    '\u079a': 'kh',  # Khaa
-    '\u079b': 'dh',  # Dhaal
-    '\u079c': 'sh',  # Sheenu
-    '\u079d': 's',   # Saadhu
-    '\u079e': 'd',   # Daadhu
-    '\u079f': 't',   # To
-    '\u07a0': 'z',   # Zo
-    '\u07a1': "'",   # Ainu
-    '\u07a2': 'gh',  # Ghainu
-    '\u07a3': 'q',   # Qaafu
-    '\u07a4': 'gh',  # Ghaafu
-    '\u07a5': 'w',   # Waavu
-    '\u07b1': 'n'    # Naa
+    # Tikhi Thaana (Official Unicode U+0798..U+07A5 and U+07B1)
+    '\u0798': 'th',  # U+0798 Ttaa (Arabic Thaa)
+    '\u0799': 'h',   # U+0799 Hhaa (Arabic Haa)
+    '\u079a': 'kh',  # U+079A Khaa (Arabic Khaa)
+    '\u079b': 'dh',  # U+079B Thaalu (Arabic Dhaal)
+    '\u079c': 'zh',  # U+079C Zaa (Persian/English Zhe)
+    '\u079d': 'sh',  # U+079D Sheenu (Arabic Sheen)
+    '\u079e': 's',   # U+079E Saadhu (Arabic Saad)
+    '\u079f': 'd',   # U+079F Daadhu (Arabic Daad)
+    '\u07a0': 't',   # U+07A0 To (Arabic Taa)
+    '\u07a1': 'z',   # U+07A1 Zo (Arabic Zaa)
+    '\u07a2': "'",   # U+07A2 Ainu (Arabic Ayn)
+    '\u07a3': 'gh',  # U+07A3 Ghainu (Arabic Ghayn)
+    '\u07a4': 'q',   # U+07A4 Qaafu (Arabic Qaaf)
+    '\u07a5': 'w',   # U+07A5 Waavu (Arabic Waaw)
+    '\u07b1': 'n'    # U+07B1 Naa (Southern retroflex nasal)
 }
 
 VOWELS = {
@@ -81,6 +81,8 @@ VOWELS = {
 SUKUN = '\u07b0'
 
 def transliterate_word(w):
+    if w == '(އ)':
+        return '(a)'
     res = []
     i = 0
     n = len(w)
@@ -91,9 +93,9 @@ def transliterate_word(w):
             # Check next character
             if i + 1 < n and w[i+1] in VOWELS:
                 v = VOWELS[w[i+1]]
-                if c == '\u0787':  # Alifu + vowel
-                    # If start of word or after vowel, no apostrophe needed in Malé Latin
-                    if i == 0 or (len(res) > 0 and res[-1] in 'aeiou'):
+                if c in ('\u0787', '\u07a2'):  # Alifu or Ainu + vowel
+                    # If start of word (or after opening paren), no apostrophe needed in Malé Latin
+                    if i == 0 or (len(res) > 0 and res[-1] == '('):
                         res.append(v)
                     else:
                         res.append("'" + v)
@@ -107,8 +109,10 @@ def transliterate_word(w):
                     res.append('n')
                 elif c == '\u0790':  # Seenu sukun is always 's'
                     res.append('s')
-                elif c in ('\u0781', '\u079c'):  # Shaviyani or Sheenu sukun
-                    res.append('sh' if is_final or (i + 2 < n and w[i+2] in ('\u078e', '\u0786', '\u0790')) else 'h')
+                elif c == '\u0781':  # Shaviyani sukun is 'h' in Malé Latin (e.g., rah, macchah, majileehah)
+                    res.append('h')
+                elif c == '\u079d':  # Sheenu sukun is 'sh'
+                    res.append('sh')
                 elif c == '\u0787':  # Alifu sukun
                     if is_final:
                         res.append('h')
@@ -130,7 +134,7 @@ def transliterate_word(w):
                 # Bare consonant (e.g. Hus Noonu)
                 if c == '\u0782':
                     res.append('n')
-                elif c == '\u0787':
+                elif c in ('\u0787', '\u07a2'):
                     res.append("'")
                 else:
                     res.append(CONSONANTS[c])
