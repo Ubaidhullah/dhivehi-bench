@@ -79,6 +79,7 @@ VOWELS = {
 }
 
 SUKUN = '\u07b0'
+PUNCT_MAP = {'\u060c': ',', '\u061b': ';', '\u061f': '?'}
 
 def transliterate_word(w):
     if w == '(އ)':
@@ -89,13 +90,16 @@ def transliterate_word(w):
     while i < n:
         c = w[i]
         
-        if c in CONSONANTS:
+        if c in PUNCT_MAP:
+            res.append(PUNCT_MAP[c])
+            i += 1
+        elif c in CONSONANTS:
             # Check next character
             if i + 1 < n and w[i+1] in VOWELS:
                 v = VOWELS[w[i+1]]
                 if c in ('\u0787', '\u07a2'):  # Alifu or Ainu + vowel
-                    # If start of word (or after opening paren), no apostrophe needed in Malé Latin
-                    if i == 0 or (len(res) > 0 and res[-1] == '('):
+                    # If start of word (or after opening paren / initial short vowel), no apostrophe needed in Malé Latin
+                    if i == 0 or (len(res) > 0 and res[-1] in ('a', 'i', 'u', 'e', 'o', '(')):
                         res.append(v)
                     else:
                         res.append("'" + v)

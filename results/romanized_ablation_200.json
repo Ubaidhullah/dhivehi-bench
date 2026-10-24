@@ -18,19 +18,19 @@
           "loop_rate": 4.5
         },
         "romanized": {
-          "bleu": 0.15320841629574425,
+          "bleu": 0.1793234650151611,
           "bleu_ci": [
-            0.05874973830329687,
-            0.28159536721135664
+            0.06913939155461514,
+            0.32828824203033147
           ],
-          "chrf": 15.95214629729248,
+          "chrf": 16.090059894347377,
           "chrf_ci": [
-            15.12448949018928,
-            16.806239974239432
+            15.233125358189342,
+            16.950750292562645
           ],
           "loop_rate": 18.5
         },
-        "delta_bleu": -0.40405231494429206
+        "delta_bleu": -0.37793726622487517
       },
       "llama70b": {
         "model_id": "meta-llama/llama-3.1-70b-instruct",
@@ -40,19 +40,19 @@
           "loop_rate": 0.0
         },
         "romanized": {
-          "bleu": 0.26362516599830926,
+          "bleu": 0.3176129882267433,
           "bleu_ci": [
-            0.07958419478062728,
-            0.5212738317425827
+            0.0906753973051821,
+            0.5962965762049701
           ],
-          "chrf": 17.261881764723963,
+          "chrf": 17.44375962193511,
           "chrf_ci": [
-            16.3141205683817,
-            18.236425174442598
+            16.469380785223386,
+            18.413054490126367
           ],
           "loop_rate": 5.5
         },
-        "delta_bleu": -0.48461743795484274
+        "delta_bleu": -0.43062961572640873
       },
       "qwen72b": {
         "model_id": "qwen/qwen-2.5-72b-instruct",
@@ -62,19 +62,19 @@
           "loop_rate": 11.0
         },
         "romanized": {
-          "bleu": 0.2247262864104962,
+          "bleu": 0.25501117448952754,
           "bleu_ci": [
-            0.06866264129299171,
-            0.43547945600091575
+            0.07864317393717472,
+            0.4942615469948122
           ],
-          "chrf": 18.577725839682437,
+          "chrf": 18.715136462965358,
           "chrf_ci": [
-            17.848252855334334,
-            19.330894821998566
+            17.98593950051149,
+            19.472427642278515
           ],
           "loop_rate": 4.0
         },
-        "delta_bleu": 0.14003326069254457
+        "delta_bleu": 0.17031814877157592
       }
     }
   },
@@ -84,7 +84,7 @@
       "domain": "legal",
       "english": "2. the purpose and importance of limiting the right or freedom;",
       "gold_thaana": "2. އެ ޙައްޤެއް ނުވަތަ އެ މިނިވަންކަމެއް ހިފެހެއްޓުމުގެ ބޭނުމާއި، މުހިންމުކަން.",
-      "gold_romanized": "2. e haqqeh nuvatha e minivankameh hifehettumuge beynumaa'i، muhinmukan.",
+      "gold_romanized": "2. e haqqeh nuvatha e minivankameh hifehettumuge beynumaa'i, muhinmukan.",
       "predictions": {
         "gemma4": {
           "thaana": "2. މި ހައްގު ނުވަތަ މި and މި މިނިވަންކަން ހިމިގާਉਣതിന്റെ މަގްސަދު އަދި މުހިންމުކަން؛",
@@ -105,7 +105,7 @@
       "domain": "legal",
       "english": "The jurisdiction of the Judicial Service Commission shall extend to all members of the Judiciary and such other persons as designated by the People’s Majlis.",
       "gold_thaana": "ޢަދުލު އިންޞާފު ޤާއިމްކުރުމުގެ ބާރުގައި ހިމެނޭ އެންމެހައި މީހުނާއި، ރައްޔިތުންގެ މަޖިލީހުން ކަނޑައަޅާ ކޮންމެ ފަރާތެއްގެ މައްޗަށް ޖުޑީޝަލް ސަރވިސް ކޮމިޝަނުގެ އިޚްތިޞާޞް ހިނގާނެއެވެ.",
-      "gold_romanized": "adhulu insaafu qaa'imkurumuge baaruga'i himeney enmeha'i meehunaa'i، rayyithunge majileehun kanda'alhaa konme faraathegge macchah judeeshal sarvis komishanuge ikhthisaas hingaane'eve.",
+      "gold_romanized": "adhulu insaafu qaa'imkurumuge baaruga'i himeney enmeha'i meehunaa'i, rayyithunge majileehun kanda'alhaa konme faraathegge macchah judeeshal sarvis komishanuge ikhthisaas hingaane'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "ޤަޟިއްޔާ ހިԶުމް ކޮމިޝަނުގެ އިޚްތިޔާރު ހިމެހޭނީ ޤަޟާީ ނިޒާމުގެ ހުރިހާ މެންބަރުންނަށާއި، ރައްޔިތުންގެ މަޖިލިހުން ކަނޑައަޅާ އެހެން and މީހުންނަށެވެ.",
@@ -210,7 +210,7 @@
       "domain": "legal",
       "english": "2. a Judge of the High Court, elected by the Judges of the High Court;",
       "gold_thaana": "2. ހައިކޯޓުގައި ހިމެނޭ ފަނޑިޔާރުންގެ ތެރެއިން، އެ ކޯޓުން އިންތިޚާބުކުރާ ފަނޑިޔާރަކު.",
-      "gold_romanized": "2. ha'ikoatuga'i himeney fandiyaarunge there'in، e koatun inthikhaabukuraa fandiyaaraku.",
+      "gold_romanized": "2. ha'ikoatuga'i himeney fandiyaarunge there'in, e koatun inthikhaabukuraa fandiyaaraku.",
       "predictions": {
         "gemma4": {
           "thaana": "2. ހައިކޯޓުގެ ޖަޖްޖުންތަކުން އިންތިޚާބުކުރާ ހައިކޯޓުގެ ޖަޖްޖެއް؛",
@@ -231,7 +231,7 @@
       "domain": "legal",
       "english": "(c) The Judicial Service Commission appointed as provided in this Chapter shall continue until constitution by the next elected People’s Majlis, of a Judicial Service Commission as specified in this Constitution.",
       "gold_thaana": "(ނ) މި މާއްދާގެ ދަށުން ޤާއިމުކުރާ ޖުޑީޝަލް ސަރވިސް ކޮމިޝަން، ދެން އިންތިޚާބުކުރެވޭ ރައްޔިތުންގެ މަޖިލީހުގެ އިންތިޚާބު ނިމިގެން، މި ޤާނޫނުއަސާސީގައި ބަޔާންކޮށްފައިވާ ގޮތުގެމަތީން ޖުޑީޝަލް ސަރވިސް ކޮމިޝަން އެކުލަވައިލެވެންދެން ދެމިއޮންނާނެއެވެ.",
-      "gold_romanized": "(n) mi maaddhaage dhashun qaa'imukuraa judeeshal sarvis komishan، dhen inthikhaabukurevey rayyithunge majileehuge inthikhaabu nimigen، mi qaanoonu'asaaseega'i bayaankohfa'ivaa gothugematheen judeeshal sarvis komishan ekulava'ilevendhen dhemi'onnaane'eve.",
+      "gold_romanized": "(n) mi maaddhaage dhashun qaa'imukuraa judeeshal sarvis komishan, dhen inthikhaabukurevey rayyithunge majileehuge inthikhaabu nimigen, mi qaanoonu'asaaseega'i bayaankohfa'ivaa gothugematheen judeeshal sarvis komishan ekulava'ilevendhen dhemi'onnaane'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "(ށ) މި ބާބުގައިވާ ގޮތަށް އައްޔަނިކުރެވޭ ޖުޑީޝަލް ސާވިސް ކޮމިޝަނަކީ، މި ގާނޫލުގައި ބަޔާންކުރާ ގޮތުގެމަތިން ޖުޑީޝަލް ސާވިސް ކޮމިޝަނެއް، އަންލިބޭގެން އިންތިޚާބުކުރެވޭ ރައްޔިތުންގެ މަޖިލިހުން އުފެއްދި 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直",
@@ -357,7 +357,7 @@
       "domain": "legal",
       "english": "(g) to promote, protect and uphold the rule of law, and defend public safety and the public interest;",
       "gold_thaana": "(ކ) ޤާނޫނުގެ ވެރިކަން ޙިމާޔަތްކޮށް ކުރިއެރުވުމާއި، ރައްޔިތުންގެ ސަލާމަތްތެރިކަމާއި ޢާންމު ފައިދާ ދަމަހައްޓައި ރައްކާތެރިކުރުމަށް މަސައްކަތްކުރުން.",
-      "gold_romanized": "(k) qaanoonuge verikan himaayakkoh kuri'eruvumaa'i، rayyithunge salaamattherikamaa'i aanmu fa'idhaa dhamahatta'i rakkaatherikurumah masakkakkurun.",
+      "gold_romanized": "(k) qaanoonuge verikan himaayakkoh kuri'eruvumaa'i, rayyithunge salaamattherikamaa'i aanmu fa'idhaa dhamahatta'i rakkaatherikurumah masakkakkurun.",
       "predictions": {
         "gemma4": {
           "thaana": "(ގ) क़ާނޫނުގެ and ނިޒާމު ކުރިއެރުވުމާއި، ރައްކާތެރިކުރުމާއި، and ދިމަގަށް ማስިމާކުރުމާއި، އަދި އާންމު ސަލާމަތާއި އާންމު މަސްލަހަތް and ދިފާޢުކުރުމެވެ؛",
@@ -378,7 +378,7 @@
       "domain": "legal",
       "english": "1. each of the political parties shall submit to the People’s Majlis one nomination for appointment to the Elections Commission;",
       "gold_thaana": "1. އިލެކްޝަންސް ކޮމިޝަނަށް މެންބަރުން ޢައްޔަންކުރުމަށްޓަކައި، ކޮންމެ ސިޔާސީ ޕާޓީއަކުން އެއިން ޕާޓީއެއްގެ ނަން ރައްޔިތުންގެ މަޖިލީހަށް ހުށަހަޅާންވާނެއެވެ.",
-      "gold_romanized": "1. ilekshans komishanah menbarun ayyankurumahtaka'i، konme siyaasee paatee'akun e'in paatee'egge nan rayyithunge majileehah hushahalhaanvaane'eve.",
+      "gold_romanized": "1. ilekshans komishanah menbarun ayyankurumahtaka'i, konme siyaasee paatee'akun ein paatee'egge nan rayyithunge majileehah hushahalhaanvaane'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "1. ކޮންމެ ސiyasi ፓർട്ടީއަކުން އިލެކްޝަންސް ކޮމިޝަނަށް bổ</h5>任命 ڪرڻ ਲਈ އެކި ނޯމިނޭޝަނެއް ރައްޔިސްމަޖިލިހަށް ހުށަހަޅަންވާނެ؛",
@@ -399,7 +399,7 @@
       "domain": "legal",
       "english": "(n) to receive and recognize the credentials of diplomatic and consular representatives of foreign countries and other parties and to accept their letters of recall;",
       "gold_thaana": "(ލ) ބޭރުޤައުމުތަކާއި އެނޫންވެސް ފަރާތްތަކުން ރާއްޖެއަށް ކަނޑައަޅާ ސަފީރުންގެ ފަތްކޮޅު ބަލައިގަތުމާއި، ސަފީރުން އަނބުރާ ގެންދިއުމުގެ ލިޔުން ބަލައިގަތުން.",
-      "gold_romanized": "(l) beyruqa'umuthakaa'i enoonves faraatthakun raajje'ah kanda'alhaa safeerunge fakkolhu bala'igathumaa'i، safeerun anburaa gendhi'umuge liyun bala'igathun.",
+      "gold_romanized": "(l) beyruqa'umuthakaa'i enoonves faraatthakun raajje'ah kanda'alhaa safeerunge fakkolhu bala'igathumaa'i, safeerun anburaa gendhi'umuge liyun bala'igathun.",
       "predictions": {
         "gemma4": {
           "thaana": "(ނ) ބޭރު ޤައުމުތަކާއި އެހެން ޕާޓީތަކުގެ ޑިޕްލޮމެޓިކް އަދި ކޮންސިއުލަރ and ރިޕްރިޒެންޓްޓިވްތަކުގެ ލިޔެކިޔުންތައް လက်ခံކޮށް ސާބިތުކުރުމާއި، އެމީހުންގެ ރިކޯލް ލެޓަރތައް އެކަބަލުކުރުމެވެ؛",
@@ -483,7 +483,7 @@
       "domain": "legal",
       "english": "to inquire into and investigate all allegations of corruption; any complaints, information, or suspicion of corruption must be investigated;",
       "gold_thaana": "ކޮރަޕްޝަންގެ މައްސަލަތައް ބަލައި ތަޙުޤީޤުކުރުން. މީގެތެރޭގައި، އެއްވެސް ފަރާތަކުން ކޮރަޕްޝަންގެ ޢަމަލެއް ހިންގައިފިކަމުގެ ޝަކުވާއެއް ހުށަހަޅައިފިނަމަ ނުވަތަ މިފަދަ ކަމެއްގެ މަޢުލޫމާތު މިނޫންގޮތަކުންވެސް ލިބިއްޖެނަމަ، ނުވަތަ އެފަދަ ކަމެއްގެ މައްޗަށް ޝައްކުކުރެވިއްޖެނަމަ، އެކަމެއް ބަލައި ތަޙުޤީޤުކުރުން.",
-      "gold_romanized": "korapshange massalathah bala'i thahuqeequkurun. meegethereyga'i، evves faraathakun korapshange amaleh hinga'ifikamuge shakuvaa'eh hushahalha'ifinama nuvatha mifadha kamegge ma'uloomaathu minoongothakunves libijjenama، nuvatha efadha kamegge macchah shakkukurevijjenama، ekameh bala'i thahuqeequkurun.",
+      "gold_romanized": "korapshange massalathah bala'i thahuqeequkurun. meegethereyga'i, evves faraathakun korapshange amaleh hinga'ifikamuge shakuvaa'eh hushahalha'ifinama nuvatha mifadha kamegge ma'uloomaathu minoongothakunves libijjenama, nuvatha efadha kamegge macchah shakkukurevijjenama, ekameh bala'i thahuqeequkurun.",
       "predictions": {
         "gemma4": {
           "thaana": "ރިޝްވަތް ނުވަތަ ஊழަލުގެ ހުރިހާ اލާމްތަކެއް ބަލާ ފަހުސޫހާކުރުމަށް؛ ஊழަލާގުޅޭ އެކި ޝަކުވާތައް، މައުލޫމާތުތައް ނުވަތަ ޝައްކުކުރާ ކަންތައްތައް ތަހުގީގު ކުރަން and يجب.",
@@ -525,7 +525,7 @@
       "domain": "legal",
       "english": "All property, assets and monies which at the commencement of this Constitution were vested in the State shall continue to vest in the State.",
       "gold_thaana": "މި ޤާނޫނުއަސާސީއަށް ޢަމަލުކުރާން ފަށާއިރު ދައުލަތުގެ މިލްކުގައިވާ ހުރިހައި މުދަލާއި، ތަންތަނާއި، ތަކެއްޗާއި، ފައިސާއަކީ، ދައުލަތުގެ ތަކެއްޗެވެ.",
-      "gold_romanized": "mi qaanoonu'asaasee'ah amalukuraan fashaa'iru dha'ulathuge milkuga'ivaa huriha'i mudhalaa'i، thanthanaa'i، thakecchaa'i، fa'isaa'akee، dha'ulathuge thakeccheve.",
+      "gold_romanized": "mi qaanoonu'asaasee'ah amalukuraan fashaa'iru dha'ulathuge milkuga'ivaa huriha'i mudhalaa'i, thanthanaa'i, thakecchaa'i, fa'isaa'akee, dha'ulathuge thakeccheve.",
       "predictions": {
         "gemma4": {
           "thaana": "މި ގާނޫލަށާއި އެކު ހިᱡެހުނު ވަގުތުގައި ދައުލަތުގެ މިލްކިއްޔަތުގައި ހުރި ހުރިހާ މުލްކިއްޔަތުތަކާއި، މުއްމަލްތަކާއި، ފައިސާ ހުރިހާކަމީ ކުރިއަށްވެސް ދައުލަތުގެ މިލްކިއްޔަތުގައި ހުންނާނެއެވެ.",
@@ -567,7 +567,7 @@
       "domain": "legal",
       "english": "to faithfully implement the provisions of this Constitution and the law, and to promote compliance by organs of the State and by the people;",
       "gold_thaana": "މި ޤާނޫނުއަސާސީ އާއި ޤާނޫނުގައި ކަނޑައަޅައިފައިވާ ކަންތައްތައް އިޚްލާސްތެރިކަމާއެކު ތަންފީޛުކޮށް، ދައުލަތުގެ މުއައްސަސާތަކުންނާއި ރައްޔިތުން ޤާނޫނުއަސާސީ އާއި ޤާނޫނާ އެއްގޮތަށް ޢަމަލުކުރުމަށް ބާރުއެޅުން.",
-      "gold_romanized": "mi qaanoonu'asaasee aa'i qaanoonuga'i kanda'alha'ifa'ivaa kanthatthah ikhlaastherikamaa'eku thanfeedhukoh، dha'ulathuge mu'assasaathakunnaa'i rayyithun qaanoonu'asaasee aa'i qaanoonaa eggothah amalukurumah baaru'elhun.",
+      "gold_romanized": "mi qaanoonu'asaasee aa'i qaanoonuga'i kanda'alha'ifa'ivaa kanthatthah ikhlaastherikamaa'eku thanfeedhukoh, dha'ulathuge mu'assasaathakunnaa'i rayyithun qaanoonu'asaasee aa'i qaanoonaa eggothah amalukurumah baaru'elhun.",
       "predictions": {
         "gemma4": {
           "thaana": "މި ޤަވާއިދާއި and ಕಾನೂނުގެ and ހުްކުމްތައް އިޚްލާޞްތެރިކަމާއެކުઅમަލުކުރުމަށާއި، ދައުލަތުގެ and މުއައްސަސާތަކާއި and and ރައްޔިތުން އެކަން އަމަލުކުރުމަށް ప్రోމޯޓްކުރުމަށް؛",
@@ -588,7 +588,7 @@
       "domain": "legal",
       "english": "A member of the Anti-Corruption Commission may resign from office by writing under his hand addressed to the President, and the office shall become vacant when the resignation is received by the President.",
       "gold_thaana": "އެންޓި-ކޮރަޕްޝަން ކޮމިޝަނުގެ މެންބަރަކު މެންބަރުކަމުން އިސްތިޢުފާދޭން ބޭނުންވެއްޖެނަމަ، އެކަން ބަޔާންކޮށް ރައީސުލްޖުމްހޫރިއްޔާއަށް ސިޓީއަކުން ހުށަހަޅައި، އެ ސިޓީ ރައީސުލްޖުމްހޫރިއްޔާއަށް ލިބުމުން އެ މެންބަރަކު މެންބަރުކަމުން ވަކިވީއެވެ.",
-      "gold_romanized": "enti-korapshan komishanuge menbaraku menbarukamun isthi'ufaadheyn beynunvejjenama، ekan bayaankoh ra'eesuljumhooriyyaa'ah sitee'akun hushahalha'i، e sitee ra'eesuljumhooriyyaa'ah libumun e menbaraku menbarukamun vakivee'eve.",
+      "gold_romanized": "enti-korapshan komishanuge menbaraku menbarukamun isthi'ufaadheyn beynunvejjenama, ekan bayaankoh ra'eesuljumhooriyyaa'ah sitee'akun hushahalha'i, e sitee ra'eesuljumhooriyyaa'ah libumun e menbaraku menbarukamun vakivee'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "ލާރިޝާއިލްކަމާބެހޭ ކޮމިޝަނުގެ މެންބަރަކު، ރައީސުލަފާ މަގާމުން and ވަކިވުމަށް ބޭނުންވާނަމަ، ރައީސަށް ފޮނުވާ ސިޓީއަކުން އެކަން ހިếnކުރަންޖެހޭރުމެވެ. އަދި އެ ސިޓީ ރައީސަށް ލިބުނު ވަގުތުން އެ މަގާމު and ఖާލީވާނެއެވެ.",
@@ -609,7 +609,7 @@
       "domain": "legal",
       "english": "to recommend further inquiries and investigations by other investigatory bodies, and to recommend prosecution of alleged offences to the Prosecutor General, where warranted;",
       "gold_thaana": "ކޮމިޝަނުން ތަޙުޤީޤުކުރާ ކަންތައްތަކުގެ ތެރެއިން އެހެނިހެން އިދާރާތަކުން އިތުރަށް ބަލައި ސާފުކުރާންޖެހޭ ކަންތައްތައް އެ ފަރާތްތަކަށް ހުށަހަޅައި، ޝަރީޢަތަށް ހުށަހަޅާންޖެހޭކަމަށް ފެންނަ ކަންތައްތައް ޝަރީޢަތަށް ހުށަހެޅުމަށްޓަކައި ޕްރޮސިކިއުޓަރ ޖެނެރަލަށް ފޮނުވުން.",
-      "gold_romanized": "komishanun thahuqeequkuraa kanthatthakuge there'in ehenihen idhaaraathakun ithurah bala'i saafukuraanjehey kanthatthah e faraatthakah hushahalha'i، sharee'athah hushahalhaanjeheykamah fenna kanthatthah sharee'athah hushahelhumahtaka'i prosiki'utar jeneralah fonuvun.",
+      "gold_romanized": "komishanun thahuqeequkuraa kanthatthakuge there'in ehenihen idhaaraathakun ithurah bala'i saafukuraanjehey kanthatthah e faraatthakah hushahalha'i, sharee'athah hushahalhaanjeheykamah fenna kanthatthah sharee'athah hushahelhumahtaka'i prosiki'utar jeneralah fonuvun.",
       "predictions": {
         "gemma4": {
           "thaana": "ሌሎች ތަހުގީގުކުރާ and އިދާރާތަކުން އިތުރު ތަހުގީގުތައް ކުރަން సిఫާރިކުރުމަށާއި، އަދި ބޭނުންވާކަމަށްވާނަމަ، ތުހުމްކުރެވޭ and കുށްތަކާ 관련ކޮށް ޖިނާއީ މުއާމަލާތް ކުރަން ޖެނެރަލް ޕް รอސିକިއުޓަރަށް సిఫާރިކުރުމަށެވެ؛",
@@ -630,7 +630,7 @@
       "domain": "legal",
       "english": "(c) The jurisdiction and characteristics of constituencies, posts and councils created to provide for decentralised administration shall be specified in law.",
       "gold_thaana": "(ނ) ލާމަރުކަޒީ އުޞޫލުން އިދާރީ ދާއިރާތައް ހިންގުމަށްޓަކައި އުފައްދާ އިދާރާތަކާއި، މަޤާމުތަކާއި، ކައުންސިލްތަކުގެ ސިފަތަކާއި، އެފަރާތްތަކުގެ އިޚްތިޞާޞް ޤާނޫނުގައި ކަނޑައަޅައިފައި އޮންނާންވާނެއެވެ.",
-      "gold_romanized": "(n) laamarukazee usoolun idhaaree dhaa'iraathah hingumahtaka'i ufaddhaa idhaaraathakaa'i، maqaamuthakaa'i، ka'unsilthakuge sifathakaa'i، efaraatthakuge ikhthisaas qaanoonuga'i kanda'alha'ifa'i onnaanvaane'eve.",
+      "gold_romanized": "(n) laamarukazee usoolun idhaaree dhaa'iraathah hingumahtaka'i ufaddhaa idhaaraathakaa'i, maqaamuthakaa'i, ka'unsilthakuge sifathakaa'i, efaraatthakuge ikhthisaas qaanoonuga'i kanda'alha'ifa'i onnaanvaane'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "(ށ) ލާމަރުކަޒީ އިންތިޒާމީ ނިޒާމެއް ގާއިމުކުރުމަށް އުފެއްދޭ ދާއިރާތަކުގެ పరిധി އަދި ސവിശേഷതތަކާއި، މަގާމުތަކާއި ކައުންސިލްތަކުގެ ސവിശേഷతތައް قانونުން သާބިތުކުރަންވާނެއެވެ.",
@@ -651,7 +651,7 @@
       "domain": "legal",
       "english": "(h) to issue declarations of war and peace, and to immediately submit such declarations to the People’s Majlis for approval;",
       "gold_thaana": "(އ) ހަނގުރާމަ ނުވަތަ ޞުލްޙަ އިޢުލާންކުރުމުގެ ޤަރާރު ނެރުމާއި، އެފަދަ ޤަރާރުތައް ރައްޔިތުންގެ މަޖިލީހުން ފާސްކުރުމަށްޓަކައި އެ މަޖިލީހަށް އެވަގުތުން ހުށަހެޅުން.",
-      "gold_romanized": "(a) hanguraama nuvatha sulha i'ulaankurumuge qaraaru nerumaa'i، efadha qaraaruthah rayyithunge majileehun faaskurumahtaka'i e majileehah evaguthun hushahelhun.",
+      "gold_romanized": "(a) hanguraama nuvatha sulha iulaankurumuge qaraaru nerumaa'i, efadha qaraaruthah rayyithunge majileehun faaskurumahtaka'i e majileehah evaguthun hushahelhun.",
       "predictions": {
         "gemma4": {
           "thaana": "(ހ) ހަނގުރާމާއި and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and",
@@ -714,7 +714,7 @@
       "domain": "legal",
       "english": "197. A member of the Human Rights Commission shall be removed from office only for the reasons specified in article (a) and in the manner specified in article (b):",
       "gold_thaana": "197. ހިއުމަން ރައިޓްސް ކޮމިޝަނުގެ މެންބަރަކު އެ މަޤާމުން ވަކިކުރެވޭނީ މި މާއްދާގެ (ހ) ގައި ބަޔާންކޮށްފައިވާފަދަ ޙާލަތެއްގައި، މި މާއްދާގެ (ށ) ގައިވާ ގޮތުގެމަތީންނެވެ.",
-      "gold_romanized": "197. hi'uman ra'its komishanuge menbaraku e maqaamun vakikureveynee mi maaddhaage (h) ga'i bayaankohfa'ivaafadha haalathegga'i، mi maaddhaage (sh) ga'ivaa gothugematheenneve.",
+      "gold_romanized": "197. hi'uman ra'its komishanuge menbaraku e maqaamun vakikureveynee mi maaddhaage (h) ga'i bayaankohfa'ivaafadha haalathegga'i, mi maaddhaage (sh) ga'ivaa gothugematheenneve.",
       "predictions": {
         "gemma4": {
           "thaana": "197. ހިއުމަން ރައިޓްސް ކޮމިޝަނުގެ މެންބަރަކު މަގާމުން ވަކިކުރަންވާނީ (ހ) ޖަދުވަލުގައިވާ ސަބަބުތަކާ ހިލާ and (ށ) ޖަދުވަލުގައިވާ ގޮތަށެވެ.",
@@ -735,7 +735,7 @@
       "domain": "legal",
       "english": "Such statute shall specify the responsibilities, powers, mandate, qualifications, and ethical standards of members.",
       "gold_thaana": "އެ ޤާނޫނުގައި، ކޮމިޝަނުގެ މަސްއޫލިއްޔަތުތަކާއި، ބާރުތަކާއި، ކޮމިޝަނުގެ މަސައްކަތުގެ ދާއިރާއާއި، ކޮމިޝަނުގެ މެންބަރުންގެ ކިބައިގައި ހުންނާންވާނެ ޝަރުޠުތަކާއި، ސުލޫކީ މިންގަނޑުތައް ކަނޑައަޅައިފައި އޮންނާންވާނެއެވެ.",
-      "gold_romanized": "e qaanoonuga'i، komishanuge mas'ooliyyathuthakaa'i، baaruthakaa'i، komishanuge masakkathuge dhaa'iraa'aa'i، komishanuge menbarunge kiba'iga'i hunnaanvaane sharututhakaa'i، sulookee minganduthah kanda'alha'ifa'i onnaanvaane'eve.",
+      "gold_romanized": "e qaanoonuga'i, komishanuge mas'ooliyyathuthakaa'i, baaruthakaa'i, komishanuge masakkathuge dhaa'iraa'aa'i, komishanuge menbarunge kiba'iga'i hunnaanvaane sharututhakaa'i, sulookee minganduthah kanda'alha'ifa'i onnaanvaane'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "މި ގަވާއިދުގައި މެންބަރުންގެ and ޒިންމާތައް، powers، މާންޑޭޓް، தަޖުރިބާ އަދި اخލާގީ စံތަކերը သާބިތުކުރަންވާނެއެވެ.",
@@ -756,7 +756,7 @@
       "domain": "legal",
       "english": "to promote the rule of law, and to protect the rights and freedoms of all people;",
       "gold_thaana": "ޤާނޫނުގެ ވެރިކަން ކުރިއަރުވައި، އެންމެންގެ ޙައްޤުތަކާއި މިނިވަންކަން ރައްކާތެރިކުރުން.",
-      "gold_romanized": "qaanoonuge verikan kuri'aruva'i، enmenge haqquthakaa'i minivankan rakkaatherikurun.",
+      "gold_romanized": "qaanoonuge verikan kuri'aruva'i, enmenge haqquthakaa'i minivankan rakkaatherikurun.",
       "predictions": {
         "gemma4": {
           "thaana": "ޤާނޫނީ ނިޒާމް ކުރިއެރުވުމާއި، ހުރިހާ މީހުންގެ ހައްޤުތަކާއި މިނިވަންކަން ރައްކާތެރިކުރުމަށް؛",
@@ -861,7 +861,7 @@
       "domain": "legal",
       "english": "198. Every member of the Human Rights Commission shall take and subscribe the oath of office of members of the Human Rights Commission set out in Schedule 1 of this Constitution before assuming office.",
       "gold_thaana": "198. ހިއުމަން ރައިޓްސް ކޮމިޝަނުގެ މެންބަރުކަމަށް ޢައްޔަންކުރާ ކޮންމެ މީހަކުމެ، އެ މަޤާމާ ޙަވާލުވުމުގެ ކުރިން މި ޤާނޫނުއަސާސީގެ ޖަދުވަލު 1 ގައިވާ ހިއުމަން ރައިޓްސް ކޮމިޝަނުގެ މެންބަރުންގެ ހުވައިކޮށް، ހުވައިގެ އިޤްރާރުގައި ސޮއިކުރާންވާނެއެވެ.",
-      "gold_romanized": "198. hi'uman ra'its komishanuge menbarukamah ayyankuraa konme meehakume، e maqaamaa havaaluvumuge kurin mi qaanoonu'asaaseege jadhuvalu 1 ga'ivaa hi'uman ra'its komishanuge menbarunge huva'ikoh، huva'ige iqraaruga'i so'ikuraanvaane'eve.",
+      "gold_romanized": "198. hi'uman ra'its komishanuge menbarukamah ayyankuraa konme meehakume, e maqaamaa havaaluvumuge kurin mi qaanoonu'asaaseege jadhuvalu 1 ga'ivaa hi'uman ra'its komishanuge menbarunge huva'ikoh, huva'ige iqraaruga'i so'ikuraanvaane'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "198. މީހަކީ މީހަކީ ހައްގުތަކުގެ ކޮމިޝަނުގެ މެންބަރަކަށް ހިފަވަމުން ކުރިއަށް، މި ގާނޫލުގެ ޖަދުވަލު 1 ގައިވާ މީހަކީ ހައްގުތަކުގެ ކޮމިޝަނުގެ މެންބަރުންގެ and ހުވާ ކުރަންވާނެއެވެ.",
@@ -882,7 +882,7 @@
       "domain": "legal",
       "english": "to compile the register of voters in each constituency, to revise it at such periods as shall be determined by law and to provide for publication of the register in the Government Gazette;",
       "gold_thaana": "އިންތިޚާބީ ދާއިރާތަކުގައި ތިބި ވޯޓުދިނުމުގެ ޙައްޤު ލިބިފައިވާ މީހުންގެ ރަޖިސްޓަރީތައް އެކުލަވައިލައި، ޤާނޫނުގައި ކަނޑައަޅައިފައިވާ މުއްދަތަށް އެ ރަޖިސްޓަރީތަކަށް ގެންނާންޖެހޭ އުނިއިތުރުގެނެސް، ޤާނޫނުގައިވާ ގޮތުގެމަތީން ސަރުކާރުގެ ގެޒެޓްގައި ޝާއިޢުކުރަމުން ގެންދިޔުން.",
-      "gold_romanized": "inthikhaabee dhaa'iraathakuga'i thibi voatudhinumuge haqqu libifa'ivaa meehunge rajistareethah ekulava'ila'i، qaanoonuga'i kanda'alha'ifa'ivaa muddhathah e rajistareethakah gennaanjehey uni'ithurugenes، qaanoonuga'ivaa gothugematheen sarukaaruge gezetga'i shaa'i'ukuramun gendhiyun.",
+      "gold_romanized": "inthikhaabee dhaa'iraathakuga'i thibi voatudhinumuge haqqu libifa'ivaa meehunge rajistareethah ekulava'ila'i, qaanoonuga'i kanda'alha'ifa'ivaa muddhathah e rajistareethakah gennaanjehey uni'ithurugenes, qaanoonuga'ivaa gothugematheen sarukaaruge gezetga'i shaa'i'ukuramun gendhiyun.",
       "predictions": {
         "gemma4": {
           "thaana": "ކޮންމެ ދާއިރާއަކުން ވޯޓަރުންގެ ރަޖިސްޓަރ ތަ{'ރީކުރުމަށާއި، ގާނޫނުން ކަނޑައަޅާ މުއްދަތުތަކުގައި އެ ރަޖިސްޓަރ މުރާޖައަކުރުމަށާއި، އެ ރަޖިސްޓަރް ސަރުކާރުގެ ގެޒެޓްގައި and ޝަޢިލްކުރުމުގެ ހަމަލަ ކުރުމަށެވެ؛",
@@ -924,7 +924,7 @@
       "domain": "legal",
       "english": "Members of the AntiCorruption Commission shall not engage in any other employment.",
       "gold_thaana": "އަދި އެ މެންބަރުންނަކީ، އެ ކޮމިޝަނުގެ ވަޒީފާގެ އިތުރުން އެހެން ވަޒީފާއެއް އަދާކުރާ ބަޔަކަށް ވެގެންނުވާނެއެވެ.",
-      "gold_romanized": "adhi e menbarunnakee، e komishanuge vazeefaage ithurun ehen vazeefaa'eh adhaakuraa bayakah vegennuvaane'eve.",
+      "gold_romanized": "adhi e menbarunnakee, e komishanuge vazeefaage ithurun ehen vazeefaa'eh adhaakuraa bayakah vegennuvaane'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "ރިޝްވަަތް ނަގުމާއި ஊލްމާނުކުރުމުގެ މައްސަލަތައް ތަހުގީގުކުރާ ކޮމިޝަނުގެ މެންބަރުން އެހެން އެއްވެސް ވަޒީފާއެއް ކުރެއް ހިމަނާ ނުވާ යුතුය.",
@@ -1008,7 +1008,7 @@
       "domain": "legal",
       "english": "A member of the Anti-Corruption Commission shall be removed from office only for the reasons specified in article (a) and in the manner specified in article (b):",
       "gold_thaana": "އެންޓި-ކޮރަޕްޝަން ކޮމިޝަނުގެ މެންބަރަކު އެ މަޤާމުން ވަކިކުރެވޭނީ މި މާއްދާގެ (ހ) ގައި ބަޔާންކޮށްފައިވާފަދަ ޙާލަތެއްގައި، މި މާއްދާގެ (ށ) ގައިވާ ގޮތުގެމަތީންނެވެ.",
-      "gold_romanized": "enti-korapshan komishanuge menbaraku e maqaamun vakikureveynee mi maaddhaage (h) ga'i bayaankohfa'ivaafadha haalathegga'i، mi maaddhaage (sh) ga'ivaa gothugematheenneve.",
+      "gold_romanized": "enti-korapshan komishanuge menbaraku e maqaamun vakikureveynee mi maaddhaage (h) ga'i bayaankohfa'ivaafadha haalathegga'i, mi maaddhaage (sh) ga'ivaa gothugematheenneve.",
       "predictions": {
         "gemma4": {
           "thaana": "ރިޝްވަތް ނަގުމުގެ މައްސަލަތައް ތަހުގީގުކުރާ ކޮމިޝަނުގެ މެންބަރަކު މަގާމުން ވަކިކުރަންވާނީ (ށ) ނުވަތަ (ނ) މި މާއްދާގައި ބަޔާންކޮށްފައިވާ ސަބަބުތަކަކާ ހަމަކޮށް، އެ މާއްދާގައި ބަޔާންކޮށްފައިވާ ގޮތުގެމަތިން ހަމައެކަނިކަމެވެ.",
@@ -1029,7 +1029,7 @@
       "domain": "legal",
       "english": "The land, sea, and seabed, including all fish within the territory of the Maldives, and all naturally occurring resources, including metallic ores, petroleum and gas, shall vest in the State.",
       "gold_thaana": "ދިވެހިރާއްޖޭގެ ސަރަޙައްދުގެ ތެރޭގައި ހިމެނޭ އެއްގަމާއި، ކަނޑާއި، ކަނޑުގައިވާ މަހާއި، ކަނޑުގެ އަޑީގެ ބިމާއި، އަދި މިތަންތާނގައި އުފެދިފައި ހުރި ނުވަތަ ހުރި ޠަބީޢީ އަގުހުރި މަޢުދަނާއި، ތެލާއި، ގޭހާއި، އަދި މިނޫންވެސް ހުރިހައި އެއްޗެއް މިލްކުވެގެންވަނީ، ދިވެހިދައުލަތަށެވެ.",
-      "gold_romanized": "dhivehiraajjeyge sarahaddhuge thereyga'i himeney eggamaa'i، kandaa'i، kanduga'ivaa mahaa'i، kanduge adeege bimaa'i، adhi mithanthaanga'i ufedhifa'i huri nuvatha huri tabee'ee aguhuri ma'udhanaa'i، thelaa'i، geyhaa'i، adhi minoonves huriha'i eccheh milkuvegenvanee، dhivehidha'ulathasheve.",
+      "gold_romanized": "dhivehiraajjeyge sarahaddhuge thereyga'i himeney eggamaa'i, kandaa'i, kanduga'ivaa mahaa'i, kanduge adeege bimaa'i, adhi mithanthaanga'i ufedhifa'i huri nuvatha huri tabee'ee aguhuri ma'udhanaa'i, thelaa'i, geyhaa'i, adhi minoonves huriha'i eccheh milkuvegenvanee, dhivehidha'ulathasheve.",
       "predictions": {
         "gemma4": {
           "thaana": "މޯލްޑިވްސްގެ ސަރަހައްދުގެ ތެރޭގައިވާ ހުރިހާ މަހިތަކާއެކު ބިމާއި، and ކަނޑާއި، ކަނޑުބިމާއި، އަދި މެޓަލިކް އޯރްސް، and பெޓްރޯލިއަމް އަދި ގޭސް ހިމެނޭ ހުރިހާ သဘာވި مصادرތަކަކީ ދައުލަތުގެ މިލްކިއްޔަތުގައި ހުންނަ 것ތަކެކެވެ.",
@@ -1092,7 +1092,7 @@
       "domain": "legal",
       "english": "Any such law enacted by the People’s Majlis can limit the rights and freedoms to any extent only if demonstrably justified in a free and democratic society.",
       "gold_thaana": "ރައްޔިތުންގެ މަޖިލީހުން ފާސްކުރާ ޤާނޫނަކުން ވެސް އެއިން ޙައްޤެއް ނުވަތަ މިނިވަންކަމެއްގެ އެއްވެސް މިންވަރެއް ހިފެހެއްޓޭނީ، މިނިވަން، ދީމިޤްރާޠީ މުޖްތަމަޢެއްގައި މިފަދަ ޙައްޤެއް ނުވަތަ މިނިވަންކަމެއް ހިފެހެއްޓިދާނެކަމަށް ޤަބޫލުކުރެވޭ މިންވަރަކަށެވެ.",
-      "gold_romanized": "rayyithunge majileehun faaskuraa qaanoonakun ves e'in haqqeh nuvatha minivankamegge evves minvareh hifehetteynee، minivan، dheemiqraatee mujthama'egga'i mifadha haqqeh nuvatha minivankameh hifehettidhaanekamah qaboolukurevey minvarakasheve.",
+      "gold_romanized": "rayyithunge majileehun faaskuraa qaanoonakun ves ein haqqeh nuvatha minivankamegge evves minvareh hifehetteynee, minivan, dheemiqraatee mujthama'egga'i mifadha haqqeh nuvatha minivankameh hifehettidhaanekamah qaboolukurevey minvarakasheve.",
       "predictions": {
         "gemma4": {
           "thaana": "މަޖިލިހުން প্রণູນކުރާ އެފަދަ ಯಾವುದೇ قانونެއްގެ ސަބަބުން ހ and މިނިވަންކަމަށް އަންނabilecek పరిమిތަކަކީ، މިނިވަން އަދި ޑިމޮކްރަޓިކް societàއެއްގައި ސާބިތުކުރެވިގެންވާ ސަބަބެއް ހުރިކަމުގައި ހުރެއިރު ހަމަޖެހޭ މިންވަރަށް ހަމަކުރެވިގެންވާކަން ސާބިތުކުރެވިގެންވާ ހާލަތެއްގައިသာ އެކަމަކީ ކުރެވޭނެ ކަމެކެވެ.",
@@ -1176,7 +1176,7 @@
       "domain": "news",
       "english": "The award was presented at the official Republic Day ceremony held this morning at the Maldives Centre for Social Education.",
       "gold_thaana": " މި ޢިއްޒަތް އަރުވާފައިވަނީ، ޒުވާނުންގެ މަރުކަޒުގައި މިއަދު ހެނދުނު ބޭއްވި، ޖުމްހޫރީ ދުވަހުގެ ރަސްމީ ޖަލްސާގައެވެ.",
-      "gold_romanized": " mi izzath aruvaafa'ivanee، zuvaanunge marukazuga'i mi'adhu hendhunu beyvvi، jumhooree dhuvahuge rasmee jalsaaga'eve.",
+      "gold_romanized": " mi izzath aruvaafa'ivanee, zuvaanunge marukazuga'i mi'adhu hendhunu beyvvi, jumhooree dhuvahuge rasmee jalsaaga'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今މ 今",
@@ -1197,7 +1197,7 @@
       "domain": "news",
       "english": "The Maldives is scheduled to join the alliance during the visit, and the Vice President will deliver an address at the Blue Planet Alliance Fellowship Programme ceremony.",
       "gold_thaana": "ރައީސުލްޖުމްހޫރިއްޔާގެ ނައިބުގެ މި ދަތުރުފުޅުގައި، ބްލޫ ޕްލެނެޓް އެލަޔަންސްގައި ދިވެހިރާއްޖެ ބައިވެރިވެ، އެފަރާތުން ބާއްވާ ފެލޯޝިޕް ޕްރޮގްރާމްގެ ޖަލްސާގައި، ޚާއްޞަ މެހެމާނެއްގެގޮތުން ވާހަކަފުޅު ދެއްކެވުމަށް ހަމަޖެހިފައިވެއެވެ.",
-      "gold_romanized": "ra'eesuljumhooriyyaage na'ibuge mi dhathurufulhuga'i، bloo plenet elayansga'i dhivehiraajje ba'iverive، efaraathun baavvaa feloaship prograamge jalsaaga'i، khaassa mehemaaneggegothun vaahakafulhu dhekkevumah hamajehifa'ive'eve.",
+      "gold_romanized": "ra'eesuljumhooriyyaage na'ibuge mi dhathurufulhuga'i, bloo plenet elayansga'i dhivehiraajje ba'iverive, efaraathun baavvaa feloaship prograamge jalsaaga'i, khaassa mehemaaneggegothun vaahakafulhu dhekkevumah hamajehifa'ive'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "މި সফরާހަމަގޮތުން ރާއްޖެ މި கூட்டணியަށް ގިނިކުރާނެ ކަމަށް ހަމަޖެހިފައިވާއިރު، ބްލޫ ޕްލެނެޓް އެލްލަޔަންސް ފެލޯޝިޕް ޕްރޮގްރާމްގެ ހަފްލާއުގައި and ނައިބު ރައީސުލްޖުމްހޫރިއްޔާ ތަގުރީރެއް ކުރައްވާނެއެވެ.",
@@ -1218,7 +1218,7 @@
       "domain": "news",
       "english": "Tourism workers: 200 (5+ years at resort, commit to five more years)",
       "gold_thaana": "ޓޫރިޒަމް މަސައްކަތްތެރިން: 200 (ރިސޯޓުގައި 5+ އަހަރު، އިތުރު ފަސް އަހަރަށް މަސައްކަތް ކުރާން އެއްބަސްވާ)",
-      "gold_romanized": "toorizam masakkattherin: 200 (risoatuga'i 5+ aharu، ithuru fas aharah masakkath kuraan ebbasvaa)",
+      "gold_romanized": "toorizam masakkattherin: 200 (risoatuga'i 5+ aharu, ithuru fas aharah masakkath kuraan ebbasvaa)",
       "predictions": {
         "gemma4": {
           "thaana": "ޓޫރިޒަމްގެ பணியާލުން: 200 (ރިސޯޓުގައި 5 އަހަރަށްވުރެ ގިނަ ދުވަހުގެ ތަޖުރިބާ ލިބިފައިވުމަށާއި، އަރިހަ އަހަރަށް އިތުރުކޮށް މަސައްކަތްކުރުމަށް and އެއްބަސްވުމަށް)",
@@ -1260,7 +1260,7 @@
       "domain": "news",
       "english": "The hospital also noted that scans for admitted patients should not be delayed due to public holidays.",
       "gold_thaana": "އޭގެއިތުރަށް، ސަރުކާރު ބަންދު ދުވަސްތަކެއް އައުމުން ''އަލްޓްރާ ސައުންޑް ސްކޭން\" ހެދުން ލަސްވި ތުހުމަތާ ގުޅުވައި އައިޖީއެމްއެޗުން ބުނީ، ސަރުކާރު ބަންދު ދުވަސްތަކެއް އައި ނަމަވެސް، އެޑުމިޓުކޮށްފައިވާ ބަލި މީހެއްގެ ސްކޭނު ލަސްވެގެން ނުވާނެ ކަމަށް ގަބޫލުކުރާ ކަމަށެވެ.",
-      "gold_romanized": "eyge'ithurah، sarukaaru bandhu dhuvasthakeh a'umun '''altraa sa'und skeyn\" hedhun lasvi thuhumathaa gulhuva'i a'ijee'em'echun bunee، sarukaaru bandhu dhuvasthakeh a'i namaves، edumitukohfa'ivaa bali meehegge skeynu lasvegen nuvaane kamah gaboolukuraa kamasheve.",
+      "gold_romanized": "eyge'ithurah, sarukaaru bandhu dhuvasthakeh aumun '''altraa sa'und skeyn\" hedhun lasvi thuhumathaa gulhuva'i aijee'em'echun bunee, sarukaaru bandhu dhuvasthakeh ai namaves, edumitukohfa'ivaa bali meehegge skeynu lasvegen nuvaane kamah gaboolukuraa kamasheve.",
       "predictions": {
         "gemma4": {
           "thaana": "furthermore، އޮފީސް ގަޑި ނޯމަލް ނޫން ދުވަސްތަކުގައި ހޮስፒޓަލަށް އެޑްމިޓްކޮށްފައިވާ ބަލީމީންގެ ஸކޭންތައް ఆలާކިރާ ނުކުރަން ހޮስፒޓަލުން މައުލޫމާތު ދިނިއެވެ.",
@@ -1281,7 +1281,7 @@
       "domain": "news",
       "english": "Under the promotion, Dhiraagu prepaid, postpaid, fibre and new customers will have the opportunity to win a brand‑new sports speedboat twice a year, making it one of the most exciting giveaways currently underway.",
       "gold_thaana": "ދިރާގުން ބުނީ 'އެންރޯލް އެންޑް ވިން 2 ސްޕީޑްބޯޓް' ޕްރޮމޯޝަންގެ ދަށުން ދިރާގު ޕްރީޕެއިޑް، ޕޯސްޓްޕެއިޑް، ލިމިޓެއްނެތް ފައިބާ ކަސްޓަމަރުންނަށް އަދި އަލަށް ދިރާގާ ގުޅޭ ކަސްޓަމަރުންނަށް ކޮންމެ ހަ މަހަކުން މުޅިން އައު ސްޕޯޓްސް ސްޕީޑްބޯޓެއް ހޯދުމުގެ ފުރުސަތު ވަނީ ހުޅުވައިލައިފައި ކަމަށެވެ.",
-      "gold_romanized": "dhiraagun bunee ''enroal end vin 2 speedboat' promoashange dhashun dhiraagu preepe'id، poastpe'id، limitenneth fa'ibaa kastamarunnah adhi alah dhiraagaa gulhey kastamarunnah konme ha mahakun mulhin a'u spoats speedboateh hoadhumuge furusathu vanee hulhuva'ila'ifa'i kamasheve.",
+      "gold_romanized": "dhiraagun bunee ''enroal end vin 2 speedboat' promoashange dhashun dhiraagu preepe'id, poastpe'id, limitenneth fa'ibaa kastamarunnah adhi alah dhiraagaa gulhey kastamarunnah konme ha mahakun mulhin au spoats speedboateh hoadhumuge furusathu vanee hulhuva'ila'ifa'i kamasheve.",
       "predictions": {
         "gemma4": {
           "thaana": "މި އޮފަރުގެ ދަށުން، ދިރާގުގެ ޕްރީޕޭޑް، ޕޯސްޓްޕޭޑް، ފައިބަރ އަދި އައު ކަސްޓަމަރުންނަށް އަހަރަކު ދެފަހަރު އައު სპޯޓް and speedboat އެކި ހަދިޔާއެއްގެ ގޮތުގައި ހޯދުމުގެ ފުރުސަތު and లިބޭނެއެވެ. މިއީ މިހާރު ކުރިއަށްގަless އިން އެންމެ ފިލާހިމި ހަދިޔާގެ ރިހާންތަކުގެ ތެރެtတစ်ခုකි.",
@@ -1323,7 +1323,7 @@
       "domain": "news",
       "english": "Second, applicants whose spouse owns property on another island will no longer disqualified.",
       "gold_thaana": "ދެވަނަ ކަމަކީ، އެހެން ރަށެއްގައި އަނބިމީހާ ނުވަތަ ފިރިމީހާގެ ބިމެއް ނުވަތަ ފްލެޓެއް އޮވެގެން ޑިސްކޮލިފައި ނުވުމެވެ.",
-      "gold_romanized": "dhevana kamakee، ehen rashegga'i anbimeehaa nuvatha firimeehaage bimeh nuvatha fleteh ovegen diskolifa'i nuvumeve.",
+      "gold_romanized": "dhevana kamakee, ehen rashegga'i anbimeehaa nuvatha firimeehaage bimeh nuvatha fleteh ovegen diskolifa'i nuvumeve.",
       "predictions": {
         "gemma4": {
           "thaana": "ދެވަތަގޮތުން،配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配配",
@@ -1344,7 +1344,7 @@
       "domain": "news",
       "english": "In this regard, a roadmap has been developed to achieve this ambitious goal, and several programmes have been launched in support of it.",
       "gold_thaana": "މިގޮތުން، މި އުއްމީދީ މަޤްޞަދު ޙާޞިލުކުރުމަށްޓަކައި މަގުޗާޓެއް އެކުލަވާލައި، މި މަގުޗާޓު ތަންފީޒު ކުރުމުގެ ގޮތުން ތަފާތު ޕްރޮގްރާމްތަކާއި މަޝްރޫޢުތައްވެސް މިހާރުވެސް ދަނީ ހިންގަމުންނެވެ.",
-      "gold_romanized": "migothun، mi ummeedhee maqsadhu haasilukurumahtaka'i maguchaateh ekulavaala'i، mi maguchaatu thanfeezu kurumuge gothun thafaathu prograamthakaa'i mashroo'uthavves mihaaruves dhanee hingamunneve.",
+      "gold_romanized": "migothun, mi ummeedhee maqsadhu haasilukurumahtaka'i maguchaateh ekulavaala'i, mi maguchaatu thanfeezu kurumuge gothun thafaathu prograamthakaa'i mashroo'uthavves mihaaruves dhanee hingamunneve.",
       "predictions": {
         "gemma4": {
           "thaana": "މިކަމާ 관련하여، މި އަމިއްލަ އަމިއްލަ އަމާޒު ހާސިލުކުރުމަށް ރޯޑްމެޕްއެއް ތയാރުކޮށްފައިあり، އެކަމަށް އެހީތެރިވާ ގޮތުގައި పలు புްރޮގްރާމްތައް ފަށާލާ ඇතެވެ.",
@@ -1365,7 +1365,7 @@
       "domain": "news",
       "english": "Opponents raise concerns about democratic accountability, the balance of power, and the ruling party consolidating control.",
       "gold_thaana": "އިދިކޮޅު ފަރާތްތަކުން ފާޅުކުރަނީ ޑިމޮކްރެޓިކް ހަމަތަކުން ޖަވާބުދާރީވުމާއި، ބާރުތަކުގެ ބެލެންސްއާއި، ވެރިކަން ކުރާ ޕާޓީ އިން ކޮންޓްރޯލް ވަރުގަދަކުރުމާ މެދުގައި ހުރި ކަންބޮޑުވުންތަކެކެވެ.",
-      "gold_romanized": "idhikolhu faraatthakun faalhukuranee dimokretik hamathakun javaabudhaareevumaa'i، baaruthakuge belens'aa'i، verikan kuraa paatee in kontroal varugadhakurumaa medhuga'i huri kanboduvunthakekeve.",
+      "gold_romanized": "idhikolhu faraatthakun faalhukuranee dimokretik hamathakun javaabudhaareevumaa'i, baaruthakuge belens'aa'i, verikan kuraa paatee in kontroal varugadhakurumaa medhuga'i huri kanboduvunthakekeve.",
       "predictions": {
         "gemma4": {
           "thaana": "މިކަމާ ދެކޮޅުވާ ފަރާތްތަކުން ޑިމޮކްރަޓިކް ހިސާބުދާނިކަން، ބަ and ބަރުގެ ހިލމިލުން، އަދި ހުކުމުގައިވާ ፓർട്ടީން ކޮންޓްރޯލް ވަރުގަދަކުރުމާ ގުޅޭގޮތުން ކަންބޮޑުވުންތ raising ކުރަމުން 갑니다.",
@@ -1428,7 +1428,7 @@
       "domain": "news",
       "english": "Why is this being proposed now?",
       "gold_thaana": "މިކަން މިވަގުތު ހުށަމިއަޅަނީ ކީއްވެގެން ހެއްޔެވެ؟",
-      "gold_romanized": "mikan mivaguthu hushami'alhanee keevvegen heyyeve؟",
+      "gold_romanized": "mikan mivaguthu hushami'alhanee keevvegen heyyeve?",
       "predictions": {
         "gemma4": {
           "thaana": "މިއީ މިހާރު ހުށަހަޅަމުންދަނީ ކީއްވެ؟",
@@ -1449,7 +1449,7 @@
       "domain": "news",
       "english": "The commission has not disclosed further details of the case.",
       "gold_thaana": "ނަމަވެސް، މި މައްސަލައިގެ އިތުރު ތަފުސީލެއް އެ ކޮމިޝަނުން ހާމައެއް ނުކުރެއެވެ.",
-      "gold_romanized": "namaves، mi massala'ige ithuru thafuseeleh e komishanun haama'eh nukure'eve.",
+      "gold_romanized": "namaves, mi massala'ige ithuru thafuseeleh e komishanun haama'eh nukure'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "ކޮމިޝަނުން މި މައްސަލައިގެ އިތުރު ތަފްސީލްތައް ހާމަކޮށްފައެއް ނުވަނީއެވެ.",
@@ -1491,7 +1491,7 @@
       "domain": "news",
       "english": "She highlighted that by creating employment opportunities through such programmes, the prioritisation of human dignity is affirmed, demonstrating in practice that all Maldivians are equal.",
       "gold_thaana": "އެ ކަމަނާގެ ވާހަކަފުޅުގައި މިފަދަ ޕްރޮގްރާމްތަކުން ފަހިވެގެންދާ ވަޒީފާގެ ފުރުސަތުތަކުން އިންސާނީ ކަރާމަތް ހިމާޔަތްކުރުމަށް އިސްކަންދެވި، ހުރިހާ ދިވެހިންނަކީ ހަމަހަމަ ބައެއްކަން އަމަލީގޮތުން ސާބިތުވެގެންދާކަމަށެވެ.",
-      "gold_romanized": "e kamanaage vaahakafulhuga'i mifadha prograamthakun fahivegendhaa vazeefaage furusathuthakun insaanee karaamath himaayakkurumah iskandhevi، hurihaa dhivehinnakee hamahama ba'ekkan amaleegothun saabithuvegendhaakamasheve.",
+      "gold_romanized": "e kamanaage vaahakafulhuga'i mifadha prograamthakun fahivegendhaa vazeefaage furusathuthakun insaanee karaamath himaayakkurumah iskandhevi, hurihaa dhivehinnakee hamahama ba'ekkan amaleegothun saabithuvegendhaakamasheve.",
       "predictions": {
         "gemma4": {
           "thaana": "މިފަދަ and ޕްރޮގްރާމްތަކުގެ މެދުވެރިކޮށް ވަޒީފާގެ ފުރުސަތުތައް ဖަހިކުރުމުން، އިންސާނީ ކަރާމާތަށް and އިސްކަންދީ ඇතිކަން and ސާބިތުވެ، ހުރިހާ ދިވެހިރާއްޖޭގެ and ރައްޔިތުން சமކަން and އޮންނަކަން އަމަލީގޮތުން and ދައްކާލާކަމަށް އަންމާރަށް ފާހަގަކުރެއްވިއެވެ.",
@@ -1512,7 +1512,7 @@
       "domain": "news",
       "english": "Conserve at least one island, one reef and one wetland in each atoll",
       "gold_thaana": "ކޮންމެ އަތޮޅެއްގައި ބައިނަލް އަގްވާމީ މިންގަނޑުތަކަށް ފެތޭ ގޮތަށް ހިމާޔަތްކުރުމުގެ ޕްރޮގްރާމެއްގެ ދަށުން މަދުވެގެން 1 ފަރާ، 1 ރަށާ، 1 ކަނޑޫފާ ހިމެނޭ ގޮތަށް ރައްކާތެރިކުރެވޭނެ",
-      "gold_romanized": "konme atholhegga'i ba'inal agvaamee minganduthakah fethey gothah himaayakkurumuge prograamegge dhashun madhuvegen 1 faraa، 1 rashaa، 1 kandoofaa himeney gothah rakkaatherikureveyne",
+      "gold_romanized": "konme atholhegga'i ba'inal agvaamee minganduthakah fethey gothah himaayakkurumuge prograamegge dhashun madhuvegen 1 faraa, 1 rashaa, 1 kandoofaa himeney gothah rakkaatherikureveyne",
       "predictions": {
         "gemma4": {
           "thaana": "ކޮންމެ އަތޮލެއްގައި အနည်းဆုံး އެއް ރަށެއް، އެއް ބުރަެއް އަދި އެއް våޓްލޭންޑްކޮންސާވް ކުރޭ.",
@@ -1533,7 +1533,7 @@
       "domain": "news",
       "english": "Everyone will be more involved in implementing decisions based on participation.”",
       "gold_thaana": "އެންމެން ބައިވެރިވެގެން ނިންމާ ނިންމުންތަކަށް ބިނާކޮށް ކަންކަން ތަންފީޒުކުރުމުގައި ބޮޑަށް ހަރަކާތްތެރިވާނީ،",
-      "gold_romanized": "enmen ba'iverivegen ninmaa ninmunthakah binaakoh kankan thanfeezukurumuga'i bodah harakaattherivaanee،",
+      "gold_romanized": "enmen ba'iverivegen ninmaa ninmunthakah binaakoh kankan thanfeezukurumuga'i bodah harakaattherivaanee,",
       "predictions": {
         "gemma4": {
           "thaana": "ބައިވެރިވުމަށް ބިނާކޮށް ނިންމާ నిర్ణumericތައް అమలుކުރުމުގައި ހުރިހާ މީހަކުވެސް የበለጠ ބައިވެރިވާނެއެވެ.",
@@ -1617,7 +1617,7 @@
       "domain": "news",
       "english": "Rubyn comes from a musical family, her father, Hussain Muaz, is a singer, and her aunt, Aishath Inaya, is a well‑known musician in Maldives.",
       "gold_thaana": "ރުބީންގެ އާއިލާއަކީ މިއުޒިކީ އާއިލާއެއް ކަމުން... ރުބީންގެ ބައްޕަ ހުސައިން މުއާޒަކީ ލަވަކިޔުންތެރިއެއް ކަމަށްވާއިރު، ރުބީންގެ ބޮޑުދައިތަ އައިޝަތު އިނާޔާއަކީ ވެސް މިއުޒިކްގެ ދާއިރާއިން ގިނަ ބަޔަކު ދަންނަ މޫނެކެވެ.",
-      "gold_romanized": "rubeenge aa'ilaa'akee mi'uzikee aa'ilaa'eh kamun... rubeenge bappa husa'in mu'aazakee lavakiyuntheri'eh kamahvaa'iru، rubeenge bodudha'itha a'ishathu inaayaa'akee ves mi'uzikge dhaa'iraa'in gina bayaku dhanna moonekeve.",
+      "gold_romanized": "rubeenge aa'ilaa'akee mi'uzikee aa'ilaa'eh kamun... rubeenge bappa husa'in mu'aazakee lavakiyuntheri'eh kamahvaa'iru, rubeenge bodudha'itha aishathu inaayaa'akee ves mi'uzikge dhaa'iraa'in gina bayaku dhanna moonekeve.",
       "predictions": {
         "gemma4": {
           "thaana": "ރުބިން އައިސްފައިވަނީ މިއުޒިކް އާއިލާއަކުންނެވެ. އޭނާގެ and ފާރިހުސައިން މުއިޒް އަކީ ހިތްގައިންވާ గా𝙮ަކެވެ. އަދި އޭނާގެ খালާ އައިޝަތު އިނާޔާ އަކީ ރާއްޖޭގައި މަޝްހޫރު މިއުޒިޝަނެކެވެ.",
@@ -1701,7 +1701,7 @@
       "domain": "news",
       "english": "She added that although standards existed previously, they were never implemented",
       "gold_thaana": "އަދި، މީގެ ކުރިން އެމްކިޔުއޭގެ މިންގަނޑެއް އޮތަސް މިހާތަނަށް ތަންފީޒު ނުކުރެވި އޮތްކަން އޭނާ ފާހަގަކުރެއްވިއެވެ.",
-      "gold_romanized": "adhi، meege kurin emkiyu'eyge mingandeh othas mihaathanah thanfeezu nukurevi okkan eynaa faahagakurevvi'eve.",
+      "gold_romanized": "adhi, meege kurin emkiyu'eyge mingandeh othas mihaathanah thanfeezu nukurevi okkan eynaa faahagakurevvi'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "މިކަމާ ގުޅިގެން އަންނިކޮށް చెప్పారు، ކުރިން စံތަކެއް ހުއްޓ existed ނަމަވެސް، އެކަން ഒരിക്കലും Amal ނުކުރިކަމަށް.",
@@ -1722,7 +1722,7 @@
       "domain": "news",
       "english": "President Ibrahim Mohamed Solih has said that the government has drafted a bill aimed at fostering patriotic young people who love and respect the principles of Islam.",
       "gold_thaana": "ސަރުކާރުން މިހާރު ޑްރާފްޓްކޮށްފައިވާ \"ޒުވާނުން ބިނާކުރުމާއި ހުނަރުވެރިކުރުމުގެ ބިލު\"ގެ އެންމެ މުހިންމު މަޤްޞަދަކީ، އިސްލާމް ދީނަށް ލޯބިކުރާ ދީނުގެ އަސާސްތަކަށް ޙުރުމަތްތެރިކޮށް ހިތާ، އަދި ދިވެހި ޤައުމިއްޔަތުގެ ސިފަތައް ލިބިގެންވާ ޒުވާނުންތަކެއް ބިނާކުރުންކަމުގައި ރައީސުލްޖުމްހޫރިއްޔާ އިބްރާހީމް މުޙައްމަދު ޞާލިޙް ވިދާޅުވެއްޖެއެވެ.",
-      "gold_romanized": "sarukaarun mihaaru draaftkohfa'ivaa \"zuvaanun binaakurumaa'i hunaruverikurumuge bilu\"ge enme muhinmu maqsadhakee، islaam dheenah loabikuraa dheenuge asaasthakah hurumattherikoh hithaa، adhi dhivehi qa'umiyyathuge sifathah libigenvaa zuvaanunthakeh binaakurunkamuga'i ra'eesuljumhooriyyaa ibraaheem muhammadhu saalih vidhaalhuvejje'eve.",
+      "gold_romanized": "sarukaarun mihaaru draaftkohfa'ivaa \"zuvaanun binaakurumaa'i hunaruverikurumuge bilu\"ge enme muhinmu maqsadhakee, islaam dheenah loabikuraa dheenuge asaasthakah hurumattherikoh hithaa, adhi dhivehi qa'umiyyathuge sifathah libigenvaa zuvaanunthakeh binaakurunkamuga'i ra'eesuljumhooriyyaa ibraaheem muhammadhu saalih vidhaalhuvejje'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "އިސްލާމީގަބޫލްކުރާ މިންގަނޑުތަކަށް އިހުތިރާމްކޮށް، އެކަން ভালোবাসާ، وطنދާނީ 청 niênުންތަކެއް އުފެއްދުމަށް އަމާޒުކޮށް ސަރުކާރުން ބިލެއް ތައްޔާރުކުރާފައިވާ ކަމަށް ރައީސް އިބްރާހިމް މުހައްމަދު ސޯލިހު ވަނީ and ಹೇಳާފައެވެ.",
@@ -1785,7 +1785,7 @@
       "domain": "news",
       "english": "Hamna said Rubyn often sings at home with her family and currently attends vocal classes in Sri Lanka to prepare for the competition.",
       "gold_thaana": "އޭގެއިތުރުން، އާއިލާއާއެކު ގޭތެރޭގައި ވެސް ކޮންމެވެސް ވަރަކަށް ރުބީން ލަވަ ކިޔައި އުޅޭކަން ހަމްނާ ފާހަގަކުރިއެވެ. އަދި، ރުބީންއަށް މުބާރާތުގައި ރީތި ލަވަތައް ހުށަހަޅަން މަގުފަހި ކުރުމަށް ލަންކާގައި ވޯކަލް ކުލާހަކަށް ގެންދާ ކަމަށް އޭނާ ވަނީ ބުނެފައެވެ.",
-      "gold_romanized": "eyge'ithurun، aa'ilaa'aa'eku geythereyga'i ves konmeves varakah rubeen lava kiya'i ulheykan hamnaa faahagakuri'eve. adhi، rubeen'ah mubaaraathuga'i reethi lavathah hushahalhan magufahi kurumah lankaaga'i voakal kulaahakah gendhaa kamah eynaa vanee bunefa'eve.",
+      "gold_romanized": "eyge'ithurun, aa'ilaa'aa'eku geythereyga'i ves konmeves varakah rubeen lava kiya'i ulheykan hamnaa faahagakuri'eve. adhi, rubeen'ah mubaaraathuga'i reethi lavathah hushahalhan magufahi kurumah lankaaga'i voakal kulaahakah gendhaa kamah eynaa vanee bunefa'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "ހަމްނާ ބުނި 것은 ރუბިން އޭގެ އާއިލާއާއެކު ގޭގައި ގިނަގୁނంగా ހިތާމަ ކުރާކަމަށާއި، މިހާރު މުބާރާތަށް ތައްޔާރުވުމަށް and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and",
@@ -1806,7 +1806,7 @@
       "domain": "news",
       "english": "What does uninterrupted residency mean?",
       "gold_thaana": "މެދުކެނޑުމެއްނެތި ދިރިއުޅުމަކީ ކޮބާ ހެއްޔެވެ؟",
-      "gold_romanized": "medhukendumennethi dhiri'ulhumakee kobaa heyyeve؟",
+      "gold_romanized": "medhukendumennethi dhiri'ulhumakee kobaa heyyeve?",
       "predictions": {
         "gemma4": {
           "thaana": "މުއައްޖަލް ނުވާ ރަހަވަސްކަން ဆိုသည်ގެ މާނާ ਕੀ ހިމޭތ습니까؟",
@@ -1848,7 +1848,7 @@
       "domain": "news",
       "english": "Transparency Maldives warned that rushing through electoral changes without proper safeguards could exacerbate abuses, stressing the importance of a transparent referendum process with adequate civic education.",
       "gold_thaana": "އެކަށީގެންވާ ރައްކާތެރިކަމެއް ނެތި އިންތިޚާބީ ބަދަލުތައް ގެނައުމަށް އަވަސްވެގަތުމަކީ ގޯސްތައް އިތުރަށް ފުޅާވެ، ޢާންމުވެދާނެ ކަމެއް ކަމަށް ޓްރާންސްޕޭރެންސީ މޯލްޑިވްސް އިންވެސް އިންޒާރު ދީފައިވެއެވެ.",
-      "gold_romanized": "ekasheegenvaa rakkaatherikameh nethi inthikhaabee badhaluthah gena'umah avasvegathumakee goasthah ithurah fulhaave، aanmuvedhaane kameh kamah traanspeyrensee moaldivs inves inzaaru dheefa'ive'eve.",
+      "gold_romanized": "ekasheegenvaa rakkaatherikameh nethi inthikhaabee badhaluthah gena'umah avasvegathumakee goasthah ithurah fulhaave, aanmuvedhaane kameh kamah traanspeyrensee moaldivs inves inzaaru dheefa'ive'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "އިމާނުކަންތައްތަކުގެ ރައްކާތެރިކަމާ އެކިގޮތަށް، އަግባެރި ރައްކާތެރިކަމެއް ނެތި އިލެކްޓަރަލް ބަދަލުތައް އަވަސްކުރުމުން އަނިޔާތައް އިތުރުވެދާނެކަމަށް ትްރާންސްޕޭަރެންސީ މޯލްޑިވްސް সতর্কކޮށްދިނީއެވެ. އަわせて، އެކަށީގެންވާ ސިਵިލް ތަޢުލީމާއާއެކު، and شفاف ރިފަރެންޑަމް પ્રಕ್ರިއްޔާއެއްގެ މުހިންމުކަން އެކުލަވާލައިފިމެވެ.",
@@ -1869,7 +1869,7 @@
       "domain": "news",
       "english": "Judge Danu Innasitambi said he was very pleased with Rubyn’s performance, while judge Stephanie Sirivadena described her as having a “beautiful, rich, textured voice.”",
       "gold_thaana": "އެ ހުށަހެޅުމަށް ފަހުގައި، ފަނޑިޔާރު ދަނޫ އިންނަސިތަމްބީ ބުނީ، ރުބީންގެ ހުށަހެޅުމާ މެދު ވަރަށް ހިތްހަމަ ޖެހޭ ކަމަށެވެ. އަދި، ފަނޑިޔާރު ސްޓެފަނީ ސިރިވާޑެނާ ބުނީ، ރުބީންއަށް ލިބިފައި ވަނީ، ވަރަށް މާނަފުން ރީތި އަޑެއް ކަމަށާއި، ލަވަ ކިޔުން ވަރަށް ކަމުދާ ކަމަށެވެ.",
-      "gold_romanized": "e hushahelhumah fahuga'i، fandiyaaru dhanoo innasithambee bunee، rubeenge hushahelhumaa medhu varah hihhama jehey kamasheve. adhi، fandiyaaru stefanee sirivaadenaa bunee، rubeen'ah libifa'i vanee، varah maanafun reethi adeh kamashaa'i، lava kiyun varah kamudhaa kamasheve.",
+      "gold_romanized": "e hushahelhumah fahuga'i, fandiyaaru dhanoo innasithambee bunee, rubeenge hushahelhumaa medhu varah hihhama jehey kamasheve. adhi, fandiyaaru stefanee sirivaadenaa bunee, rubeen'ah libifa'i vanee, varah maanafun reethi adeh kamashaa'i, lava kiyun varah kamudhaa kamasheve.",
       "predictions": {
         "gemma4": {
           "thaana": "ޖަޖް ޑަނު އިންނަސިތަމްބީ ވަނީ ރუბިންގެ ప్రകടުން పట్ల ވަރަށް ބޮޑަށް ހިތުހަމަޖެހި ކަމަށް ಹೇಳާGetService، އަދި ޖަޖް ސްޓެފަނީ ސިރިވަޑެނާ ވަނީ သူမގެ އަޑަކީ \"ރީތި، މުއްސަނދި، އަދި ފަށުފަށު އަޑެއް\" ކަމަށް ބަޔާންކޮށްފައެވެ.",
@@ -1890,7 +1890,7 @@
       "domain": "news",
       "english": "President Dr Mohamed Muizzu has participated in a series of ceremonies held in Dhuvaafaru, North Maalhosmadulu, to inaugurate and commence several development projects aimed at improving public services and infrastructure on the island.",
       "gold_thaana": "މާޅޮސްމަޑުލު އުތުރުބުރީ ދުވާފަރުގެ ރައްޔިތުންގެ ތަރައްޤީއާ ގުޅިފައިވާ ބައެއް މަޝްރޫޢުތަކުގެ ޢަމަލީ މަސައްކަތް ފެއްޓެވުމާއި، އަދުގެ ސަރުކާރުން އެރަށުގައި ކުރިއަށްގެންދަވައި ނިންމަވާފައިވާ ގިނަ މަޝްރޫޢުތަކެއްގެ ނިމުން ފާހަގަކުރުމަށް އެ ރަށުގައި މިއަދު ކުރިއަށްގެންދިޔަ ރަސްމިއްޔާތުތަކުގައި ރައީސުލްޖުމްހޫރިއްޔާ ޑޮކްޓަރ މުޙައްމަދު މުޢިއްޒު ބައިވެރިވެވަޑައިގެންފިއެވެ.",
-      "gold_romanized": "maalhosmadulu uthuruburee dhuvaafaruge rayyithunge tharaqqee'aa gulhifa'ivaa ba'eh mashroo'uthakuge amalee masakkath fettevumaa'i، adhuge sarukaarun erashuga'i kuri'ahgendhava'i ninmavaafa'ivaa gina mashroo'uthakegge nimun faahagakurumah e rashuga'i mi'adhu kuri'ahgendhiya rasmiyyaathuthakuga'i ra'eesuljumhooriyyaa doktar muhammadhu mu'izzu ba'iverivevada'igenfi'eve.",
+      "gold_romanized": "maalhosmadulu uthuruburee dhuvaafaruge rayyithunge tharaqqee'aa gulhifa'ivaa ba'eh mashroo'uthakuge amalee masakkath fettevumaa'i, adhuge sarukaarun erashuga'i kuri'ahgendhava'i ninmavaafa'ivaa gina mashroo'uthakegge nimun faahagakurumah e rashuga'i mi'adhu kuri'ahgendhiya rasmiyyaathuthakuga'i ra'eesuljumhooriyyaa doktar muhammadhu mu'izzu ba'iverivevada'igenfi'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "ޖަޒީރާގެ މުޖައްޖަމަޢުން އަދި އިންފްރާސްޓްރަކްޗަރ మెޝިންތައް ތަރައްގީކުރުމަށް އަމާޒުކުރާ ތަރައްގީގެ މަޝްރޫޢުތަކެއް ހިމަނިގެން، ހި półމުލްހޮސްމަދުލު އަތޮޅުގެ ދުވާފަރުގައި ބޭއްވުނު ރަސްމީ ހަފްލާތަކުގައި ރައީސް ޑރ މުޙައްމަދު މުއިއްޒު ބައިވެރިވެލެއްއެވެ.",
@@ -1953,7 +1953,7 @@
       "domain": "news",
       "english": "Former Vice President Faisal Naseem has praised India as one of the Maldives’ most important development partners, noting that India has consistently been the first to offer assistance in times of need.",
       "gold_thaana": "ރާއްޖޭގެ ތަރައްގީގެ އެންމެ މުހިންމު އެއް ބައިވެރިޔާއަކީ އިންޑިއާ ކަމަށާއި، ރާއްޖެއަށް ދިމާވާ ކޮންމެ ކަމެއްގައި އެންމެ ފުރަތަމަ އެހީތެރިކަން ފޮރުކޮށްދޭ ގައުމަކީ ވެސް އިންޑިއާ ކަމަށް ވިދާޅުވެ ކުރީގެ ނައިބުރައީސް ފައިސަލް ނަސީމް އެ ގައުމަށް ތައުރީފުކުރައްވައިފިއެވެ.",
-      "gold_romanized": "raajjeyge tharaggeege enme muhinmu eh ba'iveriyaa'akee indi'aa kamashaa'i، raajje'ah dhimaavaa konme kamegga'i enme furathama eheetherikan forukohdhey ga'umakee ves indi'aa kamah vidhaalhuve kureege na'ibura'ees fa'isal naseem e ga'umah tha'ureefukuravva'ifi'eve.",
+      "gold_romanized": "raajjeyge tharaggeege enme muhinmu eh ba'iveriyaa'akee indi'aa kamashaa'i, raajje'ah dhimaavaa konme kamegga'i enme furathama eheetherikan forukohdhey ga'umakee ves indi'aa kamah vidhaalhuve kureege na'ibura'ees fa'isal naseem e ga'umah tha'ureefukuravva'ifi'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "ބުރާބުރާ ފަހަރަށް އެހީތެރިކަން ފޯރުކޮށްދޭ އެންމެமுހިންމު ဖွޯލިމަންޓް ޕާޓްނަރަކަށް އިންޑިއާ ވާތާކަމަށް 전 ކުރީގެ and ভাইস ރައީ ފައިސަލް ނަސީމް ވަނީ އިންޑިއާއަށް ތަހުމীদެއް ދީފައެވެ.",
@@ -1995,7 +1995,7 @@
       "domain": "news",
       "english": "He stated that success lies in the efforts of many individuals working diligently towards a common goal, and that tonight, we celebrate such an achievement.",
       "gold_thaana": "ކާމިޔާބީ އަކީ، ގިނަ ބަޔަކު އެކުގައި ކުރާ ބުރަ މަސައްކަތުން ޙާޞިލުކުރެވޭ ކަމެއް ކަމަށާއި، މިރޭ މި ފާހަގަކުރަނީ އެ ފަދަ ތާރީޚީ ކާމިޔާބީއެއް ކަމަށް އެ މަނިކުފާނު ވިދާޅުވިއެވެ.",
-      "gold_romanized": "kaamiyaabee akee، gina bayaku ekuga'i kuraa bura masakkathun haasilukurevey kameh kamashaa'i، mirey mi faahagakuranee e fadha thaareekhee kaamiyaabee'eh kamah e manikufaanu vidhaalhuvi'eve.",
+      "gold_romanized": "kaamiyaabee akee, gina bayaku ekuga'i kuraa bura masakkathun haasilukurevey kameh kamashaa'i, mirey mi faahagakuranee e fadha thaareekhee kaamiyaabee'eh kamah e manikufaanu vidhaalhuvi'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "އޭނާ ބުނިގޮތުގައި، ކާމިޔާބީއަކީ އެކި ފردުން އެކުލެިގެން fæންމަ މަގުލަނޑުއަކަށް ތިރިވެ، އޭގެ కోసం ކުރާ ބުރަ މަސައްކަތުންရရှိ得ވާ އެއްޗެކެވެ. އަދި މ 今ރޭގަނޑު އަހަރެމެން ăn వేރަވަނީ އެފަދަ ކާމިޔާބީއެކެވެ.",
@@ -2016,7 +2016,7 @@
       "domain": "news",
       "english": "According to the seller, the price of these commodities has risen due to a shortage following shipment delays. The seller also linked the price hike to increasing US dollar rates.",
       "gold_thaana": "އޭނާ ކިޔައިދިން ގޮތުގައި މި ބާވަތްތަކުގެ އަގުތައް އުފުލެން ފަށާފައި ވަނީ، ބާޒާރުން އެ ތަކެތި މަދުވެ، ޝިޕްމަންޓުތައް ލަސްވެފައިވާތީއެވެ. އަދި، ތަކެތީގެ އަގުތައް އުފުލުން ގުޅިފައި ވަނީ، ޑޮލަރުގެ އަގު ބޮޑުވުމާކަން ވެސް އެ ވިޔަފާރިވެރިޔާ ފާހަގަކުރިއެވެ.",
-      "gold_romanized": "eynaa kiya'idhin gothuga'i mi baavatthakuge aguthah ufulen fashaafa'i vanee، baazaarun e thakethi madhuve، shipmantuthah lasvefa'ivaathee'eve. adhi، thaketheege aguthah ufulun gulhifa'i vanee، dolaruge agu boduvumaakan ves e viyafaariveriyaa faahagakuri'eve.",
+      "gold_romanized": "eynaa kiya'idhin gothuga'i mi baavatthakuge aguthah ufulen fashaafa'i vanee, baazaarun e thakethi madhuve, shipmantuthah lasvefa'ivaathee'eve. adhi, thaketheege aguthah ufulun gulhifa'i vanee, dolaruge agu boduvumaakan ves e viyafaariveriyaa faahagakuri'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "ވިއްޖެ ފަރާތުގެ ބުނުމުގައި، އިންޝިޕްމަންޓްތައް ఆలުވުމުގެ ސަބަބުން މުދަލާ ހިލިވުމަށް llevóໄປ، އެހެންކަމުން މި މުދަލުގެ އަގު ވަނީ މަތިވެފައިެވެ. އަދި ވިއްޖެ ފަރާތުން އަގު މަތިވުމަށް ސަބަބުވި 또 އެހެން ކަމެއްގެ ގޮތުގައި ފާހަގަކުރީ އެމެރިކާ ޑޮލަރުގެ ރޭޓް މަތިވުމެވެ.",
@@ -2037,7 +2037,7 @@
       "domain": "news",
       "english": "The plan anticipates the impact of potential global trade restrictions.",
       "gold_thaana": "މިޔަރުގެ ވިޔަފާރިއަށް ދުނިޔޭގެ ފެންވަރުގައި ހުރަސްތައް ހުރިކަމާއި، ކުރިމަތިވެދާނެ ކަމަށް ލަފާކޮށްފައިވެ އެވެ.",
-      "gold_romanized": "miyaruge viyafaari'ah dhuniyeyge fenvaruga'i hurasthah hurikamaa'i، kurimathivedhaane kamah lafaakohfa'ive eve.",
+      "gold_romanized": "miyaruge viyafaari'ah dhuniyeyge fenvaruga'i hurasthah hurikamaa'i, kurimathivedhaane kamah lafaakohfa'ive eve.",
       "predictions": {
         "gemma4": {
           "thaana": "މި ހިސާބުން ބަލާއިރު، މި পৰিকল্পނައިގައި ދުނިޔޭގެ تجارتی ވަގުތީ ހުއްދަތަކަށް އަންނަ ބަދަލުތަކުގެ އަސަރު ކުރާނެ ކަމަށް ބެލެވެއެވެ.",
@@ -2079,7 +2079,7 @@
       "domain": "news",
       "english": "The President added that the goal is to ensure that every national identity card, while remaining a physical card, becomes fully digital by the end of 2027.",
       "gold_thaana": "އަދި 2027 ވަނަ އަހަރުގެ ނިޔަލަށްދާއިރު ކޮންމެ ދިވެއްސެއްގެ އަތުގައި އޮންނަ ފިޒިކަލް އައިޑީ ކާޑަކީ ޑިޖިޓަލް އައިޑީ ކާޑަކަށް ވެގެންދާނެ ކަމުގައި ރައީސުލްޖުމްހޫރިއްޔާ ވިދާޅުވިއެވެ.",
-      "gold_romanized": "adhi 2027 vana aharuge niyalahdhaa'iru konme dhivessegge athuga'i onna fizikal a'idee kaadakee dijital a'idee kaadakah vegendhaane kamuga'i ra'eesuljumhooriyyaa vidhaalhuvi'eve.",
+      "gold_romanized": "adhi 2027 vana aharuge niyalahdhaa'iru konme dhivessegge athuga'i onna fizikal aidee kaadakee dijital aidee kaadakah vegendhaane kamuga'i ra'eesuljumhooriyyaa vidhaalhuvi'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "ރައީސް further  اضافہކުރެއްވީ، އަމާޒަކީ ކޮންމެ ދިވެހި ރާއްޖާގެ ގަބޫލުކުރާ ދިވެހިކަން ކަށަވަރުކުރާ ކާޑަކީ ފިޒިކަލް ކާޑެއްގެ ގޮތުގައި ހުރުމާއެކު، 2027 ވަނަ އަހަރު ނިމުމުގެ ކުރިން އެކަން ފުރިހަމައަށް ޑިޖިޓަލްކުރުމެވެ.",
@@ -2100,7 +2100,7 @@
       "domain": "news",
       "english": "Vice President Uz. Hussain Mohamed Latheef is an Al-Azhar University, Egypt, alumni who obtained his Undergraduate Degree in Social Service and Community Development.",
       "gold_thaana": "ރައީސުލްޖުމްހޫރިއްޔާގެ ނައިބު އަލްއުސްތާޛު ޙުސައިން މުޙައްމަދު ލަޠީފް ފުރަތަމަ ޑިގްރީ ޙާޞިލްކުރައްވާފައިވަނީ މިޞްރުގެ އަލްއަޒްހަރު ޔުނިވަރސިޓީގައި، ސޯޝަލް ސަރވިސް އެންޑް ކޮމިޔުނިޓީ ޑިވެލޮޕްމަންޓުގެ ދާއިރާއިންނެވެ.",
-      "gold_romanized": "ra'eesuljumhooriyyaage na'ibu al'usthaadhu husa'in muhammadhu lateef furathama digree haasilkuravvaafa'ivanee misruge al'azharu yunivarsiteega'i، soashal sarvis end komiyunitee divelopmantuge dhaa'iraa'inneve.",
+      "gold_romanized": "ra'eesuljumhooriyyaage na'ibu al'usthaadhu husa'in muhammadhu lateef furathama digree haasilkuravvaafa'ivanee misruge al'azharu yunivarsiteega'i, soashal sarvis end komiyunitee divelopmantuge dhaa'iraa'inneve.",
       "predictions": {
         "gemma4": {
           "thaana": "ސިވިލް ސާވިސް އަދި ކޮމިއުނިޓީ ޑިވެލޮޕްމަންޓް ދާއިރާއިން ބެޗެލަރ ޑިގްރީ ހޯދާފައިވާ ވައިސް ޕްރެޒިޑަންޓް އުޒް ހުސައިން މުހައްމަދު ލަތީފް އަކީ މިސްރީގެ އަލް-އަޒްހަރު ޔުނިވަރސިޓީގެ முன்னாள் ދަރިވަރެކެވެ.",
@@ -2121,7 +2121,7 @@
       "domain": "news",
       "english": "CATEGORY 2: NON-MALÉ RESIDENTS LIVING IN MALÉ (3,000 plots)",
       "gold_thaana": "ކެޓަގަރީ 2: މާލޭގައި ދިރިއުޅޭ މާލޭ ނޫން މީހުން (3،000 ގޯތި)",
-      "gold_romanized": "ketagaree 2: maaleyga'i dhiri'ulhey maaley noon meehun (3،000 goathi)",
+      "gold_romanized": "ketagaree 2: maaleyga'i dhiri'ulhey maaley noon meehun (3,000 goathi)",
       "predictions": {
         "gemma4": {
           "thaana": "ކެޓިގަރީ 2: މާލޭގައި 거주ކުރާ މާލޭގެ ރަށުން ಹೊರത്തുގެ ރައްޔިތުން (3,000 ޕްލޮޓް)",
@@ -2163,7 +2163,7 @@
       "domain": "news",
       "english": "The family had raised several concerns, including that they were not promptly informed about Yunus’ condition and that laboratory results were not shared in a timely manner.",
       "gold_thaana": "އެ އާއިލާއިން ކުރި އެއް ތުހުމަތަކީ، ޔޫނުސްގެ ބަލީގެ ހާލަތާ ބެހޭ މައުލޫމާތު އެކަށީގެންވާ އަވަސްމިނުގައި ހިއްސާނުކުރުމާއި ލެބޯޓްރީ ޓެސްޓުތަކެއްގެ ނަތީޖާ ހިއްސާކޮށްފައި ނުވާ ކަމަށެވެ.",
-      "gold_romanized": "e aa'ilaa'in kuri eh thuhumathakee، yoonusge baleege haalathaa behey ma'uloomaathu ekasheegenvaa avasminuga'i hissaanukurumaa'i leboatree testuthakegge natheejaa hissaakohfa'i nuvaa kamasheve.",
+      "gold_romanized": "e aa'ilaa'in kuri eh thuhumathakee, yoonusge baleege haalathaa behey ma'uloomaathu ekasheegenvaa avasminuga'i hissaanukurumaa'i leboatree testuthakegge natheejaa hissaakohfa'i nuvaa kamasheve.",
       "predictions": {
         "gemma4": {
           "thaana": "ޢާއިލާއިން ވަރަށް ގިނަ ކަންކަމާމެދު ކަންބޮޑުވުން వ్యక్ތުކޮށްފައިވެއެވެ. އޭގެ ތެރޭގައި ޔުނުސްގެ ހާލަތާ በተރިގޮތުން އެމީމީންނަށް ވަގުތުން އަންގާފައި ނުވާކަމާއި، ਲੈބަރޓަރީ ނަތީޖާތައް ވަގުތުން ހިއްސާކޮށްފައި ނުވާކަމެވެ.",
@@ -2226,7 +2226,7 @@
       "domain": "news",
       "english": "But at present, there is no council housing tier, no rental vouchers, and no sliding-scale subsidies based on income.",
       "gold_thaana": "އެކަމަކު މިވަގުތު ކައުންސިލް ހައުސިންގެއް، ކުއްޔަށް ދޭ ވައުޗަރެއް، އާމްދަނީއަށް ރިޢާޔަތްކޮށްގެންދޭ ސްލައިޑިންގް ސްކޭލް ސަބްސިޑީއެއް ވެސް ނެތެވެ.",
-      "gold_romanized": "ekamaku mivaguthu ka'unsil ha'usingeh، kuyyah dhey va'uchareh، aamdhanee'ah ri'aayakkohgendhey sla'iding skeyl sabsidee'eh ves netheve.",
+      "gold_romanized": "ekamaku mivaguthu ka'unsil ha'usingeh, kuyyah dhey va'uchareh, aamdhanee'ah ri'aayakkohgendhey sla'iding skeyl sabsidee'eh ves netheve.",
       "predictions": {
         "gemma4": {
           "thaana": "މިހާރު، ކައުންސިލްގެގެ އިންތިޒާމެއް ނެތް، ކުލީގެ ቫ ideaޗަރު ނެތް، އަދި އާމްދަނީގެအပေါ် ބިނާކޮށް ލިބޭ ސަބސިޑީ ނެތް.",
@@ -2247,7 +2247,7 @@
       "domain": "news",
       "english": "You're talking about getting rid of a tree that's over 100 years old, and planting a small cutting here and another cutting there.",
       "gold_thaana": "ތިދައްކަނީ 100 އަހަރަށް ވުރެ ގިނަ ދުވަސްވީ ގަހެއް ނަގާފައި، އެތައް މިތާނގައި އޮފިބުރިތަކެއް އިންދާ ވާހަކަ،\"",
-      "gold_romanized": "thidhakkanee 100 aharah vure gina dhuvasvee gaheh nagaafa'i، ethah mithaanga'i ofiburithakeh indhaa vaahaka،\"",
+      "gold_romanized": "thidhakkanee 100 aharah vure gina dhuvasvee gaheh nagaafa'i, ethah mithaanga'i ofiburithakeh indhaa vaahaka,\"",
       "predictions": {
         "gemma4": {
           "thaana": "ތިޔަބަހަވާލަނީ އަހަރު 100 އަށްވުރެ ގިނަ ގަހެއް ކަނޑާލައި، އެތަނത്ത് ކުޑަ އޮމާރެއް އަދި އަނެއް ތަނެއްގައި އަނެއް އޮމާރެއް and އަލަށް އިންތިކުރުކުރުމުގެ މާހަރާستެވެ.",
@@ -2310,7 +2310,7 @@
       "domain": "news",
       "english": "President also noted that numerous projects were being carried out across the country with assistance from the government of India and described the neighbour as an important development partner for the Maldives.",
       "gold_thaana": "ރައީސުލްޖުމްހޫރިއްޔާގެ ވާހަކަފުޅުގައި މީގެތެރެއިން ބައެއް މަޝްރޫޢުތަކަކީ ، އިންޑިއާގެ އެހީތެރިކަމާއެކު ސަރުކާރުން ހިންގާ މަޝްރޫޢުތަކެއްކަން ފާހަގަކުރައްވައި އިންޑިއާ އަކީ ރާއްޖޭގެ އިޤްތިސާދީ ، އިޖްތިމާއީ އަދި އުމްރާނީ ތަރައްޤީގެ އެންމެ މުހިންމު އެއް ބައިވެރިޔާކަމުގައި ވިދާޅުވިއެވެ.",
-      "gold_romanized": "ra'eesuljumhooriyyaage vaahakafulhuga'i meegethere'in ba'eh mashroo'uthakakee ، indi'aage eheetherikamaa'eku sarukaarun hingaa mashroo'uthakekkan faahagakuravva'i indi'aa akee raajjeyge iqthisaadhee ، ijthimaa'ee adhi umraanee tharaqqeege enme muhinmu eh ba'iveriyaakamuga'i vidhaalhuvi'eve.",
+      "gold_romanized": "ra'eesuljumhooriyyaage vaahakafulhuga'i meegethere'in ba'eh mashroo'uthakakee , indi'aage eheetherikamaa'eku sarukaarun hingaa mashroo'uthakekkan faahagakuravva'i indi'aa akee raajjeyge iqthisaadhee , ijthimaa'ee adhi umraanee tharaqqeege enme muhinmu eh ba'iveriyaakamuga'i vidhaalhuvi'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "އިންޑިއާ ސަރުކާރުގެ އެހީމާއެކު ގައުމުގައި ގިނަNumberOf ޕްރޮޖެކްޓްތައް ކުރިއަށްގަ着 ކަމަށް ރައީސް ފާހަގަކުރެއްވިއެވެ. އަދި ރިމާލްއަށް މި প্রতিবেশী ގައުމަކީ މުހިންމު ဖွ oggetto ލިބޭ شرީކެއް ކަމުގައި ސިފަކުރެއްވިއެވެ.",
@@ -2331,7 +2331,7 @@
       "domain": "news",
       "english": "Marking last year’s tourism performance, Visit Maldives said tourist spending reached a record USD 5.4 billion, citing data from the Maldives Monetary Authority (MMA).",
       "gold_thaana": "މިދިޔަ އަހަރުގެ ފަތުރުވެރިކަމުގެ ކާމިޔާބީތައް ފާހަގަކޮށް، ވިޒިޓް މޯލްޑިވްސްއިން ވަނީ އެއަހަރު ރާއްޖެއަށް ޒިޔާރަތްކޮށްފައިވާ ފަތުރުވެރިން ކޮށްފައިވާ ހޭދައިގެ މިންވަރު ރެކޯޑު އަދަދަކަށް އިތުރުވެ، 5.4 ބިލިއަން އެމެރިކާ ޑޮލަރަށް އަރައިފައިވާ ކަމަށް، މަރުކަޒީ ބޭންކު އެމްއެމްއޭއާ ހަވާލާދީ ބުނެފައެވެ.",
-      "gold_romanized": "midhiya aharuge fathuruverikamuge kaamiyaabeethah faahagakoh، vizit moaldivs'in vanee e'aharu raajje'ah ziyaarakkohfa'ivaa fathuruverin kohfa'ivaa heydha'ige minvaru rekoadu adhadhakah ithuruve، 5.4 bili'an emerikaa dolarah ara'ifa'ivaa kamah، marukazee beynku em'em'ey'aa havaalaadhee bunefa'eve.",
+      "gold_romanized": "midhiya aharuge fathuruverikamuge kaamiyaabeethah faahagakoh, vizit moaldivs'in vanee eaharu raajje'ah ziyaarakkohfa'ivaa fathuruverin kohfa'ivaa heydha'ige minvaru rekoadu adhadhakah ithuruve, 5.4 bili'an emerikaa dolarah ara'ifa'ivaa kamah, marukazee beynku em'em'ey'aa havaalaadhee bunefa'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "މޯލްޑިވްސް މަނިޓަރީ އތޯރިޓީގެ (MMA) މައުލޫމާތުތަކަށް ބިނާ করে، ގަސްތަ އަހަރުގެ ފަތުރުވެރިކަމުގެ ކުރިއެރުމާ ގުޅިގެން ވިޒިޓް މޯލްޑިވްސްން ބުނެފައިވަނީ ފަތުރުވެރިން ചെലവުކުރި మొత్తం އަ and 5.4 ބިލިއަން ޑޮލަރަށް and ރިކޯޑް އަދަދަކަށް and ވަނީ ރިސިކުރާ ކަމަށެވެ.",
@@ -2352,7 +2352,7 @@
       "domain": "news",
       "english": "The Minister affirmed that the operations of Hanimaadhoo Airport are well underway, with the opportunity now open for international airlines to commence operation to the airport.",
       "gold_thaana": "މިނިސްޓަރު ވިދާޅުވީ ހަނިމާދޫ އެއާޕޯޓް ރަނގަޅަށް ހިންގަމުން އަންނަ ކަމަށާއި އިންޓަނޭޝަނަލް އެއާލައިންތަކުގެ ދަތުރުތައް ފަށަން މިހާރު ހުޅުވާލާފައިވާ ކަމަށެވެ.",
-      "gold_romanized": "ministaru vidhaalhuvee hanimaadhoo e'aapoat rangalhah hingamun anna kamashaa'i intaneyshanal e'aala'inthakuge dhathuruthah fashan mihaaru hulhuvaalaafa'ivaa kamasheve.",
+      "gold_romanized": "ministaru vidhaalhuvee hanimaadhoo eaapoat rangalhah hingamun anna kamashaa'i intaneyshanal eaala'inthakuge dhathuruthah fashan mihaaru hulhuvaalaafa'ivaa kamasheve.",
       "predictions": {
         "gemma4": {
           "thaana": "ހަނިމާދޫ އެയަރޕޯޓުގެ ހަރަކާތްތައް ރަނގަޅަށް ކުރިއަށްދާކަމާއި، މިހާރު އިންޓަނޭޝަނަލް އެയަރލައިންތަކަށް އެയަރޕޯޓަށް ފަހަރި ފަށާ kesempatan ހުޅުވޭތިކަމަށް މިނިސްޓަރ affirming ކުރެއްވިއެވެ.",
@@ -2394,7 +2394,7 @@
       "domain": "news",
       "english": "IGMH said that once a patient is referred abroad, travel arrangements are handled by Aasandha or NSPA in coordination with airlines and other government agencies.",
       "gold_thaana": "އެ ކަމާ ގުޅިގެން އައިޖީއެމްއެޗުން ބުނީ، ރާއްޖޭން ބޭރަށް ބަލި މީހަކު ރިފާ ކުރުމަށް ފަހުގައި، ފުރުމުގެ އިންތިޒާމުތައް ހަމަޖެއްސުމަކީ، ސަރުކާރުގެ އެހެނިހެން އިދާރާތައް ހިމެނޭހެން އާސަންދަ ނުވަތަ އެންސްޕާއިން އެއާލައިންތަކާ ގުޅިގެން ކުރާ ކަމެއް ކަމަށެވެ.",
-      "gold_romanized": "e kamaa gulhigen a'ijee'em'echun bunee، raajjeyn beyrah bali meehaku rifaa kurumah fahuga'i، furumuge inthizaamuthah hamajessumakee، sarukaaruge ehenihen idhaaraathah himeneyhen aasandha nuvatha enspaa'in e'aala'inthakaa gulhigen kuraa kameh kamasheve.",
+      "gold_romanized": "e kamaa gulhigen aijee'em'echun bunee, raajjeyn beyrah bali meehaku rifaa kurumah fahuga'i, furumuge inthizaamuthah hamajessumakee, sarukaaruge ehenihen idhaaraathah himeneyhen aasandha nuvatha enspaa'in eaala'inthakaa gulhigen kuraa kameh kamasheve.",
       "predictions": {
         "gemma4": {
           "thaana": "މިކަމާ ގުޅިގެން އައި.ޖީ.އެމް.އައިން ބުނާ ގޮތުގައި، ބަލިމީހަކު ރާއްޖ国外އަށް ފޮނުވާމ后، ދަތުރުމަގުތައް ހަމަޖައްސާލުމުގެ މަސައްކަތް ކުރަނީ އާސަންދަ ނުވަތަ އެން.އެސް.ޕީ.އޭއިން، އެއަރލައިންތަކާއި އެހެން ސަރުކާރުގެ އިދާރާތަކާ ގުޅިގެން.",
@@ -2436,7 +2436,7 @@
       "domain": "news",
       "english": "Why is MVR 60,000 the income ceiling?",
       "gold_thaana": "60،000 ރުފިޔާ ކަނޑައަޅާފައިވަނީ ކިހިނެއް ހެއްޔެވެ؟",
-      "gold_romanized": "60،000 rufiyaa kanda'alhaafa'ivanee kihineh heyyeve؟",
+      "gold_romanized": "60,000 rufiyaa kanda'alhaafa'ivanee kihineh heyyeve?",
       "predictions": {
         "gemma4": {
           "thaana": "މުސާރާގެ މަހުވަރުގެ ހުދުވަރު 60,000 രൂപ ކަނޑުކުރީ and ކީއްކަމާ?",
@@ -2457,7 +2457,7 @@
       "domain": "news",
       "english": "During his academic life, he always stood out as a studious, well-versed student who achieved academic excellence, leading up to his doctorate.",
       "gold_thaana": "ތަޢުލީމީ ޙަޔާތުގައި، އިބްތިދާއީ މަރުޙަލާއިން ފެށިގެން ޕީއެޗްޑީ ޙާޞިލްކުރެއްވުމާ ހަމަޔަށްވެސް އެމަނިކުފާނު ވަނީ މަތީ ނަތީޖާތަކެއް ޙާޞިލްކުރައްވައިފައެވެ.",
-      "gold_romanized": "tha'uleemee hayaathuga'i، ibthidhaa'ee maruhalaa'in feshigen pee'echdee haasilkurevvumaa hamayahves emanikufaanu vanee mathee natheejaathakeh haasilkuravva'ifa'eve.",
+      "gold_romanized": "tha'uleemee hayaathuga'i, ibthidhaa'ee maruhalaa'in feshigen pee'echdee haasilkurevvumaa hamayahves emanikufaanu vanee mathee natheejaathakeh haasilkuravva'ifa'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "އެކަޑެމިކް ދިރިއުޅުމުގެ ތެރޭގައި، އޭނާ އަބަދުވެސް ފާހަގަކުރެވުނު ގިނަ ކަންކަމަކަށް ލަފާ، ކިޔެވުމަށް തިލަ ދެލި، އެކަޑެމިކްގޮތުން މޮޅުކަން ހޯދި ދަރިވަރަކަށް ވި and، އެކަމީ ޑޮކްޓަރޭޓް ލިބޭ 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直 直",
@@ -2478,7 +2478,7 @@
       "domain": "news",
       "english": "At a press briefing on Monday, MP Mauroof Zakir noted President Muizzu's declaration of 2025 as the \"special year of housing\" and pointed out that the year is ending without a single project.",
       "gold_thaana": "ހޯމަ ދުވަހު އެމްޑީޕީ އިން ބޭއްވި ނޫސްވެރިންގެ ބައްދަލުވުމެއްގައި މަޖިލިސް މެމްބަރު މަޢުރޫފް ޒާކިރު ވިދާޅުވީ 2025 ވަނަ އަހަރަކީ \"ބޯހިޔާވަހިކަމުގެ އަހަރު“ ކަމަށް ރައީސް މުޢިއްޒު ކަނޑައަޅުއްވާ، އިޢުލާން ކުރައްވާފައި ވީ ނަމަވެސް، އަހަރު ނިމިދިޔައީ ބޯހިޔާވަހިކަމުގެ އެންމެ މަޝްރޫޢެއް ނުފައްޓަވާ ކަމަށެވެ.",
-      "gold_romanized": "hoama dhuvahu emdeepee in beyvvi noosveringe baddhaluvumegga'i majilis membaru ma'uroof zaakiru vidhaalhuvee 2025 vana aharakee \"boahiyaavahikamuge aharu“ kamah ra'ees mu'izzu kanda'alhuvvaa، i'ulaan kuravvaafa'i vee namaves، aharu nimidhiya'ee boahiyaavahikamuge enme mashroo'eh nufattavaa kamasheve.",
+      "gold_romanized": "hoama dhuvahu emdeepee in beyvvi noosveringe baddhaluvumegga'i majilis membaru ma'uroof zaakiru vidhaalhuvee 2025 vana aharakee \"boahiyaavahikamuge aharu“ kamah ra'ees mu'izzu kanda'alhuvvaa, iulaan kuravvaafa'i vee namaves, aharu nimidhiya'ee boahiyaavahikamuge enme mashroo'eh nufattavaa kamasheve.",
       "predictions": {
         "gemma4": {
           "thaana": "ޞާނައިމަގާބަވަމުން ދިޔަ ހިᱞާލުގައި ހިނގާ ޕްރެސް ކޮންފަރަންސްއެއްގައި، މީލްސްޓޯންގެ މައުރޫފް ޒަކީރު ފާހަގަކުރެއްވީ ރައީސް މުއިއްޒު 2025 ވަނަ އަހަރު \"ގެލިކޮޓަރީގެ and ހާއްސަ އަހަރެއް\" ଭାବުގައި އިޢުލާންކުރެއްވުމާގުޅިގެން، އެ އަހަރު ނިމިގެންދަނީ އެއްވެސް ပްރޮޖެކްޓެއް ނުކުރާކަންކަންނެވެ.",
@@ -2520,7 +2520,7 @@
       "domain": "news",
       "english": "While the arrest case was rejected, the High Court accepted Nadhama’s remand appeal, and hearings on that matter have begun.",
       "gold_thaana": "ނަދަމާގެ ހައްޔަރު މައްސަލަ ބޭރުކޮށްލިއިރު، ނަދަމާގެ ބަންދު މުއްދަތު ޖެހި މައްސަލަ ހައިކޯޓަށް ބަލައިގަނެ އޮތީ މިހާރު އަޑުއެހުންތައް ފެށިފައެވެ.",
-      "gold_romanized": "nadhamaage hayyaru massala beyrukohli'iru، nadhamaage bandhu muddhathu jehi massala ha'ikoatah bala'igane othee mihaaru adu'ehunthah feshifa'eve.",
+      "gold_romanized": "nadhamaage hayyaru massala beyrukohli'iru, nadhamaage bandhu muddhathu jehi massala ha'ikoatah bala'igane othee mihaaru adu'ehunthah feshifa'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "গ্রেފްޓްކުރުމުގެ މައްސަލަ ނަފީކުރި ނަމަވެސް، ހައިކޯޓުން ނަދަމާގެ ރިމާންޑް މައްސަލައިގެ އެޕީލް ބަލައިގަތްމަށް ނިންމާފައިވާއިރު، އެކަމާ ގުޅޭ ވަཅަވަކީގެ ސިއްސިލްތަކެއް ފަށާފައިވެއެވެ.",
@@ -2583,7 +2583,7 @@
       "domain": "news",
       "english": "Emphasising the Administration’s commitment to women’s empowerment, the President highlighted significant ongoing initiatives ranging from preventing domestic violence to providing employment opportunities.",
       "gold_thaana": "އަންހެނުން ބާރުވެރިކުރުމަކީ ސަރުކާރުން ވަރަށް ބޮޑު އިސްކަމެއް ދެއްވާ ކަމެއް ކަމުގައި ފާހަގަކުރައްވަމުން ރައީސުލްޖުމްހޫރިއްޔާ ވިދާޅުވީ، ގެވެށި އަނިޔާއިން ސަލާމަތްކޮށްދިނުމުން ފެށިގެން ގޮސް، ވަޒީފާގެ ފުރުޞަތުތައް ފަހިކޮށްދިނުމާ ހަމައަށް، އަންހެނުން ބާރުވެރިކުރުމުގެ ދާއިރާއިން ވެސް ގިނަ މަސައްކަތްތަކެއް ކުރެވެމުންދާ ކަމަށެވެ.",
-      "gold_romanized": "anhenun baaruverikurumakee sarukaarun varah bodu iskameh dhevvaa kameh kamuga'i faahagakuravvamun ra'eesuljumhooriyyaa vidhaalhuvee، geveshi aniyaa'in salaamakkohdhinumun feshigen gos، vazeefaage furusathuthah fahikohdhinumaa hama'ah، anhenun baaruverikurumuge dhaa'iraa'in ves gina masakkatthakeh kurevemundhaa kamasheve.",
+      "gold_romanized": "anhenun baaruverikurumakee sarukaarun varah bodu iskameh dhevvaa kameh kamuga'i faahagakuravvamun ra'eesuljumhooriyyaa vidhaalhuvee, geveshi aniyaa'in salaamakkohdhinumun feshigen gos, vazeefaage furusathuthah fahikohdhinumaa hama'ah, anhenun baaruverikurumuge dhaa'iraa'in ves gina masakkatthakeh kurevemundhaa kamasheve.",
       "predictions": {
         "gemma4": {
           "thaana": "އިލާމީ ސަރުކާރުގެ އަންހެނުންގެ ކުރިއެރުމަށް އޮތް ቁርއާރިކަން ފާހަގަކުރައްވައި، ރައީސް ވަނީ ގިރިމަހުގެ ހિંސާ ހުއްޓުވުމުގެ ފަހަރިއިރު ވަޒީފާގެ ފުރުސަތުތައް ހޯދައިދިނުމާ ހަމައަށंपर्यंत ކުރިއަށްދާ މުހިންމު މަސައްކަތްތަކާ ހިމ相关ކޮށް ފާހަގަކުރެއްވުއްޖެއެވެ.",
@@ -2604,7 +2604,7 @@
       "domain": "news",
       "english": "As residents begin moving into newly built flats, private furniture importers and interior designers typically roll out special packages targeting new homeowners.",
       "gold_thaana": "އަލަށް އިމާރާތްކުރާ ފްލެޓްތަކަށް މީހުން ބަދަލުވާން ފެށުމާ އެކު، ފަރުނީޗަރު އެތެރެކޮށް ވިއްކުމުގެ ވިޔަފާރި ހިންގާ އަމިއްލަ ފަރާތްތަކުން ވެސް ޚާއްސަ ޕެކޭޖުތައް ހަދައެެވެ.",
-      "gold_romanized": "alah imaaraakkuraa fletthakah meehun badhaluvaan feshumaa eku، faruneecharu etherekoh vikkumuge viyafaari hingaa amilla faraatthakun ves khaassa pekeyjuthah hadha'eeve.",
+      "gold_romanized": "alah imaaraakkuraa fletthakah meehun badhaluvaan feshumaa eku, faruneecharu etherekoh vikkumuge viyafaari hingaa amilla faraatthakun ves khaassa pekeyjuthah hadha'eeve.",
       "predictions": {
         "gemma4": {
           "thaana": "కొత్తކުރި ފްލެޓްތަކަށް ރައްޔިލުން താമަށަށް ދިއުމާއެކު، އަމިއްލަ ފަރުނީޗަރު ഇറކުކުރާ ފަރާތްތަކާއި އިންޓީރިއަރ ޑިޒައިނަރުން އާކޮޓިތަކުގެ ވެރިންނަށް އަމާޒުކޮށް ހާސް ပެކޭޖްތައް ތަޖުރިބާކުރުމަށް ފަށާ عادةً.",
@@ -2625,7 +2625,7 @@
       "domain": "news",
       "english": "Later registered in Malé house registry: 2,000",
       "gold_thaana": "ފަހުން މާލޭގެ ގެއެއްގައި ރަޖިސްޓްރީ ކޮށްފައިވާ މީހުންނަށް: 2،000",
-      "gold_romanized": "fahun maaleyge ge'egga'i rajistree kohfa'ivaa meehunnah: 2،000",
+      "gold_romanized": "fahun maaleyge ge'egga'i rajistree kohfa'ivaa meehunnah: 2,000",
       "predictions": {
         "gemma4": {
           "thaana": "ބަad ފަހުން މާލޭގެ ގޭގެ ރަޖިސްޓްރީގައި ރަޖިސްޓްރީ ކުރި: 2,000",
@@ -2646,7 +2646,7 @@
       "domain": "news",
       "english": "Arshad was convicted of attempted robbery in two counts and sentenced to two months and 12 days, and convicted of damage to property and sentenced to seven months and six days.",
       "gold_thaana": "ދެ މައްސަލައިގެ ތެރެއިން ވައްކަންކުރަން އުޅުމުގެ ކުށުގެ މައްސަލަ ސާބިތުވެ، ދެ މަހާއި 12 ދުވަހުގެ ހުކުމެއް އިއްވިއެވެ. އަދި މުދަލަށް ގެއްލުން ދިނުމުގެ ކުށް ސާބިތުވެ، ހަތް މަހާއި ހަ ދުވަހުގެ ހުކުމެއް އިއްވިއެވެ.",
-      "gold_romanized": "dhe massala'ige there'in vakkankuran ulhumuge kushuge massala saabithuve، dhe mahaa'i 12 dhuvahuge hukumeh ivvi'eve. adhi mudhalah gellun dhinumuge kuh saabithuve، hath mahaa'i ha dhuvahuge hukumeh ivvi'eve.",
+      "gold_romanized": "dhe massala'ige there'in vakkankuran ulhumuge kushuge massala saabithuve, dhe mahaa'i 12 dhuvahuge hukumeh ivvi'eve. adhi mudhalah gellun dhinumuge kuh saabithuve, hath mahaa'i ha dhuvahuge hukumeh ivvi'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "އަރުޝާދު ދެ ފަހަރު and ވަގުތުން and ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން ވަގުތުން",
@@ -2709,7 +2709,7 @@
       "domain": "news",
       "english": "Rubyn’s mother, Fathimath Hamna, told Sun that Rubyn received the opportunity to participate through the Sri Lankan High Commission.",
       "gold_thaana": "ރުބީންގެ މަންމަ ފާތިމަތު ހަމްނާ 'ސަން'އަށް ބުނީ، އެ މުބާރާތުގައި ބައިވެރިވުމުގެ ފުރުސަތު ލިބުނީ ލަންކާ ހައިކޮމިޝަން މެދުވެރިކޮށް ކަމަށެވެ.",
-      "gold_romanized": "rubeenge manma faathimathu hamnaa 'san''ah bunee، e mubaaraathuga'i ba'iverivumuge furusathu libunee lankaa ha'ikomishan medhuverikoh kamasheve.",
+      "gold_romanized": "rubeenge manma faathimathu hamnaa 'san''ah bunee, e mubaaraathuga'i ba'iverivumuge furusathu libunee lankaa ha'ikomishan medhuverikoh kamasheve.",
       "predictions": {
         "gemma4": {
           "thaana": "ރუბިންގެ މަންމަ ފާތިމަތު ހަމްނަ ސަން އަށް ပြောީ، ރუბިންނަށް މި机会 கிடைத்தது శ్రీލަންކާގެ ހައި ކޮމިޝަނުން гэންމެވެ.",
@@ -2730,7 +2730,7 @@
       "domain": "news",
       "english": "In his message, President conveyed the felicitations and best wishes of the Government and the people of the Maldives to President Erdoğan, the government and the brotherly people of Türkiye.",
       "gold_thaana": "އެ މެސެޖުގައި ރައީސުލްޖުމްހޫރިއްޔާ ވަނީ، ތުރުކީގެ ރައީސް އުރްދުޣާނަށާއި، އެ މަނިކުފާނުގެ ސަރުކާރަށާއި، ތުރުކީވިލާތުގެ ރައްޔިތުންނަށް، ދިވެހި ރައްޔިތުންނާއި ދިވެހި ސަރުކާރުގެ ނަމުގައި، ޖުމްހޫރީ ދުވަހުގެ ތަހުނިޔާ އާއި ހެޔޮއެދުން އަރިސްކުރައްވާފައެވެ.",
-      "gold_romanized": "e mesejuga'i ra'eesuljumhooriyyaa vanee، thurukeege ra'ees urdhughaanashaa'i، e manikufaanuge sarukaarashaa'i، thurukeevilaathuge rayyithunnah، dhivehi rayyithunnaa'i dhivehi sarukaaruge namuga'i، jumhooree dhuvahuge thahuniyaa aa'i heyo'edhun ariskuravvaafa'eve.",
+      "gold_romanized": "e mesejuga'i ra'eesuljumhooriyyaa vanee, thurukeege ra'ees urdhughaanashaa'i, e manikufaanuge sarukaarashaa'i, thurukeevilaathuge rayyithunnah, dhivehi rayyithunnaa'i dhivehi sarukaaruge namuga'i, jumhooree dhuvahuge thahuniyaa aa'i heyo'edhun ariskuravvaafa'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "ރައީސްކުރި މެސެޖްގައި، ރައީސް އެ尔多އަންއާއި، ޓިއުކީގެ ސަރުކާރާއި، އެކިބަބު ރައްޔިތުންނަށް ރާއްޖޭގެ ސަރުކާރާއި ރައްޔިތުންގެ ތަހުނިޔާ އަދި ހެޔޮއިރިޝާދުތައް ފޮނުވައިފިލާވަ胺އެވެ.",
@@ -2751,7 +2751,7 @@
       "domain": "news",
       "english": "He added that it would increase tourism facilities, including guesthouses and city hotels, drive job creation in the northern atolls, and transform the region into an economic hub.",
       "gold_thaana": "އެގޮތުން އެތައްހާސް ވަޒީފާތައް އުފެދުމާއި ގެސްޓް ހައުސްތަކާއި، ސިޓީ ހޮޓާތަކާއި، ރިސޯޓުތަކުގެ އެނދުތައް، އެތައް ގުނައެއް އިތުރުވެގެންދިއުމާއި އެކި ބާވަތްތަކުގެ ވިޔަފާރިތަކާ ، އިޤްތިޞާދީ މަސައްކަތްތަކަށް ގިނަ ފުރުޞަތުތަކެއް ހުޅުވިގެންގޮސް ބޮޑުތިލަދުންމައްޗަކީ އިޤްތިޞާދީ ވަރުގަދަ ހަބަކަށްވުމަށް މަގުފަހިވެގެންދާނެކަން އެމަނިކުފާނު ފާހަގަކުރެއްވިއެވެ.",
-      "gold_romanized": "egothun ethahhaas vazeefaathah ufedhumaa'i gest ha'usthakaa'i، sitee hotaathakaa'i، risoatuthakuge endhuthah، ethah guna'eh ithuruvegendhi'umaa'i eki baavatthakuge viyafaarithakaa ، iqthisaadhee masakkatthakah gina furusathuthakeh hulhuvigengos boduthiladhunmacchakee iqthisaadhee varugadha habakahvumah magufahivegendhaanekan emanikufaanu faahagakurevvi'eve.",
+      "gold_romanized": "egothun ethahhaas vazeefaathah ufedhumaa'i gest ha'usthakaa'i, sitee hotaathakaa'i, risoatuthakuge endhuthah, ethah guna'eh ithuruvegendhi'umaa'i eki baavatthakuge viyafaarithakaa , iqthisaadhee masakkatthakah gina furusathuthakeh hulhuvigengos boduthiladhunmacchakee iqthisaadhee varugadha habakahvumah magufahivegendhaanekan emanikufaanu faahagakurevvi'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "މީގެ ސަބަބުން ގެސްޓްހައުސްތަކާއި ސިޓީ ހޮޓަލްތަކުގެ ހިމެނޭ ޓޫރިޒަމްގެ ވަސިলাތްތައް އިތުރުވެާނެ ކަމަށާއި، އަތޮލްތަކުގެ އުތުރުބަގޭގެ ރަށްރަށުގައި ވަޒީފާ ފުރުސަތުތައް އިތުރުވެާނެ ކަމަށާއި، އަދި މި ސަރަހައްދަކީ އިގްތިސާދީ މަރުކަޒަކަށް ပြែވާނެ ކަމަށް އޭނާ കൂട്ടްކުރިއެވެ.",
@@ -2772,7 +2772,7 @@
       "domain": "news",
       "english": "She noted that some institutions conduct examinations and award certificates before required contact hours are completed, and said the MQA is working to correct such practices.",
       "gold_thaana": "އޭނާ ވިދާޅުވީ، މަތީ ތައުލީމަށް ކިޔަވައިދޭ ބައެއް ތަންތަނުން ދަރިވަރުން ހަމަކުރަން ޖެހޭ ގަޑިތައް ހަމަ ނުކުރަނީސް އިމްތިހާނު ދީ، ސަނަދު ދޭކަން ފާހަގަކުރެވިފައިވާ ކަމަށާއި އެ މައްސަލަތައް ރަނގަޅު ކުރުމަށް އެމްކިޔުއޭއިން މަސައްކަތް ކުރަމުން އަންނަ ކަމަށެވެ.",
-      "gold_romanized": "eynaa vidhaalhuvee، mathee tha'uleemah kiyava'idhey ba'eh thanthanun dharivarun hamakuran jehey gadithah hama nukuranees imthihaanu dhee، sanadhu dheykan faahagakurevifa'ivaa kamashaa'i e massalathah rangalhu kurumah emkiyu'ey'in masakkath kuramun anna kamasheve.",
+      "gold_romanized": "eynaa vidhaalhuvee, mathee tha'uleemah kiyava'idhey ba'eh thanthanun dharivarun hamakuran jehey gadithah hama nukuranees imthihaanu dhee, sanadhu dheykan faahagakurevifa'ivaa kamashaa'i e massalathah rangalhu kurumah emkiyu'ey'in masakkath kuramun anna kamasheve.",
       "predictions": {
         "gemma4": {
           "thaana": "އިލްމީ މަރުކަޒްތަކުން ކަށަވަރުކުރަންޖެހޭ ވަގުތު ހަމަވުމުގެ ކުރިން އިމްތިހާންތައް ނަގާ ސެޓްފިކެޓްތައް ދޫކުރާކަން ފާހަގަކުރައްވައި، މިފަދަ އަމަލުތައް düzކުރުމަށް އެމްކިއުއޭ މަސައްކަތް ކުރަމުންދާކަން ఆమె ပြော স্নেহއްވ았습니다.",
@@ -2793,7 +2793,7 @@
       "domain": "news",
       "english": "During the visit, the President is also scheduled to attend the official Fishermen's Day ceremony and related commemorative activities taking place in Dhuvaafaru.",
       "gold_thaana": "ރައީސުލްޖުމްހޫރިއްޔާގެ މި ދަތުރުފުޅުގައި، މިއަހަރުގެ މަސްވެރިންގެ ދުވަހުގެ ރަސްމީ ޖަލްސާއާއި އަދި މަސްވެރިންގެ ދުވަސް ފާހަގަކުރުމަށް ދުވާފަރުގައި މިހާރު ކުރިއަށްދާ އެކި އެކި ހަރަކާތްތަކުގައި ވެސް ބައިވެރިވެވަޑައިގަންނަވާނެއެވެ.",
-      "gold_romanized": "ra'eesuljumhooriyyaage mi dhathurufulhuga'i، mi'aharuge masveringe dhuvahuge rasmee jalsaa'aa'i adhi masveringe dhuvas faahagakurumah dhuvaafaruga'i mihaaru kuri'ahdhaa eki eki harakaatthakuga'i ves ba'iverivevada'igannavaane'eve.",
+      "gold_romanized": "ra'eesuljumhooriyyaage mi dhathurufulhuga'i, mi'aharuge masveringe dhuvahuge rasmee jalsaa'aa'i adhi masveringe dhuvas faahagakurumah dhuvaafaruga'i mihaaru kuri'ahdhaa eki eki harakaatthakuga'i ves ba'iverivevada'igannavaane'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "ޒިޔާރަތުގެ ތެރޭގައި، ދުވާފަރުގައި ބާއްވާ ރަސްމީ މަސްވެރިންގެ ދުވަހުގެ ހަފްލާއަށާއި ގުޅިގެން ކުރިއަށްގަންނަވާ ހަފްލާތަކުގެ ތެރެއަށް ރައީސުލްޖުމްހޫރިއްޔާ ވަޑައިގަތުމަށް ހަމަޖެހިފައިވެއެވެ.",
@@ -2856,7 +2856,7 @@
       "domain": "news",
       "english": "The agency stressed that it is “not appropriate” for an employee to pursue a PhD full‑time while working, and that working students must be enrolled part‑time.",
       "gold_thaana": "އެމްކިޔުއޭއިން ވަނީ، ވަޒީފާ އަދާކުރަމުން ފުލްޓައިމްކޮށް ޕީއެޗްޑީއަށް ކިޔެވުމަކީ އެކަށީގެންވާ ކަމެއް ނޫން ކަމަށާއި ވަޒީފާ އަދާކުރާ މީހުން އެ ޕްރޮގްރާމުގައި ބައިވެރިވާނަމަ، ޕާޓްޓައިމް އުސޫލުން ކިޔެވުމަށް އަންގާ ކަމަށް ބުނެފައެވެ.",
-      "gold_romanized": "emkiyu'ey'in vanee، vazeefaa adhaakuramun fulta'imkoh pee'echdee'ah kiyevumakee ekasheegenvaa kameh noon kamashaa'i vazeefaa adhaakuraa meehun e prograamuga'i ba'iverivaanama، paatta'im usoolun kiyevumah angaa kamah bunefa'eve.",
+      "gold_romanized": "emkiyu'ey'in vanee, vazeefaa adhaakuramun fulta'imkoh pee'echdee'ah kiyevumakee ekasheegenvaa kameh noon kamashaa'i vazeefaa adhaakuraa meehun e prograamuga'i ba'iverivaanama, paatta'im usoolun kiyevumah angaa kamah bunefa'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "employed މީހަކު வேலை ކުރަމުން ފުރިހަމަ ވަގުތު PhD ކޯހެއް ކުރުމަކީ \"ގަބޫލު ނުވާ\" ކަމެއް ކަމަށާއި، employed ދަރިވަރުން ވަގުތުކުޑަ ނިޒާމުން ރަޖިސްޓްރީ ކުރަންޖެހޭ ކަމަށް އެޭޖެންސީން ഊކ emphasis ކުރިއެވެ.",
@@ -2919,7 +2919,7 @@
       "domain": "news",
       "english": "He further observed that the new year marks 900 years since the nation embraced Islam, describing the milestone as one of profound significance for this generation of Maldivians.",
       "gold_thaana": "އަންނަ އަހަރަކީ، ރާއްޖެ އިސްލާމްވިތާ ހިޖުރީގޮތުން 900 އަހަރު ފުރޭ މުނާސަބާ ދިވެހީންނާ ބައްދަލުކުރާ އަހަރުކަން ފާހަގަކުރައްވައި އެމަނިކުފާނު ވަނީ، މިއީ، މި ޖީލުގެ ދިވެހީންނާ ބައްދަލުވާނޭ އެންމެ ހައިބަތުހުރި އެއް ތާރީޚުގެ ގޮތުގައި ސިފަކުރައްވާފައެވެ.",
-      "gold_romanized": "anna aharakee، raajje islaamvithaa hijureegothun 900 aharu furey munaasabaa dhiveheennaa baddhalukuraa aharukan faahagakuravva'i emanikufaanu vanee، mi'ee، mi jeeluge dhiveheennaa baddhaluvaaney enme ha'ibathuhuri eh thaareekhuge gothuga'i sifakuravvaafa'eve.",
+      "gold_romanized": "anna aharakee, raajje islaamvithaa hijureegothun 900 aharu furey munaasabaa dhiveheennaa baddhalukuraa aharukan faahagakuravva'i emanikufaanu vanee, mi'ee, mi jeeluge dhiveheennaa baddhaluvaaney enme ha'ibathuhuri eh thaareekhuge gothuga'i sifakuravvaafa'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "މި އަހަރަކީ ރާއްޖެއަށް އިސްލާމްދީން შემ llegadoިވި 900 އަހަރު ފުރޭ journée އަހަރެއް ކަމަށް އޭނާ ފާހަގަކުރެއްވިއެވެ. އަދި މި މުހިންމު މަގާމަކީ މި generation ގެ ދިވެހިންނަށް ވަރަށް ބޮޑު މުހިންމުކަމެއްရှိသော ކަމެއް ކަމަށް އޭނާ ސިފަކުރެއްވިއެވެ.",
@@ -2940,7 +2940,7 @@
       "domain": "news",
       "english": "To further strengthen healthcare service delivery on the island, the President inaugurated a newly constructed building at the Dhuvaafaru Health Centre.",
       "gold_thaana": "ހޮސްޕިޓަލު ތަރައްޤީކުރެއްވުމާ ހަމައަށްވެސް ރައްޔިތުންނަށް ޞިއްޙީ ޚިދުމަތްތައް ވީހާވެސް ފުރިހަމަ ގޮތެއްގައި ފޯރުކޮށްދެއްވުމަށް މިހާރުން މިހާރަށް ކުރައްވަމުން ގެންދަވާ މަސައްކަތްތަކުގެ ތެރޭގައި ހިމެނިގެން، ދުވާފަރުގެ ޞިއްޙީ މަރުކަޒަށް އަލަށް އިތުރުކުރެވުނު އިމާރާތް އެމަނިކުފާނު ވަނީ، ރަސްމީކޮށް ހުޅުއްވައިދެއްވާފައެވެ.",
-      "gold_romanized": "hospitalu tharaqqeekurevvumaa hama'ahves rayyithunnah sihhee khidhumatthah veehaaves furihama gothegga'i foarukohdhevvumah mihaarun mihaarah kuravvamun gendhavaa masakkatthakuge thereyga'i himenigen، dhuvaafaruge sihhee marukazah alah ithurukurevunu imaaraath emanikufaanu vanee، rasmeekoh hulhuvva'idhevvaafa'eve.",
+      "gold_romanized": "hospitalu tharaqqeekurevvumaa hama'ahves rayyithunnah sihhee khidhumatthah veehaaves furihama gothegga'i foarukohdhevvumah mihaarun mihaarah kuravvamun gendhavaa masakkatthakuge thereyga'i himenigen, dhuvaafaruge sihhee marukazah alah ithurukurevunu imaaraath emanikufaanu vanee, rasmeekoh hulhuvva'idhevvaafa'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "ޖަޒީރާގެ ސިއްހީ స hizmetްތައް އިތުރަށް ހަރުކޮށް strengthening ކުރުމަށްޓަކައި، ރައީސް ވަރިފާލުކުރެއްވީ ދުވާފަރު ހެލްތް ސެންޓަރުގެ އާކީ ހިމާޔަތްކުރި އިމާރާތެކެވެ.",
@@ -2961,7 +2961,7 @@
       "domain": "news",
       "english": "Furthermore information regarding activities prohibited to conduct in the protected areas will be informed to everyone through special informative programmes.",
       "gold_thaana": "އެސަރަޙައްދުތަކުގައި ކުރުން ހުއްދަ އަދި ކުރުން މަނާކަންކަން އިޢުލާން ކުރުމަށްވެސް ވަނީ ނިންމަވާފައެވެ.",
-      "gold_romanized": "esarahaddhuthakuga'i kurun huddha adhi kurun manaakankan i'ulaan kurumahves vanee ninmavaafa'eve.",
+      "gold_romanized": "esarahaddhuthakuga'i kurun huddha adhi kurun manaakankan iulaan kurumahves vanee ninmavaafa'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "މީގެ އިތުރުން، ރައްކާތެރިކުރެވިފައިވާ ސަރަހద్దుებში ކުރާ ނަބަދު މަނާކޮށްފައިވާ ކަންކަމާ ilgili މަޢުލޫމާތު، ހާއްސަ މައުލޫމާތުކުރާ ޕްރޮގްރާމްތަކުގެ މެދުކޮށް ހުރިހާ ފަރާތަކަށް އަންގަވާނެއެވެ.",
@@ -2982,7 +2982,7 @@
       "domain": "news",
       "english": "10- In the area of Arts and Craftsmanship – Nazim Hassan",
       "gold_thaana": "10- އާރޓް، ފަންނުވެރިކަމުގެ ދާއިރާއިން - ނާޒިމް ޙަސަން.",
-      "gold_romanized": "10- aart، fannuverikamuge dhaa'iraa'in - naazim hasan.",
+      "gold_romanized": "10- aart, fannuverikamuge dhaa'iraa'in - naazim hasan.",
       "predictions": {
         "gemma4": {
           "thaana": "10- އާޓްސް އަދި ހస్తކਲਾގެ ދާއިރާއިން – ނަޒީމް ހަސަން",
@@ -3024,7 +3024,7 @@
       "domain": "news",
       "english": "Only a flat or home that exceeds 400 square feet in the Greater Malé area will count against husbands or wives.",
       "gold_thaana": "ފިރިމީހާ ނުވަތަ އަނބިމީހާގެ 400 އަކަ ފޫޓަށްވުރެ ބޮޑު ފްލެޓެއް ނުވަތަ  ގޯއްޗެއް ގްރޭޓަރ މާލޭ ސަރަޙައްދުގައި ހުރި ނަމަ، ޑިސްކޮލިފައި ވާނެއެވެ.",
-      "gold_romanized": "firimeehaa nuvatha anbimeehaage 400 aka footahvure bodu fleteh nuvatha  goaccheh greytar maaley sarahaddhuga'i huri nama، diskolifa'i vaane'eve.",
+      "gold_romanized": "firimeehaa nuvatha anbimeehaage 400 aka footahvure bodu fleteh nuvatha  goaccheh greytar maaley sarahaddhuga'i huri nama, diskolifa'i vaane'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "ބޮޑު މާލޭ ސަރަހައްދުން 400 စުފު ފޫޓަށްވުރެ ބޮޑު ފްލެޓެއް ނުވަތަގެ ގެއެއް ހުރި ހިމޭލުން ނުވަތަ އަލްބިދާލުންގެ ނަމުގައި ހުރިކަން만이 கணަންކުރާނެއެވެ.",
@@ -3045,7 +3045,7 @@
       "domain": "news",
       "english": "No, but they can state a preference.",
       "gold_thaana": "ނޫނެކެވެ. ނަމަވެސް، އެމީހަކު އެދޭގޮތް ބަޔާންކުރެވިދާނެއެވެ.",
-      "gold_romanized": "noonekeve. namaves، emeehaku edheygoth bayaankurevidhaane'eve.",
+      "gold_romanized": "noonekeve. namaves, emeehaku edheygoth bayaankurevidhaane'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "ނޫން، ނަމަވެސް އެމީހުން ބޭނުންވާ ގޮތް ހާމަކުރާލެވިދާނެ.",
@@ -3066,7 +3066,7 @@
       "domain": "news",
       "english": "Civil servants: 200 (5+ years service, commit to five more years)",
       "gold_thaana": "ސިވިލް ސާރވަންޓުން: 200 (5+ އަހަރު ޚިދުމަތް، އިތުރު ފަސް އަހަރަށް މަސައްކަތް ކުރާން އެއްބަސްވާ)",
-      "gold_romanized": "sivil saarvantun: 200 (5+ aharu khidhumath، ithuru fas aharah masakkath kuraan ebbasvaa)",
+      "gold_romanized": "sivil saarvantun: 200 (5+ aharu khidhumath, ithuru fas aharah masakkath kuraan ebbasvaa)",
       "predictions": {
         "gemma4": {
           "thaana": "ސިቪލް ސާވިސް މުވައްޒަފުން: 200 (5 އަހަރަށްވުރެ ގިނަ ތަޖުރިބާ، އަރިހަމަ އަހަރެއް އިތުރު މަސައްކަތްކުރުމަށް and އެއްބަސްވުން)",
@@ -3087,7 +3087,7 @@
       "domain": "news",
       "english": "Make the constructed ice plants operational and provide ice to fisherman",
       "gold_thaana": "ރާއްޖޭގައި މިހާރު ގާއިމްކޮށްފައިހުރި އައިސް ޕްލާންޓް ތަކުތެރެއިން، އޮޕަރޭޓްނުކޮށް ހުރި ނިޒާމުތައް އޮޕަރޭޓް ކޮށް، މަސްވެރިންނަށް ފަސޭހައިން އައިސް ލިބޭނެގޮތް ހެދޭނެ",
-      "gold_romanized": "raajjeyga'i mihaaru gaa'imkohfa'ihuri a'is plaant thakuthere'in، opareytnukoh huri nizaamuthah opareyt koh، masverinnah faseyha'in a'is libeynegoth hedheyne",
+      "gold_romanized": "raajjeyga'i mihaaru gaa'imkohfa'ihuri ais plaant thakuthere'in, opareytnukoh huri nizaamuthah opareyt koh, masverinnah faseyha'in ais libeynegoth hedheyne",
       "predictions": {
         "gemma4": {
           "thaana": "ގާއިމުކުރި އައިސް ޕްލާންޓްތައް ހަރަކާތްތެރިކޮށް، މަސްވެރިންނަށް އައިސް ފޯރުކޮށްދޭށެވެ.",
@@ -3108,7 +3108,7 @@
       "domain": "news",
       "english": "Prioritising education and experience over family or party ties",
       "gold_thaana": "ވަކި އާއިލާއަކަށް ނުވަތަ ވަކި ފަރާތަކަށް ނުބަލައި، ތައުލީމާއި ތަޖުރިބާއަށް އިސްކަންދީގެން ދައުލަތުގެ މަގާމުތައް ދިނުމަށް",
-      "gold_romanized": "vaki aa'ilaa'akah nuvatha vaki faraathakah nubala'i، tha'uleemaa'i thajuribaa'ah iskandheegen dha'ulathuge magaamuthah dhinumah",
+      "gold_romanized": "vaki aa'ilaa'akah nuvatha vaki faraathakah nubala'i, tha'uleemaa'i thajuribaa'ah iskandheegen dha'ulathuge magaamuthah dhinumah",
       "predictions": {
         "gemma4": {
           "thaana": "ޢާއިލީ ނުވަތަ ፓർട്ടީ ގުޅިލ সম্পর্কތަކަށްވުރެ ތަޢުލީމާއި ތަޖުރިބާއަށް முன்ன মুহূর্তেކުރުން",
@@ -3129,7 +3129,7 @@
       "domain": "news",
       "english": "What changed from November?",
       "gold_thaana": "ނޮވެމްބަރު މަހުން ފެށިގެން ބަދަލުވީ ކޮން ކަމެއް ހެއްޔެވެ؟",
-      "gold_romanized": "novembaru mahun feshigen badhaluvee kon kameh heyyeve؟",
+      "gold_romanized": "novembaru mahun feshigen badhaluvee kon kameh heyyeve?",
       "predictions": {
         "gemma4": {
           "thaana": "ނޮވެމްބަރުން ފަށާލާފައި ބަދަލުވީ რაީ؟",
@@ -3150,7 +3150,7 @@
       "domain": "news",
       "english": "He said the sudden deduction of a large portion of salaries, without prior notice, has left families struggling to cope.",
       "gold_thaana": "މުސާރައަށް އެއްކޮށް ބަރޯސާވާ އަދި ލިބޭ އެއްޗަކުން ކިރިޔާ ދެކޮޅުޖެއްސޭ އާއިލާތަކަށް ކުރިން އެންގުމަކާ ނުލައި، ލިބެމުން އައި މުސާރައިން ބޮޑު ބައެއް އުނިވުމަކީ އެފަދަ އާއިލާތަކުގެ މުޅި ދިރިއުޅުމަށް ގިނަ ދަތިތަކެއް ކުރިމަތި ވެގެންދާނެ ކަމެއް ކަމަށް އާޒިމް ވިދާޅުވިއެވެ.",
-      "gold_romanized": "musaara'ah ekkoh baroasaavaa adhi libey ecchakun kiriyaa dhekolhujessey aa'ilaathakah kurin engumakaa nula'i، libemun a'i musaara'in bodu ba'eh univumakee efadha aa'ilaathakuge mulhi dhiri'ulhumah gina dhathithakeh kurimathi vegendhaane kameh kamah aazim vidhaalhuvi'eve.",
+      "gold_romanized": "musaara'ah ekkoh baroasaavaa adhi libey ecchakun kiriyaa dhekolhujessey aa'ilaathakah kurin engumakaa nula'i, libemun ai musaara'in bodu ba'eh univumakee efadha aa'ilaathakuge mulhi dhiri'ulhumah gina dhathithakeh kurimathi vegendhaane kameh kamah aazim vidhaalhuvi'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "އިލާންކޮށްނުކޮށް، 급ކުލީގެ ބޮޑުބަޔެއް ވަގުތުން ކުލަގަންމާލުމުގެ ސަބަބުން އާއިލާތައް ދަތި ހާލަތެއްގައި ހުރިކަމަށް އޭނާ ပြောިއެވެ.",
@@ -3171,7 +3171,7 @@
       "domain": "news",
       "english": "Make changes to the system to ease the service queue in IGMH",
       "gold_thaana": "އައިޖީއެމްއެޗުގައި ޚިދުމަތުގެ ކިޔޫއަށް ލުޔެއް ލިބިގެންދާނެގޮތަކަށް ނިޒާމަށް ބަދަލުތަކެއް ގެނައުން",
-      "gold_romanized": "a'ijee'em'echuga'i khidhumathuge kiyoo'ah luyeh libigendhaanegothakah nizaamah badhaluthakeh gena'un",
+      "gold_romanized": "aijee'em'echuga'i khidhumathuge kiyoo'ah luyeh libigendhaanegothakah nizaamah badhaluthakeh gena'un",
       "predictions": {
         "gemma4": {
           "thaana": "IGMH ގެ ސާވިސް キュー ކުޑަކުރުމަށް ސިސްޓަމަށް ބަދަލުތައް വരുއްވާށެވެ.",
@@ -3255,7 +3255,7 @@
       "domain": "speech",
       "english": "Under the policy of continuing to provide citizen-centric services, we will be introducing Neighbourhood Police Services to more atolls.",
       "gold_thaana": "ރައްޔިތުންނާ ގާތުން ޚިދުމަތް ދިނުމުގެ ސިޔާސަތުގެ ތެރެއިން، ނެއިބަރހުޑް ޕޮލިސްގެ ޚިދުމަތް، މި އަހަރު އިތުރު އަތޮޅުތަކަށް ތަޢާރުފްކުރެވޭނެ.",
-      "gold_romanized": "rayyithunnaa gaathun khidhumath dhinumuge siyaasathuge there'in، ne'ibarhud polisge khidhumath، mi aharu ithuru atholhuthakah tha'aarufkureveyne.",
+      "gold_romanized": "rayyithunnaa gaathun khidhumath dhinumuge siyaasathuge there'in, ne'ibarhud polisge khidhumath, mi aharu ithuru atholhuthakah tha'aarufkureveyne.",
       "predictions": {
         "gemma4": {
           "thaana": "މި ރާއްޖޭގެ ރައްޔިތުންނަށް އިތުރަށް ފަސޭހަކޮށް ޚިދުމަތްތައް ފޯރުކޮށްދިނުމުގެ ސިޔާސަތުގެ ތެރެއިން، މުޖުތަމަޢީ ފުލުހުންގެ ޚިދުމަތް އިތުރު އަތޮލްތަކަށް ތަހުލީލު ކުރާނެއެވެ.",
@@ -3276,7 +3276,7 @@
       "domain": "speech",
       "english": "A total of 2,180 houses are being built through programs to provide housing within the atolls.",
       "gold_thaana": "އަތޮޅުތެރޭގެ ބޯހިޔާވަހިކަމަށް ހިންގާ މަޝްރޫޢުގެ ދަށުން ޖުމްލަ 2,180 ގެދޮރުގެ މަސައްކަތް، އެކި މަރުޙަލާގައި ކުރިއަށް އެބަދޭ.",
-      "gold_romanized": "atholhuthereyge boahiyaavahikamah hingaa mashroo'uge dhashun jumla 2,180 gedhoruge masakkath، eki maruhalaaga'i kuri'ah ebadhey.",
+      "gold_romanized": "atholhuthereyge boahiyaavahikamah hingaa mashroo'uge dhashun jumla 2,180 gedhoruge masakkath, eki maruhalaaga'i kuri'ah ebadhey.",
       "predictions": {
         "gemma4": {
           "thaana": "އަތޮލްތަކުގެ ތެރޭގައިގެ ގެދޮރު ހިމާޔަތްކުރުމުގެ ޕްރޮގްރާމްތަކުގެ ތެރެއިން మొత్తం 2,180 ގެކަން ވަނީ ހިމަނާމާ ކުރަމުން.",
@@ -3297,7 +3297,7 @@
       "domain": "speech",
       "english": "The Presidential Commission is currently investigating the case.",
       "gold_thaana": "އަދި އެ މައްސަލައިގެ ތަޙުޤީޤު، ރިޔާސީ ކޮމިޝަނުން މިހާރު ކުރިއަށް އެބަ ގެންދޭ.",
-      "gold_romanized": "adhi e massala'ige thahuqeequ، riyaasee komishanun mihaaru kuri'ah eba gendhey.",
+      "gold_romanized": "adhi e massala'ige thahuqeequ, riyaasee komishanun mihaaru kuri'ah eba gendhey.",
       "predictions": {
         "gemma4": {
           "thaana": "ރައީސިއްޔާންގެކޮމިޝަނުން މިހާރު މިކަމުގެ ތަހުގީގު ކުރަމުން 갑니다.",
@@ -3318,7 +3318,7 @@
       "domain": "speech",
       "english": "In the last 15 years, last year’s fish purchase was the highest ever made by MIFCO.",
       "gold_thaana": "ފާއިތުވެދިޔަ 15 އަހަރުގެ ތެރޭގައި، އެންމެގިނަ މަސް މިފްކޯއަށް ކިރުވީ ނިމިދިޔަ އަހަރު.",
-      "gold_romanized": "faa'ithuvedhiya 15 aharuge thereyga'i، enmegina mas mifkoa'ah kiruvee nimidhiya aharu.",
+      "gold_romanized": "faa'ithuvedhiya 15 aharuge thereyga'i, enmegina mas mifkoa'ah kiruvee nimidhiya aharu.",
       "predictions": {
         "gemma4": {
           "thaana": "ވޭތުވެފައިވާ އަހަރު 15 ގެ ތެރެއިން، މި ފަހު އަހަރު މިފްކޯއިން މަސް కొనుއްވައިލީ އެންމެ ބޮޑެކެވެ.",
@@ -3360,7 +3360,7 @@
       "domain": "general",
       "english": "The amendment will take effect from the date on which the Government officially announces the completion of the resettlement and registration of Hirimaradhoo residents in Hanimaadhoo.",
       "gold_thaana": "މި އިޞްލާޙަށް ޢަމަލުކުރަން ފަށާނީ، ތިލަދުންމަތީ ދެކުނުބުރީ ހިރިމަރަދޫގެ ރައްޔިތުން އެ އަތޮޅުގެ ހަނިމާދޫގައި އާބާދުކޮށް ރަޖިސްޓަރީކޮށް ނިމުމާއެކު، އެ ކަން ސަރުކާރުން ޢާންމުކޮށް އިޢުލާނުކުރާ ތާރީޚުން ފެށިގެންނެވެ.",
-      "gold_romanized": "mi islaahah amalukuran fashaanee، thiladhunmathee dhekunuburee hirimaradhooge rayyithun e atholhuge hanimaadhooga'i aabaadhukoh rajistareekoh nimumaa'eku، e kan sarukaarun aanmukoh i'ulaanukuraa thaareekhun feshigenneve.",
+      "gold_romanized": "mi islaahah amalukuran fashaanee, thiladhunmathee dhekunuburee hirimaradhooge rayyithun e atholhuge hanimaadhooga'i aabaadhukoh rajistareekoh nimumaa'eku, e kan sarukaarun aanmukoh iulaanukuraa thaareekhun feshigenneve.",
       "predictions": {
         "gemma4": {
           "thaana": "ހިރިމަރަދޫގެ ރައްޔިތުން ހަނިމާދޫއަށް ބަދަލުކޮށް ރަޖިސްޓްރީކުރުން ނިމުމިކަމާ Pemerintah އިން ރަސްމީކޮށް ހާމަކުރާ ތާރީކުން ފެށިގެން މި އިސްލާހު and అమలుވާނެއެވެ.",
@@ -3402,7 +3402,7 @@
       "domain": "speech",
       "english": "I note that the aforementioned legislation was ratified by this Government following repeated failures by preceding governments to do so over the past 28 years.",
       "gold_thaana": "މި ދެންނެވި ޤާނޫނު އަޅުގަނޑުމެން މި ފާސްކުރީ، ކުރީގެ ސަރުކާރުތަކުން މި ޤާނޫނު ފާސްކުރުމުގެ ވާހަކަ ދައްކާތާ، ދިގު 28 އަހަރަށް ފަހުގައިކަން އަޅުގަނޑު މިއަދު ފާހަގަކޮށްލަން.",
-      "gold_romanized": "mi dhennevi qaanoonu alhugandumen mi faaskuree، kureege sarukaaruthakun mi qaanoonu faaskurumuge vaahaka dhakkaathaa، dhigu 28 aharah fahuga'ikan alhugandu mi'adhu faahagakohlan.",
+      "gold_romanized": "mi dhennevi qaanoonu alhugandumen mi faaskuree, kureege sarukaaruthakun mi qaanoonu faaskurumuge vaahaka dhakkaathaa, dhigu 28 aharah fahuga'ikan alhugandu mi'adhu faahagakohlan.",
       "predictions": {
         "gemma4": {
           "thaana": "ވީމާގަނޑު ޖެހިފައިވާ ގާނޫނަކީ، ކުރީގެ ސަރުކާރުތަކުން గత 28 އަހަރަށްވުރެ ގިނަ ދުވަހެއް ވަގުތު ހ得到了 ނަމަވެސް އެކަން ނުކުރާ އޮތުމަށްފަހު، މި ސަރުކާރުން ރަސްމީކޮށް ފާސްކުރި ގާނޫނެއްކަން ကျွန်တော် ފާހަގަކުރަމެވެ.",
@@ -3423,7 +3423,7 @@
       "domain": "speech",
       "english": "This year, legislation governing Hajj and Umrah, Waqf, and Zakat will be drafted and sent to Parliament for consideration.",
       "gold_thaana": "އަދި ޙައްޖާއި ޢުމްރާއާއި، ވަޤްފުގެ ކަންކަމާއި އަދި ޒަކާތާބެހޭ ޤާނޫނުތައް އެކުލަވައިލައި، މިއަހަރުގެ ތެރޭގައި މި ޢިއްޒަތްތެރި މަޖިލީހަށް ފޮނުވާނަން.",
-      "gold_romanized": "adhi hajjaa'i umraa'aa'i، vaqfuge kankamaa'i adhi zakaathaabehey qaanoonuthah ekulava'ila'i، mi'aharuge thereyga'i mi izzattheri majileehah fonuvaanan.",
+      "gold_romanized": "adhi hajjaa'i umraa'aa'i, vaqfuge kankamaa'i adhi zakaathaabehey qaanoonuthah ekulava'ila'i, mi'aharuge thereyga'i mi izzattheri majileehah fonuvaanan.",
       "predictions": {
         "gemma4": {
           "thaana": "މި އަހަރު، ހަޖް އަދި ޢުމުރަ، ވަഖްފް އަދި ޒަކާތް ހިންގާ ގަވާއިދުތައް އެކުލަވާލައި، ಪರಿ Xétކުރުމަށް ރިހާސިމަޖިލިސްއަށް ފޮނުވާނެއެވެ.",
@@ -3444,7 +3444,7 @@
       "domain": "speech",
       "english": "To that end, we will be providing 1,000 plots of land from Hulhumalé and at least 2,000 plots of land from Gulhifalhu to residents of Malé.",
       "gold_thaana": "އެގޮތުން، މާލޭ ރަށްވެހިންނަށް ހުޅުމާލެއިން މަދުވެގެން 1,000 ގޯތި، ގުޅީފަޅުން މަދުވެގެން 2,000 ގޯތި ދޭނަން.",
-      "gold_romanized": "egothun، maaley rahvehinnah hulhumaale'in madhuvegen 1,000 goathi، gulheefalhun madhuvegen 2,000 goathi dheynan.",
+      "gold_romanized": "egothun, maaley rahvehinnah hulhumaale'in madhuvegen 1,000 goathi, gulheefalhun madhuvegen 2,000 goathi dheynan.",
       "predictions": {
         "gemma4": {
           "thaana": "އިތުރު ކުރިއަށްގޮވައިގެން، މާލޭގެ cưމީންނަށް ހުޅުމާލެއިން 1,000 ބިމާއި، ގުލްފަލްފަހުން މަދުވެގެން 2,000 ބިމެއް ހިފާލާނެކަން తెలియުގަންނަވަމެވެ.",
@@ -3465,7 +3465,7 @@
       "domain": "non-fiction",
       "english": "But what is the reaction?",
       "gold_thaana": "އެކަމަކު، ރައްދަކީ ކޮބާ؟",
-      "gold_romanized": "ekamaku، raddhakee kobaa؟",
+      "gold_romanized": "ekamaku, raddhakee kobaa?",
       "predictions": {
         "gemma4": {
           "thaana": "ނަމަވެސް، މިކަމަށް რა რე އެކ்சަންތޯ ކުރިމަތިވެނީ؟",
@@ -3507,7 +3507,7 @@
       "domain": "speech",
       "english": "As such, 25 percent of the loans that are issued will be solely dedicated to women, youth and persons with disabilities.",
       "gold_thaana": "އެ ސިޔާސަތުގެ ދަށުން ދޫކުރެވޭ ލޯނުގެ 25 އިންސައްތަ ޚާއްޞަ ކުރެވިފައިވަނީ އަންހެނުންނާއި، ޒުވާނުންނާއި، ނުކުޅެދުންތެރިކަން ހުންނަ މީހުންނަށް.",
-      "gold_romanized": "e siyaasathuge dhashun dhookurevey loanuge 25 insattha khaassa kurevifa'ivanee anhenunnaa'i، zuvaanunnaa'i، nukulhedhuntherikan hunna meehunnah.",
+      "gold_romanized": "e siyaasathuge dhashun dhookurevey loanuge 25 insattha khaassa kurevifa'ivanee anhenunnaa'i, zuvaanunnaa'i, nukulhedhuntherikan hunna meehunnah.",
       "predictions": {
         "gemma4": {
           "thaana": "މިގޮތުން، ދޫކުރާ ލޯންތަކުގެ އިންތިސާރީ 25 އިންސައްތަވަކީ ހަމައެކަނި އަންހެނުންނާއި، and ޒުުވާނުންނާއި، އަދި వైކަރީ މީހުންނަށް ހާއްސަކޮށް కేటްކުރެވޭނެ ބައެކެވެ.",
@@ -3528,7 +3528,7 @@
       "domain": "speech",
       "english": "Zakat is another fundamental pillar of Islam, regarded by scholars as vital in ensuring social justice.",
       "gold_thaana": "ޒަކާތަކީ މާތްވެގެންވާ އިސްލާމްދީނުގެ މުހިންމު އަނެއް ރުކުން. ޢިލްމުވެރީން ވިދާޅުވާ ގޮތުގައި، ޒަކާތަކީ އިޖުތިމާޢީ ޢަދާލަތުގެ ވަރަށް ޚާއްޞަ އެއް އަސާސް.",
-      "gold_romanized": "zakaathakee maavvegenvaa islaamdheenuge muhinmu aneh rukun. ilmuvereen vidhaalhuvaa gothuga'i، zakaathakee ijuthimaa'ee adhaalathuge varah khaassa eh asaas.",
+      "gold_romanized": "zakaathakee maavvegenvaa islaamdheenuge muhinmu aneh rukun. ilmuvereen vidhaalhuvaa gothuga'i, zakaathakee ijuthimaa'ee adhaalathuge varah khaassa eh asaas.",
       "predictions": {
         "gemma4": {
           "thaana": "ޒަކާތަކީ އިސްލާމްދީނުގެ އަނެއް މުހިންމަ އުސޫލެއް ކަމަށްވާ ሲ torna، އިޖުތިމާއީ އިންސާފު ކަށަވަރުކުރުމުގައި މިއީ ވަރަށް މުހިންމު ކަމެއް ކަމަށް ޢުލމާއުން ޤަބޫލުކުރެއެވެ.",
@@ -3549,7 +3549,7 @@
       "domain": "speech",
       "english": "Maldivian athletes won a total of 46 medals, including 13 gold medals from international sporting events.",
       "gold_thaana": "ދިވެހި އެތުލީޓުން މިދިޔަ އަހަރު ވާދަކުރި ބައިނަލްއަޤްވާމީ މުބާރާތްތަކުން، 13 ރަން މެޑެއްޔާއެކު، ޖުމްލަ 46 މެޑެލް ރާއްޖެއަށް ލިބުނު.",
-      "gold_romanized": "dhivehi ethuleetun midhiya aharu vaadhakuri ba'inal'aqvaamee mubaaraatthakun، 13 ran medeyyaa'eku، jumla 46 medel raajje'ah libunu.",
+      "gold_romanized": "dhivehi ethuleetun midhiya aharu vaadhakuri ba'inal'aqvaamee mubaaraatthakun, 13 ran medeyyaa'eku, jumla 46 medel raajje'ah libunu.",
       "predictions": {
         "gemma4": {
           "thaana": "އިލާމީ కھیލާތަކުން 13 ރަން މެޑަލް ހިމެނޭގޮތުން، ދިވެހި ފަހަރަކުން మొత్తం 46 މެޑަލް ހޯދާފައިވެއެވެ.",
@@ -3612,7 +3612,7 @@
       "domain": "speech",
       "english": "The Government forecasts a 12 percent increase in Maldivian GDP in 2022 and a total of 1.6 million tourists visiting the Maldives this year.",
       "gold_thaana": "ސަރުކާރުގެ އަންދާޒާއަކީ، މި ހިނގާ 2022 ވަނަ އަހަރު ރާއްޖޭގެ އުފެއްދުންތެރިކަން 12 އިންސައްތައިގެ ކުރިއެރުމެއް ހޯދާނެކަމަށް. އަދި މި އަހަރު ޖުމްލަ 1.6 މިލިއަން ފަތުރުވެރިން ރާއްޖެ ޒިޔާރަތް ކުރާނެކަމަށް.",
-      "gold_romanized": "sarukaaruge andhaazaa'akee، mi hingaa 2022 vana aharu raajjeyge ufeddhuntherikan 12 insattha'ige kuri'erumeh hoadhaanekamah. adhi mi aharu jumla 1.6 mili'an fathuruverin raajje ziyaarath kuraanekamah.",
+      "gold_romanized": "sarukaaruge andhaazaa'akee, mi hingaa 2022 vana aharu raajjeyge ufeddhuntherikan 12 insattha'ige kuri'erumeh hoadhaanekamah. adhi mi aharu jumla 1.6 mili'an fathuruverin raajje ziyaarath kuraanekamah.",
       "predictions": {
         "gemma4": {
           "thaana": "ސަރުކާރުގެ and tahminަކީ 2022 ވަނަ އަހަރީގައި މޯލްޑިވްސްގެ GDP 12 އިން އިތުރުވެବާ and މި އަހަރު މޯލްޑިވްސްއަށް మొత్తం 1.6 މިލިއަން ފަތުރުވެރިން އަންނާނެ ކަމެވެ.",
@@ -3633,7 +3633,7 @@
       "domain": "speech",
       "english": "I note that 2019 was a successful year for the democratic journey we embarked on together.",
       "gold_thaana": "ނިމިގެންދިޔަ 2019 ވަނަ އަހަރަކީ، އަޅުގަނޑުމެން އެކުގައި ފެށި ޑިމޮކްރެސީގެ ދަތުރުގައި ކާމިޔާބު އަހަރެއް.",
-      "gold_romanized": "nimigendhiya 2019 vana aharakee، alhugandumen ekuga'i feshi dimokreseege dhathuruga'i kaamiyaabu ahareh.",
+      "gold_romanized": "nimigendhiya 2019 vana aharakee, alhugandumen ekuga'i feshi dimokreseege dhathuruga'i kaamiyaabu ahareh.",
       "predictions": {
         "gemma4": {
           "thaana": "އަޅުގަނޑުމެން އެކުގައި ފަށާލި ဒီމޮކްރަސީގެ ދަތުރުގައި 2019 ވަނަ އަހަރަކީ ކާމިޔާބު އަހަރެއްކަން އަޅުގަނޑު ފާހަގަކުރަމެވެ.",
@@ -3675,7 +3675,7 @@
       "domain": "speech",
       "english": "Also, the Government will submit a bill proposing amendments to the Tourism Act – Act number 2/99.",
       "gold_thaana": "އަދި \"ދިވެހިރާއްޖޭގެ ޓޫރިޒަމާބެހޭ ޤާނޫނު\"، ޤާނޫނު ނަންބަރު 99/2 އަށް ގެނެވޭ އިޞްލާޙުގެ ބިލް މި މަޖިލީހަށް ހުށަހެޅޭނެ.",
-      "gold_romanized": "adhi \"dhivehiraajjeyge toorizamaabehey qaanoonu\"، qaanoonu nanbaru 99/2 ah genevey islaahuge bil mi majileehah hushahelheyne.",
+      "gold_romanized": "adhi \"dhivehiraajjeyge toorizamaabehey qaanoonu\", qaanoonu nanbaru 99/2 ah genevey islaahuge bil mi majileehah hushahelheyne.",
       "predictions": {
         "gemma4": {
           "thaana": "ވީމާ ޖެހިލާފައި، ޓޫރިޒަމް އެކްޓް - قانون ނަންބަރު 2/99 އަށް ސްލަފުތައް ހުށަހަޅާ ބިލެއް ސަރުކާރުން ހުށަހަޅާނެއެވެ.",
@@ -3696,7 +3696,7 @@
       "domain": "speech",
       "english": "The IMF estimates the Maldives to be among the top five economies globally expected to grow the most in 2022.",
       "gold_thaana": "އައި.އެމް.އެފް. އިން ލަފާކުރާ ގޮތުގައި، މި ހިނގާ 2022 ވަނަ އަހަރުވެސް އެންމެ ބާރަށް ކުރިއަރާނެ ކަމަށް ބެލެވޭ މުޅި ދުނިޔޭގެ 5 އިޤްތިޞާދުގެ ތެރޭގައި ދިވެހިރާއްޖެ ހިމެނޭ.",
-      "gold_romanized": "a'i.'em.'ef. in lafaakuraa gothuga'i، mi hingaa 2022 vana aharuves enme baarah kuri'araane kamah belevey mulhi dhuniyeyge 5 iqthisaadhuge thereyga'i dhivehiraajje himeney.",
+      "gold_romanized": "ai.'em.'ef. in lafaakuraa gothuga'i, mi hingaa 2022 vana aharuves enme baarah kuri'araane kamah belevey mulhi dhuniyeyge 5 iqthisaadhuge thereyga'i dhivehiraajje himeney.",
       "predictions": {
         "gemma4": {
           "thaana": "2022 ވަނަ އަހަރުގައި ప్రపంచ அளவில் އެންމެ ބޮЛЬމި ކުރިއެރުމެއް ލިބޭނެ އެންމެ މުހިންމަ ފަސް ގައުމުގެ ތެރޭގައި ދިވެހިރާއްޖަ ހިމެނޭ ކަމަށް އައި.އެމް.އެފް అంచާކުރެއެވެ.",
@@ -3717,7 +3717,7 @@
       "domain": "speech",
       "english": "Our foreign policy respects the laws and traditions of our neighbours and friends, as well as their territorial integrity, sovereign rights.",
       "gold_thaana": "ރާއްޖޭގެ ޚާރިޖީ ސިޔާސަތު ބިނާކޮށްފައިވަނީ، ބޭރުގެ ޤައުމުތަކުގެ ޤާނޫނުތަކާއި އުޞޫލުތަކާއި، އެ ޤައުމުތަކުގެ އިސްތިޤްލާލު ރަނގަޅަށް ދެނެތިބެ، އެ ޤައުމުތަކާއެކު އެކުވެރިކަން ޤާއިމުކޮށް، ގުޅުން ބަދަހިކުރެވޭނެ ގޮތުގެ މައްޗަށް.",
-      "gold_romanized": "raajjeyge khaarijee siyaasathu binaakohfa'ivanee، beyruge qa'umuthakuge qaanoonuthakaa'i usooluthakaa'i، e qa'umuthakuge isthiqlaalu rangalhah dhenethibe، e qa'umuthakaa'eku ekuverikan qaa'imukoh، gulhun badhahikureveyne gothuge macchah.",
+      "gold_romanized": "raajjeyge khaarijee siyaasathu binaakohfa'ivanee, beyruge qa'umuthakuge qaanoonuthakaa'i usooluthakaa'i, e qa'umuthakuge isthiqlaalu rangalhah dhenethibe, e qa'umuthakaa'eku ekuverikan qaa'imukoh, gulhun badhahikureveyne gothuge macchah.",
       "predictions": {
         "gemma4": {
           "thaana": "އަމަދިމީ విਦੇހި ސިޔާސަތަކީ އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަބަދުކަން އަ",
@@ -3738,7 +3738,7 @@
       "domain": "speech",
       "english": "Next week, with the grace of Almighty Allah, we will embark on an ambitious programme to vaccinate everyone residing in the Maldives.",
       "gold_thaana": "މި އަންނަ ހަފުތާގެ ތެރޭގައި، މާތް ﷲގެ ވާގިފުޅާއެކު، އަޅުގަނޑުމެން މި ފަށަނީ ރާއްޖޭގައި އުޅޭ އެންމެންނަށް ކޯވިޑް ވެކްސިން ޖެހުމުގެ ވަރަށް ބޮޑު ޕްރޮގްރާމެއް.",
-      "gold_romanized": "mi anna hafuthaage thereyga'i، maath ﷲge vaagifulhaa'eku، alhugandumen mi fashanee raajjeyga'i ulhey enmennah koavid veksin jehumuge varah bodu prograameh.",
+      "gold_romanized": "mi anna hafuthaage thereyga'i, maath ﷲge vaagifulhaa'eku, alhugandumen mi fashanee raajjeyga'i ulhey enmennah koavid veksin jehumuge varah bodu prograameh.",
       "predictions": {
         "gemma4": {
           "thaana": "އަލްމަޖީދުﷲގެ އިރާދައިން، އަންނަ ހަފްތާއުގައި ދިވެހިރާއްޖޭގައި 거주ކުރާ ހުރިހާ މީހަކަށް ވެސް ވެކްސިންޖެހުމުގެ އަމާޒު ހުރި ބޮޑު ޕްރޮގްރާމެއް އަޅުގަނޑުމެން ފަށާނެއެވެ.",
@@ -3759,7 +3759,7 @@
       "domain": "speech",
       "english": "Of the cases reported via the Whistleblower Portal, which was established last year to enable secure reporting of corruption, 120 cases have been forwarded to investigative authorities.",
       "gold_thaana": "ކޮރަޕްޝަންގެ މައްސަލަތައް ރިޕޯޓްކުރުމަށް، ޤާއިމުކުރި ވިސްލްބްލޯވަރ ޕޯޓަލްއަށް، މިދިޔަ އަހަރު ހުށަހެޅި މައްސަލަތަކުގެ ތެރެއިން، 120 މައްސަލައެއް މިހާރުވާނީ ތަޙުޤީޤީ އިދާރާތަކަށް ފޮނުވާފައި.",
-      "gold_romanized": "korapshange massalathah ripoatkurumah، qaa'imukuri vislbloavar poatal'ah، midhiya aharu hushahelhi massalathakuge there'in، 120 massala'eh mihaaruvaanee thahuqeeqee idhaaraathakah fonuvaafa'i.",
+      "gold_romanized": "korapshange massalathah ripoatkurumah, qaa'imukuri vislbloavar poatal'ah, midhiya aharu hushahelhi massalathakuge there'in, 120 massala'eh mihaaruvaanee thahuqeeqee idhaaraathakah fonuvaafa'i.",
       "predictions": {
         "gemma4": {
           "thaana": "ރިޝްވަތް ނަގުން ރިޕޯޓްކުރުމަށް ސੁਰކަށިކޮށް ގާއިމުކުރި ވޯސްޓަލްބްލޯއަރ ޕޯޓަލްမှ ރިޕޯޓްކުރި މައްސަލަތަކުގެ ތެރެއިން، 120 މައްސަލައެއް ތަހުގީގުކުރާ އިދާރާތަކަށް ފޮނުވާފައިވެއެވެ.",
@@ -3780,7 +3780,7 @@
       "domain": "speech",
       "english": "The flats built in the ‘Gaakoshi’ area and the former ‘Arabiyya School’ plot will be completed this year, and handed over to their occupants.",
       "gold_thaana": "ޢިމާރާތްކުރަމުންދާ ފްލެޓްތަކުގެ ތެރެއިން ކުރީގެ ޢަރަބިއްޔާ ސްކޫލް ހުރި ބިމުގަޔާއި އަދި ގާކޮށީގައި ހަދާ ފްލެޓްގެ މަސައްކަތް ނިންމައި، އިރާދަކުރެއްވިއްޔާ މިއަހަރު އެ ދެތަނުގައި މީހުން ދިރިއުޅެން ފަށާނެ.",
-      "gold_romanized": "imaaraakkuramundhaa fletthakuge there'in kureege arabiyyaa skool huri bimugayaa'i adhi gaakosheega'i hadhaa fletge masakkath ninma'i، iraadhakurevviyyaa mi'aharu e dhethanuga'i meehun dhiri'ulhen fashaane.",
+      "gold_romanized": "imaaraakkuramundhaa fletthakuge there'in kureege arabiyyaa skool huri bimugayaa'i adhi gaakosheega'i hadhaa fletge masakkath ninma'i, iraadhakurevviyyaa mi'aharu e dhethanuga'i meehun dhiri'ulhen fashaane.",
       "predictions": {
         "gemma4": {
           "thaana": "‘ގާކޮށި’ ސަރަހައްދާއި ކުރީގެ ‘ޢަރަބިއްޔާ ސްކޫލް’ގެ ބިމުގައި and ހަ ricordo ވަނީ ފްލެޓްތައް މި އަހަރު ނިމި، އެކަންކަން އެކަށީގެންވާ ފަރާތްތަކަށް ހަވާލުކުރާނެއެވެ.",
@@ -3801,7 +3801,7 @@
       "domain": "speech",
       "english": "We are working on putting an end to the practice of education being treated as a commodity that is exclusively available to the wealthy.",
       "gold_thaana": "މިހާރު މިކުރާ ކަމަކީ، މަތީ ތަޢުލީމަށް އޮތް ގަނެވިއްކުމުގެ ވިޔަފާރި ބަންދުކުރުން.",
-      "gold_romanized": "mihaaru mikuraa kamakee، mathee tha'uleemah oth ganevikkumuge viyafaari bandhukurun.",
+      "gold_romanized": "mihaaru mikuraa kamakee, mathee tha'uleemah oth ganevikkumuge viyafaari bandhukurun.",
       "predictions": {
         "gemma4": {
           "thaana": "ތަޢުލީމަކީ ހަމައެކަނި މުއްސަނދި މީހުންނަށް ހަމަވާ މުދަލެއްގެ ގޮތުގައި ಪರಿഗണಿಸುವ އާދަތަކަށް ނިމުމެއް తీసుకుދ 주기 위해 మేము މަސައްކަތް ކުރަމެވެ.",
@@ -3822,7 +3822,7 @@
       "domain": "speech",
       "english": "‘HIYA’ (‘Shelter’), the biggest housing project launched by the Government this year, to be completed next year, is expected to provide housing to more than 160,000 people residing in the Maldives.",
       "gold_thaana": "މިހާތަނަށް، ރާއްޖޭގައި ބޯހިޔާވަހިކަމާ ގުޅޭގޮތުން ހިންގާ އެންމެބޮޑު މަޝްރޫޢު ކަމަށްވާ [ހިޔާ] މަޝްރޫޢު، 2019 ވަނަ އަހަރު ނިމޭއިރު، ރާއްޖޭގެ އާބާދީގެ ޖުމުލަ 160,000 އަށްވުރެ ގިނަ އަދަދެއްގެ ބަޔަކަށް، ބޯހިޔާވަހިކަމުގެ ފުރުޞަތު އިރާދަކުރެއްވިއްޔާ ފަހިވެގެންދާނެ.",
-      "gold_romanized": "mihaathanah، raajjeyga'i boahiyaavahikamaa gulheygothun hingaa enmebodu mashroo'u kamahvaa [hiyaa] mashroo'u، 2019 vana aharu nimey'iru، raajjeyge aabaadheege jumula 160,000 ahvure gina adhadhegge bayakah، boahiyaavahikamuge furusathu iraadhakurevviyyaa fahivegendhaane.",
+      "gold_romanized": "mihaathanah, raajjeyga'i boahiyaavahikamaa gulheygothun hingaa enmebodu mashroo'u kamahvaa [hiyaa] mashroo'u, 2019 vana aharu nimey'iru, raajjeyge aabaadheege jumula 160,000 ahvure gina adhadhegge bayakah, boahiyaavahikamuge furusathu iraadhakurevviyyaa fahivegendhaane.",
       "predictions": {
         "gemma4": {
           "thaana": "މި އަހަރު ސަރުކާރުން ފަށާލި އެންމިނަ ބޮޑުގެގެ ပްރޮޖެކްޓް ކަމަށްވާ 'ހިޔާ'، އަންނަ އަހަރެއްގައި ނިމުމަށް ހަމަޖެހިފައިވާއިރު، މޯލްޑިވްސްގައި 거주ކުރާ 160,000 އަށްވުރެ ގިނަ މީ ludziމުންނަށްގެމީގެ ފޯރުކޮށްދެވޭނެ ކަމަށް އުންމީދުކުރެއެވެ.",
@@ -3843,7 +3843,7 @@
       "domain": "speech",
       "english": "There have been favourable outcomes following increased efforts to improve bilateral diplomatic relations and attract foreign aid and assistance.",
       "gold_thaana": "މިރާއްޖޭގެ ޚާރިޖީ ގުޅުންތައް އިތުރުކޮށް، ބޭރުގެ އެހީ ލިބޭ މިންވަރު ބޮޑުކުރުމަށް ކުރެވޭ މަސައްކަތްތަކުގައި ވަރަށް އެދެވޭ ނަތީޖާތަކެއް ދަނީ ފެންނަމުން.",
-      "gold_romanized": "miraajjeyge khaarijee gulhunthah ithurukoh، beyruge ehee libey minvaru bodukurumah kurevey masakkatthakuga'i varah edhevey natheejaathakeh dhanee fennamun.",
+      "gold_romanized": "miraajjeyge khaarijee gulhunthah ithurukoh, beyruge ehee libey minvaru bodukurumah kurevey masakkatthakuga'i varah edhevey natheejaathakeh dhanee fennamun.",
       "predictions": {
         "gemma4": {
           "thaana": "ދެနိုင်ငံကြားގެ and ސ diplomacy ގުޅުންތައް మెరుగుކުރުމަށާއި విదేశީ އެހީތެރިކަން ހޯދުމަށް ކުރި އިތުރު މަސައްކަތްތަކާ ގުޅިގެން ފavorable ނަތީޖާތައް and ވަނީ ކުރިމަތިވެފައެވެ.",
@@ -3864,7 +3864,7 @@
       "domain": "speech",
       "english": "To resolve these issues, a national action plan authorising exchange of intelligence among relevant institutions will be formulated and implemented during this year.",
       "gold_thaana": "މިކަންކަން ޙައްލުކުރުމަށް، ކަމާބެހޭ މުއައްސަސާތަކުގެ މެދުގައި އިންޓެލިޖެންސް މަޢުލޫމާތު ބަދަލުކުރެވޭނޭހެން، ޤައުމީ އެކްޝަން ޕްލޭނެއް އެކުލަވާލައި، ތަންފީޒުކޮށް މޮނިޓަރ ކުރުމުގެ މަސައްކަތް، މި އަހަރުގެ ތެރޭގައި ފެށޭނެ.",
-      "gold_romanized": "mikankan hallukurumah، kamaabehey mu'assasaathakuge medhuga'i intelijens ma'uloomaathu badhalukureveyneyhen، qa'umee ekshan pleyneh ekulavaala'i، thanfeezukoh monitar kurumuge masakkath، mi aharuge thereyga'i fesheyne.",
+      "gold_romanized": "mikankan hallukurumah, kamaabehey mu'assasaathakuge medhuga'i intelijens ma'uloomaathu badhalukureveyneyhen, qa'umee ekshan pleyneh ekulavaala'i, thanfeezukoh monitar kurumuge masakkath, mi aharuge thereyga'i fesheyne.",
       "predictions": {
         "gemma4": {
           "thaana": "މި މައްސަލަތައް ހައްލުކުރުމަށްޓަކައި، ގުޅުންހުރި މުއައްސަސާތަކުގެ މެދުގައި މައުލޫމާތު ހුවéchangeކުރުމަށް ހުއްދަދޭ ގައުމީ and އެކްޝަން ޕްލޭންއެއް މި އަހަރު ތެރޭގައި އެކުލަވައިގެން ހިންގާނެއެވެ.",
@@ -3885,7 +3885,7 @@
       "domain": "speech",
       "english": "Under the programme to assist tsunami affected families, 309 houses that have been built in Thaa Villifushi, have now been occupied;",
       "gold_thaana": "ސުނާމީގައި ގެއްލުންވެފައިވާ ޢާއިލާތަކަށް އެހީތެރިވުމުގައި ހިންގޭ ޕްރޮގްރާމްތަކުގެ ދަށުން ތ.ވިލުފުށީގައި 309 ގެ ޢިމާރާތްކޮށް ނިމި، މީހުން ބަދަލުވެ، އެރަށުގައި މީހުން ދިރިއުޅެން ވަނީ ފަށާފައި.",
-      "gold_romanized": "sunaameega'i gellunvefa'ivaa aa'ilaathakah eheetherivumuga'i hingey prograamthakuge dhashun th.vilufusheega'i 309 ge imaaraakkoh nimi، meehun badhaluve، erashuga'i meehun dhiri'ulhen vanee fashaafa'i.",
+      "gold_romanized": "sunaameega'i gellunvefa'ivaa aa'ilaathakah eheetherivumuga'i hingey prograamthakuge dhashun th.vilufusheega'i 309 ge imaaraakkoh nimi, meehun badhaluve, erashuga'i meehun dhiri'ulhen vanee fashaafa'i.",
       "predictions": {
         "gemma4": {
           "thaana": "সুনާމީއާ ހިމ相关 families އެމީމީގެ އެހީތެރިކަމުގެ ޕްރޮގްރާމްގެ ދަށުން، ތާ. విލިފުށީގައި నిర్މިކުރި 309ގެރި މިހާރު ވަނީ ބޭނުންކުރަން ފަށާފައެވެ.",
@@ -3906,7 +3906,7 @@
       "domain": "speech",
       "english": "Last year, more than 15,300 students received MVR 1.26 billion in financial assistance for higher education.",
       "gold_thaana": " ފާއިތުވި އަހަރު ޖުމުލަ 15,300 އަށްވުރެ ގިނަ ދަރިވަރުން، މަތީ ތަޢުލީމު ހާސިލުކުރުމަށް 1.26 ބިލިއަން ރުފިޔާގެ މާލީ އެހީ ވާނީ ދެވިފައި.",
-      "gold_romanized": " faa'ithuvi aharu jumula 15,300 ahvure gina dharivarun، mathee tha'uleemu haasilukurumah 1.26 bili'an rufiyaage maalee ehee vaanee dhevifa'i.",
+      "gold_romanized": " faa'ithuvi aharu jumula 15,300 ahvure gina dharivarun, mathee tha'uleemu haasilukurumah 1.26 bili'an rufiyaage maalee ehee vaanee dhevifa'i.",
       "predictions": {
         "gemma4": {
           "thaana": "ގަސްތަ އަހަރު، މަތީގެ ပަފަ<|channel>ތަކަށް ހިސާބުން 15,300 އަށްވުރެ ގިނަ ދަރިވަރުންނަށް 1.26 ބިލިއަން രൂപްޔަލ相当于ގެ މާލީ އެހީތެރިކަން ލިބިയിފިއެވެ.",
@@ -3927,7 +3927,7 @@
       "domain": "speech",
       "english": "Thalassemia screening services will also be available this year in hospitals across the country",
       "gold_thaana": "އަދި އަތޮޅުތެރޭގެ ހުރިހާ ހޮސްޕިޓަލަކުންވެސް ތެލަސީމިއާއަށް ސްކްރީން ކުރުމުގެ ޚިދުމަތް، މިއަހަރުގެ ތެރޭގައި ހަމަޖެހިގެންދާނެ.",
-      "gold_romanized": "adhi atholhuthereyge hurihaa hospitalakunves thelaseemi'aa'ah skreen kurumuge khidhumath، mi'aharuge thereyga'i hamajehigendhaane.",
+      "gold_romanized": "adhi atholhuthereyge hurihaa hospitalakunves thelaseemi'aa'ah skreen kurumuge khidhumath, mi'aharuge thereyga'i hamajehigendhaane.",
       "predictions": {
         "gemma4": {
           "thaana": "މި އަހަރު ގައުމުގެ ހުރިހާ ހޮስፒޓަލްތަކުން ތަލަސީމިއާގެ စކްރީނިންގް ހިދުމަތްތައްވެސް ലഭ്യވާނެއެވެ.",
@@ -3948,7 +3948,7 @@
       "domain": "speech",
       "english": "On November 3, 2024, the Special Boat Squadron was launched to enhance the Coast Guard’sspecial operations capabilities.",
       "gold_thaana": "ކޯސްޓްގާޑުގެ ސްޕެޝަލް އޮޕަރޭޝަންތަކަށް \"ސްޕެޝަލް ބޯޓް ސްކޮޑްރަން\" 3 ނޮވެންބަރު 2024 ގައި ވާނީ އުފައްދައި، ޚިދުމަތަށް ނެރެފައި.",
-      "gold_romanized": "koastgaaduge speshal opareyshanthakah \"speshal boat skodran\" 3 novenbaru 2024 ga'i vaanee ufaddha'i، khidhumathah nerefa'i.",
+      "gold_romanized": "koastgaaduge speshal opareyshanthakah \"speshal boat skodran\" 3 novenbaru 2024 ga'i vaanee ufaddha'i, khidhumathah nerefa'i.",
       "predictions": {
         "gemma4": {
           "thaana": "ކޯސްޓްގާޑްގެ and ልዩ އޮޕަރޭޝަންތަކުގެ సామާrތް ބޮetapkanިމen 为了 3 ނޮވެމްބަރު 2024 ގައި، ސްޕެޝަލް ބޯޓް ސްކުއާޑްރަން އުފެއްދިಲಾಯಿತು.",
@@ -4011,7 +4011,7 @@
       "domain": "non-fiction",
       "english": "1. In war, the general receives his commands from the sovereign, collects his army and concentrates his forces.",
       "gold_thaana": "1. ހަނގުރާމައިގެ ޢާންމު އުޞޫލަކީ، ރައްޔިތުން ތައްޔާރީ ޙާލަތަށްގެނެސް، ލަޝްކަރު ޖަމާކުރުމަށް ޖެނެރަލްއަށް އަމުރު ކުރާނީ ޤައުމުގެ ވެރިޔާއެވެ.",
-      "gold_romanized": "1. hanguraama'ige aanmu usoolakee، rayyithun thayyaaree haalathahgenes، lashkaru jamaakurumah jeneral'ah amuru kuraanee qa'umuge veriyaa'eve.",
+      "gold_romanized": "1. hanguraama'ige aanmu usoolakee, rayyithun thayyaaree haalathahgenes, lashkaru jamaakurumah jeneral'ah amuru kuraanee qa'umuge veriyaa'eve.",
       "predictions": {
         "gemma4": {
           "thaana": "1. ހަނގުރާމީ ހާލަތެއްގައި، ஜெނറަލް އޭނާގެ އަމުރުތައް అందుకుނީ ސަރުކާރ représentantsކުރާ މީހާއிடައި and އޭނާގެ సైންޔާ ޖަމާކޮށް، ބާރުތައް އެކުކުރެއެވެ.",
@@ -4053,7 +4053,7 @@
       "domain": "speech",
       "english": "The Presidential Commission on Investigation of Murders and Enforced Disappearances is currently in the process of wrapping up its final reports on the murder of Yameen Rasheed and disappearance of Ahmed Rilwan Abdulla.",
       "gold_thaana": "ގޮތް ނޭނގޭ މަރުތަކާއި ވީނުވީއެއް ނޭނގި ގެއްލިފައިވާ މީހުންގެ މައްސަލަތައް ތަޙުޤީޤުކުރާ ކޮމިޝަނުން ބެލި މައްސަލަތަކުގެ ތެރެއިން، ޔާމީން ރަޝީދާއި، އަޙްމަދު ރިޟްވާން ޢަބްދުﷲގެ މައްސަލައިގެ ރިޕޯޓް ފުރިހަމަކުރުމުގެ މަސައްކަތް މިހާރު އަންނަނީ ކުރެވެމުން.",
-      "gold_romanized": "goth neyngey maruthakaa'i veenuvee'eh neyngi gellifa'ivaa meehunge massalathah thahuqeequkuraa komishanun beli massalathakuge there'in، yaameen rasheedhaa'i، ahmadhu ridvaan abdhuﷲge massala'ige ripoat furihamakurumuge masakkath mihaaru annanee kurevemun.",
+      "gold_romanized": "goth neyngey maruthakaa'i veenuvee'eh neyngi gellifa'ivaa meehunge massalathah thahuqeequkuraa komishanun beli massalathakuge there'in, yaameen rasheedhaa'i, ahmadhu ridvaan abdhuﷲge massala'ige ripoat furihamakurumuge masakkath mihaaru annanee kurevemun.",
       "predictions": {
         "gemma4": {
           "thaana": "ޔާމީން ރަޝީދު މަރާލުމާއި އަހުމަދު ރިލްވާން އަބްދުﷲގެ and mấtުވެލުމާ ގުޅޭގޮތުން ރައީސިކޮމިޝަނުން ތನಿಖަކުރަމުންދާ ކޮމިޝަނަކީ މިހާރު އެކަމުގެ ފަހު ރިޕޯޓްތައް ނިންމާލުމުގެ މަސައްކަތުގައި އުޅޭ ކޮމިޝަނެވެ.",
@@ -4116,7 +4116,7 @@
       "domain": "non-fiction",
       "english": "8. (3) When the force of the flames has reached its height, follow it up with an attack, if that is practicable; if not, stay where you are.",
       "gold_thaana": "8. )ނ( – ހުޅުގަނޑު ބޮޑުވެ، އޭގެ އުސްމިނަށް ފޯރުމުން، ކުޅަދާނަނަމަ، އެއާއި ގުޅުވާލެވޭ ޙަމަލާއެއް ދޭށެވެ؛ ނޫންނަމަ ހަމަޖެހިލާށެވެ.",
-      "gold_romanized": "8. )n( – hulhugandu boduve، eyge usminah foarumun، kulhadhaananama، e'aa'i gulhuvaalevey hamalaa'eh dheysheve؛ noonnama hamajehilaasheve.",
+      "gold_romanized": "8. )n( – hulhugandu boduve, eyge usminah foarumun, kulhadhaananama, eaa'i gulhuvaalevey hamalaa'eh dheysheve; noonnama hamajehilaasheve.",
       "predictions": {
         "gemma4": {
           "thaana": "8. (3) އލިމުގެ ބާރު އެންމެ މަހާލަވުމުން، އެކަމުގައި ކުރިއަށް بڑھި ހަމަލާއެއް ކުރޭ، އެކަމަކީ ކުރެވިދާނެ ކަމެއް ނަމަ؛ ނޫން ނަމަ، ތިބިތާކު ތިބާށެވެ.",
@@ -4158,7 +4158,7 @@
       "domain": "speech",
       "english": "Finally, with the unanimous support from the international community, as of the 1st of February, the Maldives is once again part of the Commonwealth family.",
       "gold_thaana": "ބައިނަލްއަޤްވާމީ މުޖުތަމަޢުގެ ފުރިހަމަ އެހީތެރިކަމާއެކު، މި މަހުގެ ފުރަތަމަ ދުވަހުން ފެށިގެން، ދިވެހިރާއްޖެ އަނެއްކާވެސް މިވަނީ ކޮމަންވެލްތުގެ މެމްބަރު ޤައުމަކަށްވެފައި.",
-      "gold_romanized": "ba'inal'aqvaamee mujuthama'uge furihama eheetherikamaa'eku، mi mahuge furathama dhuvahun feshigen، dhivehiraajje anekkaaves mivanee komanvelthuge membaru qa'umakahvefa'i.",
+      "gold_romanized": "ba'inal'aqvaamee mujuthama'uge furihama eheetherikamaa'eku, mi mahuge furathama dhuvahun feshigen, dhivehiraajje anekkaaves mivanee komanvelthuge membaru qa'umakahvefa'i.",
       "predictions": {
         "gemma4": {
           "thaana": "މިހާރު، ބައިލަހި quốc tếއީ މުޖتمعގެ އެކަހި އެއްބަސްކަމާއެކު، ފެބްރުއަރީ މަހުގެ 1 ވަނަ ދުވަހުން ފެށިގެން ދިވެހިރާއްޖެ åter ځ തുടങ്ങിയ Commonwealth އާއި ގުޅިގެން ވަނީއެވެ.",
@@ -4179,7 +4179,7 @@
       "domain": "speech",
       "english": "It was Summuvul Ameer the late Ibrahim Nasir Rannabandeyri Kilegefaan, recipient of The Most Honourable Order of the Distinguished Rule of Ghaazee, who spearheaded our independence with his wisdom and decisiveness.",
       "gold_thaana": "ޙިކްމަތު ޢަމަލީގެ ވަރަށް ފުރިހަމަ ނަމޫނާއެއް ދައްކަވައި، ރާއްޖެއަށް މިނިވަންކަން ހޯއްދަވައިދެއްވީ، ނިޝާން ޣާޒީގެ ޢިއްޒަތްތެރި ވެރިޔާ، ސުމުއްވުލް އަމީރު އަލްމަރްޙޫމް އިބްރާހީމް ނާޞިރު ރަންނަބަނޑޭރި ކިލެގެފާނު.",
-      "gold_romanized": "hikmathu amaleege varah furihama namoonaa'eh dhakkava'i، raajje'ah minivankan hoaddhava'idhevvee، nishaan ghaazeege izzattheri veriyaa، sumuvvul ameeru almarhoom ibraaheem naasiru rannabandeyri kilegefaanu.",
+      "gold_romanized": "hikmathu amaleege varah furihama namoonaa'eh dhakkava'i, raajje'ah minivankan hoaddhava'idhevvee, nishaan ghaazeege izzattheri veriyaa, sumuvvul ameeru almarhoom ibraaheem naasiru rannabandeyri kilegefaanu.",
       "predictions": {
         "gemma4": {
           "thaana": "މި ގައުމުގެ މިނިވަންކަމަށް މަގުހުރިގޮތް ތަޖުރިބާކޮށް، ހިކުމަތާއި ނިންމުންތަކުން މިނިވަންކަން ހޯދައިދެއްവിީ، ގާޒީގެ މަތިވެރިކަމުގެ ސަންމަބަސް ލިބިވަޑައިގަތް ސުންމުވުލް އަމީރު މަރާހިލް އިބްރާހިމް ނަސީރު ރަންނަބަންޑޭރީކިލޭގެފާނެވެ.",
@@ -4200,7 +4200,7 @@
       "domain": "speech",
       "english": "Social justice and stability cannot be established without protecting the rights of the people.",
       "gold_thaana": "ރައްޔިތުންގެ ޙައްޤުތައް ޙިމާޔަތް ނުކުރެވޭހާ ހިނދަކު، އިޖުތިމާޢީ ޢަދާލަތެއްވެސް، އަދި ހަމަޖެހުމެއްވެސް ޤާއިމެއްނުކުރެވޭނެ.",
-      "gold_romanized": "rayyithunge haqquthah himaayath nukureveyhaa hindhaku، ijuthimaa'ee adhaalathevves، adhi hamajehumevves qaa'imennukureveyne.",
+      "gold_romanized": "rayyithunge haqquthah himaayath nukureveyhaa hindhaku, ijuthimaa'ee adhaalathevves, adhi hamajehumevves qaa'imennukureveyne.",
       "predictions": {
         "gemma4": {
           "thaana": "މީހުންގެ ހައްގުތައް ރައްކާތެރިކުރުމާ ނުލައި، సాাজিক އިންސާފާއި and and stability ގާއިމުކުރެވޭ ނުވާނެއެވެ.",
@@ -4221,7 +4221,7 @@
       "domain": "speech",
       "english": "Additionally, the National Centre for Heritage Protection was founded, coordinators appointed, and research initiatives are now underway.",
       "gold_thaana": "ދިވެހި ތަރިކަ ރައްކާތެރިކުރާ ޤައުމީ މަރުކަޒު އުފައްދައި، ވިލަރެސްވެރީން ނަގައި، ދިރާސާތައް ވާނީ ފަށައިފައި.",
-      "gold_romanized": "dhivehi tharika rakkaatherikuraa qa'umee marukazu ufaddha'i، vilaresvereen naga'i، dhiraasaathah vaanee fasha'ifa'i.",
+      "gold_romanized": "dhivehi tharika rakkaatherikuraa qa'umee marukazu ufaddha'i, vilaresvereen naga'i, dhiraasaathah vaanee fasha'ifa'i.",
       "predictions": {
         "gemma4": {
           "thaana": "މީގެ އިތުރުން، ނޭޝަނަލް ސੈਂޓަރ ފޯ ހެރިޓޭޖް ޕްރޮޓެކްޝަން އުފެއްދި并且، ކޯޑިނޭޓަރުން ނspaceship، އަދި ރިސާޗް އިނީޝިއޭޓިވްތައް މިހާރު ކުރިއަށްޤަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަަ",
@@ -4242,7 +4242,7 @@
       "domain": "speech",
       "english": "Last year, fundamental changes were brought to the administrative framework of our National Defence Force in order to ensure that the military is a trusted force that functions independent of political influence.",
       "gold_thaana": "ދިވެހި ޢަސްކަރިއްޔާއަކީ، ސިޔާސީ ނުފޫޒުން އެއްކިބާވެ، ރައްޔިތުންގެ ފުރިހަމަ އިތުބާރާއި ލޯތްބާއެކު، މަސައްކަތްކުރާ ޕްރޮފެޝަނަލް ބަޔަކަށް ހެދުމަށް، މިދިޔަ އަހަރުގެ ތެރޭގައި، ދިވެހިރާއްޖޭގެ ޤައުމީ ދިފާޢީ ބާރުގެ، ހިންގުމުގެ އޮނިގަނޑަށް މުހިންމު ބަދަލުތަކެއް ގެނެވުނު.",
-      "gold_romanized": "dhivehi askariyyaa'akee، siyaasee nufoozun ekkibaave، rayyithunge furihama ithubaaraa'i loabbaa'eku، masakkakkuraa profeshanal bayakah hedhumah، midhiya aharuge thereyga'i، dhivehiraajjeyge qa'umee dhifaa'ee baaruge، hingumuge onigandah muhinmu badhaluthakeh genevunu.",
+      "gold_romanized": "dhivehi askariyyaa'akee, siyaasee nufoozun ekkibaave, rayyithunge furihama ithubaaraa'i loabbaa'eku, masakkakkuraa profeshanal bayakah hedhumah, midhiya aharuge thereyga'i, dhivehiraajjeyge qa'umee dhifaa'ee baaruge, hingumuge onigandah muhinmu badhaluthakeh genevunu.",
       "predictions": {
         "gemma4": {
           "thaana": "ސިފާއިލާހީ ގަދަބަރުން ސިޔާސީ ނުފ 영향ުން މިނިވަהކޮށް، އިތުބާރުކޮށްލެވޭ ބަރުއެއްކަން ކަށަވަރުކުރުމަށްޓަކައި، ކުރިމަނަ އަހަރު އަމިނިޝަންގެ ނިޒާމަށް ބুনާދީހި ބަދަލުތައް తీసుకు جާވިއެވެ.",
@@ -4263,7 +4263,7 @@
       "domain": "speech",
       "english": "This historic occasion calls upon us to aim towards preserving our independence and sovereignty at all times.",
       "gold_thaana": "ހަމަ މި މުނާސަބަތުގައި އަޅުގަނޑުމެން ޢަޒުމް ކަނޑައަޅަންވީ، އެ ޙައްޤުތައް ތާއަބަދަށް ކަށަވަރުކުރުމަށްޓަކައި، އަޅުގަނޑުމެންގެ މިނިވަންކަމާއި ސިޔާދަތު ރައްކާތެރިކުރުމުގައި ދެމިތިބުމަށް.",
-      "gold_romanized": "hama mi munaasabathuga'i alhugandumen azum kanda'alhanvee، e haqquthah thaa'abadhah kashavarukurumahtaka'i، alhugandumenge minivankamaa'i siyaadhathu rakkaatherikurumuga'i dhemithibumah.",
+      "gold_romanized": "hama mi munaasabathuga'i alhugandumen azum kanda'alhanvee, e haqquthah thaa'abadhah kashavarukurumahtaka'i, alhugandumenge minivankamaa'i siyaadhathu rakkaatherikurumuga'i dhemithibumah.",
       "predictions": {
         "gemma4": {
           "thaana": "މި ތާሪކީ މުނާސަބާއަކީ އަބަދުވެཅޭ ನಮ್ಮ މިނިވަރުކަމާއި ސިޔާދަތު ރައްކާލުމަށް މަސައްކަތްކުރުމަށް އަމަޒުކުރާ މުހިމު ވަގުތެވެ.",
