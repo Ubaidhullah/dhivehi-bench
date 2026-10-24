@@ -79,6 +79,7 @@ VOWELS = {
 }
 
 SUKUN = '\u07b0'
+PUNCT_MAP = {'\u060c': ',', '\u061b': ';', '\u061f': '?'}
 
 def transliterate_word(w):
     if w == '(އ)':
@@ -89,7 +90,10 @@ def transliterate_word(w):
     while i < n:
         c = w[i]
         
-        if c in CONSONANTS:
+        if c in PUNCT_MAP:
+            res.append(PUNCT_MAP[c])
+            i += 1
+        elif c in CONSONANTS:
             # Check next character
             if i + 1 < n and w[i+1] in VOWELS:
                 v = VOWELS[w[i+1]]
