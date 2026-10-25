@@ -40,7 +40,7 @@ MODELS = [
         "tokenizer_type": "SentencePiece (Byte-fallback)",
         "base_vocab_size": 256000,
         "effective_vocab_size": "262,144 (~262k)*",
-        "single_char_thaana": 42,
+        "single_char_thaana": 43,
         "multi_char_merges": 0,
         "notes": "* Architectural projection dimension is d x 262,144 (MTP layer)"
     },
