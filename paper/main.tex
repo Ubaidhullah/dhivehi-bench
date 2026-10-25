@@ -206,19 +206,19 @@ Because written Dhivehi requires diacritic stacking---attaching a vowel diacriti
 \begin{table}[t]
 \centering
 \small
-\setlength{\tabcolsep}{3.5pt}
 \caption{Tokenizer Architecture and Empirical Thaana Coverage Across Evaluated Models. A token is classified as Thaana if its decoded UTF-8 byte representation contains codepoints in \texttt{U+0780}--\texttt{U+07BF}. Across open-weights models, multi-character Thaana merges are zero, resulting in sub-syllabic and byte-level fragmentation on continuous text, while NLLB-200 collapses to \texttt{<unk>} due to missing Thaana vocabulary and lack of byte fallback.}
 \label{tab:tokenizer_vocab}
-\begin{tabular}{llcccc}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llcccc@{}}
 \toprule
-\textbf{Model} & \textbf{Tokenizer Family} & \textbf{Base Vocab} & \textbf{Effective Vocab} & \textbf{Thaana Tokens} & \textbf{Multi-Char Merges} \\
+\textbf{Model} & \textbf{Tokenizer} & \textbf{Base} & \textbf{Effective} & \textbf{Thaana} & \textbf{Multi-Char} \\
+ & \textbf{Family} & \textbf{Vocab} & \textbf{Vocab} & \textbf{Tokens} & \textbf{Merges} \\
 \midrule
-Gemma 4 (31B) & SentencePiece & 256,000 & 262,144\textsuperscript{*} & 42 & 0 \\
+Gemma 4 (31B) & SentencePiece & 256,000 & 262,144\rlap{\textsuperscript{*}} & 42 & 0 \\
 Llama 3.1 (70B) & Tiktoken BPE & 128,000 & 128,256 & 0 & 0 \\
-Qwen 2.5 (72B) & Tiktoken BPE & 151,643 & 152,064 & 8\textsuperscript{\dag} & 0 \\
-NLLB-200 (600M--3.3B) & SentencePiece & 256,204 & 256,204 & 1\textsuperscript{\ddag} & 0 \\
+Qwen 2.5 (72B) & Tiktoken BPE & 151,643 & 152,064 & 8\rlap{\textsuperscript{\dag}} & 0 \\
+NLLB-200 (600M--3.3B) & SentencePiece & 256,204 & 256,204 & 1\rlap{\textsuperscript{\ddag}} & 0 \\
 \bottomrule
-\end{tabular}
+\end{tabular*}
 \begin{flushleft}
 \footnotesize
 \textsuperscript{*} The base SentencePiece unigram vocabulary is 256,000; the architectural embedding and projection layers are dimensioned to $d \times 262,144$ ($2^{18}$, $\approx 262\text{k}$) in the Gemma Technical Report \cite{team_gemma_2026}.\\
