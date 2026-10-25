@@ -120,7 +120,7 @@ If you use Dhivehi-Bench in your research, please cite:
 
 ```bibtex
 @article{dhivehibench2026,
-  title={Dhivehi-Bench: A Comprehensive Benchmark for Evaluating Large Language Models on the Maldivian Language},
+  title={Dhivehi-Bench: A Multi-Task Dataset and Benchmark for the Maldivian Language},
   author={Hameed, Ubaidhullah Abdul},
   journal={ACM Transactions on Asian and Low-Resource Language Information Processing (TALLIP)},
   year={2026}
