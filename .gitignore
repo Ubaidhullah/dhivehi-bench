@@ -222,10 +222,11 @@ Thumbs.db
 */data/extracted_text/
 */data/pdfs/
 *.pdf
-!paper/*.pdf
 
 # Review Studio standalone repository
 dhivehi-review-studio/
 
-# ACM template bundle
+# ACM template bundle and manuscript files
 acm_paper/
+paper/
+dhivehi_bench_overleaf.zip

@@ -60,7 +60,7 @@ python3 scripts/verify_tokenizers.py
 
 | Model | Tokenizer Family | Base Vocab | Effective Vocab | Thaana Tokens | Multi-Char Merges | Fallback Rate |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| **Gemma 4 (31B)** | SentencePiece | 256,000 | 262,144* | 42 | **0** | **100% (Fallback)** |
+| **Gemma 4 (31B)** | SentencePiece | 256,000 | 262,144* | 43 | **0** | **100% (Fallback)** |
 | **Llama 3.1 (70B)** | Tiktoken BPE | 128,000 | 128,256 | 0 | **0** | **100% (Fallback)** |
 | **Qwen 2.5 (72B)** | Tiktoken BPE | 151,643 | 152,064 | 8† | **0** | **100% (Fallback)** |
 
@@ -84,10 +84,7 @@ dhivehi-bench/
 │   └── data/                            # 2,016 parallel pairs (EN-DV / DV-EN)
 ├── scripts/
 │   └── verify_tokenizers.py             # Reproducible tokenizer & vocabulary verification
-├── paper/
-│   ├── main.tex                         # Complete LaTeX manuscript
-│   ├── references.bib                   # BibTeX bibliographic entries
-│   └── fig_tokenization.pdf             # Tokenization tax diagram (Figure 2)
+├── LICENSE                              # Dual license (MIT for code, CC BY-NC 4.0 for data)
 └── README.md
 ```
 
@@ -114,21 +111,6 @@ dhivehi-bench/
 
 ---
 
-## 📜 Citation
-
-If you use Dhivehi-Bench in your research, please cite:
-
-```bibtex
-@article{dhivehibench2026,
-  title={Dhivehi-Bench: A Multi-Task Dataset and Benchmark for the Maldivian Language},
-  author={Hameed, Ubaidhullah Abdul},
-  journal={ACM Transactions on Asian and Low-Resource Language Information Processing (TALLIP)},
-  year={2026}
-}
-```
-
----
-
 ## 📄 License
-- **Code & Scripts:** Licensed under the [MIT License](LICENSE).
-- **Benchmark Datasets:** Licensed under the [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/) license.
+- **Code & Scripts (`scripts/`, `evaluation/`, scrapers):** Licensed under the [MIT License](LICENSE).
+- **Benchmark Datasets (`mcq/data/`, `context_qa/data/`, `translation/`, `results/`):** Licensed under the [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/) license.
