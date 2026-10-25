@@ -428,12 +428,12 @@ Word-level BLEU remains suppressed across all three models ($\leq 0.32$). Howeve
 & \textbf{Gemma 4 (31B):} 2. \underline{hakku} eh nungaa adha libarun limiting kurun ge \underline{maqsadu} adha ege \underline{ahmiyyath}; \\
 & \textit{\footnotesize Qualitative note: Model retrieves valid Arabic loan synonyms (\textit{hakku} [right], \textit{maqsadu} [purpose], \textit{ahmiyyath} [importance]) where the formal legal reference uses native/inflected Dhivehi phrasing (\textit{haqqeh}, \textit{beynumaa'i}, \textit{muhinmukan}), yielding 0.0 word-BLEU despite semantic alignment.} \\
 \midrule
-\textbf{English Code-Switching \& Dhivehi Inflection} & \textbf{Source (EN):} The jurisdiction of the Judicial Service Commission shall extend to all members of the Judiciary and such other persons as designated by the People’s Majlis. \\
+\textbf{English Code-Switching \& Dhivehi Inflection} & \textbf{Source (EN):} The jurisdiction of the Judicial Service Commission shall extend to all members of the Judiciary and such other persons as designated by the People's Majlis. \\
 & \textbf{Gold (Mal\'{e} Latin):} adhulu insaafu qaa'imkurumuge baaruga'i himeney enmeha'i meehunaa'i, rayyithunge majileehun kanda'alhaa konme faraathegge macchah judeeshal sarvis komishanuge ikhthisaas hingaane'eve. \\
 & \textbf{Gemma 4 (31B):} \underline{Judicial Service Commission-ge} \underline{jurisdiction-aa} hifaa-fai vanee, Judiciary-ge gaana-gaana \underline{members-ah} aa People's Majlis-a\dots \\
 & \textit{\footnotesize Qualitative note: Model retains English technical nouns but attaches productive Dhivehi case clitics (genitive \textit{-ge}, conjunctive \textit{-aa}, dative \textit{-ah}), reflecting syntactic grammatical frame competence alongside lexical retrieval failure.} \\
 \midrule
-\textbf{Morphological Particle Loops} & \textbf{Source (EN):} (h) to issue declarations of war and peace, and to immediately submit such declarations to the People’s Majlis for approval; \\
+\textbf{Morphological Particle Loops} & \textbf{Source (EN):} (h) to issue declarations of war and peace, and to immediately submit such declarations to the People's Majlis for approval; \\
 & \textbf{Gold (Mal\'{e} Latin):} (a) hanguraama nuvatha sulha i'ulaankurumuge qaraaru nerumaa'i, efadha qaraaruthah rayyithunge majileehun faaskurumahtaka'i e majileehah evaguthun hushahelhun. \\
 & \textbf{Gemma 4 (31B):} (h) war eh \underline{thah thah thah thah thah thah thah thah thah thah thah thah}\dots \\
 & \textit{\footnotesize Qualitative note: In Latin script, decoders avoid byte-level Unicode loops but remain vulnerable to grammatical particle loops, repeatedly generating the plural marker \textit{thah}.} \\
