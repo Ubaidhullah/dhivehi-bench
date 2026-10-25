@@ -32,7 +32,7 @@
 
 \begin{document}
 
-\title{Dhivehi-Bench: A Comprehensive Benchmark for Evaluating Large Language Models on the Maldivian Language}
+\title{Dhivehi-Bench: Evaluating Large Language Models on the Maldivian Language}
 
 \author{Anonymous Author(s)}
 \affiliation{%
@@ -41,7 +41,7 @@
 }
 
 \begin{abstract}
-Evaluating Large Language Models (LLMs) on low-resource languages requires datasets that are linguistically accurate, domain-diverse, and insulated from pre-training data contamination. We introduce Dhivehi-Bench, a 5,220-item multi-task benchmark for the Maldivian language (Thaana script) spanning Multiple Choice Questions (MCQ, $n=2,070$), Contextual Question Answering ($n=1,134$), and bidirectional Translation at both the sentence ($n=1,812$) and paragraph ($n=204$) levels. To prevent pre-training contamination in the comprehension tracks, we digitized historical manuscripts and academic monographs from offline physical archives using a Thaana Optical Character Recognition (OCR) pipeline and manually post-edited all extracted text before item creation. Three native Maldivian speakers independently validated every prompt-target pair under a 100\% consensus requirement. Evaluating three open-weights model families---Gemma 4 (31B), Llama 3.1 (70B), and Qwen 2.5 (72B)---reveals a consistent directional asymmetry. While Gemma 4 reaches 74.98\% accuracy on multiple-choice comprehension, 52.49\% Token F1 on extractive question answering, and 50.95 chrF when translating Dhivehi into English, all three models achieve $\leq 1.01$ word-level BLEU when generating Thaana script from English. An orthographic ablation evaluating Romanized Mal\'{e} Latin transliteration ($n=200$ stratified, with 10,000 paired bootstrap resamples) across all three model families shows that Latin output eliminates cross-script byte substitutions and cuts repetition loops on byte-fallback-bound Qwen 2.5 (from 78.5\% to 30.0\% local; 11.0\% to 4.0\% persistent), while shifting Gemma 4 into Latin grammatical particle loops (38.5\% local; 18.5\% persistent) and leaving word-level BLEU $\leq 0.32$ (16.09--18.72 chrF). A double-blind human error audit by two native speakers ($n=50$, Cohen's $\kappa=0.50$) confirms that Romanized generations remain dominated by morphological particle loops (40.0\%), lexical hallucination (37.0\%), and English code-switching (15.0\%), indicating that generative failure reflects both sub-syllabic tokenization and pre-training data scarcity.
+We introduce Dhivehi-Bench, a 5,220-item benchmark for the Maldivian language (Thaana script) spanning Multiple Choice Questions ($n=2,070$), Contextual Question Answering ($n=1,134$), and bidirectional Translation across sentences ($n=1,812$) and paragraphs ($n=204$). To prevent pre-training contamination in the comprehension tracks, we digitized offline archival manuscripts via custom Thaana OCR, manually post-edited all text, and validated every item across three native speakers to 100\% consensus. Evaluating Gemma 4 (31B), Llama 3.1 (70B), and Qwen 2.5 (72B) reveals a sharp receptive-generative asymmetry: Gemma 4 achieves 74.98\% MCQ accuracy, 52.49\% QA Token F1, and 50.95 chrF on $\text{DV}\rightarrow\text{EN}$ translation, yet all models score $\leq 1.01$ word-BLEU when generating Thaana ($\text{EN}\rightarrow\text{DV}$) under 14.6x--16.5x token fertility. In a Romanized Mal\'{e} Latin ablation ($n=200$, 10,000 bootstrap resamples), Latin output eliminates cross-script byte substitutions and cuts repetition loops on Qwen 2.5 (78.5\% to 30.0\% local; 11.0\% to 4.0\% persistent), while shifting Gemma 4 into Latin particle loops (38.5\% local; 18.5\% persistent) and leaving word-BLEU $\leq 0.32$ (16.09--18.72 chrF). A double-blind human audit ($n=50$, $\kappa=0.50$) confirms that particle loops (40.0\%), lexical hallucination (37.0\%), and English code-switching (15.0\%) persist, tying generative failure to both tokenization and data scarcity.
 \end{abstract}
 
 \begin{CCSXML}
@@ -50,11 +50,23 @@ Evaluating Large Language Models (LLMs) on low-resource languages requires datas
        <concept_id>10010147.10010178.10010179</concept_id>
        <concept_desc>Computing methodologies~Natural language processing</concept_desc>
        <concept_significance>500</concept_significance>
-       </concept>
- </ccs2012>
+   </concept>
+   <concept>
+       <concept_id>10010147.10010178.10010179.10010186</concept_id>
+       <concept_desc>Computing methodologies~Language resources</concept_desc>
+       <concept_significance>500</concept_significance>
+   </concept>
+   <concept>
+       <concept_id>10010147.10010178.10010179.10010180</concept_id>
+       <concept_desc>Computing methodologies~Machine translation</concept_desc>
+       <concept_significance>300</concept_significance>
+   </concept>
+</ccs2012>
 \end{CCSXML}
 
 \ccsdesc[500]{Computing methodologies~Natural language processing}
+\ccsdesc[500]{Computing methodologies~Language resources}
+\ccsdesc[300]{Computing methodologies~Machine translation}
 
 \keywords{Low-Resource Languages, Dhivehi, Large Language Models, Benchmarking, Dataset Construction}
 
